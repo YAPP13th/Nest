@@ -52,7 +52,7 @@ commit 코멘트 작성
 ```
 
 ```
-$git push origin "위에서 생성한 브랜치이름"
+$git push origin "위에서 생성한 브랜치이름" (master로 push X)
 =>Head에서 최종 repository로 올린다.
  나의 브랜치에서 수정사항을 origin으로 보낸다.
 ```
