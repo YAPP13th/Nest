@@ -13,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
 
-=======
         //테ㅔ스트
         Button button=findViewById(R.id.testbtn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
->>>>>>> 1d32e7c14eb272d485dfcb4345fb3a7267aa4c09
+
     }
 }
