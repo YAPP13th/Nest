@@ -110,9 +110,6 @@ obj/
 *.iws
 /out/
 
-# User-specific configurations
-*.idea
-
 # OS-specific files
 .DS_Store
 .DS_Store?
