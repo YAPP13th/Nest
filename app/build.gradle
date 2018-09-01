@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -25,6 +26,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+<<<<<<< HEAD
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.android.support:cardview-v7:26.1.0'
+=======
+
+    // recyclerview
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+>>>>>>> 7beb82f9e82566efe00b49d1727a4e92fe018373
 }
