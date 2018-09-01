@@ -1,7 +1,7 @@
 # YAPP 13TH ROOMMATE PROJECT
 
 
-## 1.프로젝트 관리 정책
+## 1. 프로젝트 관리 정책
 
 ### 1) github repository fork 
 
