@@ -60,7 +60,8 @@ $git push origin "위에서 생성한 브랜치이름" (master로 push X)
 이제 여기까지 진행을 하였으면, 자신의 저장소에 들어오면  Pull Request 버튼이 활성화 되고, Pull Request 사항에 변경 Comment들을 작성한다. 
 
 ### 9) 최종 프로젝트 관리자가 Merge   할지 안할지 여부를 결정하여 Merge
-
+merge부분에서 충돌이 나면, 프로젝트로 이동하여 충돌난 부분을 확인하여 제거 한후, 관리자는 다시 충돌없는 상태로 
+add,commit,push 를 반복해준다.
 
 ### 10) Merge이후에 코드 동기화 
 * 작업을 하기전에 무조건 해주어야함 중요
@@ -68,6 +69,17 @@ $git push origin "위에서 생성한 브랜치이름" (master로 push X)
 ```
 $git pull "위에서 작성한 remote 별명"
 => 코드 동기화
+
+*예외 
+혹시 git pull "위에서 작성한 remote 별명"를 하였는데,
+You asked to pull from the remote 'upstream', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+오류를 뱉어낸다면 branch가 제대로 지정이 되지않은것때문이다.
+$git pull "remote 별명" master
+명령을 사용한다 이 명령은 지정을 해주어서 마스터로 부터 값들을 변경해주는것이다. master -> remote 변경값들을 가져오는것이다.
+=>변경사항 모두 동기화
+
 ```
 ### 11) 작업한 브랜치는 삭제(삭제 안해도 되긴하지만, 코드 충돌때문에 해주는게 좋음)
 ```
