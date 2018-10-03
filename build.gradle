@@ -16,9 +16,13 @@ buildscript {
 }
 
 allprojects {
+
     repositories {
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
         google()
         jcenter()
+
+
     }
 }
 

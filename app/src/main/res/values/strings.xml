@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Yapp13th_RoomMate</string>
     <string name="desc_iv_profile">profile image</string>
-
+    <string name="get_kakao_sdk_appkey">@string/kakao_sdk_appkey</string>
     <string-array name="year">
         <item>2015</item>
         <item>2014</item>
