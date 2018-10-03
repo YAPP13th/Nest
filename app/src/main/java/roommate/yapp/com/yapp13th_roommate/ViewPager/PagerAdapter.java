@@ -1,8 +1,12 @@
-package roommate.yapp.com.yapp13th_roommate.select;
+package roommate.yapp.com.yapp13th_roommate.ViewPager;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import roommate.yapp.com.yapp13th_roommate.Likelist.LikeFragment;
+import roommate.yapp.com.yapp13th_roommate.Mypage.MyPageFragment;
+import roommate.yapp.com.yapp13th_roommate.Recommend.RecommendFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
     private int numOfTabs;
@@ -16,11 +20,14 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                PickingFragment tab1 = new PickingFragment();
+                RecommendFragment tab1 = new RecommendFragment();
                 return tab1;
             case 1:
-                PickedFragment tab2 = new PickedFragment();
+                LikeFragment tab2 = new LikeFragment();
                 return tab2;
+            case 2:
+                MyPageFragment tab3 = new MyPageFragment();
+                return tab3;
             default:
                 return null;
         }

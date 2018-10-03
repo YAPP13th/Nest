@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.select;
+package roommate.yapp.com.yapp13th_roommate.Likelist;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import roommate.yapp.com.yapp13th_roommate.R;
 
-public class PickedFragment extends Fragment {
+public class LikeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
