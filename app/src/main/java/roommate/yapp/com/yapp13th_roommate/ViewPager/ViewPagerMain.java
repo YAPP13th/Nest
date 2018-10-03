@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.select;
+package roommate.yapp.com.yapp13th_roommate.ViewPager;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import roommate.yapp.com.yapp13th_roommate.R;
 
-public class SelectMain extends AppCompatActivity {
+public class ViewPagerMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -16,8 +16,9 @@ public class SelectMain extends AppCompatActivity {
         setContentView(R.layout.activity_select);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("내가 찜한"));
-        tabLayout.addTab(tabLayout.newTab().setText("나를 찜한"));
+        tabLayout.addTab(tabLayout.newTab().setText("추천"));
+        tabLayout.addTab(tabLayout.newTab().setText("찜"));
+        tabLayout.addTab(tabLayout.newTab().setText("마이페이지"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);

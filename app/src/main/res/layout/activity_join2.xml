@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join2Activity">
+    tools:context=".SignUp.SignUp_Second_Activity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -442,6 +442,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/join_start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_orange_light"

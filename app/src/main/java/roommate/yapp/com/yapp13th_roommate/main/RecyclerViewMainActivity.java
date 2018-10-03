@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import roommate.yapp.com.yapp13th_roommate.R;
 
-public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.ItemClickListener {
+public class RecyclerViewMainActivity extends AppCompatActivity implements RecyclerViewAdapter.ItemClickListener {
     private RecyclerViewAdapter adapter;
 
     @Override
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
 
         adapter = new RecyclerViewAdapter(this, data);
         adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
+//        recyclerView.setAdapter(adapter);
     }
 
     @Override

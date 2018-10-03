@@ -9,23 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-
-        <activity android:name=".select.SelectMain">
+        <activity android:name=".Kakao.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Join1Activity" />
-        <activity android:name=".Join2Activity"></activity>
+        <activity android:name=".ViewPager.ViewPagerMain"></activity>
+        <activity android:name=".main.RecyclerViewMainActivity"></activity>
+        <activity android:name=".SignUp.SignUp_First_Activity"></activity>
+        <activity android:name=".SignUp.SignUp_Second_Activity"></activity>
+
     </application>
 
 </manifest>
