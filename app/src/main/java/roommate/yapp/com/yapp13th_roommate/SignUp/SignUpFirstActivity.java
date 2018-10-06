@@ -26,6 +26,8 @@ import roommate.yapp.com.yapp13th_roommate.R;
 
 public class SignUpFirstActivity extends AppCompatActivity {
 
+    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
+
     private EditText name, openChat;
     private ImageView imageView;
     private RadioButton rbf, rbm, rbroomo,rbroomx;
@@ -34,9 +36,14 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private RadioGroup rg1,rg2;
     private GradientDrawable drawable,drawable2;
     private Spinner spinner;
+    private TextView location;
 
     private UserInfo userInfo;
     //유저 정보 DTO
+
+    private ImageView iv1, iv2,iv3,iv4,iv5,iv6,iv7;
+    //소제콕 텍스트 앞에 붙는 이미지(위에서부터 순서대로 번호)
+    private ImageView ivBack, ivRoomPic, ivProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
         userInfo = new UserInfo();
 
+        location=findViewById(R.id.join_location);
         name = (EditText)findViewById(R.id.join_etname);
         openChat = (EditText)findViewById(R.id.join_etchatURL);
 
@@ -67,8 +75,28 @@ public class SignUpFirstActivity extends AppCompatActivity {
             imageView.setClipToOutline(true);//원형으로 자르는게 롤리팝이상버전만 가능
         }
 
-        //싴바 테스트
+        //이미지뷰 세팅
+        iv1=findViewById(R.id.ivName);
+        iv2=findViewById(R.id.ivGender);
+        iv3=findViewById(R.id.ivBirth);
+        iv4=findViewById(R.id.ivMonthly);
+        iv5=findViewById(R.id.ivChatURL);
+        iv6=findViewById(R.id.ivRoom);
+        iv7=findViewById(R.id.ivLocation);
+        ivBack=findViewById(R.id.ivBack);
+        ivRoomPic=findViewById(R.id.join_ivroompotho);
 
+        //이미지 삽입(후에 기기 화면 크기따라서 해상도 조절해야함) 급하니까 xhdpi로 다 넣어놓음
+        iv1.setImageResource(R.drawable.myprofileedit_first_name_icon);
+        iv2.setImageResource(R.drawable.myprofileedit_first_sex_icon);
+        iv3.setImageResource(R.drawable.myprofileedit_birth_icon);
+        iv4.setImageResource(R.drawable.myprofileedit_money_icon);
+        iv5.setImageResource(R.drawable.myprofileedit_chat_icon);
+        iv6.setImageResource(R.drawable.myprofileedit_house_icon);
+        iv7.setImageResource(R.drawable.myprofileedit_location_icon);
+
+
+        //싴바 테스트
         final TextView tvprog=findViewById(R.id.join_tvprog);
         seekBar=findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -159,6 +187,35 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
             }
         });
+        //위치검색 했을때
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SignUpFirstActivity.this, WebViewActivity.class);
+                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+            }
+        });
+    }
+
+    //webview액티비티에 인텐트 결과(주소)받아서 텍스트바꾸기
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch(requestCode){
+
+            case SEARCH_ADDRESS_ACTIVITY:
+
+                if(resultCode == RESULT_OK){
+
+                    String d = data.getExtras().getString("data");
+                    if (d != null)
+                        location.setText(d);
+
+                }
+                break;
+
+        }
     }
 
     public void checkclick(RadioButton rb){
@@ -192,5 +249,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
             rb.setClipToOutline(true);
         }
     }
+
 
 }

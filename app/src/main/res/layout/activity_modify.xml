@@ -24,9 +24,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="21dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile_back_icon" />
 
             <TextView
                 android:id="@+id/textView"
@@ -93,9 +93,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_image" />
+                app:layout_constraintTop_toBottomOf="@+id/join_image"
+                app:srcCompat="@drawable/myprofileedit_first_name_icon" />
 
             <TextView
                 android:id="@+id/tvName"
@@ -131,9 +131,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_etname" />
+                app:layout_constraintTop_toBottomOf="@+id/join_etname"
+                app:srcCompat="@drawable/myprofileedit_first_sex_icon" />
 
             <TextView
                 android:id="@+id/tvGender"
@@ -194,9 +194,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_rggender" />
+                app:layout_constraintTop_toBottomOf="@+id/join_rggender"
+                app:srcCompat="@drawable/myprofileedit_birth_icon" />
 
             <TextView
                 android:id="@+id/tvBirth"
@@ -231,9 +231,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_spinner" />
+                app:layout_constraintTop_toBottomOf="@+id/join_spinner"
+                app:srcCompat="@drawable/myprofileedit_money_icon" />
 
             <TextView
                 android:id="@+id/tvMonthly"
@@ -242,7 +242,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="33dp"
-                android:text="출생연도"
+                android:text="예상월세"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
                 app:layout_constraintTop_toBottomOf="@+id/join_spinner" />
@@ -280,7 +280,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_chat_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -318,7 +318,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_house_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etchatURL" />
 
@@ -383,7 +383,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="14dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_house_photo_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgroom" />
@@ -396,7 +396,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_location_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_ivroompotho" />
 
@@ -436,7 +436,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_second_instagram_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_location" />
 
@@ -477,7 +477,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_lifetime_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etinstar" />
 
@@ -554,7 +554,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_beer_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rglifestyle" />
 
@@ -645,7 +645,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_smoking_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgdrink" />
 
@@ -710,7 +710,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_friends_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgcig" />
 
@@ -789,7 +789,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_pet_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgfriend" />
 
@@ -868,7 +868,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_like_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgpet" />
 
@@ -909,7 +909,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_dislike_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etlike" />
 
@@ -949,7 +949,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_introducing_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etdislike" />
 
