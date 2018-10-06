@@ -27,13 +27,30 @@ import roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_First_Activity;
 
 public class KaKaoLoginActivity extends Activity {
 
-        private SessionCallback callback; // 콜백 선언
+    private SessionCallback callback; // 콜백 선언
     private static final String TAG = "KaKaoLoginActivity";
+
+    private void getHashKey(){
+        try {                                                        // 패키지이름을 입력해줍니다.
+            PackageInfo info = getPackageManager().getPackageInfo("roommate.yapp.com.yapp13th_roommate", PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d(TAG,"key_hash="+ Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_test);
+
+        getHashKey();
 
 //        Button button=findViewById(R.id.com_kakao_login);
 //        button.setOnClickListener(new View.OnClickListener() {

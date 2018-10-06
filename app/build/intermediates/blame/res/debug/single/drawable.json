@@ -1,298 +1,298 @@
 [
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_edit_text_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_editable_profile.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_editable_profile.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_light_focused.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_cancel_button_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_cancel_button_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/ic_launcher_background.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_go_search_api_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_text_cursor_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_bar.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_login_bar.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_spinner_textfield_background_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_textfield_search_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_account_logo.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_account_logo.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_btn_borderless_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_item_background_holo_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/drawable/notification_bg.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable/navigation_empty_icon.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_symbol.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_login_symbol.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/bg_profile.xml",
-        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/drawable/bg_profile.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_search_api_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/drawable/notification_bg.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_seekbar_track_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_voice_search_api_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ratingbar_small_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/drawable/notification_icon_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_seekbar_track_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_bar.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_login_bar.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable/design_bottom_navigation_item_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_list_selector_holo_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_dialog_material_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_default_profile_image.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_default_profile_image.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/rounding.xml",
-        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/drawable/rounding.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_editable_profile.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_editable_profile.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/ic_launcher_background.xml",
-        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/drawable/ic_launcher_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_text_cursor_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/drawable/notification_tile_bg.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_textfield_search_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable/design_fab_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/textstroke.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/textstroke.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable/design_password_eye.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_profile_boxbg.9.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_profile_boxbg.9.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/drawable/notification_icon_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_symbol.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_login_symbol.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/tooltip_frame_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ratingbar_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_disabled.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/rounding2.xml",
-        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/drawable/rounding2.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_close_button.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/auth-1.1.7.aar/c654bf187489346a9cdf3f92c3818ea3/res/drawable/kakao_close_button.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_clear_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_btn_check_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/bg_profile.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/bg_profile.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_menu_overflow_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_cancel_button_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_cancel_button_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_button_background.9.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_login_button_background.9.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/design_snackbar_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/tooltip_frame_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ratingbar_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/rounding.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/rounding.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/tooltip_frame_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_close_button.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/auth-1.1.7.aar/73c727984088576b8f4e9e8f7534808e/res/drawable/kakao_close_button.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_default_profile_image.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_default_profile_image.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_disabled.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_account_button_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_account_button_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_btn_radio_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable/design_snackbar_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_seekbar_tick_mark_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/tooltip_frame_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/tooltip_frame_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_profile_boxbg.9.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_profile_boxbg.9.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/drawable/notification_tile_bg.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ratingbar_indicator_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/drawable/notification_bg_low.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_account_button_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_account_button_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_disabled.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_vector_test.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/navigation_empty_icon.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_clear_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/rounding2.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/rounding2.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/textstroke.xml",
-        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/drawable/textstroke.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_cab_background_top_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/design_password_eye.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_seekbar_thumb_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/design_fab_background.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_dialog_material_background.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_list_selector_holo_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_button_background.9.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable/kakao_login_button_background.9.png"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_account_logo.png",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/drawable/kakao_account_logo.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_switch_thumb_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_icon_disabled.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_ic_ab_back_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/drawable/common_google_signin_btn_text_light_normal.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_vector_test.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/drawable/abc_btn_colored_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_search_api_material.xml"
     }
 ]

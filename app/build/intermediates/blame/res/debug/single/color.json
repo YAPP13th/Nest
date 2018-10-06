@@ -1,98 +1,98 @@
 [
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_search_url_text.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/color/common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_tint_seek_thumb.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_tint_edittext.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/color/common_google_signin_btn_text_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_spinner.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_hint_foreground_material_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_tint_switch_track.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_btn_colored_text_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_tint_btn_checkable.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/color/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_tint_spinner.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/switch_thumb_material_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_search_url_text.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/color/design_error.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_default.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/color/common_google_signin_btn_tint.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/switch_thumb_material_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/color/design_tint_password_toggle.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/color/design_error.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_secondary_text_material_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/41bd21a75a0b4d529bca154dfe2c12fa/res/color/common_google_signin_btn_text_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/switch_thumb_material_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_tint_default.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_primary_text_material_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/color/design_tint_password_toggle.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_primary_text_material_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/abc_hint_foreground_material_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/color/switch_thumb_material_dark.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_switch_track.xml"
     }
 ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/values-v17/values-v17.xml",
+            "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/values-v17/values-v17.xml",
+                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -17,10 +17,10 @@
             ]
         },
         {
-            "outputFile": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
+            "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/values-v17/values-v17.xml",
+                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

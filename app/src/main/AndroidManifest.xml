@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Kakao.KaKaoLoginActivity">
-
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

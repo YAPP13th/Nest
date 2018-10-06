@@ -15,7 +15,6 @@ public class RecyclerViewMainActivity extends AppCompatActivity implements Recyc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         // ReclyclerView에 적용할 data
@@ -27,7 +26,7 @@ public class RecyclerViewMainActivity extends AppCompatActivity implements Recyc
 
         adapter = new RecyclerViewAdapter(this, data);
         adapter.setClickListener(this);
-//        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
