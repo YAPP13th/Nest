@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.Mypage;
+package roommate.yapp.com.yapp13th_roommate.MyPage;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

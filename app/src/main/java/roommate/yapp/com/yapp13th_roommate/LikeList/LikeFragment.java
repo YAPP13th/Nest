@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.Likelist;
+package roommate.yapp.com.yapp13th_roommate.LikeList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

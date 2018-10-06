@@ -38,7 +38,7 @@
                 android:text="두둥이 추천해요"/>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/topRecyclerViewtopRecyclerView"
+                android:id="@+id/topRecyclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
