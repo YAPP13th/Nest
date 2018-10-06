@@ -68,6 +68,10 @@
         "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable-xhdpi/main.png"
     },
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/fill_1.png",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable-xhdpi/fill_1.png"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
