@@ -31,7 +31,6 @@
             android:value="@string/get_kakao_sdk_appkey" />
 
         <activity android:name=".SignUp.WebViewActivity" />
-        <activity android:name=".SignUp.FindJusoActivity"></activity>
     </application>
 
 </manifest>

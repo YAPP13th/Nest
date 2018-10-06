@@ -28,7 +28,26 @@
                     android:textSize="24sp" />//크기 색조정 필요
                 <!--항목 당-->
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="인스타그램 ID" />
+
+                    <EditText
+                        android:id="@+id/join_etname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="하나만 입력해주세요"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp" />
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -385,7 +404,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/textstroke"
                         android:ems="10"
-                        android:hint="ex) 요리, 여행"
+                        android:hint="하나만 입력해주세요    ex) 요리, 여행"
                         android:inputType="textPersonName"
                         android:padding="10dp"
                         android:textSize="14sp" />
@@ -408,7 +427,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/textstroke"
                         android:ems="10"
-                        android:hint="ex) 빨래, 애완동물"
+                        android:hint="하나만 입력해주세요    ex) 빨래, 애완동물"
                         android:inputType="textPersonName"
                         android:padding="10dp"
                         android:textSize="14sp" />
