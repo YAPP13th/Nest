@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/anim-v21/design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/anim-v21/design_bottom_sheet_slide_out.xml"
     }
 ]
