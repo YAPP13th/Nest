@@ -1,14 +1,26 @@
 package roommate.yapp.com.yapp13th_roommate.SignUp;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
+import android.media.ExifInterface;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,10 +33,21 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.R;
 
 public class SignUpFirstActivity extends AppCompatActivity {
+
+    private final int CAMERA_CODE = 1111;
+    private final int GALLERY_CODE = 1112;
+    private Uri photoUri;
+    private String currentPhotoPath;
+    private String mImageCaptureName;
 
     private EditText name, openChat;
     private ImageView imageView;
@@ -67,9 +90,16 @@ public class SignUpFirstActivity extends AppCompatActivity {
             imageView.setClipToOutline(true);//원형으로 자르는게 롤리팝이상버전만 가능
         }
 
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectGallery();
+            }
+        });
+
         //싴바 테스트
 
-        final TextView tvprog=findViewById(R.id.join_tvprog);
+        final TextView tvprog = findViewById(R.id.join_tvprog);
         seekBar=findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -94,12 +124,12 @@ public class SignUpFirstActivity extends AppCompatActivity {
             }
         });
         //라디오 이벤트
-        rg1=findViewById(R.id.join_rggender);
-        rg2=findViewById(R.id.join_rgroom);
-        rbf=findViewById(R.id.join_rbf);
-        rbm=findViewById(R.id.join_rbm);
-        rbroomo=findViewById(R.id.join_rbroomo);
-        rbroomx=findViewById(R.id.join_rbroomx);
+        rg1 = findViewById(R.id.join_rggender);
+        rg2 = findViewById(R.id.join_rgroom);
+        rbf = findViewById(R.id.join_rbf);
+        rbm = findViewById(R.id.join_rbm);
+        rbroomo = findViewById(R.id.join_rbroomo);
+        rbroomx = findViewById(R.id.join_rbroomx);
 
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -124,7 +154,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
         });
 
         //다음페이지
-        TextView tvnext=findViewById(R.id.join_btnnext);
+        TextView tvnext = findViewById(R.id.join_btnnext);
         tvnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -191,6 +221,149 @@ public class SignUpFirstActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             rb.setClipToOutline(true);
         }
+    }
+
+    private void selectPhoto(){
+        String state = Environment.getExternalStorageState();
+
+        if(Environment.MEDIA_MOUNTED.equals(state)){
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if(intent.resolveActivity(getPackageManager()) != null){
+                File photoFile = null;
+                try{
+                    photoFile = createImageFile();
+                }catch (IOException ex){
+
+                }
+                if(photoFile != null){
+                    photoUri = FileProvider.getUriForFile(this, getPackageName(), photoFile);
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                    startActivityForResult(intent, CAMERA_CODE);
+                }
+            }
+        }
+
+    }
+
+    private File createImageFile() throws IOException {
+        File dir = new File(Environment.getExternalStorageDirectory() + "/path/");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        mImageCaptureName = timeStamp + ".png";
+
+        File storageDir = new File(Environment.getExternalStorageDirectory().getAbsoluteFile() + "/path/"
+
+                + mImageCaptureName);
+        currentPhotoPath = storageDir.getAbsolutePath();
+
+        return storageDir;
+
+    }
+
+    private void getPictureForPhoto() {
+        Bitmap bitmap = BitmapFactory.decodeFile(currentPhotoPath);
+        ExifInterface exif = null;
+        try {
+            exif = new ExifInterface(currentPhotoPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int exifOrientation;
+        int exifDegree;
+
+        if (exif != null) {
+            exifOrientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+            exifDegree = exifOrientationToDegrees(exifOrientation);
+        } else {
+            exifDegree = 0;
+        }
+        imageView.setImageBitmap(rotate(bitmap, exifDegree));//이미지 뷰에 비트맵 넣기
+    }
+
+    private void selectGallery(){
+        try {
+            if (ActivityCompat.checkSelfPermission(SignUpFirstActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(SignUpFirstActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, GALLERY_CODE);
+            } else {
+                Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                galleryIntent.setType("image/*");
+                startActivityForResult(galleryIntent, GALLERY_CODE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode == RESULT_OK){
+            switch (requestCode){
+                case GALLERY_CODE:
+                    sendPicture(data.getData());
+                    break;
+                case CAMERA_CODE:
+                    getPictureForPhoto();
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+    }
+
+    private void sendPicture(Uri imgUri) {
+
+        String imagePath = getRealPathFromURI(imgUri); // path 경로
+        ExifInterface exif = null;
+        try {
+            exif = new ExifInterface(imagePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int exifOrientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+        int exifDegree = exifOrientationToDegrees(exifOrientation);
+
+        Bitmap bitmap = BitmapFactory.decodeFile(imagePath);//경로를 통해 비트맵으로 전환
+        imageView.setImageBitmap(rotate(bitmap, exifDegree));//이미지 뷰에 비트맵 넣기
+
+    }
+
+    private int exifOrientationToDegrees(int exifOrientation) {
+        if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_90) {
+            return 90;
+        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_180) {
+            return 180;
+        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_270) {
+            return 270;
+        }
+        return 0;
+    }
+
+    private Bitmap rotate(Bitmap src, float degree) {
+
+        // Matrix 객체 생성
+        Matrix matrix = new Matrix();
+        // 회전 각도 셋팅
+        matrix.postRotate(degree);
+        // 이미지와 Matrix 를 셋팅해서 Bitmap 객체 생성
+        return Bitmap.createBitmap(src, 0, 0, src.getWidth(),
+                src.getHeight(), matrix, true);
+    }
+
+    private String getRealPathFromURI(Uri contentUri) {
+        int column_index=0;
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
+        if(cursor.moveToFirst()){
+            column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        }
+
+        return cursor.getString(column_index);
     }
 
 }
