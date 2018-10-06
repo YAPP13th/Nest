@@ -23,13 +23,25 @@ import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
 public class KaKaoLoginActivity extends Activity {
 
-        private SessionCallback callback; // 콜백 선언
+    private SessionCallback callback; // 콜백 선언
     private static final String TAG = "KaKaoLoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
+
+        getHashKey();
+
+//        Button button=findViewById(R.id.com_kakao_login);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(getApplicationContext(), SignUp_First_Activity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
 //        getHashKey();
         callback = new SessionCallback();                  // 이 두개의 함수 중요함

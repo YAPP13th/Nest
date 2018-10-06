@@ -19,37 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Kakao.KaKaoLoginActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="roommate.yapp.com.yapp13th_roommate"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_path" />
-        </provider>
-
-        <activity android:name=".ViewPager.ViewPagerMain"></activity>
-        <activity android:name=".main.RecyclerViewMainActivity"></activity>
-
-        <activity android:name=".SignUp.SignUpFirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".ViewPager.ViewPagerMain"></activity>
+        <activity android:name=".SignUp.SignUpFirstActivity"></activity>
         <activity android:name=".SignUp.SignUpSecondActivity"></activity>
-        <activity android:name=".DetailInfo.DetailInfoActivity"></activity>
-        <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"></activity>
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />

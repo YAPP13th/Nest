@@ -159,9 +159,9 @@ public class SignUpSecondActivity extends AppCompatActivity {
                         for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                             Log.d("test", snapshot.getValue().toString());
                             UserInfo test = new UserInfo();
-                            test = snapshot.getValue(UserInfo.class);
+//                            test = snapshot.getValue(UserInfo.class);
                             //이런식으로 DTO랑 연동해서 데이터 가져올 수 있슴!
-                            Log.d("test2", test.getNow_date().toString());
+//                            Log.d("test2", test.getNow_date().toString());
                         }
                     }
 

@@ -39,37 +39,15 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity" >
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="roommate.yapp.com.yapp13th_roommate"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_path" />
-        </provider>
-
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain" />
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.main.RecyclerViewMainActivity" />
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain" />
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity" />
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity" />
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
