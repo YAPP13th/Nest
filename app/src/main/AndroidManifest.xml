@@ -12,16 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Kakao.KaKaoLoginActivity">
+        <activity android:name=".SignUp.SignUpSecondActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPager.ViewPagerMain"></activity>
-        <activity android:name=".SignUp.SignUpFirstActivity"></activity>
-        <activity android:name=".SignUp.SignUpSecondActivity"></activity>
+        <activity android:name=".ViewPager.ViewPagerMain" />
+        .Kakao.KaKaoLoginActivity
+        <activity android:name=".SignUp.SignUpFirstActivity" />
+        <activity android:name=".Kakao.KaKaoLoginActivity" />
+        <activity android:name=".DetailInfo.DetailInfoActivity" />
+
+
+
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />

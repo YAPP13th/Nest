@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.ShapeDrawable;
@@ -23,6 +24,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -61,10 +65,19 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private UserInfo userInfo;
     //유저 정보 DTO
 
+    TextView textView1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_first);
+
+
+        textView1 = (TextView)findViewById(R.id.tvNewLine);
+        String str = "당신은\n어떤사람인가요?";
+        SpannableStringBuilder ssb = new SpannableStringBuilder(str);
+        ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#ffc231")), 4, 8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView1.setText(ssb);
 
         userInfo = new UserInfo();
 

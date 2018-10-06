@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.kakao.auth.ErrorCode;
 import com.kakao.network.ErrorResult;
@@ -31,6 +32,10 @@ public class KakaoSignupActivity extends Activity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+
         requestMe();
 
         mcontext = getApplicationContext();
@@ -68,6 +73,8 @@ public class KakaoSignupActivity extends Activity {
             public void onSuccess(UserProfile userProfile) {
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
                 kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
+
+
                 setKakaoNickname(kakaoNickname);
                 Logger.d("UserProfile : " + userProfile);
                 //redirectMainActivity(); // 로그인 성공시 MainActivity로
