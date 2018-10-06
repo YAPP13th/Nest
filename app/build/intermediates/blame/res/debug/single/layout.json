@@ -68,6 +68,10 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/layout/abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/item_bottom_recyclerview.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/layout/item_bottom_recyclerview.xml"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/affcc369165813a0d09bd4e168685707/res/layout/notification_template_media.xml"
     },
@@ -122,10 +126,6 @@
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/tooltip.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/layout/tooltip.xml"
-    },
-    {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/activity_recyclerview_item.xml",
-        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/layout/activity_recyclerview_item.xml"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",

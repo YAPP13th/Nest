@@ -104,6 +104,10 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/bg_rounded_only_top.xml",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/bg_rounded_only_top.xml"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/main_background.png",
         "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/main_background.png"
     },
@@ -112,16 +116,12 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/bg_rounded_only_top.xml",
-        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/bg_rounded_only_top.xml"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/myprofileedit_first_sex_icon.png",
+        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/myprofileedit_first_sex_icon.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/bg_profile.xml",
         "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/bg_profile.xml"
-    },
-    {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/myprofileedit_first_sex_icon.png",
-        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/myprofileedit_first_sex_icon.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
@@ -156,12 +156,12 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
-    },
-    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/main_like1x.png",
         "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/drawable/main_like1x.png"
+    },
+    {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/myprofileedit_first_profile.png",

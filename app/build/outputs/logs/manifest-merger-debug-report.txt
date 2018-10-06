@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [com.android.support:multidex:1.0.2] /Users/jy/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/1d9f0d425117ad3ce73cd286e140b5f7/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:26.1.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/AndroidManifest.xml:17:1-31:12
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/AndroidManifest.xml:2:1-14:12
@@ -42,20 +42,20 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/jy/.gradle/caches/tran
 MERGED from [com.kakao.sdk:network:1.1.7] /Users/jy/.gradle/caches/transforms-1/files-1.1/network-1.1.7.aar/87868fc1ca0ea553c09425a2f998bc1e/AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/3b16d31fae8db5adc4fdd3a81d00f4a5/AndroidManifest.xml:17:1-24:12
 MERGED from [com.kakao.sdk:util:1.1.7] /Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/AndroidManifest.xml:2:1-15:12
-INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:3:5-50
 		INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:2:11-69
@@ -89,28 +89,8 @@ MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/jy/.gradle/caches/t
 MERGED from [com.google.firebase:firebase-iid:16.0.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/firebase-iid-16.0.0.aar/3be4a40591ea9acf41a8a1bd1e251dc0/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:6:22-64
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:7:5-80
-	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:7:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:8:5-81
-	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:8:22-78
-uses-permission#android.permission.CAMERA
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:9:5-65
-	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:9:22-62
-uses-feature#android.hardware.camera
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:10:5-60
-	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:10:19-57
-uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:11:5-70
-	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:11:19-67
 application
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:13:5-40:19
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:7:5-28:19
 MERGED from [com.android.support:design:26.1.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/AndroidManifest.xml:25:5-29:19
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/AndroidManifest.xml:11:5-12:19
@@ -172,51 +152,51 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/jy/.gradle/caches/tran
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/3b16d31fae8db5adc4fdd3a81d00f4a5/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/3b16d31fae8db5adc4fdd3a81d00f4a5/AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:17:9-41
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:16:9-43
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:20:9-40
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:14:9-48
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:8:9-48
 activity#roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:21:9-27:20
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:21:19-59
-activity#roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:28:9-34:20
-	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:28:19-58
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:15:19-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:29:13-33:29
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:30:17-69
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:30:25-66
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:32:17-77
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:32:27-74
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:19:27-74
+activity#roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:22:9-70
+	android:name
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:22:19-58
 activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:35:9-73
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:23:9-73
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:35:19-61
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:23:19-61
 activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:36:9-74
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:24:9-74
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:36:19-62
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:24:19-62
 meta-data#com.kakao.sdk.AppKey
-ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:37:9-39:60
+ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:25:9-27:60
 	android:value
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:39:13-57
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:27:13-57
 	android:name
-		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:38:13-48
+		ADDED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml:26:13-48
 uses-sdk
 INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/jy/Documents/github_dev/Nest/app/src/main/AndroidManifest.xml

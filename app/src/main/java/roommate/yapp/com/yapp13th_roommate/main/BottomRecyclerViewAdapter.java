@@ -9,6 +9,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.like.LikeButton;
+import com.like.OnLikeListener;
+
 import roommate.yapp.com.yapp13th_roommate.R;
 
 public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
@@ -41,20 +44,26 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        ImageButton btn_pick;
+        LikeButton btn_bottom_recycler_pick;
         TextView myTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             myTextView = itemView.findViewById(R.id.info_text);
-            btn_pick = itemView.findViewById(R.id.btn_pick);
+            btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
 
-            btn_pick.setOnClickListener(new View.OnClickListener() {
+            btn_bottom_recycler_pick.setOnLikeListener(new OnLikeListener() {
                 @Override
-                public void onClick(View view) {
+                public void liked(LikeButton likeButton) {
                     Toast.makeText(context, "찜!", Toast.LENGTH_SHORT).show();
                 }
+
+                @Override
+                public void unLiked(LikeButton likeButton) {
+                    Toast.makeText(context, "찜@", Toast.LENGTH_SHORT).show();
+                }
             });
+
             itemView.setOnClickListener(this);
         }
 
