@@ -172,6 +172,27 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="오픈채팅 URL" />
+
+                    <EditText
+                        android:id="@+id/join_etkakao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="카카오톡 오픈채팅 URL을 입력해주세요"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
                         android:id="@+id/join_tvroom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -241,9 +262,19 @@
                             android:layout_height="30dp"
                             android:background="@drawable/rounding2"
                             android:gravity="center"
-                            android:text="위치검색" />
+                            android:text="위치검색"
+                            android:clickable="true"/>
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/join_tvjuso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="지역을 검색해주세요"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
 

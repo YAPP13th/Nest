@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Yapp13th_RoomMate</string>
     <string name="desc_iv_profile">profile image</string>
-    <string name="get_kakao_sdk_appkey">@string/kakao_sdk_appkey</string>
+    <string name="get_kakao_sdk_appkey">kakao_sdk_appkey</string>
+    <!--위에 카카오 앞에 스트링 붙으면 그래들에러가 나서 지웠습니다-->
+
     <string-array name="year">
         <item>2015</item>
         <item>2014</item>

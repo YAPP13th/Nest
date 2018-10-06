@@ -1,7 +1,7 @@
-#Wed Oct 03 17:24:37 KST 2018
-base.0=/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/transforms/dexMerger/debug/1
+#Sat Oct 06 08:00:18 KST 2018
+base.0=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
-base.1=/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/transforms/dexMerger/debug/0
-file.0=/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/transforms/dexMerger/debug/1/classes.dex
+file.1=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes2.dex
+base.1=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+file.0=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

@@ -241,9 +241,19 @@
                             android:layout_height="30dp"
                             android:background="@drawable/rounding2"
                             android:gravity="center"
-                            android:text="위치검색" />
+                            android:text="위치검색"
+                            android:clickable="true"/>
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/join_tvjuso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="지역을 검색해주세요"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
 

@@ -27,6 +27,8 @@ import roommate.yapp.com.yapp13th_roommate.R;
 
 public class SignUp_First_Activity extends AppCompatActivity {
 
+    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
+
     private EditText name;
     private ImageView imageView;
     private RadioButton rbf, rbm, rbroomo,rbroomx;
@@ -35,6 +37,7 @@ public class SignUp_First_Activity extends AppCompatActivity {
     private RadioGroup rg1,rg2;
     private GradientDrawable drawable,drawable2;
     private Spinner spinner;
+    private TextView juso;
 
     private UserInfo userInfo;
     //유저 정보 DTO
@@ -163,6 +166,16 @@ public class SignUp_First_Activity extends AppCompatActivity {
 
             }
         });
+
+        //주소검색(구 단위로 자르는거 해야함)
+        juso=findViewById(R.id.join_tvjuso);
+        juso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SignUp_First_Activity.this, WebViewActivity.class);
+                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+            }
+        });
     }
 
     public void checkclick(RadioButton rb){
@@ -197,4 +210,24 @@ public class SignUp_First_Activity extends AppCompatActivity {
         }
     }
 
+    //주소 검색 했을때 돌아오는 결과
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch(requestCode){
+
+            case SEARCH_ADDRESS_ACTIVITY:
+
+                if(resultCode == RESULT_OK){
+
+                    String address = data.getExtras().getString("data");
+                    if (address != null)
+                        juso.setText(address);
+
+                }
+                break;
+
+        }
+    }
 }

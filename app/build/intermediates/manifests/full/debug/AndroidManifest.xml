@@ -46,6 +46,10 @@
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
+
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.WebViewActivity" />
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.FindJusoActivity" />
+
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
