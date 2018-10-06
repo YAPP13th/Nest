@@ -1,306 +1,306 @@
 [
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/select_item.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/select_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_join_first.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_join_first.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_layout_snackbar_include.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/layout/notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_big_media_custom.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/kakao_internal_login_activity.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/layout/kakao_internal_login_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\70885c5f5b4462b4e0602d59eaad497a\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_mypage.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\fragment_mypage.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_layout_snackbar.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_picked.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\fragment_picked.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_navigation_item_header.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mypage.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_mypage.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_media.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_big_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kakao_login_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\util-1.1.7.aar\\ebf201e77389f43713ed3d31de40cb97\\res\\layout\\kakao_login_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_mypage.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_mypage.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recyclerview_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_recyclerview_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_search_view.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_detail.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_detail.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_layout_tab_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\kakao_internal_login_activity.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\util-1.1.7.aar\\ebf201e77389f43713ed3d31de40cb97\\res\\layout\\kakao_internal_login_activity.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_menu_item_action_area.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_modify.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_modify.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_recommend.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\fragment_recommend.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/layout/notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_join_second.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_join_second.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\70885c5f5b4462b4e0602d59eaad497a\\res\\layout\\notification_action.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_navigation_item_separator.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/fragment_mypage.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/fragment_mypage.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_select.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_select.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_navigation_menu.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_detail.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_detail.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_navigation_menu_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_navigation_item_subheader.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_pickme.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\fragment_pickme.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_bottom_navigation_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_kakao_login.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_kakao_login.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_media_cancel_action.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\70885c5f5b4462b4e0602d59eaad497a\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_big_media_narrow.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_recyclerview_item.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_recyclerview_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_media_cancel_action.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_select.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_select.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_media_action.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_navigation_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_navigation_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_media_action.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_modify.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_modify.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_bottom_navigation_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_join_second.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_join_second.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_menu_item_action_area.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_navigation_item_separator.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\70885c5f5b4462b4e0602d59eaad497a\\res\\layout\\notification_template_part_time.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/tooltip.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/tooltip.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/fragment_recommend.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/fragment_recommend.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_text_input_password_icon.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/fragment_pickme.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/fragment_pickme.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_screen_simple.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/38a94d5996a2652195e64de08e2b04a3/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_layout_snackbar.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_layout_tab_text.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_item.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\select_item.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tooltip.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\tooltip.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_kakao_login.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\activity_kakao_login.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_alert_dialog_title_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/activity_join_first.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/activity_join_first.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/kakao_login_layout.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/1c32937554c7b15d0017efe847ff4fd1/res/layout/kakao_login_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/927c134d26a2d26c9fa8e2c5a8731984/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_big_media.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e7e4035b75fdfcf282489aaaabb7e88d/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\70885c5f5b4462b4e0602d59eaad497a\\res\\layout\\notification_template_icon_group.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/layout/design_navigation_item_subheader.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9175fd6f2a4eb17a782af95df05ddf28\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/layout/fragment_picked.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/layout/fragment_picked.xml"
     }
 ]
