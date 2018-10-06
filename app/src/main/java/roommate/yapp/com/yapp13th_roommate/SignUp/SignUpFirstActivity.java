@@ -64,7 +64,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join_first);
+        setContentView(R.layout.activity_jgoin_first);
 
         userInfo = new UserInfo();
 
