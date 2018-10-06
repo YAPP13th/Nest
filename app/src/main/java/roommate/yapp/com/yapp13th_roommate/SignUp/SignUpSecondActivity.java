@@ -50,7 +50,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
         pattern1 = pattern2 = pattern3 = drink1 = drink2 = drink3 = drink4 = smoking1 = smoking2 = friend1 = friend2 = friend3 = pet1 = pet2 = pet3 = false;
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info");
+        databaseReference = firebaseDatabase.getReference("user_info_test");
         //user_info 라는 파베의 테이블과 연동
 
         Intent intent = getIntent();
