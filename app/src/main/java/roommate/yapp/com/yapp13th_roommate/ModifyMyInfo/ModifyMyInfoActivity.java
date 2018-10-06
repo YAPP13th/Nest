@@ -83,14 +83,6 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
 
         userInfo = (UserInfo)intent.getSerializableExtra("userInfo");
 
-        Log.i("test", userInfo.getId());
-        Log.i("test", userInfo.getAllow_friend());
-        Log.i("test", userInfo.getIntroduce());
-        Log.i("test", userInfo.getLike());
-        Log.i("test", userInfo.getName());
-        Log.i("test", userInfo.getMonthly());
-        Log.i("test", userInfo.getPattern());
-
         pattern1 = pattern2 = pattern3 = drink1 = drink2 = drink3 = drink4 = smoking1 = smoking2 = friend1 = friend2 = friend3 = pet1 = pet2 = pet3 = false;
 
         firebaseDatabase = FirebaseDatabase.getInstance();

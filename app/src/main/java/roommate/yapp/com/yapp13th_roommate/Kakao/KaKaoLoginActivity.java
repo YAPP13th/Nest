@@ -35,9 +35,7 @@ public class KaKaoLoginActivity extends Activity {
     Context mcontext;
     static String kakaoNickname;
 
-
     private UserInfo userInfo;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +143,7 @@ public class KaKaoLoginActivity extends Activity {
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
                 kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
 
+                userInfo.setId(kakaoID);
 
                 setKakaoNickname(kakaoNickname);
                 Logger.d("UserProfile : " + userProfile);
@@ -161,35 +160,6 @@ public class KaKaoLoginActivity extends Activity {
     public static String getKakaoNickname() {
         return kakaoNickname;
     }
-
-
-    public static void setKakaoNickname(String kakaoNickname) {
-        KakaoSignupActivity.kakaoNickname = kakaoNickname;
-    }
-
-//    private void redirectMainActivity() {
-//        startActivity(new Intent(this, CulturalEventSearch.class));
-//        finish();
-//    }
-
-    private void redirectKeywordActivity() {
-        startActivity(new Intent(this, SignUpFirstActivity.class));
-        finish();
-    }
-
-    private void redirectFragmentMain() {
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
-    }
-
-    protected void redirectLoginActivity() {
-        final Intent intent = new Intent(this, roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
-        finish();
-    }
-
-
 
     public static void setKakaoNickname(String kakaoNickname) {
         KakaoSignupActivity.kakaoNickname = kakaoNickname;
