@@ -25,7 +25,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.activity_recyclerview_item, parent, false);
+        View view = mInflater.inflate(R.layout.item_bottom_recyclerview, parent, false);
         return new ViewHolder(view);
     }
 

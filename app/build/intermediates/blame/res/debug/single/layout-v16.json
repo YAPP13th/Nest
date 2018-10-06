@@ -1,11 +1,6 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\10aaad504669a79fadaa8587274b67f8\\res\\layout-v16\\notification_template_custom_big.xml"
-=======
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout-v16/notification_template_custom_big.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/layout-v16/notification_template_custom_big.xml"
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
     }
 ]

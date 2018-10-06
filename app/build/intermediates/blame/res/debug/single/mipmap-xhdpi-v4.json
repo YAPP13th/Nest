@@ -1,19 +1,10 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "D:\\1212\\Nest\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher_round.png",
-        "source": "D:\\1212\\Nest\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-=======
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
         "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher_round.png",
         "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
     }
 ]

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -44,6 +45,8 @@ public class RecommendFragment extends Fragment implements BottomRecyclerViewAda
         LinearLayoutManager layoutManager = new LinearLayoutManager
                 (context, LinearLayoutManager.HORIZONTAL, false);
         top_recyclerView.setLayoutManager(layoutManager);
+        // TODO: custom divider 만들어야함
+        top_recyclerView.addItemDecoration(new DividerItemDecoration(context, layoutManager.getOrientation()));
 
         bottom_adapter = new BottomRecyclerViewAdapter(context, data);
         top_adapter = new TopRecyclerViewAdapter(context, data);
