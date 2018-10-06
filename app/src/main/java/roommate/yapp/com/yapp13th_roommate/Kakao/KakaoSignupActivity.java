@@ -35,6 +35,7 @@ public class KakaoSignupActivity extends Activity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         userInfo = new UserInfo();
 
         requestMe();
@@ -74,6 +75,8 @@ public class KakaoSignupActivity extends Activity {
             public void onSuccess(UserProfile userProfile) {
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
                 kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
+
+
                 setKakaoNickname(kakaoNickname);
                 Logger.d("UserProfile : " + userProfile);
                 //redirectMainActivity(); // 로그인 성공시 MainActivity로
