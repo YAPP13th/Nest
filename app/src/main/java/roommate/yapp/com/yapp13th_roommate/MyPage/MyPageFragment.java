@@ -85,7 +85,7 @@ public class MyPageFragment extends Fragment {
 
             }
         };
-        
+
         mReference.addChildEventListener(mChild);
 
         return view;
