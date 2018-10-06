@@ -18,14 +18,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -36,7 +33,6 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -47,15 +43,11 @@ import roommate.yapp.com.yapp13th_roommate.R;
 
 public class SignUpFirstActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
-    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
-=======
     private final int CAMERA_CODE = 1111;
     private final int GALLERY_CODE = 1112;
     private Uri photoUri;
     private String currentPhotoPath;
     private String mImageCaptureName;
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
 
     private EditText name, openChat;
     private ImageView imageView;
@@ -65,14 +57,9 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private RadioGroup rg1,rg2;
     private GradientDrawable drawable,drawable2;
     private Spinner spinner;
-    private TextView location;
 
     private UserInfo userInfo;
     //유저 정보 DTO
-
-    private ImageView iv1, iv2,iv3,iv4,iv5,iv6,iv7;
-    //소제콕 텍스트 앞에 붙는 이미지(위에서부터 순서대로 번호)
-    private ImageView ivBack, ivRoomPic, ivProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +68,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
         userInfo = new UserInfo();
 
-        location=findViewById(R.id.join_location);
         name = (EditText)findViewById(R.id.join_etname);
         openChat = (EditText)findViewById(R.id.join_etchatURL);
 
@@ -104,31 +90,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
             imageView.setClipToOutline(true);//원형으로 자르는게 롤리팝이상버전만 가능
         }
 
-<<<<<<< HEAD
-        //이미지뷰 세팅
-        iv1=findViewById(R.id.ivName);
-        iv2=findViewById(R.id.ivGender);
-        iv3=findViewById(R.id.ivBirth);
-        iv4=findViewById(R.id.ivMonthly);
-        iv5=findViewById(R.id.ivChatURL);
-        iv6=findViewById(R.id.ivRoom);
-        iv7=findViewById(R.id.ivLocation);
-        ivBack=findViewById(R.id.ivBack);
-        ivRoomPic=findViewById(R.id.join_ivroompotho);
-
-        //이미지 삽입(후에 기기 화면 크기따라서 해상도 조절해야함) 급하니까 xhdpi로 다 넣어놓음
-        iv1.setImageResource(R.drawable.myprofileedit_first_name_icon);
-        iv2.setImageResource(R.drawable.myprofileedit_first_sex_icon);
-        iv3.setImageResource(R.drawable.myprofileedit_birth_icon);
-        iv4.setImageResource(R.drawable.myprofileedit_money_icon);
-        iv5.setImageResource(R.drawable.myprofileedit_chat_icon);
-        iv6.setImageResource(R.drawable.myprofileedit_house_icon);
-        iv7.setImageResource(R.drawable.myprofileedit_location_icon);
-
-
-        //싴바 테스트
-        final TextView tvprog=findViewById(R.id.join_tvprog);
-=======
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,7 +100,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
         //싴바 테스트
 
         final TextView tvprog = findViewById(R.id.join_tvprog);
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
         seekBar=findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -229,35 +189,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
             }
         });
-        //위치검색 했을때
-        location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(SignUpFirstActivity.this, WebViewActivity.class);
-                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
-            }
-        });
-    }
-
-    //webview액티비티에 인텐트 결과(주소)받아서 텍스트바꾸기
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch(requestCode){
-
-            case SEARCH_ADDRESS_ACTIVITY:
-
-                if(resultCode == RESULT_OK){
-
-                    String d = data.getExtras().getString("data");
-                    if (d != null)
-                        location.setText(d);
-
-                }
-                break;
-
-        }
     }
 
     public void checkclick(RadioButton rb){
@@ -292,8 +223,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
-=======
     private void selectPhoto(){
         String state = Environment.getExternalStorageState();
 
@@ -350,16 +279,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
         } else {
             exifDegree = 0;
         }
-
-        bitmap = bitmap.getWidth() > bitmap.getHeight()
-                ? Bitmap.createBitmap(bitmap, (bitmap.getWidth() - bitmap.getHeight()) / 2, 0, bitmap.getHeight(), bitmap.getHeight())
-                : Bitmap.createBitmap(bitmap, 0, (bitmap.getHeight() - bitmap.getWidth()) / 2, bitmap.getWidth(), bitmap.getWidth());
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-
-        userInfo.setProfile_image(Base64.encodeToString(baos.toByteArray(), Base64.NO_WRAP));
-
         imageView.setImageBitmap(rotate(bitmap, exifDegree));//이미지 뷰에 비트맵 넣기
     }
 
@@ -374,20 +293,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case GALLERY_CODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(galleryIntent, GALLERY_CODE);
-                } else {
-                    //do something like displaying a message that he didn`t allow the app to access gallery and you wont be able to let him select from gallery
-                }
-                break;
         }
     }
 
@@ -424,16 +329,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
         int exifDegree = exifOrientationToDegrees(exifOrientation);
 
         Bitmap bitmap = BitmapFactory.decodeFile(imagePath);//경로를 통해 비트맵으로 전환
-
-        bitmap = bitmap.getWidth() > bitmap.getHeight()
-                ? Bitmap.createBitmap(bitmap, (bitmap.getWidth() - bitmap.getHeight()) / 2, 0, bitmap.getHeight(), bitmap.getHeight())
-                : Bitmap.createBitmap(bitmap, 0, (bitmap.getHeight() - bitmap.getWidth()) / 2, bitmap.getWidth(), bitmap.getWidth());
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-
-        userInfo.setProfile_image(Base64.encodeToString(baos.toByteArray(), Base64.NO_WRAP));
-
         imageView.setImageBitmap(rotate(bitmap, exifDegree));//이미지 뷰에 비트맵 넣기
 
     }
@@ -470,6 +365,5 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
         return cursor.getString(column_index);
     }
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
 
 }

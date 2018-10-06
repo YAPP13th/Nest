@@ -1,19 +1,10 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
-        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\c46586e348405cf142f0c2b7c52ef1ae\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e3dd7e8af546676c8f63f5038a813ace/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
     },
     {
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
-        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\c46586e348405cf142f0c2b7c52ef1ae\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
-=======
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
-    },
-    {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable-anydpi-v21/design_ic_visibility.xml"
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e3dd7e8af546676c8f63f5038a813ace/res/drawable-anydpi-v21/design_ic_visibility.xml"
     }
 ]

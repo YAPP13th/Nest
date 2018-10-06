@@ -1,19 +1,10 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26\\ic_launcher_round.xml",
-        "source": "D:\\1212\\Nest\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26/ic_launcher.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26\\ic_launcher.xml",
-        "source": "D:\\1212\\Nest\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-=======
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26/ic_launcher_round.xml",
-        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26/ic_launcher.xml",
-        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "source": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     }
 ]

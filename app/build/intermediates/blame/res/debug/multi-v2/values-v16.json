@@ -1,11 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\10aaad504669a79fadaa8587274b67f8\\res\\values-v16\\values-v16.xml",
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/747cab5df84065847a66b925d344b072/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -15,13 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-v16\\values-v16.xml",
-=======
-            "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/values-v16/values-v16.xml",
-            "map": [
-                {
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-v16/values-v16.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/68991e5f348ede2d74aeace6315ed841/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,20 +31,14 @@
                         "endColumns": "12",
                         "endOffsets": "289"
                     }
-<<<<<<< HEAD
                 }
             ]
         },
         {
-            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\values-v16\\values-v16.xml",
+            "outputFile": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\10aaad504669a79fadaa8587274b67f8\\res\\values-v16\\values-v16.xml",
-=======
-                },
-                {
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/values-v16/values-v16.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/747cab5df84065847a66b925d344b072/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -59,18 +46,9 @@
                         "endColumns": "65",
                         "endOffsets": "116"
                     }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
-            "map": [
+                },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-v16\\values-v16.xml",
-=======
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-v16/values-v16.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/68991e5f348ede2d74aeace6315ed841/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -86,16 +64,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

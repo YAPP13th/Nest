@@ -1,55 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\values-sq\\values-sq.xml",
+            "outputFile": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\e93fbb8096d853b2c2dd214d3b25042a\\res\\values-sq\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "187",
-                        "endOffsets": "434"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "3308",
-                        "endColumns": "187",
-                        "endOffsets": "3491"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\values-sq\\values.xml",
-=======
-            "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/values-sq/values-sq.xml",
-            "map": [
-                {
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4c8af113d4c3f8b85712c05bad6766f8/res/values-sq/values.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "187",
-                        "endOffsets": "434"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "3308",
-                        "endColumns": "187",
-                        "endOffsets": "3491"
-                    }
-                },
-                {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-sq\\values-sq.xml",
-=======
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-sq/values-sq.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/68991e5f348ede2d74aeace6315ed841/res/values-sq/values-sq.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -64,15 +19,9 @@
                         "endColumns": "113,107,122,99,111,86,109,122,80,78,82,105,104,97,105,102,115,130,98,80,100",
                         "endOffsets": "214,322,445,545,657,744,854,977,1058,1137,1220,1326,1431,1529,1635,1738,1854,1985,2084,5002,5103"
                     }
-                }
-            ]
-        },
-        {
-            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
-            "map": [
+                },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\e93fbb8096d853b2c2dd214d3b25042a\\res\\values-sq\\values.xml",
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/9a96f211f3dd659898ed5457f6292817/res/values-sq/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -89,10 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\values-sq\\values.xml",
-=======
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/values-sq/values.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/d01deb46a281630cf397605eede65bd6/res/values-sq/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -111,10 +57,27 @@
             ]
         },
         {
-            "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
+            "outputFile": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/values-sq/values-sq.xml",
             "map": [
                 {
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4c8af113d4c3f8b85712c05bad6766f8/res/values-sq/values.xml",
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/68991e5f348ede2d74aeace6315ed841/res/values-sq/values-sq.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,169,277,400,500,612,699,809,932,1013,1092,1175,1281,1386,1484,1590,1693,1809,1940,2039,2120",
+                        "endColumns": "113,107,122,99,111,86,109,122,80,78,82,105,104,97,105,102,115,130,98,80,100",
+                        "endOffsets": "164,272,395,495,607,694,804,927,1008,1087,1170,1276,1381,1479,1585,1688,1804,1935,2034,2115,2216"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,39,40",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,327,450,550,662,749,859,982,1063,1142,1225,1331,1436,1534,1640,1743,1859,1990,4926,5007",
+                        "endColumns": "113,107,122,99,111,86,109,122,80,78,82,105,104,97,105,102,115,130,98,80,100",
+                        "endOffsets": "214,322,445,545,657,744,854,977,1058,1137,1220,1326,1431,1529,1635,1738,1854,1985,2084,5002,5103"
+                    }
+                },
+                {
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/9a96f211f3dd659898ed5457f6292817/res/values-sq/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -131,30 +94,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-sq\\values-sq.xml",
-=======
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-sq/values-sq.xml",
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,169,277,400,500,612,699,809,932,1013,1092,1175,1281,1386,1484,1590,1693,1809,1940,2039,2120",
-                        "endColumns": "113,107,122,99,111,86,109,122,80,78,82,105,104,97,105,102,115,130,98,80,100",
-                        "endOffsets": "164,272,395,495,607,694,804,927,1008,1087,1170,1276,1381,1479,1585,1688,1804,1935,2034,2115,2216"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,39,40",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,219,327,450,550,662,749,859,982,1063,1142,1225,1331,1436,1534,1640,1743,1859,1990,4926,5007",
-                        "endColumns": "113,107,122,99,111,86,109,122,80,78,82,105,104,97,105,102,115,130,98,80,100",
-                        "endOffsets": "214,322,445,545,657,744,854,977,1058,1137,1220,1326,1431,1529,1635,1738,1854,1985,2084,5002,5103"
-                    }
-<<<<<<< HEAD
-=======
-                },
-                {
-                    "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/values-sq/values.xml",
+                    "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/d01deb46a281630cf397605eede65bd6/res/values-sq/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -169,7 +109,6 @@
                         "endColumns": "108,204,138,108,219,135,155,144,228,109,205,139,227,213,94,96,110",
                         "endOffsets": "2193,2398,2537,2646,2866,3002,3158,3303,3720,3830,4036,4176,4404,4618,4713,4810,4921"
                     }
->>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                 }
             ]
         }
