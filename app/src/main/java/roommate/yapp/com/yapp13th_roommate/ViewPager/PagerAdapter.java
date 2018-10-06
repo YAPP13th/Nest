@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import roommate.yapp.com.yapp13th_roommate.Likelist.LikeFragment;
-import roommate.yapp.com.yapp13th_roommate.Mypage.MyPageFragment;
+import roommate.yapp.com.yapp13th_roommate.LikeList.LikeFragment;
+import roommate.yapp.com.yapp13th_roommate.MyPage.MyPageFragment;
 import roommate.yapp.com.yapp13th_roommate.Recommend.RecommendFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {

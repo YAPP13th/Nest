@@ -22,11 +22,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Date;
 
-import roommate.yapp.com.yapp13th_roommate.Datamodel.UserInfo;
+import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain;
 
-public class SignUp_Second_Activity extends AppCompatActivity {
+public class SignUpSecondActivity extends AppCompatActivity {
 
     private UserInfo userInfo;
 
@@ -36,14 +36,14 @@ public class SignUp_Second_Activity extends AppCompatActivity {
     private GradientDrawable drawable,drawable2;
     private RadioButton rb11, rb12,rb13, rb21,rb22,rb23,rb24,rb31,rb32,rb41,rb42,rb43,rb51,rb52,rb53;
     private RadioGroup rg1,rg2,rg3,rg4,rg5;
-    private EditText like, disLike, introduce;
+    private EditText instar, like, disLike, introduce;
     private TextView start;
 
     private Boolean pattern1, pattern2, pattern3, drink1, drink2, drink3, drink4, smoking1, smoking2, friend1, friend2, friend3, pet1, pet2, pet3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join2);
+        setContentView(R.layout.activity_join_second);
 
         userInfo = new UserInfo();
 
@@ -51,11 +51,14 @@ public class SignUp_Second_Activity extends AppCompatActivity {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("user_info");
+        //user_info 라는 파베의 테이블과 연동
 
         Intent intent = getIntent();
 
         userInfo = (UserInfo)intent.getSerializableExtra("userInfo");
+        //회원가입 1페이지에서 받아온 데이터
 
+        instar = (EditText)findViewById(R.id.join_etinstar) ;
         like = (EditText)findViewById(R.id.join_etlike);
         disLike = (EditText)findViewById(R.id.join_etdislike);
         introduce = (EditText)findViewById(R.id.join_etme);
@@ -142,6 +145,7 @@ public class SignUp_Second_Activity extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                userInfo.setInstarID(instar.getText().toString());
                 userInfo.setLike(like.getText().toString());
                 userInfo.setDisLike(disLike.getText().toString());
                 userInfo.setIntroduce(introduce.getText().toString());
@@ -178,13 +182,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
 
             if(rb == rb11){
                 if(pattern1){
-                    userInfo.setPattern(0);
+                    userInfo.setPattern("");
                     pattern1 = false;
 
                     rg1.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPattern(1);
+                    userInfo.setPattern("1");
                     pattern1 = true;
                     pattern2 = false;
                     pattern3 = false;
@@ -194,13 +198,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb12){
                 if(pattern2){
-                    userInfo.setPattern(0);
+                    userInfo.setPattern("");
                     pattern2 = false;
 
                     rg1.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPattern(2);
+                    userInfo.setPattern("2");
                     pattern1 = false;
                     pattern2 = true;
                     pattern3 = false;
@@ -210,13 +214,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb13){
                 if(pattern3){
-                    userInfo.setPattern(0);
+                    userInfo.setPattern("");
                     pattern3 = false;
 
                     rg1.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPattern(3);
+                    userInfo.setPattern("3");
                     pattern1 = false;
                     pattern2 = false;
                     pattern3 = true;
@@ -226,13 +230,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb21){
                 if(drink1){
-                    userInfo.setDrink(0);
+                    userInfo.setDrink("");
                     drink1 = false;
 
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink(1);
+                    userInfo.setDrink("1");
                     drink1 = true;
                     drink2 = false;
                     drink3 = false;
@@ -243,13 +247,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb22){
                 if(drink2){
-                    userInfo.setDrink(0);
+                    userInfo.setDrink("0");
                     drink2 = false;
 
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink(2);
+                    userInfo.setDrink("2");
                     drink1 = false;
                     drink2 = true;
                     drink3 = false;
@@ -260,13 +264,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb23){
                 if(drink3){
-                    userInfo.setDrink(0);
+                    userInfo.setDrink("0");
                     drink3 = false;
 
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink(3);
+                    userInfo.setDrink("3");
                     drink1 = false;
                     drink2 = false;
                     drink3 = true;
@@ -277,13 +281,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb24){
                 if(drink4){
-                    userInfo.setDrink(0);
+                    userInfo.setDrink("");
                     drink4 = false;
 
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink(4);
+                    userInfo.setDrink("4");
                     drink1 = false;
                     drink2 = false;
                     drink3 = false;
@@ -294,13 +298,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb31){
                 if(smoking1){
-                    userInfo.setSmoking(0);
+                    userInfo.setSmoking("");
                     smoking1 = false;
 
                     rg3.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setSmoking(1);
+                    userInfo.setSmoking("1");
                     smoking1 = true;
                     smoking2 = false;
 
@@ -309,13 +313,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb32){
                 if(smoking2){
-                    userInfo.setSmoking(0);
+                    userInfo.setSmoking("0");
                     smoking2 = false;
 
                     rg3.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setSmoking(2);
+                    userInfo.setSmoking("2");
                     smoking1 = false;
                     smoking2 = true;
 
@@ -324,13 +328,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb41){
                 if(friend1){
-                    userInfo.setAllow_friend(0);
+                    userInfo.setAllow_friend("");
                     friend1 = false;
 
                     rg4.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setAllow_friend(1);
+                    userInfo.setAllow_friend("1");
                     friend1 = true;
                     friend2 = false;
                     friend3 = false;
@@ -340,13 +344,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb42){
                 if(friend2){
-                    userInfo.setAllow_friend(0);
+                    userInfo.setAllow_friend("0");
                     friend2 = false;
 
                     rg4.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setAllow_friend(2);
+                    userInfo.setAllow_friend("2");
                     friend1 = false;
                     friend2 = true;
                     friend3 = false;
@@ -356,13 +360,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb43){
                 if(friend3){
-                    userInfo.setAllow_friend(0);
+                    userInfo.setAllow_friend("");
                     friend3 = false;
 
                     rg4.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setAllow_friend(3);
+                    userInfo.setAllow_friend("3");
                     friend1 = false;
                     friend2 = false;
                     friend3 = true;
@@ -372,13 +376,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb51){
                 if(pet1){
-                    userInfo.setPet(0);
+                    userInfo.setPet("");
                     pet1 = false;
 
                     rg5.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPet(1);
+                    userInfo.setPet("1");
                     pet1 = true;
                     pet2 = false;
                     pet3 = false;
@@ -388,13 +392,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb52){
                 if(pet2){
-                    userInfo.setPet(0);
+                    userInfo.setPet("");
                     pet2 = false;
 
                     rg5.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPet(2);
+                    userInfo.setPet("2");
                     pet1 = false;
                     pet2 = true;
                     pet3 = false;
@@ -404,13 +408,13 @@ public class SignUp_Second_Activity extends AppCompatActivity {
                 }
             }else if(rb == rb53){
                 if(pet3){
-                    userInfo.setPet(0);
+                    userInfo.setPet("");
                     pet3 = false;
 
                     rg5.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPet(3);
+                    userInfo.setPet("3");
                     pet1 = false;
                     pet2 = false;
                     pet3 = true;

@@ -4,20 +4,20 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/kakaostory_icon.png",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable-xxhdpi/kakaostory_icon.png"
-    },
-    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/kakaostory_icon.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable-xxhdpi/kakaostory_icon.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/googleg_disabled_color_18.png",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png",

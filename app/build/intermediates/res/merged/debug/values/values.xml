@@ -935,6 +935,8 @@
     <string name="google_app_id" translatable="false">1:352776152928:android:5af1df68f564585d</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDUOtY2nUO84qP4QXK6n1hxV_dIc4Yqe5M</string>
     <string name="google_storage_bucket" translatable="false">dodong-test.appspot.com</string>
+    <string name="join_Text1">당신은\n어떤사람인가요?</string>
+    <string name="join_Text2">당신은\n어떤 룸메이트 인가요?</string>
     <string name="kakao_sdk_appkey">f3d1a991e13963f430884ee96a4ac755</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
