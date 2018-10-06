@@ -89,17 +89,8 @@ gen-external-apklibs
 # Log Files
 
 # Android Studio
-<<<<<<< HEAD
-/build/
-/local.properties
-/out
-/*/build
-/production
-=======
 /build
 /local.properties
-
->>>>>>> b471c42fc34a5026b2d4e3e464881e336f981002
 *.ipr
 *~
 *.swp
