@@ -188,7 +188,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg1.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPattern("1");
+                    userInfo.setPattern("아침형");
                     pattern1 = true;
                     pattern2 = false;
                     pattern3 = false;
@@ -204,7 +204,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg1.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPattern("2");
+                    userInfo.setPattern("저녁형");
                     pattern1 = false;
                     pattern2 = true;
                     pattern3 = false;
@@ -220,7 +220,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg1.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPattern("3");
+                    userInfo.setPattern("불규칙");
                     pattern1 = false;
                     pattern2 = false;
                     pattern3 = true;
@@ -236,7 +236,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink("1");
+                    userInfo.setDrink("금주");
                     drink1 = true;
                     drink2 = false;
                     drink3 = false;
@@ -247,13 +247,13 @@ public class SignUpSecondActivity extends AppCompatActivity {
                 }
             }else if(rb == rb22){
                 if(drink2){
-                    userInfo.setDrink("0");
+                    userInfo.setDrink("");
                     drink2 = false;
 
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink("2");
+                    userInfo.setDrink("매일");
                     drink1 = false;
                     drink2 = true;
                     drink3 = false;
@@ -270,7 +270,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink("3");
+                    userInfo.setDrink("주 1~2회");
                     drink1 = false;
                     drink2 = false;
                     drink3 = true;
@@ -287,7 +287,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg2.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setDrink("4");
+                    userInfo.setDrink("월 1~2회");
                     drink1 = false;
                     drink2 = false;
                     drink3 = false;
@@ -304,7 +304,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg3.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setSmoking("1");
+                    userInfo.setSmoking("흡연");
                     smoking1 = true;
                     smoking2 = false;
 
@@ -313,13 +313,13 @@ public class SignUpSecondActivity extends AppCompatActivity {
                 }
             }else if(rb == rb32){
                 if(smoking2){
-                    userInfo.setSmoking("0");
+                    userInfo.setSmoking("");
                     smoking2 = false;
 
                     rg3.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setSmoking("2");
+                    userInfo.setSmoking("비흡연");
                     smoking1 = false;
                     smoking2 = true;
 
@@ -334,7 +334,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg4.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setAllow_friend("1");
+                    userInfo.setAllow_friend("허용");
                     friend1 = true;
                     friend2 = false;
                     friend3 = false;
@@ -344,13 +344,13 @@ public class SignUpSecondActivity extends AppCompatActivity {
                 }
             }else if(rb == rb42){
                 if(friend2){
-                    userInfo.setAllow_friend("0");
+                    userInfo.setAllow_friend("");
                     friend2 = false;
 
                     rg4.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setAllow_friend("2");
+                    userInfo.setAllow_friend("금지");
                     friend1 = false;
                     friend2 = true;
                     friend3 = false;
@@ -366,7 +366,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg4.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setAllow_friend("3");
+                    userInfo.setAllow_friend("합의하 허용");
                     friend1 = false;
                     friend2 = false;
                     friend3 = true;
@@ -382,7 +382,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg5.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPet("1");
+                    userInfo.setPet("허용");
                     pet1 = true;
                     pet2 = false;
                     pet3 = false;
@@ -398,7 +398,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg5.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPet("2");
+                    userInfo.setPet("금지");
                     pet1 = false;
                     pet2 = true;
                     pet3 = false;
@@ -414,7 +414,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
                     rg5.clearCheck();
                     radioClear(rb);
                 }else{
-                    userInfo.setPet("3");
+                    userInfo.setPet("합의하 허용");
                     pet1 = false;
                     pet2 = false;
                     pet3 = true;

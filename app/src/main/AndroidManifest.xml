@@ -12,18 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".Kakao.KaKaoLoginActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name=".ViewPager.ViewPagerMain">
+
         <activity android:name=".SignUp.SignUpSecondActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPager.ViewPagerMain" />
-        .Kakao.KaKaoLoginActivity
         <activity android:name=".SignUp.SignUpFirstActivity" />
         <activity android:name=".Kakao.KaKaoLoginActivity" />
         <activity android:name=".DetailInfo.DetailInfoActivity" />
+        <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"></activity>
 
 
 

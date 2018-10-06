@@ -24,6 +24,7 @@ import com.kakao.util.helper.log.Logger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
@@ -33,12 +34,17 @@ public class KaKaoLoginActivity extends Activity {
     private static final String TAG = "KaKaoLoginActivity";
     Context mcontext;
     static String kakaoNickname;
+
+
+    private UserInfo userInfo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
 
-        getHashKey();
+        userInfo = new UserInfo();
+//        getHashKey();
 
 //        Button button=findViewById(R.id.com_kakao_login);
 //        button.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +78,8 @@ public class KaKaoLoginActivity extends Activity {
         }
     }
 
-      @Override
-      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
         }
@@ -156,6 +162,7 @@ public class KaKaoLoginActivity extends Activity {
         return kakaoNickname;
     }
 
+
     public static void setKakaoNickname(String kakaoNickname) {
         KakaoSignupActivity.kakaoNickname = kakaoNickname;
     }
@@ -184,6 +191,40 @@ public class KaKaoLoginActivity extends Activity {
 
 
 
+    public static void setKakaoNickname(String kakaoNickname) {
+        KakaoSignupActivity.kakaoNickname = kakaoNickname;
+    }
+
+//    private void redirectMainActivity() {
+//        startActivity(new Intent(this, CulturalEventSearch.class));
+//        finish();
+//    }
+
+    private void redirectKeywordActivity() {
+
+        Intent intent = new Intent(this, SignUpFirstActivity.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("userInfo", userInfo);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+
+        finish();
+    }
+
+    private void redirectFragmentMain() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+
+    protected void redirectLoginActivity() {
+        final Intent intent = new Intent(this, roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+    }
+
+
+
 }
-
-
