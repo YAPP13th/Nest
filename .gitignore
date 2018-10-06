@@ -90,11 +90,11 @@ gen-external-apklibs
 # Log Files
 
 # Android Studio
-/*/build/
-/*/local.properties
-/*/out
-/*/*/build
-/*/*/production
+/build/
+/local.properties
+/out
+/*/build
+/production
 *.ipr
 *~
 *.swp
