@@ -40,6 +40,10 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/layout/abc_action_bar_title_item.xml"
     },
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/likeview.xml",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/layout/likeview.xml"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/layout/abc_activity_chooser_view.xml"
     },

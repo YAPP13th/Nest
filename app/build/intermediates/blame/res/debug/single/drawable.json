@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/heart_on.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/drawable/heart_on.png"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
@@ -50,6 +54,10 @@
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dfc9a3785313478d640d380157328527/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/thumb_off.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/drawable/thumb_off.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/kakao_login_symbol.png",
@@ -160,6 +168,10 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/heart_off.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/drawable/heart_off.png"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/drawable/design_snackbar_background.xml"
     },
@@ -198,6 +210,10 @@
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/thumb_on.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/drawable/thumb_on.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
@@ -276,6 +292,10 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/star_on.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/drawable/star_on.png"
+    },
+    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_btn_borderless_material.xml"
     },
@@ -294,5 +314,9 @@
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable/star_off.png",
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/ec7eece0013e27ba00aa7d48c3c0c1ad/res/drawable/star_off.png"
     }
 ]

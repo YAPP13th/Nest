@@ -11,13 +11,13 @@ import android.widget.Toast;
 
 import roommate.yapp.com.yapp13th_roommate.R;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
     private String[] mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
     private Context context;
 
-    public RecyclerViewAdapter(Context context, String[] data) {
+    public BottomRecyclerViewAdapter(Context context, String[] data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
         this.context = context;
@@ -30,7 +30,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(BottomRecyclerViewAdapter.ViewHolder holder, int position) {
         String animal = mData[position];
         holder.myTextView.setText(animal);
     }

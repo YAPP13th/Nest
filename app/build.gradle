@@ -37,6 +37,8 @@ dependencies {
     implementation group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
     implementation 'com.google.firebase:firebase-core:16.0.1'       //firebase
     implementation 'com.google.firebase:firebase-database:16.0.1'   //firebase database
+
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
