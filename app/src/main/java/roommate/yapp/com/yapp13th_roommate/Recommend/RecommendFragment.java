@@ -52,6 +52,7 @@ public class RecommendFragment extends Fragment implements RecyclerViewAdapter.I
 
         adapter = new RecyclerViewAdapter(context, data);
         bottom_recyclerView.setAdapter(adapter);
+        bottom_recyclerView.setNestedScrollingEnabled(false);
 
         //
         top_recyclerView.setAdapter(adapter);
