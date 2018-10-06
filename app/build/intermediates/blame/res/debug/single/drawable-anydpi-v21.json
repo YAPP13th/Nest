@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     },
     {
-        "merged": "/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
-        "source": "/Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/898d1e8374bedbf8f2f206ead3a457cf/res/drawable-anydpi-v21/design_ic_visibility.xml"
+        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     }
 ]

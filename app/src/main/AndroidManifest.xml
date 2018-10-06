@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Kakao.KaKaoLoginActivity">
-
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +21,10 @@
         </activity>
         <activity android:name=".ViewPager.ViewPagerMain"></activity>
         <activity android:name=".main.RecyclerViewMainActivity"></activity>
-        <activity android:name=".SignUp.SignUp_First_Activity"></activity>
-        <activity android:name=".SignUp.SignUp_Second_Activity"></activity>
+        <activity android:name=".SignUp.SignUpFirstActivity"></activity>
+        <activity android:name=".SignUp.SignUpSecondActivity"></activity>
+        <activity android:name=".DetailInfo.DetailInfoActivity"></activity>
+        <activity android:name=""
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />

@@ -4,18 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.SearchEvent;
 
 import com.kakao.auth.ErrorCode;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
-import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.helper.log.Logger;
 
-import roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_First_Activity;
+import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
 
 /**
@@ -97,7 +94,7 @@ public class KakaoSignupActivity extends Activity {
 //    }
 
     private void redirectKeywordActivity() {
-        startActivity(new Intent(this, SignUp_First_Activity.class));
+        startActivity(new Intent(this, SignUpFirstActivity.class));
         finish();
     }
 

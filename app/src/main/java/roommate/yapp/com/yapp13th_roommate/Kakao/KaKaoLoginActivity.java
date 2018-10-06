@@ -8,13 +8,9 @@ import android.content.pm.Signature;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
-import com.kakao.usermgmt.UserManagement;
-import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
@@ -23,7 +19,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_First_Activity;
+import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
 public class KaKaoLoginActivity extends Activity {
 
@@ -33,20 +29,26 @@ public class KaKaoLoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join_test);
+        setContentView(R.layout.activity_kakao_login);
 
-//        Button button=findViewById(R.id.com_kakao_login);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(getApplicationContext(), SignUp_First_Activity.class);
-//                startActivity(intent);
-//
-//            }
-//        });
-
+        getHashKey();
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
+    }
+
+    private void getHashKey(){
+        try {                                                        // 패키지이름을 입력해줍니다.
+            PackageInfo info = getPackageManager().getPackageInfo("roommate.yapp.com.yapp13th_roommate.Kakao", PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d(TAG,"key_hash="+ Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
 
       @Override
@@ -75,12 +77,12 @@ public class KaKaoLoginActivity extends Activity {
             if (exception != null) {
                 Logger.e(exception);
             }
-            setContentView(R.layout.activity_join_test); // 세션 연결이 실패했을때
+            setContentView(R.layout.activity_kakao_login); // 세션 연결이 실패했을때
         }                                            // 로그인화면을 다시 불러옴
     }
 
     protected void redirectSignupActivity() {       //세션 연결 성공 시 SignupActivity로 넘김
-        final Intent intent = new Intent(this, SignUp_First_Activity.class);
+        final Intent intent = new Intent(this, SignUpFirstActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();
