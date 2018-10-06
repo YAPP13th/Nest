@@ -37,7 +37,7 @@
                 android:text="관심 지역"/>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/topRecyclerView"
+                android:id="@+id/topRecyclerViewtopRecyclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

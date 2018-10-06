@@ -145,31 +145,31 @@ public class SignUpSecondActivity extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userInfo.setInstarID(instar.getText().toString());
-                userInfo.setLike(like.getText().toString());
-                userInfo.setDisLike(disLike.getText().toString());
-                userInfo.setIntroduce(introduce.getText().toString());
-                userInfo.setNow_date(new Date(System.currentTimeMillis()));
-
-                databaseReference.push().setValue(userInfo);
-
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                            Log.d("test", snapshot.getValue().toString());
-                            UserInfo test = new UserInfo();
-//                            test = snapshot.getValue(UserInfo.class);
-                            //이런식으로 DTO랑 연동해서 데이터 가져올 수 있슴!
-//                            Log.d("test2", test.getNow_date().toString());
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+//                userInfo.setInstarID(instar.getText().toString());
+//                userInfo.setLike(like.getText().toString());
+//                userInfo.setDisLike(disLike.getText().toString());
+//                userInfo.setIntroduce(introduce.getText().toString());
+//                userInfo.setNow_date(new Date(System.currentTimeMillis()));
+//
+//                databaseReference.push().setValue(userInfo);
+//
+//                databaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+//                            Log.d("test", snapshot.getValue().toString());
+//                            UserInfo test = new UserInfo();
+////                            test = snapshot.getValue(UserInfo.class);
+//                            //이런식으로 DTO랑 연동해서 데이터 가져올 수 있슴!
+////                            Log.d("test2", test.getNow_date().toString());
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
 
                 Intent signUpDone = new Intent(getApplicationContext(), ViewPagerMain.class);
                 startActivity(signUpDone);
