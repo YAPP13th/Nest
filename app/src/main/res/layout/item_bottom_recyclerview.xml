@@ -7,23 +7,26 @@
     android:layout_height="wrap_content">
 
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="106dp"
+        android:layout_height="120dp">
 
         <!-- 프로필 이미지 -->
         <ImageView
             android:id="@+id/iv_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
             android:contentDescription="@string/desc_iv_profile"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <!-- 찜하기 버튼 -->
-        <ImageButton
-            android:id="@+id/btn_pick"
+        <com.like.LikeButton
+            android:id="@+id/btn_bottom_recycler_pick"
+            app:icon_type="heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:layout_gravity="top|right"
+            app:icon_size="20dp" />
     </FrameLayout>
 
     <LinearLayout
