@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.like.LikeButton;
+import com.like.OnLikeListener;
 
 import roommate.yapp.com.yapp13th_roommate.R;
 
@@ -16,6 +17,7 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
     private LayoutInflater mInflater;
     private BottomRecyclerViewAdapter.ItemClickListener mClickListener;
     private Context context;
+    private LikeButton btn_top_recycler_pick;
 
     public TopRecyclerViewAdapter(Context context, String[] mData) {
         this.mInflater = LayoutInflater.from(context);
@@ -26,6 +28,9 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_top_recyclerview, parent, false);
+
+
+
         return new ViewHolder(view);
     }
 
@@ -41,18 +46,22 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        LikeButton btn_top_recycler_pick;
-
         public ViewHolder(View itemView) {
             super(itemView);
-            btn_top_recycler_pick = itemView.findViewById(R.id.btn_top_recycler_like_button);
+            btn_top_recycler_pick = itemView.findViewById(R.id.btn_top_recycler_pick);
 
-            btn_top_recycler_pick.setOnClickListener(new View.OnClickListener() {
+            btn_top_recycler_pick.setOnLikeListener(new OnLikeListener() {
                 @Override
-                public void onClick(View view) {
+                public void liked(LikeButton likeButton) {
                     Toast.makeText(context, "찜!", Toast.LENGTH_SHORT).show();
                 }
+
+                @Override
+                public void unLiked(LikeButton likeButton) {
+                    Toast.makeText(context, "찜@", Toast.LENGTH_SHORT).show();
+                }
             });
+
             itemView.setOnClickListener(this);
         }
 
