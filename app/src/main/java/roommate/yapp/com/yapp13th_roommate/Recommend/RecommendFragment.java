@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.main.RecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.main.TopRecyclerViewAdapter;
 
 public class RecommendFragment extends Fragment implements RecyclerViewAdapter.ItemClickListener {
     //
@@ -21,6 +22,7 @@ public class RecommendFragment extends Fragment implements RecyclerViewAdapter.I
 
     private RecyclerView bottom_recyclerView;
     private RecyclerViewAdapter adapter;
+    private TopRecyclerViewAdapter top_adapter;
     private Context context;
 
     @Override
@@ -51,13 +53,16 @@ public class RecommendFragment extends Fragment implements RecyclerViewAdapter.I
         top_recyclerView.setLayoutManager(layoutManager);
 
         adapter = new RecyclerViewAdapter(context, data);
+        top_adapter = new TopRecyclerViewAdapter(context, data);
+
         bottom_recyclerView.setAdapter(adapter);
         bottom_recyclerView.setNestedScrollingEnabled(false);
 
         //
-        top_recyclerView.setAdapter(adapter);
+        top_recyclerView.setAdapter(top_adapter);
 
         adapter.setClickListener(this);
+        top_adapter.setClickListener(this);
 
         return rootView;
     }
