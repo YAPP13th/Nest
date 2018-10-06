@@ -1,6 +1,7 @@
 package roommate.yapp.com.yapp13th_roommate.Kakao;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -9,8 +10,13 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 
+import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
+import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.MeResponseCallback;
+import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
@@ -18,6 +24,7 @@ import com.kakao.util.helper.log.Logger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
@@ -25,13 +32,17 @@ public class KaKaoLoginActivity extends Activity {
 
     private SessionCallback callback; // 콜백 선언
     private static final String TAG = "KaKaoLoginActivity";
+    Context mcontext;
+    static String kakaoNickname;
 
+    private UserInfo userInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
 
-        getHashKey();
+        userInfo = new UserInfo();
+//        getHashKey();
 
 //        Button button=findViewById(R.id.com_kakao_login);
 //        button.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +57,8 @@ public class KaKaoLoginActivity extends Activity {
 //        getHashKey();
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
+//        requestMe();
+
     }
 
     private void getHashKey(){
@@ -63,8 +76,8 @@ public class KaKaoLoginActivity extends Activity {
         }
     }
 
-      @Override
-      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
         }
@@ -81,7 +94,8 @@ public class KaKaoLoginActivity extends Activity {
 
         @Override
         public void onSessionOpened() {
-            redirectSignupActivity();  // 세션 연결성공 시 redirectSignupActivity() 호출
+            requestMe();
+//            redirectSignupActivity();  // 세션 연결성공 시 redirectSignupActivity() 호출
         }
 
         @Override
@@ -99,8 +113,88 @@ public class KaKaoLoginActivity extends Activity {
         startActivity(intent);
         finish();
     }
+    protected void requestMe() {
+        UserManagement.requestMe(new MeResponseCallback() {
+            @Override
+            public void onFailure(ErrorResult errorResult) {
+                String message = "failed to get user info. msg=" + errorResult;
+                Logger.d(message);
+
+                ErrorCode result = ErrorCode.valueOf(errorResult.getErrorCode());
+                if (result == ErrorCode.CLIENT_ERROR_CODE) {
+                    finish();
+                } else {
+                    redirectLoginActivity();
+                }
+            }
+
+            @Override
+            public void onSessionClosed(ErrorResult errorResult) {
+                redirectLoginActivity();
+            }
+
+            @Override
+            public void onNotSignedUp() {
+                redirectLoginActivity();
+            }
+
+            @Override
+            public void onSuccess(UserProfile userProfile) {
+                String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
+                kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
+
+                userInfo.setId(kakaoID);
+
+                setKakaoNickname(kakaoNickname);
+                Logger.d("UserProfile : " + userProfile);
+                //redirectMainActivity(); // 로그인 성공시 MainActivity로
+                //redirectFragmentMain();
+                redirectKeywordActivity();
+                //redirectMainActivity();
+            }
+
+
+        });
+    }
+
+    public static String getKakaoNickname() {
+        return kakaoNickname;
+    }
+
+    public static void setKakaoNickname(String kakaoNickname) {
+        KakaoSignupActivity.kakaoNickname = kakaoNickname;
+    }
+
+//    private void redirectMainActivity() {
+//        startActivity(new Intent(this, CulturalEventSearch.class));
+//        finish();
+//    }
+
+    private void redirectKeywordActivity() {
+
+        Intent intent = new Intent(this, SignUpFirstActivity.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("userInfo", userInfo);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+
+        finish();
+    }
+
+    private void redirectFragmentMain() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+
+    protected void redirectLoginActivity() {
+        final Intent intent = new Intent(this, roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+    }
+
 
 
 }
-
-

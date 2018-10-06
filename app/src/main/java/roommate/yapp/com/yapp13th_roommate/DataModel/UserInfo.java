@@ -17,11 +17,11 @@ public class UserInfo implements Serializable{
     private Boolean room;           //방 유무 - 있음 true 없음 false
     private String location;        //희망 지역
     private String instarID;        //인스타 아이디
-    private String pattern;         //생활 패턴 - 1 아침형 / 2 저녁형 / 3 불규칙
-    private String drink;           //음주 빈도 - 1 금주 / 2 매일 / 3 주 1~2회 / 4 월 1~2회
-    private String smoking;         //흡연 - 1 흡연 / 2 비흡연
-    private String allow_friend;    //친구 출입 - 1 허용 / 2 금지 / 3 합의하 허용
-    private String pet;             //애완동물 1 - 허용 / 2 금지 / 3 합의하 허용
+    private String pattern;         //생활 패턴 - 아침형 / 저녁형 / 불규칙
+    private String drink;           //음주 빈도 - 금주 / 매일 / 주 1~2회 / 월 1~2회
+    private String smoking;         //흡연 - 흡연 / 비흡연
+    private String allow_friend;    //친구 출입 - 허용 / 금지 / 합의하 허용
+    private String pet;             //애완동물 허용 / 금지 / 합의하 허용
     private String like;            //좋아하는 것
     private String disLike;         //싫어하는 것
     private String introduce;       //자기소개

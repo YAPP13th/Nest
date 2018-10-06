@@ -1,3 +1,0 @@
-# Referenced at C:\Users\Sung-Jin\Desktop\Nest\app\build\intermediates\manifests\full\debug\AndroidManifest.xml:31
--keep class roommate.yapp.com.yapp13th_roommate.Kakao.GlobalApplication { <init>(...); }
-
