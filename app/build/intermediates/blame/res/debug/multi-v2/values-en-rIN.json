@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
+            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-en-rIN\\values-en-rIN.xml",
+=======
             "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-en-rIN/values-en-rIN.xml",
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -16,10 +23,17 @@
             ]
         },
         {
+<<<<<<< HEAD
+            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\values-en-rIN\\values-en-rIN.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-en-rIN\\values-en-rIN.xml",
+=======
             "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-en-rIN/values-en-rIN.xml",
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

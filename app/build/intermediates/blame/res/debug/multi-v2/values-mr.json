@@ -1,10 +1,34 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
+            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\values-mr\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,351,547,669,779,983,1102,1236,1358,1567,1673,1855,1977,2175,2354,2440,2532",
+                        "endColumns": "105,195,121,109,203,118,133,121,208,105,181,121,197,178,85,91,105",
+                        "endOffsets": "350,546,668,778,982,1101,1235,1357,1566,1672,1854,1976,2174,2353,2439,2531,2637"
+                    },
+                    "to": {
+                        "startLines": "21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2071,2181,2377,2503,2617,2821,2944,3082,3410,3619,3729,3911,4037,4235,4418,4508,4604",
+                        "endColumns": "109,195,125,113,203,122,137,125,208,109,181,125,197,182,89,95,109",
+                        "endOffsets": "2176,2372,2498,2612,2816,2939,3077,3203,3614,3724,3906,4032,4230,4413,4503,4599,4709"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-mr\\values-mr.xml",
+=======
             "outputFile": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
             "map": [
                 {
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-mr/values-mr.xml",
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +45,33 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\e93fbb8096d853b2c2dd214d3b25042a\\res\\values-mr\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "201",
+                        "endOffsets": "448"
+                    },
+                    "to": {
+                        "startLines": "29",
+                        "startColumns": "4",
+                        "startOffsets": "3208",
+                        "endColumns": "201",
+                        "endOffsets": "3405"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\values-mr\\values-mr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\values-mr\\values.xml",
+=======
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/values-mr/values.xml",
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -37,6 +87,10 @@
                         "endOffsets": "2176,2372,2498,2612,2816,2939,3077,3203,3614,3724,3906,4032,4230,4413,4503,4599,4709"
                     }
                 },
+<<<<<<< HEAD
+                {
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\values-mr\\values-mr.xml",
+=======
                 {
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4c8af113d4c3f8b85712c05bad6766f8/res/values-mr/values.xml",
                     "from": {
@@ -61,6 +115,7 @@
             "map": [
                 {
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/values-mr/values-mr.xml",
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -77,6 +132,9 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\e93fbb8096d853b2c2dd214d3b25042a\\res\\values-mr\\values.xml",
+=======
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/values-mr/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -95,6 +153,7 @@
                 },
                 {
                     "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4c8af113d4c3f8b85712c05bad6766f8/res/values-mr/values.xml",
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<merger version="3"><dataSet config="main"><source path="D:\1212\Nest\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\1212\Nest\app\src\debug\jniLibs"/></dataSet></merger>
+=======
 <merger version="3"><dataSet config="main"><source path="/Users/jy/Documents/github_dev/Nest/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/jy/Documents/github_dev/Nest/app/src/debug/jniLibs"/></dataSet></merger>
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe

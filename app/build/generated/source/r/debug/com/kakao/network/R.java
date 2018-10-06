@@ -37,11 +37,19 @@ public final class R {
         public static final int kakaotalk_icon = 0x7f020082;
     }
     public static final class id {
+<<<<<<< HEAD
+        public static final int kakao_login_activity_progress_bar = 0x7f0e0134;
+    }
+    public static final class layout {
+        public static final int kakao_internal_login_activity = 0x7f040037;
+        public static final int kakao_login_layout = 0x7f040038;
+=======
         public static final int kakao_login_activity_progress_bar = 0x7f0f013a;
     }
     public static final class layout {
         public static final int kakao_internal_login_activity = 0x7f040038;
         public static final int kakao_login_layout = 0x7f040039;
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
     }
     public static final class string {
         public static final int com_kakao_account_cancel = 0x7f080027;

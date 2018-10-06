@@ -24,7 +24,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="21dp"
-                android:background="#eeeeee"
+                android:src="@drawable/profile_back_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,7 +68,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_second_instagram_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNewLine" />
 
@@ -109,7 +109,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_lifetime_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etinstar" />
 
@@ -186,7 +186,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_beer_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rglifestyle" />
 
@@ -277,7 +277,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_smoking_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgdrink" />
 
@@ -342,7 +342,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_friends_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgcig" />
 
@@ -421,7 +421,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_pet_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgfriend" />
 
@@ -500,7 +500,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_like_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgpet" />
 
@@ -541,7 +541,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_dislike_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etlike" />
 
@@ -581,7 +581,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
-                android:background="#eeeeee"
+                android:src="@drawable/myprofileedit_introducing_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etdislike" />
 

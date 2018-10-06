@@ -1,6 +1,11 @@
 [
     {
+<<<<<<< HEAD
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\c46586e348405cf142f0c2b7c52ef1ae\\res\\animator-v21\\design_appbar_state_list_animator.xml"
+=======
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/88c19c52b8a2bce953a57e20ba0e75dd/res/animator-v21/design_appbar_state_list_animator.xml"
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
     }
 ]

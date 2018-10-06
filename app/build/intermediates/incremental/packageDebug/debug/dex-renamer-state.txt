@@ -1,19 +1,23 @@
+<<<<<<< HEAD
+#Sat Oct 06 22:14:22 KST 2018
+=======
 #Sat Oct 06 20:00:51 KST 2018
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
 renamed.5=classes6.dex
 renamed.4=classes5.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-base.4=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
-base.3=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
-base.2=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
-base.1=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
-base.0=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
-file.5=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14\\classes.dex
-file.4=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17\\classes.dex
-file.3=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16\\classes.dex
-file.2=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12\\classes.dex
-file.1=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15\\classes.dex
-file.0=C\:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13\\classes.dex
+base.5=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.4=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+base.3=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.2=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+base.1=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.0=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+file.5=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14\\classes.dex
+file.4=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17\\classes.dex
+file.3=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12\\classes.dex
+file.2=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15\\classes.dex
+file.1=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13\\classes.dex
+file.0=D\:\\1212\\Nest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16\\classes.dex

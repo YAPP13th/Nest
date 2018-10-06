@@ -1,5 +1,101 @@
 [
     {
+<<<<<<< HEAD
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\c46586e348405cf142f0c2b7c52ef1ae\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\c46586e348405cf142f0c2b7c52ef1ae\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\419c6a6ccceace1889fffd522dc42fbb\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "D:\\1212\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\LGE\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0ca827a868e3f96afb6840538e666b86\\res\\color\\abc_hint_foreground_material_light.xml"
+=======
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4d1b5e06c555ac1ee151c3bdf69cc84f/res/color/common_google_signin_btn_tint.xml"
     },
@@ -94,5 +190,6 @@
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/4170545ff331183a995c0e3b818435f6/res/color/abc_tint_switch_track.xml"
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
     }
 ]

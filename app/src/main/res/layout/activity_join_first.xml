@@ -24,7 +24,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="21dp"
-                android:background="#eeeeee"
+                android:src="@drawable/profile_back_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,7 +93,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_image" />
 
@@ -131,7 +130,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etname" />
 
@@ -194,7 +192,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rggender" />
 
@@ -231,7 +228,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_spinner" />
 
@@ -242,7 +238,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="33dp"
-                android:text="출생연도"
+                android:text="예상월세"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
                 app:layout_constraintTop_toBottomOf="@+id/join_spinner" />
@@ -280,7 +276,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -318,7 +313,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etchatURL" />
 
@@ -382,9 +376,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="14dp"
-                android:background="#eeeeee"
+                android:layout_marginTop="44dp"
+                android:src="@drawable/myprofileedit_house_photo_icon"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgroom" />
 
@@ -396,7 +391,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
-                android:background="#eeeeee"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_ivroompotho" />
 
@@ -415,15 +409,17 @@
             <TextView
                 android:id="@+id/join_location"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_marginEnd="21dp"
                 android:layout_marginLeft="21dp"
                 android:layout_marginRight="21dp"
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/rounding2"
                 android:text="위치검색"
                 android:textSize="14sp"
+                android:gravity="center"
+                android:background="@drawable/rounding2"
+                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocation" />

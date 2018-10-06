@@ -46,12 +46,22 @@
             </intent-filter>
         </activity>
         <activity android:name="roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain" />
+<<<<<<< HEAD
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.main.RecyclerViewMainActivity" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity" />
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity" />
+=======
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity" />
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity" />
+>>>>>>> 608aee50720dcbfb1eabaa3e35f59c3f3923d4fe
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
+
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.WebViewActivity" />
+
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
