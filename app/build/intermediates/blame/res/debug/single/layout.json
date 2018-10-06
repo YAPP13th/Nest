@@ -4,10 +4,6 @@
         "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\test.xml"
-    },
-    {
         "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_template_media_custom.xml"
     },
@@ -212,10 +208,6 @@
         "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\2045ed69252adcccae6504184f9dadf8\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test3.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\test3.xml"
-    },
-    {
         "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
         "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_bottom_navigation_item.xml"
     },
@@ -266,10 +258,6 @@
     {
         "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
         "source": "C:\\Users\\Sung-Jin\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\cf90b38800957a5b4a618f0e2e25bcb0\\res\\layout\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test2.xml",
-        "source": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\src\\main\\res\\layout\\test2.xml"
     },
     {
         "merged": "C:\\Users\\Sung-Jin\\Desktop\\Nest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",

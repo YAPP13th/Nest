@@ -31,14 +31,14 @@ public class KaKaoLoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
 
-        getHashKey();
+//        getHashKey();
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
     }
 
     private void getHashKey(){
         try {                                                        // 패키지이름을 입력해줍니다.
-            PackageInfo info = getPackageManager().getPackageInfo("roommate.yapp.com.yapp13th_roommate.Kakao", PackageManager.GET_SIGNATURES);
+            PackageInfo info = getPackageManager().getPackageInfo("roommate.yapp.com.yapp13th_roommate", PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\fdc88187ff110b6849baf1ac09819b02\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\cf90b38800957a5b4a618f0e2e25bcb0\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\9175fd6f2a4eb17a782af95df05ddf28\AndroidManifest.xml:17:1-31:12
@@ -41,20 +41,20 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Sung-Jin\.gradle\cac
 MERGED from [com.kakao.sdk:network:1.1.7] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\network-1.1.7.aar\7ab9149a2941b049f9b69b547a9900dd\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\4f7f152c7484ddb4d7876bb458ccc39a\AndroidManifest.xml:17:1-24:12
 MERGED from [com.kakao.sdk:util:1.1.7] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\util-1.1.7.aar\ebf201e77389f43713ed3d31de40cb97\AndroidManifest.xml:2:1-15:12
-INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:3:5-50
 		INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:2:11-69
@@ -88,8 +88,20 @@ MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sung-Jin\.gradle\
 MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\01b5a9fc8062fd62dcd0390c604f07b8\AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:8:22-77
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:9:5-64
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:9:22-62
 application
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:7:5-38:19
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:10:5-53:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\cf90b38800957a5b4a618f0e2e25bcb0\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\cf90b38800957a5b4a618f0e2e25bcb0\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\9175fd6f2a4eb17a782af95df05ddf28\AndroidManifest.xml:25:5-29:19
@@ -149,55 +161,79 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Sung-Jin\.gradle\cac
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\4f7f152c7484ddb4d7876bb458ccc39a\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sung-Jin\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\4f7f152c7484ddb4d7876bb458ccc39a\AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:17:9-40
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:8:9-48
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:11:9-48
 activity#roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:15:9-24:20
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:15:19-59
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:18:19-59
+provider#android.support.v4.content.FileProvider
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:26:9-34:20
+	android:grantUriPermissions
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:30:13-47
+	android:authorities
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:28:13-70
+	android:exported
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:27:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:31:13-33:53
+	android:resource
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:33:17-50
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:32:17-67
 activity#roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:25:9-70
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:36:9-70
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:25:19-58
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:36:19-58
 activity#roommate.yapp.com.yapp13th_roommate.main.RecyclerViewMainActivity
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:26:9-76
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:37:9-76
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:26:19-64
-activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_First_Activity
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:27:9-33:20
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:37:19-64
+activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:39:9-45:20
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:27:19-63
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:39:19-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:28:13-32:29
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:29:17-69
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:31:27-74
-activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_Second_Activity
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:34:9-76
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:43:27-74
+activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:47:9-74
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:34:19-64
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:47:19-62
+activity#roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:48:9-76
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:48:19-64
+activity#roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:49:9-80
+	android:name
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:49:19-68
 meta-data#com.kakao.sdk.AppKey
-ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:35:9-37:60
+ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:50:9-52:60
 	android:value
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:37:13-57
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:52:13-57
 	android:name
-		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:36:13-48
+		ADDED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml:51:13-48
 uses-sdk
 INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Sung-Jin\Desktop\Nest\app\src\main\AndroidManifest.xml
