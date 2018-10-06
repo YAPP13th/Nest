@@ -32,13 +32,21 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name="roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity" />
 

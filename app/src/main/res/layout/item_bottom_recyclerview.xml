@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:contentDescription="@string/desc_iv_profile"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            android:src="@drawable/main_test_img2" />
 
         <!-- 찜하기 버튼 -->
         <com.like.LikeButton
@@ -31,109 +31,152 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/bg_profile"
+        android:paddingLeft="14dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="11dp"
         android:orientation="vertical">
 
-        <!-- 이름/나이/주소 -->
+        <!-- 이름 -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#212529"
+            android:text="이지은" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <!-- 이름 -->
-            <TextView
-                android:id="@+id/tv_name"
+            <!-- 생일 icon -->
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="이지은" />
+                android:src="@drawable/ic_birth"/>
 
-            <!-- 나이 -->
+            <!-- 생년 -->
             <TextView
-                android:id="@+id/tv_age"
+                android:id="@+id/tv_top_recycler_birth_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="25세" />
+                android:layout_marginLeft="3dp"
+                android:textSize="9sp"
+                android:textColor="#c0c0c0"
+                android:text="2000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:textColor="#c0c0c0"
+                android:text=" 년생"/>
+
+            <!-- 돈 icon -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:src="@drawable/ic_money" />
+
+            <!-- 월세 -->
+            <TextView
+                android:id="@+id/tv_top_recycler_monthly_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:textSize="9sp"
+                android:textColor="#c0c0c0"
+                android:text="200"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:textColor="#c0c0c0"
+                android:text=" 만원"/>
+
+            <!-- location icon -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/ic_location"/>
 
             <!-- 주소 -->
             <TextView
                 android:id="@+id/tv_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:textSize="9sp"
+                android:textColor="#c0c0c0"
                 android:text="서울시 은평구 불광동" />
 
         </LinearLayout>
-
-        <!-- 월세 -->
-        <TextView
-            android:id="@+id/tv_monthMoney"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="500,000원" />
-
-        <!-- 선 -->
-        <View
-            android:layout_width="18dp"
-            android:layout_height="1dp"
-            android:background="@color/colorAccent"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="자기소개" />
 
         <!-- 자기소개 -->
         <TextView
             android:id="@+id/tv_selfIntroduction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="안녕하세요 반갑습니다" />
+            android:layout_marginTop="8dp"
+            android:textSize="9sp"
+            android:textColor="#929292"
+            android:text="안녕하세요 반갑습니다 저는 이번에 숙명여자대학교에서
+작곡을 전공하고 있습니다. 학교 근처에서 룸메이트를 …" />
 
-        <!--실제 데이터 받아오는 예제-->
-        <TextView
-            android:id="@+id/info_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@color/colorAccent"/>
+        <!-- 선 -->
+        <View
+            android:layout_width="191dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#eeeeee"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
             android:orientation="horizontal">
 
-            <!-- 좋아요 아이콘 -->
+            <!-- 좋아요 icon -->
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_like1x" />
+
+            <!-- 좋아요 내용 -->
+            <TextView
+                android:id="@+id/tv_top_recycler_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:textSize="9sp"
+                android:textColor="#5499ff"
+                android:text="혼자 요리하기"/>
+
+            <!-- 싫어요 icon -->
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_thumb_down" />
 
-            <!-- 좋아요 -->
+            <!-- 싫어요 내용 -->
             <TextView
-                android:id="@+id/tv_like"
+                android:id="@+id/tv_top_recycler_dislike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="요리" />
+                android:layout_marginLeft="3dp"
+                android:textSize="9sp"
+                android:textColor="#ff6c3f"
+                android:text="화장실 청소"/>
 
-            <!-- 싫어요 아이콘 -->
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher" />
-
-            <!-- 싫어요 -->
-            <TextView
-                android:id="@+id/tv_disike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="반려견" />
         </LinearLayout>
-
 
     </LinearLayout>
 

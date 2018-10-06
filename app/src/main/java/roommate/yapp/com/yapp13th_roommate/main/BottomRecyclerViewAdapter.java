@@ -35,7 +35,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
     @Override
     public void onBindViewHolder(BottomRecyclerViewAdapter.ViewHolder holder, int position) {
         String animal = mData[position];
-        holder.myTextView.setText(animal);
+//        holder.myTextView.setText(animal);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
         public ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.info_text);
+//            myTextView = itemView.findViewById(R.id.info_text);
             btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
 
             btn_bottom_recycler_pick.setOnLikeListener(new OnLikeListener() {
