@@ -39,7 +39,6 @@
             </intent-filter>
         </activity>
         <activity android:name="roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain" />
-        <activity android:name="roommate.yapp.com.yapp13th_roommate.main.RecyclerViewMainActivity" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_First_Activity" />
         <activity android:name="roommate.yapp.com.yapp13th_roommate.SignUp.SignUp_Second_Activity" />
 

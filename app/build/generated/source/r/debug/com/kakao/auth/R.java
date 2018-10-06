@@ -41,8 +41,8 @@ public final class R {
         public static final int kakao_login_activity_progress_bar = 0x7f0e0120;
     }
     public static final class layout {
-        public static final int kakao_internal_login_activity = 0x7f040035;
-        public static final int kakao_login_layout = 0x7f040036;
+        public static final int kakao_internal_login_activity = 0x7f040034;
+        public static final int kakao_login_layout = 0x7f040035;
     }
     public static final class string {
         public static final int com_kakao_account_cancel = 0x7f070027;

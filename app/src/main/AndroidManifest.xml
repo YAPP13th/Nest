@@ -20,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewPager.ViewPagerMain"></activity>
-        <activity android:name=".main.RecyclerViewMainActivity"></activity>
         <activity android:name=".SignUp.SignUp_First_Activity"></activity>
         <activity android:name=".SignUp.SignUp_Second_Activity"></activity>
         <meta-data
