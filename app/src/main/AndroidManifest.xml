@@ -4,11 +4,20 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> afbce57aa40da9023ad6232011d68579bb2d55e6
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> afbce57aa40da9023ad6232011d68579bb2d55e6
 
     <application
         android:name=".Kakao.GlobalApplication"
@@ -25,9 +34,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ViewPager.ViewPagerMain"></activity>
         <activity android:name=".SignUp.SignUpFirstActivity"></activity>
         <activity android:name=".SignUp.SignUpSecondActivity"></activity>
+=======
+
+        <activity android:name=".ViewPager.ViewPagerMain" />
+
+        <activity android:name=".SignUp.SignUpFirstActivity" />
+        <activity android:name=".SignUp.SignUpSecondActivity" />
+        <activity android:name=".DetailInfo.DetailInfoActivity" />
+
+
+
+>>>>>>> afbce57aa40da9023ad6232011d68579bb2d55e6
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
