@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.MyPage;
+package roommate.yapp.com.yapp13th_roommate.Mypage;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
