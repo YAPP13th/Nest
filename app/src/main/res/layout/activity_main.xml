@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--이것도 옛날꺼. 삭제 할 예정. 맨 처음 메인에서 사람 추천하는거 예전버전-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="룸메이트를 찾아보세요" />
 
-        android:text="Hello World!"
-        android:id="@+id/testbtn"
-        />
-
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
