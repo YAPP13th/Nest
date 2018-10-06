@@ -8,7 +8,7 @@
 
 # Files for the ART/Dalvik VM
 *.dex
-
+app/build/intermediates/blame/res/debug/*
 # Java class files
 *.class
 
