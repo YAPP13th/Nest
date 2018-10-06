@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 프로필 사진 -->
+        <ImageView
+            android:id="@+id/iv_top_recycler_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+        <!-- 찜하기 버튼 -->
+        <com.like.LikeButton
+            android:id="@+id/btn_top_recycler_like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon_size="20dp"
+            app:icon_type="heart" />
+    </FrameLayout>
+
+    <!-- 이름 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#212529"
+        android:text="이지은"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 생일 icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/btn_plus" />
+
+        <!-- 생년 -->
+        <TextView
+            android:id="@+id/tv_top_recycler_birth_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#c0c0c0"
+            android:text="1955"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#c0c0c0"
+            android:text=" 년생"/>
+
+        <!-- 돈 icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/btn_plus" />
+
+        <!-- 월세 -->
+        <TextView
+            android:id="@+id/tv_top_recycler_monthly_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#c0c0c0"
+            android:text="1955"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#c0c0c0"
+            android:text=" 만원"/>
+    </LinearLayout>
+
+    <!-- 선 -->
+    <View
+        android:layout_width="151dp"
+        android:layout_height="1dp"
+        android:background="#eeeeee"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 좋아요 icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/btn_plus" />
+
+        <!-- 좋아요 내용 -->
+        <TextView
+            android:id="@+id/tv_top_recycler_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#5499ff"
+            android:text="혼자 요리하기"/>
+
+        <!-- 싫어요 icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/btn_plus" />
+
+        <!-- 싫어요 내용 -->
+        <TextView
+            android:id="@+id/tv_top_recycler_dislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#ff6c3f"
+            android:text="화장실 청소하기"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

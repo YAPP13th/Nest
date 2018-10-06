@@ -50,7 +50,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
         pattern1 = pattern2 = pattern3 = drink1 = drink2 = drink3 = drink4 = smoking1 = smoking2 = friend1 = friend2 = friend3 = pet1 = pet2 = pet3 = false;
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info");
+        databaseReference = firebaseDatabase.getReference("user_info_test");
         //user_info 라는 파베의 테이블과 연동
 
         Intent intent = getIntent();
@@ -159,9 +159,9 @@ public class SignUpSecondActivity extends AppCompatActivity {
                         for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                             Log.d("test", snapshot.getValue().toString());
                             UserInfo test = new UserInfo();
-                            test = snapshot.getValue(UserInfo.class);
+//                            test = snapshot.getValue(UserInfo.class);
                             //이런식으로 DTO랑 연동해서 데이터 가져올 수 있슴!
-                            Log.d("test2", test.getNow_date().toString());
+//                            Log.d("test2", test.getNow_date().toString());
                         }
                     }
 

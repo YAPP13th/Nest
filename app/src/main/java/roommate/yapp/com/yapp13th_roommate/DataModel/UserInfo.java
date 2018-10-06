@@ -6,6 +6,7 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
+    private String profile_image;
     private String id;              //고유 아이디(카톡 등으로 받은 아이디 값)
     private Date now_date;          //최근 접속한 날짜로 초기화
     private String name;            //이름
@@ -24,6 +25,14 @@ public class UserInfo implements Serializable{
     private String like;            //좋아하는 것
     private String disLike;         //싫어하는 것
     private String introduce;       //자기소개
+
+    public String getProfile_image() {
+        return profile_image;
+    }
+
+    public void setProfile_image(String profile_image) {
+        this.profile_image = profile_image;
+    }
 
     public String getId() {
         return id;

@@ -1,3 +1,3 @@
-# view AndroidManifest.xml #generated:24
+# view AndroidManifest.xml #generated:31
 -keep class roommate.yapp.com.yapp13th_roommate.Kakao.GlobalApplication { <init>(...); }
 
