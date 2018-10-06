@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Kakao.MainActivity"
-    android:background="@drawable/back">
+    >
 
     <TextView
         android:id="@+id/textView2"

@@ -24,6 +24,7 @@ import com.kakao.util.helper.log.Logger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
@@ -33,12 +34,15 @@ public class KaKaoLoginActivity extends Activity {
     private static final String TAG = "KaKaoLoginActivity";
     Context mcontext;
     static String kakaoNickname;
+
+    private UserInfo userInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
 
-        getHashKey();
+        userInfo = new UserInfo();
+//        getHashKey();
 
 //        Button button=findViewById(R.id.com_kakao_login);
 //        button.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +76,8 @@ public class KaKaoLoginActivity extends Activity {
         }
     }
 
-      @Override
-      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
         }
@@ -139,6 +143,7 @@ public class KaKaoLoginActivity extends Activity {
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
                 kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
 
+                userInfo.setId(kakaoID);
 
                 setKakaoNickname(kakaoNickname);
                 Logger.d("UserProfile : " + userProfile);
@@ -166,7 +171,15 @@ public class KaKaoLoginActivity extends Activity {
 //    }
 
     private void redirectKeywordActivity() {
-        startActivity(new Intent(this, SignUpFirstActivity.class));
+
+        Intent intent = new Intent(this, SignUpFirstActivity.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("userInfo", userInfo);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+
         finish();
     }
 
@@ -185,5 +198,3 @@ public class KaKaoLoginActivity extends Activity {
 
 
 }
-
-

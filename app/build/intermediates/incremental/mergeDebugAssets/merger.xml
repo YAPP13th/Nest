@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/jy/Documents/github_dev/Nest/app/src/main/assets"/><source path="/Users/jy/Documents/github_dev/Nest/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/jy/Documents/github_dev/Nest/app/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/assets"/><source path="/Users/kgh/Development/android_project/Nest_clone/Nest/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/kgh/Development/android_project/Nest_clone/Nest/app/src/debug/assets"/></dataSet></merger>
