@@ -214,3 +214,5 @@ $RECYCLE.BIN/
 
 # kakao ingnore
 kakao_string.xml
+
+app/build/*
