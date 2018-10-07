@@ -8,7 +8,6 @@
 
 # Files for the ART/Dalvik VM
 *.dex
-
 # Java class files
 *.class
 
@@ -90,11 +89,8 @@ gen-external-apklibs
 # Log Files
 
 # Android Studio
-/*/build/
-/*/local.properties
-/*/out
-/*/*/build
-/*/*/production
+/build
+/local.properties
 *.ipr
 *~
 *.swp
@@ -205,3 +201,9 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/macos,android,windows,androidstudio
+
+
+# kakao ingnore
+kakao_string.xml
+
+app/build/*
