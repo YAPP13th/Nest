@@ -1,11 +1,10 @@
-package roommate.yapp.com.yapp13th_roommate.main;
+package roommate.yapp.com.yapp13th_roommate.Recommend.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 

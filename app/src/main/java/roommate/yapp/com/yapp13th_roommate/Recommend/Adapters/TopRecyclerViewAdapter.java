@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.main;
+package roommate.yapp.com.yapp13th_roommate.Recommend.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,8 +13,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.main.BottomRecyclerViewAdapter;
-import roommate.yapp.com.yapp13th_roommate.main.TopRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.TopRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.BottomSpacesItemDecoration;
+import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.TopSpacesItemDecoration;
 
 public class RecommendFragment extends Fragment implements BottomRecyclerViewAdapter.ItemClickListener {
 
@@ -45,8 +46,9 @@ public class RecommendFragment extends Fragment implements BottomRecyclerViewAda
         LinearLayoutManager layoutManager = new LinearLayoutManager
                 (context, LinearLayoutManager.HORIZONTAL, false);
         top_recyclerView.setLayoutManager(layoutManager);
-        // TODO: custom divider 만들어야함
-        top_recyclerView.addItemDecoration(new DividerItemDecoration(context, layoutManager.getOrientation()));
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space_for_top_items);
+        top_recyclerView.addItemDecoration(new TopSpacesItemDecoration(spacingInPixels));
+        bottom_recyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
 
         bottom_adapter = new BottomRecyclerViewAdapter(context, data);
         top_adapter = new TopRecyclerViewAdapter(context, data);
