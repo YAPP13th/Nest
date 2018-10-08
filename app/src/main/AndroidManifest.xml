@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="roommate.yapp.com.yapp13th_roommate">
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
     <application
         android:name=".Kakao.GlobalApplication"
         android:allowBackup="true"
@@ -19,19 +29,32 @@
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".ViewPager.ViewPagerMain">
+
+        <activity android:name=".ViewPager.ViewPagerMain" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp.SignUpFirstActivity"></activity>
-        <activity android:name=".SignUp.SignUpSecondActivity"></activity>
+
+        <activity android:name=".Kakao.MainActivity"></activity>
+        <activity android:name=".SignUp.SignUpFirstActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".SignUp.SignUpSecondActivity" />
+        <activity android:name=".DetailInfo.DetailInfoActivity" />
+        <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"></activity>
+
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
-    </application>
 
+        <activity android:name=".SignUp.WebViewActivity"></activity>
+    </application>
 
 </manifest>

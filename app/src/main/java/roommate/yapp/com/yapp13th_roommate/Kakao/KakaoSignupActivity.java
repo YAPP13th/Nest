@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.kakao.auth.ErrorCode;
 import com.kakao.network.ErrorResult;
@@ -12,6 +13,7 @@ import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.helper.log.Logger;
 
+import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
 
@@ -28,9 +30,14 @@ public class KakaoSignupActivity extends Activity {
     Context mcontext;
     static String kakaoNickname;
 
+    private UserInfo userInfo;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        userInfo = new UserInfo();
+
         requestMe();
 
         mcontext = getApplicationContext();
@@ -68,10 +75,15 @@ public class KakaoSignupActivity extends Activity {
             public void onSuccess(UserProfile userProfile) {
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
                 kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
+
+
                 setKakaoNickname(kakaoNickname);
                 Logger.d("UserProfile : " + userProfile);
                 //redirectMainActivity(); // 로그인 성공시 MainActivity로
                 //redirectFragmentMain();
+
+                userInfo.setId(userProfile.getUUID());
+
                 redirectKeywordActivity();
                 //redirectMainActivity();
             }
@@ -104,8 +116,14 @@ public class KakaoSignupActivity extends Activity {
     }
 
     protected void redirectLoginActivity() {
+        Log.i("test4", "test4");
         final Intent intent = new Intent(this, roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("userInfo", userInfo);
+        intent.putExtras(bundle);
+
         startActivity(intent);
         finish();
     }

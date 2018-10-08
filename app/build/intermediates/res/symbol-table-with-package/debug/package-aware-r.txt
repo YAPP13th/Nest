@@ -825,6 +825,7 @@ drawable avd_show_password
 drawable avd_show_password_1
 drawable avd_show_password_2
 drawable avd_show_password_3
+drawable back
 drawable bg_profile
 drawable bg_rounded_for_main
 drawable bg_rounded_only_top
@@ -866,6 +867,7 @@ drawable ic_launcher_foreground_1
 drawable ic_location
 drawable ic_money
 drawable ic_thumb_down
+drawable join_first_sex_icon
 drawable kakao_account_button_background
 drawable kakao_account_logo
 drawable kakao_cancel_button_background
@@ -989,8 +991,8 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btnChat
-id btnLike
+id bottomRecyclerView
+id btnModify
 id btn_bottom_recycler_pick
 id btn_top_recycler_pick
 id buttonPanel
@@ -1080,7 +1082,6 @@ id ivPet
 id ivRoom
 id ivSmoking
 id ivUser
-id ivUser2
 id iv_profile
 id iv_top_recycler_profile
 id join_btnnext
@@ -1093,6 +1094,7 @@ id join_etname
 id join_image
 id join_ivroompotho
 id join_location
+id join_modify
 id join_rbcig1
 id join_rbcig2
 id join_rbday
@@ -1211,9 +1213,10 @@ id textSpacerNoTitle
 id textView
 id textView16
 id textView17
-id textView18
+id textView2
 id textView26
 id textView4
+id textView5
 id textView6
 id text_input_password_toggle
 id textinput_counter
@@ -1333,7 +1336,6 @@ layout fragment_home
 layout fragment_mypage
 layout fragment_picked
 layout fragment_pickme
-layout fragment_recommend
 layout item_bottom_recyclerview
 layout item_top_recyclerview
 layout kakao_internal_login_activity

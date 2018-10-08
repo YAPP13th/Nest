@@ -8,10 +8,6 @@
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/086a2fd5630ebf64515449d7127d5e2b/res/layout/design_navigation_item_subheader.xml"
     },
     {
-        "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/fragment_recommend.xml",
-        "source": "/Users/jy/Documents/github_dev/Nest/app/src/main/res/layout/fragment_recommend.xml"
-    },
-    {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/035f2a7ae33e3961ec5bd3c583d6e94e/res/layout/abc_action_mode_close_item_material.xml"
     },
