@@ -1,14 +1,14 @@
 [
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-small-v4/kakaotalk_icon.png",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable-small/kakaotalk_icon.png"
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/48470e0b3d91456ff32dabafda53e8d9/res/drawable-small/kakaotalk_icon.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-small-v4/kakaostory_icon.png",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable-small/kakaostory_icon.png"
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/48470e0b3d91456ff32dabafda53e8d9/res/drawable-small/kakaostory_icon.png"
     },
     {
         "merged": "/Users/jy/Documents/github_dev/Nest/app/build/intermediates/res/merged/debug/drawable-small-v4/kakaoaccount_icon.png",
-        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/9a0068452cf9325cb45f5a75131ef35e/res/drawable-small/kakaoaccount_icon.png"
+        "source": "/Users/jy/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/48470e0b3d91456ff32dabafda53e8d9/res/drawable-small/kakaoaccount_icon.png"
     }
 ]
