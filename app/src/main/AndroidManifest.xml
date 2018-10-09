@@ -51,8 +51,6 @@
         <activity android:name=".SignUp.SignUpSecondActivity" />
         <activity android:name=".DetailInfo.DetailInfoActivity" />
 
-
-
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
