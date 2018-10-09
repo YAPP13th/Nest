@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
 MERGED from [com.android.support:multidex:1.0.2] /Users/kgh/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/455d3c62df45c53baefee3c717bbf27e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:26.1.0] /Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e3dd7e8af546676c8f63f5038a813ace/AndroidManifest.xml:17:1-31:12
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /Users/kgh/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/b7a53ddcd5986137e159ef01dc765670/AndroidManifest.xml:2:1-14:12
@@ -42,20 +42,20 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/kgh/.gradle/caches/tra
 MERGED from [com.kakao.sdk:network:1.1.7] /Users/kgh/.gradle/caches/transforms-1/files-1.1/network-1.1.7.aar/8053f5078bf53708a1b0e1a342ace64c/AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/kgh/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/1e88638073a851f4ae1b1d4dba3b526e/AndroidManifest.xml:17:1-24:12
 MERGED from [com.kakao.sdk:util:1.1.7] /Users/kgh/.gradle/caches/transforms-1/files-1.1/util-1.1.7.aar/8936c9e2424b57c25c4d32bd0e89c9be/AndroidManifest.xml:2:1-15:12
-INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:3:5-50
 		INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
 		INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-49:12
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:1-63:12
 		INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:2:11-69
@@ -110,7 +110,7 @@ ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/A
 	android:name
 		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:14:19-67
 application
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:17:5-47:19
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:17:5-61:19
 MERGED from [com.android.support:design:26.1.0] /Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e3dd7e8af546676c8f63f5038a813ace/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/kgh/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/e3dd7e8af546676c8f63f5038a813ace/AndroidManifest.xml:25:5-29:19
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /Users/kgh/.gradle/caches/transforms-1/files-1.1/LikeButton-0.2.3.aar/b7a53ddcd5986137e159ef01dc765670/AndroidManifest.xml:11:5-12:19
@@ -185,50 +185,54 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /User
 		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:24:9-40
 	android:name
 		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:18:9-48
-activity#roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:25:9-31:20
-	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:25:19-59
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:26:13-30:29
-action#android.intent.action.MAIN
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:27:17-69
-	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:27:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:29:17-77
-	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:29:27-74
 activity#roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:33:9-61
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:25:9-33:20
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:33:19-58
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:25:19-58
+activity#roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:34:9-41:20
+	android:name
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:34:19-59
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:35:13-39:29
+action#android.intent.action.MAIN
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:36:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:38:27-74
+activity#roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:42:9-80
+	android:name
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:42:19-68
 activity#roommate.yapp.com.yapp13th_roommate.Kakao.MainActivity
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:35:9-65
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:43:9-65
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:35:19-53
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:43:19-53
 activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:36:9-64
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:44:9-50:20
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:36:19-61
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:44:19-61
 activity#roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:37:9-65
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:51:9-65
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:37:19-62
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:51:19-62
 activity#roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:38:9-67
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:52:9-67
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:38:19-64
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:52:19-64
 meta-data#com.kakao.sdk.AppKey
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:42:9-44:60
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:56:9-58:60
 	android:value
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:44:13-57
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:58:13-57
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:43:13-48
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:57:13-48
 activity#roommate.yapp.com.yapp13th_roommate.SignUp.WebViewActivity
-ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:46:9-69
+ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:60:9-69
 	android:name
-		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:46:19-57
+		ADDED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml:60:19-57
 uses-sdk
 INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/kgh/Development/android_project/Nest_clone/Nest/app/src/main/AndroidManifest.xml
