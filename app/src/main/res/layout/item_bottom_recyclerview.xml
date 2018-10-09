@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:contentDescription="@string/desc_iv_profile"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/park" />
 
         <!-- 찜하기 버튼 -->
         <com.like.LikeButton
@@ -99,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:background="@color/colorAccent"/>
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:background="@drawable/profile_like_icon" />
 
             <!-- 좋아요 -->
             <TextView
@@ -124,7 +124,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:background="@drawable/profile_dislike_icon" />
 
             <!-- 싫어요 -->
             <TextView

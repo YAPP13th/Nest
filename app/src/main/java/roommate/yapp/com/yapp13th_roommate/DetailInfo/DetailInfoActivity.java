@@ -1,9 +1,13 @@
 package roommate.yapp.com.yapp13th_roommate.DetailInfo;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
@@ -14,7 +18,7 @@ public class DetailInfoActivity extends AppCompatActivity {
     private UserInfo userInfo;
 
     private TextView tvName, tvBirth, tvLocation, tvInstarID, tvMonthly, tvPattern, tvDrink, tvSmoking, tvAllowFriend, tvPet, tvLike, tvDisLike, tvChatURL, tvIntroduceContent;
-
+    private ImageView ivRoom, ivUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +27,12 @@ public class DetailInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         userInfo = (UserInfo) intent.getSerializableExtra("userInfo");
 
-        Log.i("test", userInfo.getName());
+
+//        ivUser = (ImageView)findViewById(R.id.ivUser);
+//        byte[] image = Base64.decode(userInfo.getProfile_image(), Base64.DEFAULT);
+//        Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
+//        ivUser.setImageBitmap(decodeByte);
+//        Log.i("test", userInfo.getName());
 
         tvName = (TextView)findViewById(R.id.tvName);
         tvBirth = (TextView)findViewById(R.id.tvBirth);

@@ -39,7 +39,7 @@ public class RecommendFragment extends Fragment implements BottomRecyclerViewAda
 
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReference;
-
+    UserInfo data1[];
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +66,7 @@ public class RecommendFragment extends Fragment implements BottomRecyclerViewAda
                 int size = (int) dataSnapshot.getChildrenCount();
                 int count = 0;
 
-                UserInfo data1[] = new UserInfo[size];
+                data1 = new UserInfo[size];
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
 

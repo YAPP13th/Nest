@@ -31,8 +31,6 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
         this.mData = data;
         this.context = context;
     }
-
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_bottom_recyclerview, parent, false);
@@ -49,6 +47,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
     @Override
     public void onBindViewHolder(BottomRecyclerViewAdapter.ViewHolder holder, final int position) {
+
         holder.tv_name.setText(mData[position].getName());
         holder.tv_age.setText(mData[position].getYear());
         holder.tv_address.setText(mData[position].getLocation());
