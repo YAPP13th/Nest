@@ -42,19 +42,7 @@ public class KaKaoLoginActivity extends Activity {
         setContentView(R.layout.activity_kakao_login);
 
         userInfo = new UserInfo();
-//        getHashKey();
 
-//        Button button=findViewById(R.id.com_kakao_login);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(getApplicationContext(), SignUp_First_Activity.class);
-//                startActivity(intent);
-//
-//            }
-//        });
-
-//        getHashKey();
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
 //        requestMe();
