@@ -116,7 +116,6 @@ public class KakaoSignupActivity extends Activity {
     }
 
     protected void redirectLoginActivity() {
-        Log.i("test4", "test4");
         final Intent intent = new Intent(this, roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 
