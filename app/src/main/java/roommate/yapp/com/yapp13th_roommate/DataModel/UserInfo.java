@@ -6,7 +6,8 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
-    private String profile_image;
+    private String profile_image;   //프로필 사진 이미지 base64
+    private String[] room_image;    //방 사진 이미지 base64 최대 3개
     private String id;              //고유 아이디(카톡 등으로 받은 아이디 값)
     private Date now_date;          //최근 접속한 날짜로 초기화
     private String name;            //이름

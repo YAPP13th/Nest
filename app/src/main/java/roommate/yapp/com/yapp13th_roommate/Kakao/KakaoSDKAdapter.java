@@ -46,12 +46,12 @@ public class KakaoSDKAdapter extends KakaoAdapter {
         return new IApplicationConfig() {
             @Override
             public Activity getTopActivity() {
-                return roommate.yapp.com.yapp13th_roommate.Kakao.GlobalApplication.getCurrentActivity();
+                return roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable.getCurrentActivity();
             }
 
             @Override
             public Context getApplicationContext() {
-                return roommate.yapp.com.yapp13th_roommate.Kakao.GlobalApplication.getGlobalApplicationContext();
+                return roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable.getGlobalApplicationContext();
             }
         };
     }
