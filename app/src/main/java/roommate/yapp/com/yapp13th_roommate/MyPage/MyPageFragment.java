@@ -28,6 +28,7 @@ import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity;
+import roommate.yapp.com.yapp13th_roommate.ViewPager.PagerAdapter;
 
 public class MyPageFragment extends Fragment {
 
@@ -35,26 +36,19 @@ public class MyPageFragment extends Fragment {
     private ProgressBar pbLogin;
     private TextView tvName, tvBirth, tvLocation, tvInstarID, tvMonthly, tvPattern, tvDrink, tvSmoking, tvAllowFriend, tvPet, tvLike, tvDisLike, tvChatURL, tvIntroduceContent;
     private Button btnModify;
-
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReference;
-
     private UserInfo userInfo;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_mypage, null);
-
         userInfo = new UserInfo();
-
         ivRoom = (ImageView)view.findViewById(R.id.ivRoom);
         ivUser = (ImageView)view.findViewById(R.id.ivUser);
-
         pbLogin = (ProgressBar)view.findViewById(R.id.pbLogin);
-
         tvName = (TextView)view.findViewById(R.id.tvName);
         tvBirth = (TextView)view.findViewById(R.id.tvBirth);
         tvLocation = (TextView)view.findViewById(R.id.tvLocation);
@@ -118,16 +112,13 @@ public class MyPageFragment extends Fragment {
         btnModify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ModifyMyInfoActivity.class);
-
+                Intent intent = new Intent(getActivity(), MyPageFragment.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("userInfo", userInfo);
                 intent.putExtras(bundle);
-
                 startActivity(intent);
             }
         });
-
         return view;
     }
 }
