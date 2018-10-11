@@ -676,7 +676,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/clInfo">
 
                     <Button
-                        android:id="@+id/btnLike"
+                        android:id="@+id/btnModify"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

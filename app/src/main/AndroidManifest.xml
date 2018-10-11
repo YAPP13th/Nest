@@ -15,7 +15,7 @@
 
 
     <application
-        android:name=".Kakao.GlobalApplication"
+        android:name=".Global.GlobalVariable"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,11 +30,31 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ViewPager.ViewPagerMain" />
+        <activity android:name=".ViewPager.ViewPagerMain" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-        <activity android:name=".SignUp.SignUpFirstActivity" />
-        <activity android:name=".SignUp.SignUpSecondActivity" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <!--<activity android:name=".Kakao.MainActivity"></activity>-->
+        <activity android:name=".SignUp.SignUpFirstActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".SignUp.SignUpSecondActivity" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
         <activity android:name=".DetailInfo.DetailInfoActivity" />
+        <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"></activity>
 
 
 

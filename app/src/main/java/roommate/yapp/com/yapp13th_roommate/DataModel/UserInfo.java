@@ -6,7 +6,8 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
-    private String profile_image;
+    private String profile_image;   //프로필 사진 이미지 base64
+    private String[] room_image;    //방 사진 이미지 base64 최대 3개
     private String id;              //고유 아이디(카톡 등으로 받은 아이디 값)
     private Date now_date;          //최근 접속한 날짜로 초기화
     private String name;            //이름
@@ -17,14 +18,39 @@ public class UserInfo implements Serializable{
     private Boolean room;           //방 유무 - 있음 true 없음 false
     private String location;        //희망 지역
     private String instarID;        //인스타 아이디
-    private String pattern;         //생활 패턴 - 1 아침형 / 2 저녁형 / 3 불규칙
-    private String drink;           //음주 빈도 - 1 금주 / 2 매일 / 3 주 1~2회 / 4 월 1~2회
-    private String smoking;         //흡연 - 1 흡연 / 2 비흡연
-    private String allow_friend;    //친구 출입 - 1 허용 / 2 금지 / 3 합의하 허용
-    private String pet;             //애완동물 1 - 허용 / 2 금지 / 3 합의하 허용
+    private String pattern;         //생활 패턴 - 아침형 / 저녁형 / 불규칙
+    private String drink;           //음주 빈도 - 금주 / 매일 / 주 1~2회 / 월 1~2회
+    private String smoking;         //흡연 - 흡연 / 비흡연
+    private String allow_friend;    //친구 출입 - 허용 / 금지 / 합의하 허용
+    private String pet;             //애완동물 허용 / 금지 / 합의하 허용
     private String like;            //좋아하는 것
     private String disLike;         //싫어하는 것
     private String introduce;       //자기소개
+
+    public UserInfo() {}
+
+    public UserInfo(String profile_image, String[] room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce) {
+        this.profile_image = profile_image;
+        this.room_image = room_image;
+        this.id = id;
+        this.now_date = now_date;
+        this.name = name;
+        this.gender = gender;
+        this.year = year;
+        this.monthly = monthly;
+        this.openChatURL = openChatURL;
+        this.room = room;
+        this.location = location;
+        this.instarID = instarID;
+        this.pattern = pattern;
+        this.drink = drink;
+        this.smoking = smoking;
+        this.allow_friend = allow_friend;
+        this.pet = pet;
+        this.like = like;
+        this.disLike = disLike;
+        this.introduce = introduce;
+    }
 
     public String getProfile_image() {
         return profile_image;
@@ -32,6 +58,14 @@ public class UserInfo implements Serializable{
 
     public void setProfile_image(String profile_image) {
         this.profile_image = profile_image;
+    }
+
+    public String[] getRoom_image() {
+        return room_image;
+    }
+
+    public void setRoom_image(String[] room_image) {
+        this.room_image = room_image;
     }
 
     public String getId() {

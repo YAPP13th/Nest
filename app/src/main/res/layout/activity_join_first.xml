@@ -55,8 +55,9 @@
                 android:layout_marginLeft="14dp"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="21dp"
-                android:text="@string/join_Text1"
+
                 android:textSize="25sp"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/newLine" />
 
@@ -94,6 +95,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
                 app:layout_constraintStart_toStartOf="parent"
+
+                android:src="@drawable/myprofileedit_first_name_icon"
                 app:layout_constraintTop_toBottomOf="@+id/join_image" />
 
             <TextView
@@ -116,6 +119,7 @@
                 android:layout_marginLeft="42dp"
                 android:layout_marginStart="42dp"
                 android:layout_marginTop="12dp"
+
                 android:hint="반드시 실명으로 입력해주세요"
                 android:inputType="textPersonName"
                 android:textSize="14sp"
@@ -124,6 +128,8 @@
 
             <ImageView
                 android:id="@+id/ivGender"
+                android:src="@drawable/join_first_sex_icon"
+
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
@@ -192,6 +198,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
+                android:src="@drawable/myprofileedit_birth_icon"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rggender" />
 
@@ -222,6 +230,8 @@
 
             <ImageView
                 android:id="@+id/ivMonthly"
+                android:src="@drawable/myprofileedit_money_icon"
+
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
@@ -271,6 +281,7 @@
             <ImageView
                 android:id="@+id/ivChatURL"
                 android:layout_width="20dp"
+                android:src="@drawable/myprofileedit_chat_icon"
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
@@ -313,6 +324,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
+                android:src="@drawable/myprofileedit_house_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etchatURL" />
 
