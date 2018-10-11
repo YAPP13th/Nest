@@ -22,7 +22,7 @@ out/
 build/*
 !build/build.xml
 .gradle/
-build/
+app/build/*
 
 # Local configuration file (sdk path, etc)
 local.properties
