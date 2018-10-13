@@ -1,34 +1,24 @@
 package roommate.yapp.com.yapp13th_roommate.Recommend;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.main.BottomRecyclerViewAdapter;
-import roommate.yapp.com.yapp13th_roommate.main.TopRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.TopRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.BottomSpacesItemDecoration;
+import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.TopSpacesItemDecoration;
 
 public class RecommendFragment extends Fragment implements BottomRecyclerViewAdapter.ItemClickListener {
 
@@ -67,8 +57,10 @@ public class RecommendFragment extends Fragment implements BottomRecyclerViewAda
         LinearLayoutManager layoutManager = new LinearLayoutManager
                 (context, LinearLayoutManager.HORIZONTAL, false);
         top_recyclerView.setLayoutManager(layoutManager);
-        // TODO: custom divider 만들어야함
-        top_recyclerView.addItemDecoration(new DividerItemDecoration(context, layoutManager.getOrientation()));
+
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space_for_top_items);
+        top_recyclerView.addItemDecoration(new TopSpacesItemDecoration(spacingInPixels));
+        bottom_recyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
 
         top_adapter = new TopRecyclerViewAdapter(context, data);
         top_recyclerView.setAdapter(top_adapter);

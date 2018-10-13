@@ -1,4 +1,4 @@
-package roommate.yapp.com.yapp13th_roommate.main;
+package roommate.yapp.com.yapp13th_roommate.Recommend.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,6 @@ import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +22,6 @@ import java.util.List;
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity;
 
 public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
 //    private UserInfo[] mData;
@@ -97,12 +95,12 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
             super(itemView);
             iv_profile = itemView.findViewById(R.id.iv_profile);
             tv_name = itemView.findViewById(R.id.tv_name);
-            tv_age = itemView.findViewById(R.id.tv_age);
+            tv_age = itemView.findViewById(R.id.tv_top_recycler_birth_year);
             tv_address = itemView.findViewById(R.id.tv_address);
-            tv_monthMoney = itemView.findViewById(R.id.tv_monthMoney);
+            tv_monthMoney = itemView.findViewById(R.id.tv_top_recycler_monthly_money);
             tv_selfIntroduction = itemView.findViewById(R.id.tv_selfIntroduction);
-            tv_like = itemView.findViewById(R.id.tv_like);
-            tv_dislike = itemView.findViewById(R.id.tv_disike);
+            tv_like = itemView.findViewById(R.id.tv_top_recycler_like);
+            tv_dislike = itemView.findViewById(R.id.tv_top_recycler_dislike);
 
             btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
 
