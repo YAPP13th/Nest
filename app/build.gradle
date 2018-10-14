@@ -39,6 +39,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.1'   //firebase database
 
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'com.allattentionhere:fabulousfilter:0.0.5'
 }
 
 apply plugin: 'com.google.gms.google-services'
