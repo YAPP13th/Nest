@@ -348,7 +348,45 @@ public class RadioFunc {
         return clickCheck;
     }
 
+    public Boolean[] roomCheck(RadioGroup rgRoom, RadioButton rb, RadioButton[] rbRoom, Boolean[] clickCheck){
+        if(rb.isChecked()){
+            if(rb == rbRoom[0]){
+                if(clickCheck[0]){
+                    global.temp.setRoom(null);
+                    clickCheck[0] = false;
 
+                    rgRoom.clearCheck();
+                    radioClear(rb);
+                }else{
+                    global.temp.setRoom(true);
+                    clickCheck[0] = true;
+                    clickCheck[1] = false;
+
+                    rgRoom.clearCheck();
+                    radioSelect(rb);
+                }
+            }else if(rb == rbRoom[1]){
+                if(clickCheck[1]){
+                    global.temp.setRoom(null);
+                    clickCheck[1] = false;
+
+                    rgRoom.clearCheck();
+                    radioClear(rb);
+                }else{
+                    global.temp.setRoom(false);
+                    clickCheck[0] = false;
+                    clickCheck[1] = true;
+
+                    rgRoom.clearCheck();
+                    radioSelect(rb);
+                }
+            }
+        }else{
+            radioClear(rb);
+        }
+
+        return clickCheck;
+    }
 
     public void modifyGenderInit(RadioButton[] rbGender){
         if(global.myInfo.getGender().equals("F")){

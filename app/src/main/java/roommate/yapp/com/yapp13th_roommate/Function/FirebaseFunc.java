@@ -68,13 +68,19 @@ public class FirebaseFunc extends AppCompatActivity{
                             global.myInfo = temp ;
                             temp.setKey(snapshot.getKey());
                             global.setExist(true);
-                        }else{
-                            temp.setKey(snapshot.getKey());
-                            global.everyInfo.add(temp);
-                            global.filterInfo.add(temp);
                         }
                     }
                 }
+
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    UserInfo temp = snapshot.getValue(UserInfo.class);
+                    if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
+                        temp.setKey(snapshot.getKey());
+                        global.everyInfo.add(temp);
+                        global.filterInfo.add(temp);
+                    }
+                }
+
                 Login(loginProgres);
 
             }
