@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 apply plugin: 'com.android.application'
 
 android {
@@ -41,57 +40,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.1'   //firebase database
 
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
-
+    implementation 'com.allattentionhere:fabulousfilter:0.0.5'
     implementation 'com.github.darsh2:MultipleImageSelect:v0.0.4'   //multi select image //https://github.com/darsh2/MultipleImageSelect
 
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
     implementation 'com.android.support:design:27.1.0'
 }
-
-=======
-apply plugin: 'com.android.application'
-
-android {
-    compileSdkVersion 26
-    defaultConfig {
-        applicationId "roommate.yapp.com.yapp13th_roommate"
-        minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
-        multiDexEnabled true
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-}
-
-dependencies {
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:support-v4:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    // recyclerview
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
-    implementation 'com.android.support:cardview-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
-    implementation group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
-    implementation 'com.google.firebase:firebase-core:16.0.1'       //firebase
-    implementation 'com.google.firebase:firebase-database:16.0.1'   //firebase database
-
-    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
-    implementation 'com.allattentionhere:fabulousfilter:0.0.5'
-}
-
->>>>>>> be5ae8a347cd878b4c056f39d78a431bf3eaee0a
 apply plugin: 'com.google.gms.google-services'
