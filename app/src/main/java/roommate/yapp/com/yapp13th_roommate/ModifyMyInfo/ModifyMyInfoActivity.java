@@ -40,9 +40,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
+import roommate.yapp.com.yapp13th_roommate.Function.FirebaseFunc;
+import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
+import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 
@@ -50,46 +55,59 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
 
     private final int CAMERA_CODE = 1111;
     private final int GALLERY_CODE = 1112;
-    private Uri photoUri;
-    private String currentPhotoPath;
-    private String mImageCaptureName;
 
-    private EditText name, openChat,instar, like, disLike, introduce;
-    private ImageView imageView;
-    private RadioButton rbf, rbm, rbroomo,rbroomx, rb11, rb12,rb13, rb21,rb22,rb23,rb24,rb31,rb32,rb41,rb42,rb43,rb51,rb52,rb53;;
+    private GlobalVariable global;
+    private FirebaseFunc firebaseFunc;
+    private ImageFunc imageFunc;
+    private RadioFunc radioFunc;
+
+    private EditText etName, etOpenChat, etInstar, etLike, etDisLike, etIntroduce;
+    private ImageView ivJoin;
+    private RadioButton[] rbGender, rbRoom, rbPattern, rbDrink, rbSmoking, rbAllowFriend, rbPet;
     private SeekBar seekBar;
     private int prog;
-    private RadioGroup rg1, rg2, rg3, rg4, rg5, rg6, rg7;
-    private GradientDrawable drawable, drawable2, drawable3, drawable4;
+    private RadioGroup rgGender, rgRoom, rgPattern, rgDrink, rgSmoking, rgAllowFriend, rgPet;
     private Spinner spinner;
-
-    private UserInfo userInfo;
-
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
 
     private TextView modify;
 
-    private Boolean pattern1, pattern2, pattern3, drink1, drink2, drink3, drink4, smoking1, smoking2, friend1, friend2, friend3, pet1, pet2, pet3;
+    private Boolean[] patternCheck, drinkCheck, smokingCheck, friendCheck, petCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify);
 
-        userInfo = new UserInfo();
+        global = (GlobalVariable)getApplicationContext();
+        firebaseFunc = new FirebaseFunc(this);
+        imageFunc = new ImageFunc(this);
+        radioFunc = new RadioFunc(this);
 
-        Intent intent = getIntent();
+        rbGender = new RadioButton[2];
+        rbRoom = new RadioButton[2];
+        rbPattern = new RadioButton[3];
+        rbDrink = new RadioButton[4];
+        rbSmoking = new RadioButton[2];
+        rbAllowFriend = new RadioButton[3];
+        rbPet = new RadioButton[3];
 
-        userInfo = (UserInfo)intent.getSerializableExtra("userInfo");
+        patternCheck = new Boolean[3];
+        drinkCheck = new Boolean[4];
+        smokingCheck = new Boolean[2];
+        friendCheck = new Boolean[3];
+        petCheck = new Boolean[3];
 
-        pattern1 = pattern2 = pattern3 = drink1 = drink2 = drink3 = drink4 = smoking1 = smoking2 = friend1 = friend2 = friend3 = pet1 = pet2 = pet3 = false;
+        Arrays.fill(patternCheck, false);
+        Arrays.fill(drinkCheck, false);
+        Arrays.fill(smokingCheck, false);
+        Arrays.fill(friendCheck, false);
+        Arrays.fill(petCheck, false);
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test");
-
-        name = (EditText)findViewById(R.id.join_etname);
-        openChat = (EditText)findViewById(R.id.join_etchatURL);
+        global.temp = new UserInfo();
+        global.temp.setId(global.myInfo.getId());
+        global.temp.setKey(global.myInfo.getKey());
+        global.temp.setProfile_image(global.myInfo.getProfile_image());
+        global.setTempProfile(imageFunc.decodebase64ToBitmap(global.temp.getProfile_image()));
 
         Resources res = getResources();
         String[] years = res.getStringArray(R.array.year);
@@ -99,149 +117,130 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
         spinner.setSelection(0);
-
-        instar = (EditText)findViewById(R.id.join_etinstar) ;
-        like = (EditText)findViewById(R.id.join_etlike);
-        disLike = (EditText)findViewById(R.id.join_etdislike);
-        introduce = (EditText)findViewById(R.id.join_etme);
+        
+        etName = (EditText)findViewById(R.id.join_etname);
+        etOpenChat = (EditText)findViewById(R.id.join_etchatURL);
+        etInstar = (EditText)findViewById(R.id.join_etinstar) ;
+        etLike = (EditText)findViewById(R.id.join_etlike);
+        etDisLike = (EditText)findViewById(R.id.join_etdislike);
+        etIntroduce = (EditText)findViewById(R.id.join_etme);
 
         modify = (TextView) findViewById(R.id.join_modify);
 
         //라디오 이벤트
-        rg1 = findViewById(R.id.join_rggender);
-        rg2 = findViewById(R.id.join_rgroom);
-        rg3=findViewById(R.id.join_rglifestyle);
-        rg4=findViewById(R.id.join_rgdrink);
-        rg5=findViewById(R.id.join_rgcig);
-        rg6=findViewById(R.id.join_rgfriend);
-        rg7=findViewById(R.id.join_rgpet);
+        rgGender = findViewById(R.id.join_rggender);
+        rgRoom = findViewById(R.id.join_rgroom);
+        rgPattern = findViewById(R.id.join_rglifestyle);
+        rgDrink = findViewById(R.id.join_rgdrink);
+        rgSmoking = findViewById(R.id.join_rgcig);
+        rgAllowFriend = findViewById(R.id.join_rgfriend);
+        rgPet = findViewById(R.id.join_rgpet);
 
-        rbf = findViewById(R.id.join_rbf);
-        rbm = findViewById(R.id.join_rbm);
-        rbroomo = findViewById(R.id.join_rbroomo);
-        rbroomx = findViewById(R.id.join_rbroomx);
-        rb11=findViewById(R.id.join_rbday);
-        rb12=findViewById(R.id.join_rbnight);
-        rb13=findViewById(R.id.join_rbnostyle);
-        rb21=findViewById(R.id.join_rbdrink1);
-        rb22=findViewById(R.id.join_rbdrink2);
-        rb23=findViewById(R.id.join_rbdrink3);
-        rb24=findViewById(R.id.join_rbdrink4);
-        rb31=findViewById(R.id.join_rbcig1);
-        rb32=findViewById(R.id.join_rbcig2);
-        rb41=findViewById(R.id.join_rbfri1);
-        rb42=findViewById(R.id.join_rbfri2);
-        rb43=findViewById(R.id.join_rbfri3);
-        rb51=findViewById(R.id.join_rbpet1);
-        rb52=findViewById(R.id.join_rbpet2);
-        rb53=findViewById(R.id.join_rbpet3);
+        rbGender[0] = findViewById(R.id.join_rbf);
+        rbGender[1] = findViewById(R.id.join_rbm);
+        rbRoom[0] = findViewById(R.id.join_rbroomo);
+        rbRoom[1] = findViewById(R.id.join_rbroomx);
+        rbPattern[0] = findViewById(R.id.join_rbday);
+        rbPattern[1] = findViewById(R.id.join_rbnight);
+        rbPattern[2] = findViewById(R.id.join_rbnostyle);
+        rbDrink[0] = findViewById(R.id.join_rbdrink1);
+        rbDrink[1] = findViewById(R.id.join_rbdrink2);
+        rbDrink[2] = findViewById(R.id.join_rbdrink3);
+        rbDrink[3] = findViewById(R.id.join_rbdrink4);
+        rbSmoking[0] = findViewById(R.id.join_rbcig1);
+        rbSmoking[1] = findViewById(R.id.join_rbcig2);
+        rbAllowFriend[0] =findViewById(R.id.join_rbfri1);
+        rbAllowFriend[1] = findViewById(R.id.join_rbfri2);
+        rbAllowFriend[2] =findViewById(R.id.join_rbfri3);
+        rbPet[0] = findViewById(R.id.join_rbpet1);
+        rbPet[1] = findViewById(R.id.join_rbpet2);
+        rbPet[2] = findViewById(R.id.join_rbpet3);
 
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                //........체크안된거id 받아오는 방법이없어서 일일이,,
-
-                checkclick(rbf);
-                checkclick(rbm);
+                radioFunc.genderCheck(rbGender[0], rbGender);
+                radioFunc.genderCheck(rbGender[1], rbGender);
             }
         });
 
-        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgRoom.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rbroomo);
-                checkclick(rbroomx);
+                radioFunc.roomCheck(rbRoom[0], rbRoom);
+                radioFunc.roomCheck(rbRoom[1], rbRoom);
             }
         });
 
-        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgPattern.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                //........체크안된거id 받아오는 방법이없어서 일일이,,
-                checkclick(rb11);
-                checkclick(rb12);
-                checkclick(rb13);
+                radioFunc.patternCheck(rgPattern, rbPattern[0], rbPattern, patternCheck);
+                radioFunc.patternCheck(rgPattern, rbPattern[1], rbPattern, patternCheck);
+                radioFunc.patternCheck(rgPattern, rbPattern[2], rbPattern, patternCheck);
             }
         });
 
-        rg4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgDrink.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb21);
-                checkclick(rb22);
-                checkclick(rb23);
-                checkclick(rb24);
+                radioFunc.drinkCheck(rgDrink, rbDrink[0], rbDrink, drinkCheck);
+                radioFunc.drinkCheck(rgDrink, rbDrink[1], rbDrink, drinkCheck);
+                radioFunc.drinkCheck(rgDrink, rbDrink[2], rbDrink, drinkCheck);
+                radioFunc.drinkCheck(rgDrink, rbDrink[3], rbDrink, drinkCheck);
             }
         });
-        rg5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgSmoking.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb31);
-                checkclick(rb32);
+                radioFunc.smokingCheck(rgSmoking, rbSmoking[0], rbSmoking, smokingCheck);
+                radioFunc.smokingCheck(rgSmoking, rbSmoking[1], rbSmoking, smokingCheck);
             }
         });
-        rg6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgAllowFriend.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb41);
-                checkclick(rb42);
-                checkclick(rb43);
+                radioFunc.allowFriendCheck(rgAllowFriend, rbAllowFriend[0], rbAllowFriend, friendCheck);
+                radioFunc.allowFriendCheck(rgAllowFriend, rbAllowFriend[1], rbAllowFriend, friendCheck);
+                radioFunc.allowFriendCheck(rgAllowFriend, rbAllowFriend[2], rbAllowFriend, friendCheck);
             }
         });
-        rg7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgPet.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb51);
-                checkclick(rb52);
-                checkclick(rb53);
+                radioFunc.petCheck(rgPet, rbPet[0], rbPet, petCheck);
+                radioFunc.petCheck(rgPet, rbPet[1], rbPet, petCheck);
+                radioFunc.petCheck(rgPet, rbPet[2], rbPet, petCheck);
             }
         });
 
-        drawable=(GradientDrawable) ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounding);
-        drawable2=(GradientDrawable) ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounding2);
-        //라디오 자를 드로어블
-
-        imageView=findViewById(R.id.join_image);
-        imageView.setBackground(new ShapeDrawable(new OvalShape()));
+        ivJoin=findViewById(R.id.join_image);
+        ivJoin.setBackground(new ShapeDrawable(new OvalShape()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imageView.setClipToOutline(true);//원형으로 자르는게 롤리팝이상버전만 가능
+            ivJoin.setClipToOutline(true);//원형으로 자르는게 롤리팝이상버전만 가능
         }
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        ivJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectGallery();
+                imageFunc.selectGallery();
             }
         });
 
         //싴바 테스트
 
         final TextView tvprog = findViewById(R.id.join_tvprog);
-        seekBar=findViewById(R.id.seekBar);
+        seekBar = findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                prog=i*10;
-                if(prog==0)
-                    tvprog.setText(prog+"만원");
+                prog = i * 10;
+                if(prog == 0)
+                    tvprog.setText(prog + "만원");
                 else
-                    tvprog.setText("0~"+prog+"만원");
+                    tvprog.setText("0~" + prog + "만원");
 
-                userInfo.setMonthly(Integer.toString(prog));
+                global.temp.setMonthly(Integer.toString(prog));
             }
 
             @Override
@@ -258,379 +257,42 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userInfo.setName(name.getText().toString());
-                userInfo.setYear(spinner.getSelectedItem().toString());
-                userInfo.setOpenChatURL(openChat.getText().toString());
-                userInfo.setInstarID(instar.getText().toString());
-                userInfo.setLike(like.getText().toString());
-                userInfo.setDisLike(disLike.getText().toString());
-                userInfo.setIntroduce(introduce.getText().toString());
-                userInfo.setNow_date(new Date(System.currentTimeMillis()));
+                global.setMyProfile(global.getTempProfile());
+                global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
 
-                databaseReference.push().setValue(userInfo);
+                global.temp.setName(etName.getText().toString());
+                global.temp.setYear(spinner.getSelectedItem().toString());
+                global.temp.setOpenChatURL(etOpenChat.getText().toString());
+                global.temp.setInstarID(etInstar.getText().toString());
+                global.temp.setLike(etLike.getText().toString());
+                global.temp.setDisLike(etDisLike.getText().toString());
+                global.temp.setIntroduce(etIntroduce.getText().toString());
+                global.temp.setNow_date(new Date(System.currentTimeMillis()));
+
+                global.myInfo = global.temp;
+
+                firebaseFunc.MyInfoUpdate();
             }
         });
 
-    }
+        dataInit();
+        //내 정보를 불러와 레이아웃 세팅 함수
 
-    public void checkclick(RadioButton rb){
-        radioSelect(rb);
-        if(rb.isChecked()){
-            if(rb == rbf){
-                userInfo.setGender("F");
-            }else if(rb == rbm){
-                userInfo.setGender("M");
-            }else if(rb == rbroomo){
-                userInfo.setRoom(true);
-            }else if(rb == rbroomx){
-                userInfo.setRoom(false);
-            }else if(rb == rb11){
-                if(pattern1){
-                    userInfo.setPattern("");
-                    pattern1 = false;
-
-                    rg1.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPattern("아침형");
-                    pattern1 = true;
-                    pattern2 = false;
-                    pattern3 = false;
-
-                    rg1.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb12){
-                if(pattern2){
-                    userInfo.setPattern("");
-                    pattern2 = false;
-
-                    rg1.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPattern("저녁형");
-                    pattern1 = false;
-                    pattern2 = true;
-                    pattern3 = false;
-
-                    rg1.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb13){
-                if(pattern3){
-                    userInfo.setPattern("");
-                    pattern3 = false;
-
-                    rg1.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPattern("불규칙");
-                    pattern1 = false;
-                    pattern2 = false;
-                    pattern3 = true;
-
-                    rg1.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb21){
-                if(drink1){
-                    userInfo.setDrink("");
-                    drink1 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("금주");
-                    drink1 = true;
-                    drink2 = false;
-                    drink3 = false;
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb22){
-                if(drink2){
-                    userInfo.setDrink("");
-                    drink2 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("매일");
-                    drink1 = false;
-                    drink2 = true;
-                    drink3 = false;
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb23){
-                if(drink3){
-                    userInfo.setDrink("0");
-                    drink3 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("주 1~2회");
-                    drink1 = false;
-                    drink2 = false;
-                    drink3 = true;
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb24){
-                if(drink4){
-                    userInfo.setDrink("");
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("월 1~2회");
-                    drink1 = false;
-                    drink2 = false;
-                    drink3 = false;
-                    drink4 = true;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb31){
-                if(smoking1){
-                    userInfo.setSmoking("");
-                    smoking1 = false;
-
-                    rg3.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setSmoking("흡연");
-                    smoking1 = true;
-                    smoking2 = false;
-
-                    rg3.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb32){
-                if(smoking2){
-                    userInfo.setSmoking("");
-                    smoking2 = false;
-
-                    rg3.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setSmoking("비흡연");
-                    smoking1 = false;
-                    smoking2 = true;
-
-                    rg3.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb41){
-                if(friend1){
-                    userInfo.setAllow_friend("");
-                    friend1 = false;
-
-                    rg4.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setAllow_friend("허용");
-                    friend1 = true;
-                    friend2 = false;
-                    friend3 = false;
-
-                    rg4.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb42){
-                if(friend2){
-                    userInfo.setAllow_friend("");
-                    friend2 = false;
-
-                    rg4.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setAllow_friend("금지");
-                    friend1 = false;
-                    friend2 = true;
-                    friend3 = false;
-
-                    rg4.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb43){
-                if(friend3){
-                    userInfo.setAllow_friend("");
-                    friend3 = false;
-
-                    rg4.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setAllow_friend("합의하 허용");
-                    friend1 = false;
-                    friend2 = false;
-                    friend3 = true;
-
-                    rg4.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb51){
-                if(pet1){
-                    userInfo.setPet("");
-                    pet1 = false;
-
-                    rg5.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPet("허용");
-                    pet1 = true;
-                    pet2 = false;
-                    pet3 = false;
-
-                    rg5.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb52){
-                if(pet2){
-                    userInfo.setPet("");
-                    pet2 = false;
-
-                    rg5.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPet("금지");
-                    pet1 = false;
-                    pet2 = true;
-                    pet3 = false;
-
-                    rg5.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb53){
-                if(pet3){
-                    userInfo.setPet("");
-                    pet3 = false;
-
-                    rg5.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPet("합의하 허용");
-                    pet1 = false;
-                    pet2 = false;
-                    pet3 = true;
-
-                    rg5.clearCheck();
-                    radioSelect(rb);
-                }
-            }
-
-        }else{
-            radioClear(rb);
-        }
-    }
-
-    public void radioSelect(RadioButton rb){
-        rb.setBackground(drawable);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            rb.setClipToOutline(true);
-        }
-    }
-
-    public void radioClear(RadioButton rb){
-        rb.setBackground(drawable2);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            rb.setClipToOutline(true);
-        }
-    }
-
-    private void selectPhoto(){
-        String state = Environment.getExternalStorageState();
-
-        if(Environment.MEDIA_MOUNTED.equals(state)){
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            if(intent.resolveActivity(getPackageManager()) != null){
-                File photoFile = null;
-                try{
-                    photoFile = createImageFile();
-                }catch (IOException ex){
-
-                }
-                if(photoFile != null){
-                    photoUri = FileProvider.getUriForFile(this, getPackageName(), photoFile);
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-                    startActivityForResult(intent, CAMERA_CODE);
-                }
-            }
-        }
-
-    }
-
-    private File createImageFile() throws IOException {
-        File dir = new File(Environment.getExternalStorageDirectory() + "/path/");
-        if (!dir.exists()) {
-            dir.mkdirs();
-        }
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        mImageCaptureName = timeStamp + ".png";
-
-        File storageDir = new File(Environment.getExternalStorageDirectory().getAbsoluteFile() + "/path/"
-
-                + mImageCaptureName);
-        currentPhotoPath = storageDir.getAbsolutePath();
-
-        return storageDir;
-
-    }
-
-    private void getPictureForPhoto() {
-        Bitmap bitmap = BitmapFactory.decodeFile(currentPhotoPath);
-        ExifInterface exif = null;
-        try {
-            exif = new ExifInterface(currentPhotoPath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        int exifOrientation;
-        int exifDegree;
-
-        if (exif != null) {
-            exifOrientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-            exifDegree = exifOrientationToDegrees(exifOrientation);
-        } else {
-            exifDegree = 0;
-        }
-        imageView.setImageBitmap(rotate(bitmap, exifDegree));//이미지 뷰에 비트맵 넣기
-    }
-
-    private void selectGallery(){
-        try {
-            if (ActivityCompat.checkSelfPermission(ModifyMyInfoActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(ModifyMyInfoActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, GALLERY_CODE);
-            } else {
-                Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                galleryIntent.setType("image/*");
-                startActivityForResult(galleryIntent, GALLERY_CODE);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //갤러리 선택 or 카메라로 촬영 선택에 따른 onActivityResult
         super.onActivityResult(requestCode, resultCode, data);
 
         if(resultCode == RESULT_OK){
             switch (requestCode){
                 case GALLERY_CODE:
-                    sendPicture(data.getData());
+                    global.setTempProfile(imageFunc.sendPicture(data.getData()));
+                    ivJoin.setImageBitmap(global.getTempProfile());
                     break;
                 case CAMERA_CODE:
-                    getPictureForPhoto();
+                    imageFunc.getPictureForPhoto();
                     break;
 
                 default:
@@ -640,62 +302,38 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         }
     }
 
-    private void sendPicture(Uri imgUri) {
+    private void dataInit() {
+        ivJoin.setImageBitmap(imageFunc.decodebase64ToBitmap(global.myInfo.getProfile_image()));
+        //base64로 인코딩 된 내 프로필을 가져와서 bitmap으로 디코딩 후 이미지뷰에 셋팅
 
-        String imagePath = getRealPathFromURI(imgUri); // path 경로
-        ExifInterface exif = null;
-        try {
-            exif = new ExifInterface(imagePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        int exifOrientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-        int exifDegree = exifOrientationToDegrees(exifOrientation);
+        etName.setText(global.myInfo.getName());
+        etOpenChat.setText(global.myInfo.getOpenChatURL());
+        etInstar.setText(global.myInfo.getInstarID());
+        etLike.setText(global.myInfo.getLike());
+        etDisLike.setText(global.myInfo.getDisLike());
+        etIntroduce.setText(global.myInfo.getIntroduce());
+        //사용자가 입력하는 부분 초기화
 
-        Bitmap bitmap = BitmapFactory.decodeFile(imagePath);//경로를 통해 비트맵으로 전환
+        radioFunc.modifyGenderInit(rbGender);
+        radioFunc.modifyRoomInit(rbRoom);
+        radioFunc.modifyPatternInit(rbPattern);
+        radioFunc.modifyDrinkInit(rbDrink);
+        radioFunc.modifySmokingInit(rbSmoking);
+        radioFunc.modifyAllowFriendInit(rbAllowFriend);
+        radioFunc.modifyPetInit(rbPet);
+        //라디오 버튼 초기화
 
-        bitmap = bitmap.getWidth() > bitmap.getHeight()
-                ? Bitmap.createBitmap(bitmap, (bitmap.getWidth() - bitmap.getHeight()) / 2, 0, bitmap.getHeight(), bitmap.getHeight())
-                : Bitmap.createBitmap(bitmap, 0, (bitmap.getHeight() - bitmap.getWidth()) / 2, bitmap.getWidth(), bitmap.getWidth());
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-        userInfo.setProfile_image(Base64.encodeToString(baos.toByteArray(), Base64.NO_WRAP));
+        spinner.setSelection(2014 - Integer.parseInt(global.myInfo.getYear()));
 
-        imageView.setImageBitmap(rotate(bitmap, exifDegree));//이미지 뷰에 비트맵 넣기
+        TextView tvprog = findViewById(R.id.join_tvprog);
+        seekBar.setProgress(Integer.parseInt(global.myInfo.getMonthly()) / 10);
 
-    }
+        if(Integer.parseInt(global.myInfo.getMonthly()) == 0)
+            tvprog.setText(prog + "만원");
+        else
+            tvprog.setText("0~" + prog + "만원");
+        //시크바 초기화
 
-    private int exifOrientationToDegrees(int exifOrientation) {
-        if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_90) {
-            return 90;
-        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_180) {
-            return 180;
-        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_270) {
-            return 270;
-        }
-        return 0;
-    }
-
-    private Bitmap rotate(Bitmap src, float degree) {
-
-        // Matrix 객체 생성
-        Matrix matrix = new Matrix();
-        // 회전 각도 셋팅
-        matrix.postRotate(degree);
-        // 이미지와 Matrix 를 셋팅해서 Bitmap 객체 생성
-        return Bitmap.createBitmap(src, 0, 0, src.getWidth(),
-                src.getHeight(), matrix, true);
-    }
-
-    private String getRealPathFromURI(Uri contentUri) {
-        int column_index=0;
-        String[] proj = {MediaStore.Images.Media.DATA};
-        Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
-        if(cursor.moveToFirst()){
-            column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        }
-
-        return cursor.getString(column_index);
     }
 
 }

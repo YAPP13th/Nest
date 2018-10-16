@@ -2,8 +2,14 @@ package roommate.yapp.com.yapp13th_roommate.Global;
 
 import android.app.Activity;
 import android.app.Application;
+import android.graphics.Bitmap;
+import android.widget.ImageView;
 
 import com.kakao.auth.KakaoSDK;
+import com.kakao.auth.authorization.authcode.KakaoWebViewDialog;
+import com.kakao.auth.exception.KakaoWebviewException;
+
+import java.util.List;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Kakao.KakaoSDKAdapter;
@@ -14,8 +20,18 @@ public class GlobalVariable extends Application {
     public static volatile Activity currentActivity = null;
 
     public UserInfo myInfo;
-    public UserInfo[] everyInfo;
-    public UserInfo[] filterInfo;
+    public UserInfo temp;
+    public List<UserInfo> everyInfo;
+    public List<UserInfo> filterInfo;
+
+    private String myId;
+
+    public Bitmap myProfile, myRoom[], tempProfile, tempRoom[];
+
+    private Boolean isExist;
+
+    private int viewPagerPosition;
+    public ImageView[] viewPagerImageView;
 
     @Override
     public void onCreate() {
@@ -23,6 +39,7 @@ public class GlobalVariable extends Application {
         instance = this;
 
         KakaoSDK.init(new KakaoSDKAdapter());
+
     }
 
     public static Activity getCurrentActivity() {
@@ -47,19 +64,83 @@ public class GlobalVariable extends Application {
         this.myInfo = myInfo;
     }
 
-    public UserInfo[] getEveryInfo() {
+    public List<UserInfo> getEveryInfo() {
         return everyInfo;
     }
 
-    public void setEveryInfo(UserInfo[] everyInfo) {
+    public void setEveryInfo(List<UserInfo> everyInfo) {
         this.everyInfo = everyInfo;
     }
 
-    public UserInfo[] getFilterInfo() {
+    public List<UserInfo> getFilterInfo() {
         return filterInfo;
     }
 
-    public void setFilterInfo(UserInfo[] filterInfo) {
+    public void setFilterInfo(List<UserInfo> filterInfo) {
         this.filterInfo = filterInfo;
+    }
+
+    public String getMyId() {
+        return myId;
+    }
+
+    public void setMyId(String myId) {
+        this.myId = myId;
+    }
+
+    public Bitmap getMyProfile() {
+        return myProfile;
+    }
+
+    public void setMyProfile(Bitmap myProfile) {
+        this.myProfile = myProfile;
+    }
+
+    public Bitmap[] getMyRoom() {
+        return myRoom;
+    }
+
+    public void setMyRoom(Bitmap[] myRoom) {
+        this.myRoom = myRoom;
+    }
+
+    public Boolean getExist() {
+        return isExist;
+    }
+
+    public void setExist(Boolean exist) {
+        isExist = exist;
+    }
+
+    public Bitmap getTempProfile() {
+        return tempProfile;
+    }
+
+    public void setTempProfile(Bitmap tempProfile) {
+        this.tempProfile = tempProfile;
+    }
+
+    public Bitmap[] getTempRoom() {
+        return tempRoom;
+    }
+
+    public void setTempRoom(Bitmap[] tempRoom) {
+        this.tempRoom = tempRoom;
+    }
+
+    public UserInfo getTemp() {
+        return temp;
+    }
+
+    public void setTemp(UserInfo temp) {
+        this.temp = temp;
+    }
+
+    public int getViewPagerPosition() {
+        return viewPagerPosition;
+    }
+
+    public void setViewPagerPosition(int viewPagerPosition) {
+        this.viewPagerPosition = viewPagerPosition;
     }
 }

@@ -20,431 +20,153 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Arrays;
 import java.util.Date;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
+import roommate.yapp.com.yapp13th_roommate.Function.FirebaseFunc;
+import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
+import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain;
 
 public class SignUpSecondActivity extends AppCompatActivity {
 
-    private UserInfo userInfo;
+    private GlobalVariable global;
+    private FirebaseFunc firebaseFunc;
+    private ImageFunc imageFunc;
+    private RadioFunc radioFunc;
 
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
+    private RadioButton[] rbPattern, rbDrink, rbSmoking, rbAllowFriend, rbPet;
+    private RadioGroup rgPattern, rgDrink, rgSmoking, rgAllowFriend, rgPet;
+    private EditText tvInstar, tvLike, tvDisLike, tvIntroduce;
+    private TextView btnStart;
 
-    private GradientDrawable drawable,drawable2;
-    private RadioButton rb11, rb12,rb13, rb21,rb22,rb23,rb24,rb31,rb32,rb41,rb42,rb43,rb51,rb52,rb53;
-    private RadioGroup rg1,rg2,rg3,rg4,rg5;
-    private EditText instar, like, disLike, introduce;
-    private TextView start;
+    private Boolean patternCheck[], drinkCheck[],smokingCheck[], friendCheck[], petCheck[];
 
-    private Boolean pattern1, pattern2, pattern3, drink1, drink2, drink3, drink4, smoking1, smoking2, friend1, friend2, friend3, pet1, pet2, pet3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_second);
 
-        userInfo = new UserInfo();
+        global = (GlobalVariable)getApplicationContext();
+        firebaseFunc = new FirebaseFunc(this);
+        imageFunc = new ImageFunc(this);
+        radioFunc = new RadioFunc(this);
 
-        pattern1 = pattern2 = pattern3 = drink1 = drink2 = drink3 = drink4 = smoking1 = smoking2 = friend1 = friend2 = friend3 = pet1 = pet2 = pet3 = false;
+        rbPattern = new RadioButton[3];
+        rbDrink = new RadioButton[4];
+        rbSmoking = new RadioButton[2];
+        rbAllowFriend = new RadioButton[3];
+        rbPet = new RadioButton[3];
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test");
-        //user_info 라는 파베의 테이블과 연동
+        patternCheck = new Boolean[3];
+        drinkCheck = new Boolean[4];
+        smokingCheck = new Boolean[2];
+        friendCheck = new Boolean[3];
+        petCheck = new Boolean[3];
 
-        Intent intent = getIntent();
+        Arrays.fill(patternCheck, false);
+        Arrays.fill(drinkCheck, false);
+        Arrays.fill(smokingCheck, false);
+        Arrays.fill(friendCheck, false);
+        Arrays.fill(petCheck, false);
 
-        userInfo = (UserInfo)intent.getSerializableExtra("userInfo");
-        //회원가입 1페이지에서 받아온 데이터
+        tvInstar = (EditText)findViewById(R.id.join_etinstar) ;
+        tvLike = (EditText)findViewById(R.id.join_etlike);
+        tvDisLike = (EditText)findViewById(R.id.join_etdislike);
+        tvIntroduce = (EditText)findViewById(R.id.join_etme);
 
-        instar = (EditText)findViewById(R.id.join_etinstar) ;
-        like = (EditText)findViewById(R.id.join_etlike);
-        disLike = (EditText)findViewById(R.id.join_etdislike);
-        introduce = (EditText)findViewById(R.id.join_etme);
+        btnStart = (TextView)findViewById(R.id.join_start);
 
-        start = (TextView)findViewById(R.id.join_start);
-
-        drawable=(GradientDrawable) ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounding);
-        drawable2=(GradientDrawable) ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounding2);
         //라디오 이벤트
-        rg1=findViewById(R.id.join_rglifestyle);
-        rg2=findViewById(R.id.join_rgdrink);
-        rg3=findViewById(R.id.join_rgcig);
-        rg4=findViewById(R.id.join_rgfriend);
-        rg5=findViewById(R.id.join_rgpet);
-        rb11=findViewById(R.id.join_rbday);
-        rb12=findViewById(R.id.join_rbnight);
-        rb13=findViewById(R.id.join_rbnostyle);
-        rb21=findViewById(R.id.join_rbdrink1);
-        rb22=findViewById(R.id.join_rbdrink2);
-        rb23=findViewById(R.id.join_rbdrink3);
-        rb24=findViewById(R.id.join_rbdrink4);
-        rb31=findViewById(R.id.join_rbcig1);
-        rb32=findViewById(R.id.join_rbcig2);
-        rb41=findViewById(R.id.join_rbfri1);
-        rb42=findViewById(R.id.join_rbfri2);
-        rb43=findViewById(R.id.join_rbfri3);
-        rb51=findViewById(R.id.join_rbpet1);
-        rb52=findViewById(R.id.join_rbpet2);
-        rb53=findViewById(R.id.join_rbpet3);
+        rgPattern = findViewById(R.id.join_rglifestyle);
+        rgDrink = findViewById(R.id.join_rgdrink);
+        rgSmoking = findViewById(R.id.join_rgcig);
+        rgAllowFriend = findViewById(R.id.join_rgfriend);
+        rgPet = findViewById(R.id.join_rgpet);
 
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                //........체크안된거id 받아오는 방법이없어서 일일이,,
-                checkclick(rb11);
-                checkclick(rb12);
-                checkclick(rb13);
-            }
-        });
+        rbPattern[0] = findViewById(R.id.join_rbday);
+        rbPattern[1] = findViewById(R.id.join_rbnight);
+        rbPattern[2] = findViewById(R.id.join_rbnostyle);
+        rbDrink[0] = findViewById(R.id.join_rbdrink1);
+        rbDrink[1] = findViewById(R.id.join_rbdrink2);
+        rbDrink[2] = findViewById(R.id.join_rbdrink3);
+        rbDrink[3] = findViewById(R.id.join_rbdrink4);
+        rbSmoking[0] = findViewById(R.id.join_rbcig1);
+        rbSmoking[1] = findViewById(R.id.join_rbcig2);
+        rbAllowFriend[0] = findViewById(R.id.join_rbfri1);
+        rbAllowFriend[1] = findViewById(R.id.join_rbfri2);
+        rbAllowFriend[2] = findViewById(R.id.join_rbfri3);
+        rbPet[0] = findViewById(R.id.join_rbpet1);
+        rbPet[1] = findViewById(R.id.join_rbpet2);
+        rbPet[2] = findViewById(R.id.join_rbpet3);
 
-        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgPattern.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb21);
-                checkclick(rb22);
-                checkclick(rb23);
-                checkclick(rb24);
+                patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[0], rbPattern, patternCheck);
+                patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[1], rbPattern, patternCheck);
+                patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[2], rbPattern, patternCheck);
             }
         });
-        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgDrink.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb31);
-                checkclick(rb32);
+                drinkCheck = radioFunc.drinkCheck(rgDrink, rbDrink[0], rbDrink, drinkCheck);
+                drinkCheck = radioFunc.drinkCheck(rgDrink, rbDrink[1], rbDrink, drinkCheck);
+                drinkCheck = radioFunc.drinkCheck(rgDrink, rbDrink[2], rbDrink, drinkCheck);
+                drinkCheck = radioFunc.drinkCheck(rgDrink, rbDrink[3], rbDrink, drinkCheck);
             }
         });
-        rg4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgSmoking.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb41);
-                checkclick(rb42);
-                checkclick(rb43);
+                smokingCheck = radioFunc.smokingCheck(rgSmoking, rbSmoking[0], rbSmoking, smokingCheck);
+                smokingCheck = radioFunc.smokingCheck(rgSmoking, rbSmoking[1], rbSmoking, smokingCheck);
             }
         });
-        rg5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rgAllowFriend.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                //int checkid=radioGroup.getCheckedRadioButtonId();
-                //checkclick((RadioButton) findViewById(checkid));
-                checkclick(rb51);
-                checkclick(rb52);
-                checkclick(rb53);
+                friendCheck = radioFunc.allowFriendCheck(rgAllowFriend, rbAllowFriend[0], rbAllowFriend, friendCheck);
+                friendCheck = radioFunc.allowFriendCheck(rgAllowFriend, rbAllowFriend[1], rbAllowFriend, friendCheck);
+                friendCheck = radioFunc.allowFriendCheck(rgAllowFriend, rbAllowFriend[2], rbAllowFriend, friendCheck);
+            }
+        });
+        rgPet.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                petCheck = radioFunc.petCheck(rgPet, rbPet[0], rbPet, petCheck);
+                petCheck = radioFunc.petCheck(rgPet, rbPet[1], rbPet, petCheck);
+                petCheck = radioFunc.petCheck(rgPet, rbPet[2], rbPet, petCheck);
             }
         });
 
-        start.setOnClickListener(new View.OnClickListener() {
+        btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                userInfo.setInstarID(instar.getText().toString());
-//                userInfo.setLike(like.getText().toString());
-//                userInfo.setDisLike(disLike.getText().toString());
-//                userInfo.setIntroduce(introduce.getText().toString());
-//                userInfo.setNow_date(new Date(System.currentTimeMillis()));
+                global.setMyProfile(global.getTempProfile());
+                global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
 
-                databaseReference.push().setValue(userInfo);
+                global.temp.setId(global.myInfo.getId());
+                global.temp.setInstarID(tvInstar.getText().toString());
+                global.temp.setLike(tvLike.getText().toString());
+                global.temp.setDisLike(tvDisLike.getText().toString());
+                global.temp.setIntroduce(tvIntroduce.getText().toString());
+                global.temp.setNow_date(new Date(System.currentTimeMillis()));
 
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                            Log.d("test", snapshot.getValue().toString());
-                            UserInfo test = new UserInfo();
-                            test = snapshot.getValue(UserInfo.class);
+                global.myInfo = global.temp;
 
+                firebaseFunc.FirebaseSignUp();
 
-                            //이런식으로 DTO랑 연동해서 데이터 가져올 수 있슴!
-//                            Log.d("test2", test.getNow_date().toString());
-
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
-                Intent signUpDone = new Intent(getApplicationContext(), ViewPagerMain.class);
-
+                Intent signUpDone = new Intent(SignUpSecondActivity.this, ViewPagerMain.class);
                 startActivity(signUpDone);
+                finish();
             }
         });
 
-    }
-    public void checkclick(RadioButton rb){
-        if(rb.isChecked()){
-
-            if(rb == rb11){
-                if(pattern1){
-                    userInfo.setPattern("");
-                    pattern1 = false;
-
-                    rg1.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPattern("아침형");
-                    pattern1 = true;
-                    pattern2 = false;
-                    pattern3 = false;
-
-                    rg1.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb12){
-                if(pattern2){
-                    userInfo.setPattern("");
-                    pattern2 = false;
-
-                    rg1.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPattern("저녁형");
-                    pattern1 = false;
-                    pattern2 = true;
-                    pattern3 = false;
-
-                    rg1.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb13){
-                if(pattern3){
-                    userInfo.setPattern("");
-                    pattern3 = false;
-
-                    rg1.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPattern("불규칙");
-                    pattern1 = false;
-                    pattern2 = false;
-                    pattern3 = true;
-
-                    rg1.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb21){
-                if(drink1){
-                    userInfo.setDrink("");
-                    drink1 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("금주");
-                    drink1 = true;
-                    drink2 = false;
-                    drink3 = false;
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb22){
-                if(drink2){
-                    userInfo.setDrink("");
-                    drink2 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("매일");
-                    drink1 = false;
-                    drink2 = true;
-                    drink3 = false;
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb23){
-                if(drink3){
-                    userInfo.setDrink("0");
-                    drink3 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("주 1~2회");
-                    drink1 = false;
-                    drink2 = false;
-                    drink3 = true;
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb24){
-                if(drink4){
-                    userInfo.setDrink("");
-                    drink4 = false;
-
-                    rg2.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setDrink("월 1~2회");
-                    drink1 = false;
-                    drink2 = false;
-                    drink3 = false;
-                    drink4 = true;
-
-                    rg2.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb31){
-                if(smoking1){
-                    userInfo.setSmoking("");
-                    smoking1 = false;
-
-                    rg3.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setSmoking("흡연");
-                    smoking1 = true;
-                    smoking2 = false;
-
-                    rg3.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb32){
-                if(smoking2){
-                    userInfo.setSmoking("");
-                    smoking2 = false;
-
-                    rg3.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setSmoking("비흡연");
-                    smoking1 = false;
-                    smoking2 = true;
-
-                    rg3.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb41){
-                if(friend1){
-                    userInfo.setAllow_friend("");
-                    friend1 = false;
-
-                    rg4.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setAllow_friend("허용");
-                    friend1 = true;
-                    friend2 = false;
-                    friend3 = false;
-
-                    rg4.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb42){
-                if(friend2){
-                    userInfo.setAllow_friend("");
-                    friend2 = false;
-
-                    rg4.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setAllow_friend("금지");
-                    friend1 = false;
-                    friend2 = true;
-                    friend3 = false;
-
-                    rg4.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb43){
-                if(friend3){
-                    userInfo.setAllow_friend("");
-                    friend3 = false;
-
-                    rg4.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setAllow_friend("합의하 허용");
-                    friend1 = false;
-                    friend2 = false;
-                    friend3 = true;
-
-                    rg4.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb51){
-                if(pet1){
-                    userInfo.setPet("");
-                    pet1 = false;
-
-                    rg5.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPet("허용");
-                    pet1 = true;
-                    pet2 = false;
-                    pet3 = false;
-
-                    rg5.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb52){
-                if(pet2){
-                    userInfo.setPet("");
-                    pet2 = false;
-
-                    rg5.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPet("금지");
-                    pet1 = false;
-                    pet2 = true;
-                    pet3 = false;
-
-                    rg5.clearCheck();
-                    radioSelect(rb);
-                }
-            }else if(rb == rb53){
-                if(pet3){
-                    userInfo.setPet("");
-                    pet3 = false;
-
-                    rg5.clearCheck();
-                    radioClear(rb);
-                }else{
-                    userInfo.setPet("합의하 허용");
-                    pet1 = false;
-                    pet2 = false;
-                    pet3 = true;
-
-                    rg5.clearCheck();
-                    radioSelect(rb);
-                }
-            }
-
-        }else{
-            radioClear(rb);
-        }
-    }
-
-    public void radioSelect(RadioButton rb){
-        rb.setBackground(drawable);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            rb.setClipToOutline(true);
-        }
-    }
-
-    public void radioClear(RadioButton rb){
-        rb.setBackground(drawable2);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            rb.setClipToOutline(true);
-        }
     }
 
 }

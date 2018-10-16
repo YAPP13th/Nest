@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/main">
 
     <android.support.v4.widget.NestedScrollView
@@ -60,13 +61,18 @@
                 android:text="필터를 적용해요" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/bottomRecyclerView"
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
-
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_fab"
+        android:layout_margin="18dp" />
 </FrameLayout>

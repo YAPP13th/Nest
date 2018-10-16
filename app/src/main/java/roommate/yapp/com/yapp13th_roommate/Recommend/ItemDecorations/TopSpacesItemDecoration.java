@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 public class TopSpacesItemDecoration extends RecyclerView.ItemDecoration {
+
     private int space;
 
     public TopSpacesItemDecoration(int space) {
@@ -19,4 +20,5 @@ public class TopSpacesItemDecoration extends RecyclerView.ItemDecoration {
             outRect.left = 0;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +20,9 @@ import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity;
 
+
 public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
-//    private UserInfo[] mData;
+    //    private UserInfo[] mData;
     private UserInfo[] mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
@@ -81,18 +83,27 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         LikeButton btn_bottom_recycler_pick;
+
+        ImageView iv_profile;
         TextView tv_name, tv_age, tv_address, tv_monthMoney, tv_selfIntroduction, tv_like, tv_dislike;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tv_name = itemView.findViewById(R.id.tv_name);
-            tv_age = itemView.findViewById(R.id.tv_age);
-            tv_address = itemView.findViewById(R.id.tv_address);
-            tv_monthMoney = itemView.findViewById(R.id.tv_monthMoney);
-            tv_selfIntroduction = itemView.findViewById(R.id.tv_selfIntroduction);
-            tv_like = itemView.findViewById(R.id.tv_like);
-            tv_dislike = itemView.findViewById(R.id.tv_disike);
+            iv_profile = itemView.findViewById(R.id.iv_profile);
 
+            tv_name = itemView.findViewById(R.id.tv_name);
+
+            tv_age = itemView.findViewById(R.id.tv_top_recycler_birth_year);
+
+            tv_address = itemView.findViewById(R.id.tv_address);
+
+            tv_monthMoney = itemView.findViewById(R.id.tv_top_recycler_monthly_money);
+
+            tv_selfIntroduction = itemView.findViewById(R.id.tv_selfIntroduction);
+
+            tv_like = itemView.findViewById(R.id.tv_top_recycler_like);
+
+            tv_dislike = itemView.findViewById(R.id.tv_top_recycler_dislike);
             btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
 
             btn_bottom_recycler_pick.setOnLikeListener(new OnLikeListener() {

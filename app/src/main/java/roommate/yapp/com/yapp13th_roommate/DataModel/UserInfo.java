@@ -6,6 +6,7 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
+    private String key;             //DB에 저장되는 키값
     private String profile_image;   //프로필 사진 이미지 base64
     private String[] room_image;    //방 사진 이미지 base64 최대 3개
     private String id;              //고유 아이디(카톡 등으로 받은 아이디 값)
@@ -27,12 +28,54 @@ public class UserInfo implements Serializable{
     private String disLike;         //싫어하는 것
     private String introduce;       //자기소개
 
+    public UserInfo() {}
+
+    public UserInfo(String key, String profile_image, String[] room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce) {
+        this.key = key;
+        this.profile_image = profile_image;
+        this.room_image = room_image;
+        this.id = id;
+        this.now_date = now_date;
+        this.name = name;
+        this.gender = gender;
+        this.year = year;
+        this.monthly = monthly;
+        this.openChatURL = openChatURL;
+        this.room = room;
+        this.location = location;
+        this.instarID = instarID;
+        this.pattern = pattern;
+        this.drink = drink;
+        this.smoking = smoking;
+        this.allow_friend = allow_friend;
+        this.pet = pet;
+        this.like = like;
+        this.disLike = disLike;
+        this.introduce = introduce;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     public String getProfile_image() {
         return profile_image;
     }
 
     public void setProfile_image(String profile_image) {
         this.profile_image = profile_image;
+    }
+
+    public String[] getRoom_image() {
+        return room_image;
+    }
+
+    public void setRoom_image(String[] room_image) {
+        this.room_image = room_image;
     }
 
     public String getId() {

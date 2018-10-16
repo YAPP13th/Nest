@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -15,6 +16,7 @@ import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
@@ -23,25 +25,30 @@ import com.kakao.util.helper.log.Logger;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
+import roommate.yapp.com.yapp13th_roommate.Function.FirebaseFunc;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
+import roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain;
 
 public class KaKaoLoginActivity extends Activity {
 
     private SessionCallback callback; // 콜백 선언
     private static final String TAG = "KaKaoLoginActivity";
-    Context mcontext;
-    static String kakaoNickname;
 
-    private UserInfo userInfo;
+    private GlobalVariable global;
+    private FirebaseFunc firebaseFunc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
 
-        userInfo = new UserInfo();
+        global = (GlobalVariable)getApplicationContext();
+        firebaseFunc = new FirebaseFunc(KaKaoLoginActivity.this);
 
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
@@ -65,14 +72,6 @@ public class KaKaoLoginActivity extends Activity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
-            return;
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
         Session.getCurrentSession().removeCallback(callback);
@@ -83,7 +82,6 @@ public class KaKaoLoginActivity extends Activity {
         @Override
         public void onSessionOpened() {
             requestMe();
-//            redirectSignupActivity();  // 세션 연결성공 시 redirectSignupActivity() 호출
         }
 
         @Override
@@ -95,13 +93,13 @@ public class KaKaoLoginActivity extends Activity {
         }                                            // 로그인화면을 다시 불러옴
     }
 
-    protected void redirectSignupActivity() {       //세션 연결 성공 시 SignupActivity로 넘김
-        final Intent intent = new Intent(this, SignUpFirstActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
-        finish();
-    }
     protected void requestMe() {
+//        UserManagement.requestLogout(new LogoutResponseCallback() {
+//            @Override
+//            public void onCompleteLogout() {
+//
+//            }
+//        });
         UserManagement.requestMe(new MeResponseCallback() {
             @Override
             public void onFailure(ErrorResult errorResult) {
@@ -128,55 +126,34 @@ public class KaKaoLoginActivity extends Activity {
 
             @Override
             public void onSuccess(UserProfile userProfile) {
+                global.everyInfo = new ArrayList<>();
+                global.filterInfo = new ArrayList<>();
+                global.myInfo = new UserInfo();
+                global.temp = new UserInfo();
+                global.myRoom = new Bitmap[3];
+                global.tempRoom = new Bitmap[3];
+
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
-                kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
 
-                userInfo.setId(kakaoID);
-
-                setKakaoNickname(kakaoNickname);
-                Logger.d("UserProfile : " + userProfile);
-                //redirectMainActivity(); // 로그인 성공시 MainActivity로
-                //redirectFragmentMain();
+                global.setExist(false);
+                global.setMyId(kakaoID);
+                global.myInfo.setId(kakaoID);
                 redirectKeywordActivity();
-                //redirectMainActivity();
             }
 
 
         });
     }
 
-    public static String getKakaoNickname() {
-        return kakaoNickname;
-    }
-
-    public static void setKakaoNickname(String kakaoNickname) {
-        KakaoSignupActivity.kakaoNickname = kakaoNickname;
-    }
-
-//    private void redirectMainActivity() {
-//        startActivity(new Intent(this, CulturalEventSearch.class));
-//        finish();
-//    }
-
     private void redirectKeywordActivity() {
+        //카카오로 로그인 성공 시 파베에 내 정보가 있다면 메인으로, 없다면 회원가입 페이지로
 
-        Intent intent = new Intent(this, SignUpFirstActivity.class);
+        firebaseFunc.FirebaseLoginInit();
 
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("userInfo", userInfo);
-        intent.putExtras(bundle);
-
-        startActivity(intent);
-
-        finish();
-    }
-
-    private void redirectFragmentMain() {
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
     }
 
     protected void redirectLoginActivity() {
+        //로그인 오류 시 다시 로그인을 위해 로그인 페이지 다시 불러옴
         final Intent intent = new Intent(this, roommate.yapp.com.yapp13th_roommate.Kakao.KaKaoLoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);

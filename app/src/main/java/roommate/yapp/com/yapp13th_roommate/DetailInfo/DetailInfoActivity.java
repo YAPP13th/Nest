@@ -1,38 +1,39 @@
 package roommate.yapp.com.yapp13th_roommate.DetailInfo;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Base64;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
+import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 
 public class DetailInfoActivity extends AppCompatActivity {
 
+    private GlobalVariable global;
+    private ImageFunc imageFunc;
+
     private UserInfo userInfo;
 
+    private ImageView ivProfile;
     private TextView tvName, tvBirth, tvLocation, tvInstarID, tvMonthly, tvPattern, tvDrink, tvSmoking, tvAllowFriend, tvPet, tvLike, tvDisLike, tvChatURL, tvIntroduceContent;
-    private ImageView ivRoom, ivUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        global = (GlobalVariable)getApplicationContext();
+        imageFunc = new ImageFunc(this);
+
         Intent intent = getIntent();
         userInfo = (UserInfo) intent.getSerializableExtra("userInfo");
 
-
-//        ivUser = (ImageView)findViewById(R.id.ivUser);
-//        byte[] image = Base64.decode(userInfo.getProfile_image(), Base64.DEFAULT);
-//        Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
-//        ivUser.setImageBitmap(decodeByte);
-//        Log.i("test", userInfo.getName());
+        ivProfile = (ImageView)findViewById(R.id.ivUser);
 
         tvName = (TextView)findViewById(R.id.tvName);
         tvBirth = (TextView)findViewById(R.id.tvBirth);
@@ -49,6 +50,7 @@ public class DetailInfoActivity extends AppCompatActivity {
         tvChatURL= (TextView)findViewById(R.id.tvChatURL);
         tvIntroduceContent = (TextView)findViewById(R.id.tvIntroduceContent);
 
+        ivProfile.setImageBitmap(imageFunc.decodebase64ToBitmap(userInfo.getProfile_image()));;
         tvName.setText(userInfo.getName());
         tvBirth.setText(userInfo.getYear() + " 년생");
         tvLocation.setText(userInfo.getLocation());

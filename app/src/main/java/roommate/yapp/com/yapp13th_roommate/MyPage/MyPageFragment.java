@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Base64;
 import android.util.Log;
@@ -17,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,30 +23,39 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
+import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpSecondActivity;
-import roommate.yapp.com.yapp13th_roommate.ViewPager.PagerAdapter;
 
 public class MyPageFragment extends Fragment {
+
+    private GlobalVariable global;
+    private ImageFunc imageFunc;
 
     private ImageView ivRoom, ivUser;
     private ProgressBar pbLogin;
     private TextView tvName, tvBirth, tvLocation, tvInstarID, tvMonthly, tvPattern, tvDrink, tvSmoking, tvAllowFriend, tvPet, tvLike, tvDisLike, tvChatURL, tvIntroduceContent;
     private Button btnModify;
+
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReference;
-    private UserInfo userInfo;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_mypage, null);
-        userInfo = new UserInfo();
+
+        global = (GlobalVariable)getActivity().getApplication();
+        imageFunc = new ImageFunc(getActivity());
+
         ivRoom = (ImageView)view.findViewById(R.id.ivRoom);
         ivUser = (ImageView)view.findViewById(R.id.ivUser);
+
         pbLogin = (ProgressBar)view.findViewById(R.id.pbLogin);
+
         tvName = (TextView)view.findViewById(R.id.tvName);
         tvBirth = (TextView)view.findViewById(R.id.tvBirth);
         tvLocation = (TextView)view.findViewById(R.id.tvLocation);
@@ -66,59 +73,32 @@ public class MyPageFragment extends Fragment {
 
         btnModify = (Button)view.findViewById(R.id.btnModify);
 
-        mDatabase = FirebaseDatabase.getInstance();
-        mReference = mDatabase.getReference("user_info_test");
+        ivUser.setImageBitmap(imageFunc.decodebase64ToBitmap(global.myInfo.getProfile_image()));
 
-        mReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-
-                    Log.d("MainActivity", "Single ValueEventListener : " + snapshot.getValue());
-
-                    userInfo = snapshot.getValue(UserInfo.class);
-                    if(userInfo.getId().equals("933048308"))
-                        break;
-                }
-
-                Log.i("test", userInfo.getId());
-                byte[] image = Base64.decode(userInfo.getProfile_image(), Base64.DEFAULT);
-                Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
-                ivUser.setImageBitmap(decodeByte);
-
-                tvName.setText(userInfo.getName());
-                tvBirth.setText(userInfo.getYear() + " 년생");
-                tvLocation.setText(userInfo.getLocation());
-                tvInstarID.setText(userInfo.getInstarID());
-                tvMonthly.setText(userInfo.getMonthly() + " 만원");
-                tvPattern.setText(userInfo.getPattern());
-                tvDrink.setText(userInfo.getDrink());
-                tvSmoking.setText(userInfo.getSmoking());
-                tvAllowFriend.setText(userInfo.getAllow_friend());
-                tvPet.setText(userInfo.getPet());
-                tvLike.setText(userInfo.getLike());
-                tvDisLike.setText(userInfo.getDisLike());
-                tvChatURL.setText(userInfo.getOpenChatURL());
-                tvIntroduceContent.setText(userInfo.getIntroduce());
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        tvName.setText(global.myInfo.getName());
+        tvBirth.setText(global.myInfo.getYear() + " 년생");
+        tvLocation.setText(global.myInfo.getLocation());
+        tvInstarID.setText(global.myInfo.getInstarID());
+        tvMonthly.setText(global.myInfo.getMonthly() + " 만원");
+        tvPattern.setText(global.myInfo.getPattern());
+        tvDrink.setText(global.myInfo.getDrink());
+        tvSmoking.setText(global.myInfo.getSmoking());
+        tvAllowFriend.setText(global.myInfo.getAllow_friend());
+        tvPet.setText(global.myInfo.getPet());
+        tvLike.setText(global.myInfo.getLike());
+        tvDisLike.setText(global.myInfo.getDisLike());
+        tvChatURL.setText(global.myInfo.getOpenChatURL());
+        tvIntroduceContent.setText(global.myInfo.getIntroduce());
 
         btnModify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MyPageFragment.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("userInfo", userInfo);
-                intent.putExtras(bundle);
+                Intent intent = new Intent(getActivity(), ModifyMyInfoActivity.class);
+
                 startActivity(intent);
             }
         });
+
         return view;
     }
 }

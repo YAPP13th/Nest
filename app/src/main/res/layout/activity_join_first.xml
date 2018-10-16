@@ -2,8 +2,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/touchInterceptor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".SignUp.SignUpFirstActivity">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,12 +43,12 @@
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <View
                 android:id="@+id/newLine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:text="------------------------------------------------------------------------------------"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="21dp"
+                android:background="#BDBDBD"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView
@@ -55,9 +58,7 @@
                 android:layout_marginLeft="14dp"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="21dp"
-
                 android:textSize="25sp"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/newLine" />
 
@@ -94,9 +95,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-
                 android:src="@drawable/myprofileedit_first_name_icon"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_image" />
 
             <TextView
@@ -115,10 +115,10 @@
                 android:id="@+id/join_etname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
                 android:layout_marginLeft="42dp"
                 android:layout_marginStart="42dp"
                 android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
 
                 android:hint="반드시 실명으로 입력해주세요"
                 android:inputType="textPersonName"
@@ -128,14 +128,14 @@
 
             <ImageView
                 android:id="@+id/ivGender"
-                android:src="@drawable/join_first_sex_icon"
-
                 android:layout_width="20dp"
+
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
+                android:src="@drawable/myprofileedit_first_sex_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_etname" />
 
@@ -230,14 +230,14 @@
 
             <ImageView
                 android:id="@+id/ivMonthly"
-                android:src="@drawable/myprofileedit_money_icon"
-
                 android:layout_width="20dp"
+
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
+                android:src="@drawable/myprofileedit_money_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_spinner" />
 
@@ -281,12 +281,12 @@
             <ImageView
                 android:id="@+id/ivChatURL"
                 android:layout_width="20dp"
-                android:src="@drawable/myprofileedit_chat_icon"
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
+                android:src="@drawable/myprofileedit_chat_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -306,10 +306,10 @@
                 android:id="@+id/join_etchatURL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
                 android:layout_marginLeft="42dp"
                 android:layout_marginStart="42dp"
                 android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
                 android:hint="카카오톡 오픈채팅 URL 을 입력해주세요"
                 android:inputType="textPersonName"
                 android:textSize="14sp"
@@ -379,21 +379,33 @@
                     android:text="없음" />
             </RadioGroup>
 
-            <ImageView
-                android:id="@+id/join_ivroompotho"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginStart="21dp"
                 android:layout_marginTop="44dp"
-                android:src="@drawable/myprofileedit_house_photo_icon"
+                android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgroom" />
+
+            <ImageView
+                android:id="@+id/viewPagerIndex"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@android:color/darker_gray" />
 
             <ImageView
                 android:id="@+id/ivLocation"
@@ -404,7 +416,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_ivroompotho" />
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
             <TextView
                 android:id="@+id/tvLocation"
@@ -416,7 +428,7 @@
                 android:text="희망 지역"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
-                app:layout_constraintTop_toBottomOf="@+id/join_ivroompotho" />
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
             <TextView
                 android:id="@+id/join_location"
@@ -427,11 +439,11 @@
                 android:layout_marginRight="21dp"
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="16dp"
-                android:text="위치검색"
-                android:textSize="14sp"
-                android:gravity="center"
                 android:background="@drawable/rounding2"
                 android:clickable="true"
+                android:gravity="center"
+                android:text="위치검색"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
