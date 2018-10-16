@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -30,9 +31,9 @@ public class RadioFunc {
         radioSelect(rb);
         if(rb.isChecked()){
             if(rb == rbGender[0]){
-                global.myInfo.setGender("F");
+                global.temp.setGender("F");
             }else if(rb == rbGender[1]){
-                global.myInfo.setGender("M");
+                global.temp.setGender("M");
             }
 
         }else{
@@ -44,9 +45,9 @@ public class RadioFunc {
         radioSelect(rb);
         if(rb.isChecked()){
             if(rb == rbRoom[0]){
-                global.myInfo.setRoom(true);
+                global.temp.setRoom(true);
             }else if(rb == rbRoom[1]){
-                global.myInfo.setRoom(false);
+                global.temp.setRoom(false);
             }
 
         }else{
@@ -58,13 +59,13 @@ public class RadioFunc {
         if(rb.isChecked()){
             if(rb == rbPattern[0]){
                 if(clickCheck[0]){
-                    global.myInfo.setPattern("");
+                    global.temp.setPattern("");
                     clickCheck[0] = false;
 
                     rgPattern.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setPattern("아침형");
+                    global.temp.setPattern("아침형");
                     clickCheck[0] = true;
                     clickCheck[1] = false;
                     clickCheck[2] = false;
@@ -74,13 +75,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbPattern[1]){
                 if(clickCheck[1]){
-                    global.myInfo.setPattern("");
+                    global.temp.setPattern("");
                     clickCheck[1] = false;
 
                     rgPattern.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setPattern("저녁형");
+                    global.temp.setPattern("저녁형");
                     clickCheck[0] = false;
                     clickCheck[1] = true;
                     clickCheck[2] = false;
@@ -90,13 +91,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbPattern[2]){
                 if(clickCheck[2]){
-                    global.myInfo.setPattern("");
+                    global.temp.setPattern("");
                     clickCheck[2] = false;
 
                     rgPattern.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setPattern("불규칙");
+                    global.temp.setPattern("불규칙");
                     clickCheck[0] = false;
                     clickCheck[1] = false;
                     clickCheck[2] = true;
@@ -116,13 +117,13 @@ public class RadioFunc {
         if(rb.isChecked()){
             if(rb == rbDrink[0]){
                 if(clickCheck[0]){
-                    global.myInfo.setDrink("");
+                    global.temp.setDrink("");
                     clickCheck[0] = false;
 
                     rgDrink.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setDrink("금주");
+                    global.temp.setDrink("금주");
                     clickCheck[0] = true;
                     clickCheck[1] = false;
                     clickCheck[2] = false;
@@ -133,13 +134,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbDrink[1]){
                 if(clickCheck[1]){
-                    global.myInfo.setDrink("");
+                    global.temp.setDrink("");
                     clickCheck[1] = false;
 
                     rgDrink.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setDrink("매일");
+                    global.temp.setDrink("매일");
                     clickCheck[0] = false;
                     clickCheck[1] = true;
                     clickCheck[2] = false;
@@ -150,13 +151,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbDrink[2]){
                 if(clickCheck[2]){
-                    global.myInfo.setDrink("0");
+                    global.temp.setDrink("0");
                     clickCheck[2] = false;
 
                     rgDrink.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setDrink("주 1~2회");
+                    global.temp.setDrink("주 1-2회");
                     clickCheck[0] = false;
                     clickCheck[1] = false;
                     clickCheck[2] = true;
@@ -167,13 +168,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbDrink[3]){
                 if(clickCheck[3]){
-                    global.myInfo.setDrink("");
+                    global.temp.setDrink("");
                     clickCheck[3] = false;
 
                     rgDrink.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setDrink("월 1~2회");
+                    global.temp.setDrink("월 1-2회");
                     clickCheck[0] = false;
                     clickCheck[1] = false;
                     clickCheck[2] = false;
@@ -194,28 +195,28 @@ public class RadioFunc {
         if(rb.isChecked()){
             if(rb == rbSmoking[0]){
                 if(clickCheck[0]){
-                    global.myInfo.setSmoking("");
+                    global.temp.setSmoking("");
                     clickCheck[0] = false;
 
                     rgSmoking.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setSmoking("흡연");
+                    global.temp.setSmoking("흡연");
                     clickCheck[0] = true;
-                    clickCheck[0] = false;
+                    clickCheck[1] = false;
 
                     rgSmoking.clearCheck();
                     radioSelect(rb);
                 }
             }else if(rb == rbSmoking[1]){
                 if(clickCheck[1]){
-                    global.myInfo.setSmoking("");
+                    global.temp.setSmoking("");
                     clickCheck[1] = false;
 
                     rgSmoking.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setSmoking("비흡연");
+                    global.temp.setSmoking("비흡연");
                     clickCheck[0] = false;
                     clickCheck[1] = true;
 
@@ -235,13 +236,13 @@ public class RadioFunc {
         if(rb.isChecked()){
             if(rb == rbAllowFriend[0]){
                 if(clickCheck[0]){
-                    global.myInfo.setAllow_friend("");
+                    global.temp.setAllow_friend("");
                     clickCheck[0] = false;
 
                     rgAllowFriend.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setAllow_friend("허용");
+                    global.temp.setAllow_friend("허용");
                     clickCheck[0] = true;
                     clickCheck[1] = false;
                     clickCheck[2] = false;
@@ -251,13 +252,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbAllowFriend[1]){
                 if(clickCheck[1]){
-                    global.myInfo.setAllow_friend("");
+                    global.temp.setAllow_friend("");
                     clickCheck[1] = false;
 
                     rgAllowFriend.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setAllow_friend("금지");
+                    global.temp.setAllow_friend("금지");
                     clickCheck[0] = false;
                     clickCheck[1] = true;
                     clickCheck[2] = false;
@@ -267,13 +268,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbAllowFriend[2]){
                 if(clickCheck[2]){
-                    global.myInfo.setAllow_friend("");
+                    global.temp.setAllow_friend("");
                     clickCheck[2] = false;
 
                     rgAllowFriend.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setAllow_friend("합의하 허용");
+                    global.temp.setAllow_friend("합의하 허용");
                     clickCheck[0] = false;
                     clickCheck[1] = false;
                     clickCheck[2] = true;
@@ -293,13 +294,13 @@ public class RadioFunc {
         if(rb.isChecked()){
             if(rb == rbPet[0]){
                 if(clickCheck[0]){
-                    global.myInfo.setPet("");
+                    global.temp.setPet("");
                     clickCheck[0] = false;
 
                     rgPet.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setPet("허용");
+                    global.temp.setPet("허용");
                     clickCheck[0] = true;
                     clickCheck[1] = false;
                     clickCheck[2] = false;
@@ -309,13 +310,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbPet[1]){
                 if(clickCheck[1]){
-                    global.myInfo.setPet("");
+                    global.temp.setPet("");
                     clickCheck[1] = false;
 
                     rgPet.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setPet("금지");
+                    global.temp.setPet("금지");
                     clickCheck[0] = false;
                     clickCheck[1] = true;
                     clickCheck[2] = false;
@@ -325,13 +326,13 @@ public class RadioFunc {
                 }
             }else if(rb == rbPet[2]){
                 if(clickCheck[2]){
-                    global.myInfo.setPet("");
+                    global.temp.setPet("");
                     clickCheck[2] = false;
 
                     rgPet.clearCheck();
                     radioClear(rb);
                 }else{
-                    global.myInfo.setPet("합의하 허용");
+                    global.temp.setPet("합의하 허용");
                     clickCheck[0] = false;
                     clickCheck[1] = false;
                     clickCheck[2] = true;
@@ -345,6 +346,122 @@ public class RadioFunc {
         }
 
         return clickCheck;
+    }
+
+
+
+    public void modifyGenderInit(RadioButton[] rbGender){
+        if(global.myInfo.getGender().equals("F")){
+            global.temp.setGender("F");
+            radioSelect(rbGender[0]);
+            rbGender[0].setChecked(true);
+        }else{
+            global.temp.setGender("M");
+            radioSelect(rbGender[1]);
+            rbGender[1].setChecked(true);
+        }
+    }
+
+    public void modifyRoomInit(RadioButton[] rbRoom){
+        if(global.myInfo.getRoom()){
+            global.temp.setRoom(true);
+            radioSelect(rbRoom[0]);
+            rbRoom[0].setChecked(true);
+        }else{
+            global.temp.setRoom(false);
+            radioSelect(rbRoom[1]);
+            rbRoom[1].setChecked(true);
+        }
+    }
+
+    public void modifyPatternInit(RadioButton[] rbPattern){
+        if(TextUtils.isEmpty(global.myInfo.getPattern())){
+            global.temp.setPattern("");
+        }else if(global.myInfo.getPattern().equals("아침형")){
+            global.temp.setPattern("아침형");
+            radioSelect(rbPattern[0]);
+            rbPattern[0].setChecked(true);
+        }else if(global.myInfo.getPattern().equals("저녁형")){
+            global.temp.setPattern("저녁형");
+            radioSelect(rbPattern[1]);
+            rbPattern[1].setChecked(true);
+        }else if(global.myInfo.getPattern().equals("불규칙")){
+            global.temp.setPattern("불규칙");
+            radioSelect(rbPattern[2]);
+            rbPattern[2].setChecked(true);
+        }
+    }
+
+    public void modifyDrinkInit(RadioButton[] rbDrink){
+        if(TextUtils.isEmpty(global.myInfo.getDrink())){
+            global.temp.setDrink("");
+        }else if(global.myInfo.getDrink().equals("금주")){
+            global.temp.setDrink("금주");
+            radioSelect(rbDrink[0]);
+            rbDrink[0].setChecked(true);
+        }else if(global.myInfo.getDrink().equals("매일")){
+            global.temp.setDrink("매일");
+            radioSelect(rbDrink[1]);
+            rbDrink[1].setChecked(true);
+        }else if(global.myInfo.getDrink().equals("주 1-2회")){
+            global.temp.setDrink("주 1-2회");
+            radioSelect(rbDrink[2]);
+            rbDrink[2].setChecked(true);
+        }else if(global.myInfo.getDrink().equals("월 1-2회")){
+            global.temp.setDrink("월 1-2회");
+            radioSelect(rbDrink[3]);
+            rbDrink[3].setChecked(true);
+        }
+    }
+
+    public void modifySmokingInit(RadioButton[] rbSmoking){
+        if(TextUtils.isEmpty(global.myInfo.getSmoking())){
+            global.temp.setSmoking("");
+        }else if(global.myInfo.getSmoking().equals("흡연")){
+            global.temp.setSmoking("흡연");
+            radioSelect(rbSmoking[0]);
+            rbSmoking[0].setChecked(true);
+        }else if(global.myInfo.getSmoking().equals("비흡연")){
+            global.temp.setSmoking("비흡연");
+            radioSelect(rbSmoking[1]);
+            rbSmoking[1].setChecked(true);
+        }
+    }
+
+    public void modifyAllowFriendInit(RadioButton[] rbAllowFriend){
+        if(TextUtils.isEmpty(global.myInfo.getAllow_friend())){
+            global.temp.setAllow_friend("");
+        }else if(global.myInfo.getAllow_friend().equals("허용")){
+            global.temp.setAllow_friend("허용");
+            radioSelect(rbAllowFriend[0]);
+            rbAllowFriend[0].setChecked(true);
+        }else if(global.myInfo.getAllow_friend().equals("금지")){
+            global.temp.setAllow_friend("금지");
+            radioSelect(rbAllowFriend[1]);
+            rbAllowFriend[1].setChecked(true);
+        }else if(global.myInfo.getAllow_friend().equals("합의하 허용")){
+            global.temp.setAllow_friend("합의하 허용");
+            radioSelect(rbAllowFriend[2]);
+            rbAllowFriend[2].setChecked(true);
+        }
+    }
+
+    public void modifyPetInit(RadioButton[] rbPet){
+        if(TextUtils.isEmpty(global.myInfo.getPet())){
+            global.temp.setPet("");
+        }else if(global.myInfo.getPet().equals("허용")){
+            global.temp.setPet("허용");
+            radioSelect(rbPet[0]);
+            rbPet[0].setChecked(true);
+        }else if(global.myInfo.getPet().equals("금지")){
+            global.temp.setPet("금지");
+            radioSelect(rbPet[1]);
+            rbPet[1].setChecked(true);
+        }else if(global.myInfo.getPet().equals("합의하 허용")){
+            global.temp.setPet("합의하 허용");
+            radioSelect(rbPet[2]);
+            rbPet[2].setChecked(true);
+        }
     }
 
     public void radioSelect(RadioButton rb){

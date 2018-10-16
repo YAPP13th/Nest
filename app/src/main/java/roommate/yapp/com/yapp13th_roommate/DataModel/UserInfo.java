@@ -6,6 +6,7 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
+    private String key;             //DB에 저장되는 키값
     private String profile_image;   //프로필 사진 이미지 base64
     private String[] room_image;    //방 사진 이미지 base64 최대 3개
     private String id;              //고유 아이디(카톡 등으로 받은 아이디 값)
@@ -29,7 +30,8 @@ public class UserInfo implements Serializable{
 
     public UserInfo() {}
 
-    public UserInfo(String profile_image, String[] room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce) {
+    public UserInfo(String key, String profile_image, String[] room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce) {
+        this.key = key;
         this.profile_image = profile_image;
         this.room_image = room_image;
         this.id = id;
@@ -50,6 +52,14 @@ public class UserInfo implements Serializable{
         this.like = like;
         this.disLike = disLike;
         this.introduce = introduce;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getProfile_image() {

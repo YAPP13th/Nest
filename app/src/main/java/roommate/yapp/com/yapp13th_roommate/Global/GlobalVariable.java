@@ -3,8 +3,11 @@ package roommate.yapp.com.yapp13th_roommate.Global;
 import android.app.Activity;
 import android.app.Application;
 import android.graphics.Bitmap;
+import android.widget.ImageView;
 
 import com.kakao.auth.KakaoSDK;
+import com.kakao.auth.authorization.authcode.KakaoWebViewDialog;
+import com.kakao.auth.exception.KakaoWebviewException;
 
 import java.util.List;
 
@@ -27,12 +30,16 @@ public class GlobalVariable extends Application {
 
     private Boolean isExist;
 
+    private int viewPagerPosition;
+    public ImageView[] viewPagerImageView;
+
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
 
         KakaoSDK.init(new KakaoSDKAdapter());
+
     }
 
     public static Activity getCurrentActivity() {
@@ -119,5 +126,21 @@ public class GlobalVariable extends Application {
 
     public void setTempRoom(Bitmap[] tempRoom) {
         this.tempRoom = tempRoom;
+    }
+
+    public UserInfo getTemp() {
+        return temp;
+    }
+
+    public void setTemp(UserInfo temp) {
+        this.temp = temp;
+    }
+
+    public int getViewPagerPosition() {
+        return viewPagerPosition;
+    }
+
+    public void setViewPagerPosition(int viewPagerPosition) {
+        this.viewPagerPosition = viewPagerPosition;
     }
 }

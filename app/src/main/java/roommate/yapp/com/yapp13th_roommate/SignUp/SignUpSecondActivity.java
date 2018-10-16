@@ -148,13 +148,16 @@ public class SignUpSecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 global.setMyProfile(global.getTempProfile());
-                global.myInfo.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
+                global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
 
-                global.myInfo.setInstarID(tvInstar.getText().toString());
-                global.myInfo.setLike(tvLike.getText().toString());
-                global.myInfo.setDisLike(tvDisLike.getText().toString());
-                global.myInfo.setIntroduce(tvIntroduce.getText().toString());
-                global.myInfo.setNow_date(new Date(System.currentTimeMillis()));
+                global.temp.setId(global.myInfo.getId());
+                global.temp.setInstarID(tvInstar.getText().toString());
+                global.temp.setLike(tvLike.getText().toString());
+                global.temp.setDisLike(tvDisLike.getText().toString());
+                global.temp.setIntroduce(tvIntroduce.getText().toString());
+                global.temp.setNow_date(new Date(System.currentTimeMillis()));
+
+                global.myInfo = global.temp;
 
                 firebaseFunc.FirebaseSignUp();
 

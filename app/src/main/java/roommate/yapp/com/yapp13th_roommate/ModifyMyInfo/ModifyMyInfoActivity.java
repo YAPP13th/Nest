@@ -69,9 +69,6 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
     private RadioGroup rgGender, rgRoom, rgPattern, rgDrink, rgSmoking, rgAllowFriend, rgPet;
     private Spinner spinner;
 
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
-
     private TextView modify;
 
     private Boolean[] patternCheck, drinkCheck, smokingCheck, friendCheck, petCheck;
@@ -107,6 +104,10 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         Arrays.fill(petCheck, false);
 
         global.temp = new UserInfo();
+        global.temp.setId(global.myInfo.getId());
+        global.temp.setKey(global.myInfo.getKey());
+        global.temp.setProfile_image(global.myInfo.getProfile_image());
+        global.setTempProfile(imageFunc.decodebase64ToBitmap(global.temp.getProfile_image()));
 
         Resources res = getResources();
         String[] years = res.getStringArray(R.array.year);
@@ -222,7 +223,7 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         ivJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imageFunc.selectGallery(ivJoin);
+                imageFunc.selectGallery();
             }
         });
 
@@ -256,6 +257,9 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                global.setMyProfile(global.getTempProfile());
+                global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
+
                 global.temp.setName(etName.getText().toString());
                 global.temp.setYear(spinner.getSelectedItem().toString());
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
@@ -265,13 +269,14 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
                 global.temp.setIntroduce(etIntroduce.getText().toString());
                 global.temp.setNow_date(new Date(System.currentTimeMillis()));
 
-                global.setMyProfile(global.getTempProfile());
-//                global.myInfo = global.temp;
-//                databaseReference.push().setValue(userInfo);
+                global.myInfo = global.temp;
+
+                firebaseFunc.MyInfoUpdate();
             }
         });
 
         dataInit();
+        //내 정보를 불러와 레이아웃 세팅 함수
 
     }
 
@@ -283,7 +288,8 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         if(resultCode == RESULT_OK){
             switch (requestCode){
                 case GALLERY_CODE:
-                    imageFunc.sendPicture(data.getData());
+                    global.setTempProfile(imageFunc.sendPicture(data.getData()));
+                    ivJoin.setImageBitmap(global.getTempProfile());
                     break;
                 case CAMERA_CODE:
                     imageFunc.getPictureForPhoto();
@@ -298,6 +304,7 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
 
     private void dataInit() {
         ivJoin.setImageBitmap(imageFunc.decodebase64ToBitmap(global.myInfo.getProfile_image()));
+        //base64로 인코딩 된 내 프로필을 가져와서 bitmap으로 디코딩 후 이미지뷰에 셋팅
 
         etName.setText(global.myInfo.getName());
         etOpenChat.setText(global.myInfo.getOpenChatURL());
@@ -305,14 +312,28 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         etLike.setText(global.myInfo.getLike());
         etDisLike.setText(global.myInfo.getDisLike());
         etIntroduce.setText(global.myInfo.getIntroduce());
-//        tvLocation.setText(global.myInfo.getLocation());
-//        tvMonthly.setText(global.myInfo.getMonthly() + " 만원");
-//        tvPattern.setText(global.myInfo.getPattern());
-//        tvDrink.setText(global.myInfo.getDrink());
-//        tvSmoking.setText(global.myInfo.getSmoking());
-//        tvAllowFriend.setText(global.myInfo.getAllow_friend());
-//        tvPet.setText(global.myInfo.getPet());
-        //라디오버튼이랑 seekbar 처리를 해야됨
+        //사용자가 입력하는 부분 초기화
+
+        radioFunc.modifyGenderInit(rbGender);
+        radioFunc.modifyRoomInit(rbRoom);
+        radioFunc.modifyPatternInit(rbPattern);
+        radioFunc.modifyDrinkInit(rbDrink);
+        radioFunc.modifySmokingInit(rbSmoking);
+        radioFunc.modifyAllowFriendInit(rbAllowFriend);
+        radioFunc.modifyPetInit(rbPet);
+        //라디오 버튼 초기화
+
+        spinner.setSelection(2014 - Integer.parseInt(global.myInfo.getYear()));
+
+        TextView tvprog = findViewById(R.id.join_tvprog);
+        seekBar.setProgress(Integer.parseInt(global.myInfo.getMonthly()) / 10);
+
+        if(Integer.parseInt(global.myInfo.getMonthly()) == 0)
+            tvprog.setText(prog + "만원");
+        else
+            tvprog.setText("0~" + prog + "만원");
+        //시크바 초기화
+
     }
 
 }

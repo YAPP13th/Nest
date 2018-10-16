@@ -40,12 +40,12 @@
                 app:layout_constraintStart_toEndOf="@+id/ivBack"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <View
                 android:id="@+id/newLine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:text="------------------------------------------------------------------------------------"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="21dp"
+                android:background="#BDBDBD"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView

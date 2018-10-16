@@ -75,5 +75,4 @@
         android:layout_gravity="end|bottom"
         android:src="@drawable/ic_fab"
         android:layout_margin="18dp" />
-
 </FrameLayout>

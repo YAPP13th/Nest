@@ -24,7 +24,7 @@ import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
 
 public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
-//    private UserInfo[] mData;
+    //    private UserInfo[] mData;
     private List<UserInfo> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;

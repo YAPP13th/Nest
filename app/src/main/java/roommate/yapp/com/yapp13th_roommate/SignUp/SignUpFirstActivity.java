@@ -1,14 +1,26 @@
 package roommate.yapp.com.yapp13th_roommate.SignUp;
 
+import android.app.Activity;
+import android.content.ContentUris;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
+import android.net.Uri;
 import android.os.Build;
+import android.provider.MediaStore;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +28,12 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -26,19 +43,33 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.darsh.multipleimageselect.activities.AlbumSelectActivity;
+import com.darsh.multipleimageselect.helpers.Constants;
+import com.darsh.multipleimageselect.models.Image;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
+
+import java.io.File;
+import java.util.ArrayList;
+
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
+import roommate.yapp.com.yapp13th_roommate.ViewPager.PagerAdapter;
+import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImagePagerAdapter;
 
 public class SignUpFirstActivity extends AppCompatActivity {
 
     private final int CAMERA_CODE = 1111;
     private final int GALLERY_CODE = 1112;
+    private final int MULTI_CROP = 1113;
+    private final int ROOM_SELECT = 1114;
 
+    private ConstraintLayout touchInterceptor;
     private EditText etName, etOpenChat;
-    private ImageView ivMyProfile;
+    private ImageView ivMyProfile, pagerIndex;
     private RadioButton[] rbGender, rbRoom;
     private SeekBar seekBar;
     private int prog;
@@ -51,6 +82,11 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
     private TextView tvTitle;
 
+    private ViewPager viewPager;
+    private RoomImagePagerAdapter roomImagePagerAdapter;
+
+    private int multiCropIndex, multiSelectNum;
+    private ArrayList<Image> images;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +95,15 @@ public class SignUpFirstActivity extends AppCompatActivity {
         global = (GlobalVariable)getApplicationContext();
         imageFunc = new ImageFunc(this);
         radioFunc = new RadioFunc(this);
+
+        global.everyInfo = new ArrayList<>();
+        global.filterInfo = new ArrayList<>();
+        global.myInfo = new UserInfo();
+        global.temp = new UserInfo();
+        global.myRoom = new Bitmap[3];
+        global.tempRoom = new Bitmap[3];
+
+        global.viewPagerImageView = new ImageView[3];
 
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
@@ -87,11 +132,11 @@ public class SignUpFirstActivity extends AppCompatActivity {
         ivMyProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imageFunc.selectGallery(ivMyProfile);
+                imageFunc.selectGallery();
             }
         });
 
-        //싴바 테스트
+        pagerIndex = findViewById(R.id.viewPagerIndex);
 
         final TextView tvprog = findViewById(R.id.join_tvprog);
         seekBar=findViewById(R.id.seekBar);
@@ -104,7 +149,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 else
                     tvprog.setText("0~" + prog + "만원");
 
-                global.myInfo.setMonthly(Integer.toString(prog));
+                global.temp.setMonthly(Integer.toString(prog));
             }
 
             @Override
@@ -150,12 +195,12 @@ public class SignUpFirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                global.myInfo.setName(etName.getText().toString());
-                global.myInfo.setYear(spinner.getSelectedItem().toString());
-                global.myInfo.setOpenChatURL(etOpenChat.getText().toString());
+                global.temp.setName(etName.getText().toString());
+                global.temp.setYear(spinner.getSelectedItem().toString());
+                global.temp.setOpenChatURL(etOpenChat.getText().toString());
 
-                if((global.myInfo.getName() == null || global.myInfo.getName().equals("")) || (global.myInfo.getGender() == null || global.myInfo.getGender().equals(""))
-                        || (global.myInfo.getRoom() == null || global.myInfo.getRoom().equals("")) || (global.myInfo.getOpenChatURL() == null || global.myInfo.getOpenChatURL().equals(""))){
+                if((global.temp.getName() == null || global.temp.getName().equals("")) || (global.temp.getGender() == null || global.temp.getGender().equals(""))
+                        || (global.temp.getRoom() == null || global.temp.getRoom().equals("")) || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))){
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                     builder.setTitle("모두 입력해 주세요");
                     builder.setMessage("모두 입력해 주세요");
@@ -176,6 +221,27 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
             }
         });
+
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        ViewTreeObserver vto = viewPager.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
+                viewPager.requestLayout();
+            }
+        });
+        //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
+        //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
+        //레이아웃을 다시 그려준다
+
+        Bitmap[] bitmaps = new Bitmap[1];
+        bitmaps[0] = BitmapFactory.decodeResource(getResources(), R.drawable.myprofileedit_house_photo_icon);
+        roomImagePagerAdapter = new RoomImagePagerAdapter(SignUpFirstActivity.this, bitmaps);
+        viewPager.setAdapter(roomImagePagerAdapter);
+        //뷰 페이저 빈 화면 만들기
+
     }
 
     @Override
@@ -186,12 +252,97 @@ public class SignUpFirstActivity extends AppCompatActivity {
         if(resultCode == RESULT_OK){
             switch (requestCode){
                 case GALLERY_CODE:
-                    imageFunc.sendPicture(data.getData());
-                    break;
-                case CAMERA_CODE:
-                    imageFunc.getPictureForPhoto();
+                    CropImage.activity(data.getData())
+                            .setGuidelines(CropImageView.Guidelines.ON)
+                            .setAspectRatio(1,1)
+                            .start(this);
+                    //갤러리를 열고 거기서 받아온 이미지 uri를 crop 하기 위한 액티비티로 이동
                     break;
 
+                case CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE:
+                    CropImage.ActivityResult result = CropImage.getActivityResult(data);
+                    Uri resultUri = result.getUri();
+                    //file:~~~ 식의 경로로 리턴이 됨
+                    //imageFunc.getImageContentUri 이건 file 형태의 url 이미지를 content://~~ 형태의 이미지로 변경하는 함수
+                    global.setTempProfile(imageFunc.sendPicture(imageFunc.getImageContentUri(SignUpFirstActivity.this, new File(resultUri.getPath()))));
+                    ivMyProfile.setImageBitmap(global.getTempProfile());
+                    break;
+
+                case Constants.REQUEST_CODE:
+                    //이미지 다중 선택 처리
+                    //The array list has the image paths of the selected images
+                    images = data.getParcelableArrayListExtra(Constants.INTENT_EXTRA_IMAGES);
+                    global.tempRoom = new Bitmap[images.size()];
+
+                    multiSelectNum = images.size();
+                    multiCropIndex = 0;
+
+                    imageFunc.multiCrop(images, multiCropIndex, this);
+                    //선택한 이미지 수를 받아와서 그 수만큼 페이저 뷰에 이미지 세팅하기 위한 함수
+                    break;
+
+                case MULTI_CROP:
+                    //이미지 잘라내는 것을 처리 한 후 사용자가 선택한 이미지의 수 모두 처리 할 경우 페이저 뷰를 생성
+                    CropImage.ActivityResult multiResult = CropImage.getActivityResult(data);
+                    Uri multiResultUri = multiResult.getUri();
+
+                    global.tempRoom[multiCropIndex++] = imageFunc.sendPicture(imageFunc.getImageContentUri(SignUpFirstActivity.this, new File(multiResultUri.getPath())));
+
+                    if(multiCropIndex == multiSelectNum){
+                        roomImagePagerAdapter = new RoomImagePagerAdapter(SignUpFirstActivity.this, global.tempRoom);
+                        viewPager.setAdapter(roomImagePagerAdapter);
+
+                        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                            @Override
+                            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                                //페이저 뷰에서 지금 선택 된 인덱스를 표시해주는것 처리
+                                if(multiSelectNum == 3){
+                                    if(position == 0){
+                                        pagerIndex.setImageResource(R.drawable.index1);
+                                        //●○○ 형태의 이미지
+                                    }else if(position == 1){
+                                        pagerIndex.setImageResource(R.drawable.index2);
+                                        //○●○ 형태의 이미지
+                                    }else if(position == 2){
+                                        pagerIndex.setImageResource(R.drawable.index3);
+                                        //○○● 형태의 이미지
+                                    }
+                                }else if(multiSelectNum == 2){
+                                    if(position == 0){
+                                        pagerIndex.setImageResource(R.drawable.index1);
+                                        //●○ 형태의 이미지
+                                    }else if(position == 1){
+                                        pagerIndex.setImageResource(R.drawable.index2);
+                                        //○● 형태의 이미지
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onPageSelected(int position) {
+
+                            }
+
+                            @Override
+                            public void onPageScrollStateChanged(int state) {
+
+                            }
+                        });
+
+                        global.myRoom = new Bitmap[global.tempRoom.length];
+                        global.setMyRoom(global.tempRoom);
+                        //뷰 페이저가 생성되면, 사용자가 선택 및 잘라내는 작업 완료된 비트맵 저장
+                    }else{
+                        imageFunc.multiCrop(images, multiCropIndex, this);
+                        //모든 이미지가 처리가 안 됬을 경우 다음 이미지 처리
+                    }
+                    break;
+
+                case CAMERA_CODE:
+                    imageFunc.getPictureForPhoto();
+                    //갤러리 선택 말고 촬영 모드
+                    //추가 안할듯? 갤러리도 겁나 복잡햇음
+                    break;
                 default:
                     break;
             }

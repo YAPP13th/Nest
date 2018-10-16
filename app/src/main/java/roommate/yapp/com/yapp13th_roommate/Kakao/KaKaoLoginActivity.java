@@ -16,6 +16,7 @@ import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
@@ -37,8 +38,6 @@ public class KaKaoLoginActivity extends Activity {
 
     private SessionCallback callback; // 콜백 선언
     private static final String TAG = "KaKaoLoginActivity";
-//    private Context mcontext;
-    static String kakaoNickname;
 
     private GlobalVariable global;
     private FirebaseFunc firebaseFunc;
@@ -50,12 +49,6 @@ public class KaKaoLoginActivity extends Activity {
 
         global = (GlobalVariable)getApplicationContext();
         firebaseFunc = new FirebaseFunc(KaKaoLoginActivity.this);
-
-        global.everyInfo = new ArrayList<>();
-        global.filterInfo = new ArrayList<>();
-        global.myInfo = new UserInfo();
-        global.myRoom = new Bitmap[3];
-        global.tempRoom = new Bitmap[3];
 
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
@@ -101,6 +94,12 @@ public class KaKaoLoginActivity extends Activity {
     }
 
     protected void requestMe() {
+//        UserManagement.requestLogout(new LogoutResponseCallback() {
+//            @Override
+//            public void onCompleteLogout() {
+//
+//            }
+//        });
         UserManagement.requestMe(new MeResponseCallback() {
             @Override
             public void onFailure(ErrorResult errorResult) {
@@ -127,6 +126,13 @@ public class KaKaoLoginActivity extends Activity {
 
             @Override
             public void onSuccess(UserProfile userProfile) {
+                global.everyInfo = new ArrayList<>();
+                global.filterInfo = new ArrayList<>();
+                global.myInfo = new UserInfo();
+                global.temp = new UserInfo();
+                global.myRoom = new Bitmap[3];
+                global.tempRoom = new Bitmap[3];
+
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
 
                 global.setExist(false);

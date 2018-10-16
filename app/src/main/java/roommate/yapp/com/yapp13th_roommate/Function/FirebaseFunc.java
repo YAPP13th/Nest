@@ -3,8 +3,11 @@ package roommate.yapp.com.yapp13th_roommate.Function;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.ProgressBar;
 
@@ -14,7 +17,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.Semaphore;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
@@ -59,8 +66,10 @@ public class FirebaseFunc extends AppCompatActivity{
                         UserInfo temp = snapshot.getValue(UserInfo.class);
                         if(temp.getId().equals(global.getMyId())){
                             global.myInfo = temp ;
+                            temp.setKey(snapshot.getKey());
                             global.setExist(true);
                         }else{
+                            temp.setKey(snapshot.getKey());
                             global.everyInfo.add(temp);
                             global.filterInfo.add(temp);
                         }
@@ -78,6 +87,7 @@ public class FirebaseFunc extends AppCompatActivity{
     }
 
     private void Login(ProgressDialog loginProgres){
+        global.setViewPagerPosition(0);
         if(global.getExist()){
             loginProgres.dismiss();
             Intent intent = new Intent(mContext, ViewPagerMain.class);
@@ -96,6 +106,22 @@ public class FirebaseFunc extends AppCompatActivity{
         databaseReference = firebaseDatabase.getReference("user_info_test");
 
         databaseReference.push().setValue(global.myInfo);
+    }
+
+    public void MyInfoUpdate(){
+        Map<String, Object> taskMap = new HashMap<String, Object>();
+        taskMap.put(global.myInfo.getKey(), global.myInfo);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("user_info_test");
+        databaseReference.updateChildren(taskMap);
+
+        global.setViewPagerPosition(2);
+
+        Intent intent = new Intent(mContext, ViewPagerMain.class);
+        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+        mContext.startActivity(intent);
+        finish();
     }
 
 }
