@@ -73,8 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        app:rippleColor="@color/colorPrimaryDark"
-        android:src="@drawable/ic_filter"
+        android:src="@drawable/ic_fab"
         android:layout_margin="18dp" />
 
 </FrameLayout>
