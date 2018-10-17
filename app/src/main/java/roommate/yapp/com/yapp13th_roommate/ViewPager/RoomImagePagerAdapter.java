@@ -42,7 +42,6 @@ public class RoomImagePagerAdapter extends PagerAdapter {
         iv = (ImageView)v.findViewById(R.id.ivRoom);
         iv.setScaleType(ImageView.ScaleType.FIT_XY);
         iv.setImageBitmap(bitmaps[position]);
-        global.viewPagerImageView[position] = iv;
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -160,7 +160,11 @@ public class RecommendFragment extends Fragment
 
         top_adapter.setClickListener(this);
 
+<<<<<<< HEAD
 
+=======
+        global.bottom_recyclerView = bottom_recyclerView;
+>>>>>>> 2dca3a491592861bade05d84a6ec5d766a084b20
 
         return rootView;
 
@@ -183,7 +187,14 @@ public class RecommendFragment extends Fragment
     public void onResult(Object result) {
 
         Log.d("CALLBACK", "onResult: " + result.toString());
+<<<<<<< HEAD
 
+=======
+        if (result.toString().equalsIgnoreCase("swiped_down")) {
+
+        } else {
+        }
+>>>>>>> 2dca3a491592861bade05d84a6ec5d766a084b20
     }
 
 }
