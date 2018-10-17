@@ -24,7 +24,6 @@ import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
 
 public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
-    //    private UserInfo[] mData;
     private List<UserInfo> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
@@ -53,31 +52,33 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
     @Override
     public void onBindViewHolder(BottomRecyclerViewAdapter.ViewHolder holder, final int position) {
-        byte[] image = Base64.decode(mData.get(position).getProfile_image(), Base64.DEFAULT);
-        Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
+        if(mData != null){
+            byte[] image = Base64.decode(mData.get(position).getProfile_image(), Base64.DEFAULT);
+            Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
 
-        holder.iv_profile.setImageBitmap(decodeByte);
-        holder.tv_name.setText(mData.get(position).getName());
-        holder.tv_age.setText(mData.get(position).getYear());
-        holder.tv_address.setText(mData.get(position).getLocation());
-        holder.tv_monthMoney.setText(mData.get(position).getMonthly());
-        holder.tv_selfIntroduction.setText(mData.get(position).getIntroduce());
-        holder.tv_like.setText(mData.get(position).getLike());
-        holder.tv_dislike.setText(mData.get(position).getDisLike());
+            holder.iv_profile.setImageBitmap(decodeByte);
+            holder.tv_name.setText(mData.get(position).getName());
+            holder.tv_age.setText(mData.get(position).getYear());
+            holder.tv_address.setText(mData.get(position).getLocation());
+            holder.tv_monthMoney.setText(mData.get(position).getMonthly());
+            holder.tv_selfIntroduction.setText(mData.get(position).getIntroduce());
+            holder.tv_like.setText(mData.get(position).getLike());
+            holder.tv_dislike.setText(mData.get(position).getDisLike());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                Intent intent = new Intent(v.getContext(), DetailInfoActivity.class);
+                    Intent intent = new Intent(v.getContext(), DetailInfoActivity.class);
 
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("userInfo", mData.get(position));
-                intent.putExtras(bundle);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("position", position);
+                    intent.putExtras(bundle);
 
-                context.startActivity(intent);
-            }
-        });
+                    context.startActivity(intent);
+                }
+            });
+        }
     }
 
     @Override

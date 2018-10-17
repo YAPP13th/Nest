@@ -96,15 +96,6 @@ public class SignUpFirstActivity extends AppCompatActivity {
         imageFunc = new ImageFunc(this);
         radioFunc = new RadioFunc(this);
 
-        global.everyInfo = new ArrayList<>();
-        global.filterInfo = new ArrayList<>();
-        global.myInfo = new UserInfo();
-        global.temp = new UserInfo();
-        global.myRoom = new Bitmap[3];
-        global.tempRoom = new Bitmap[3];
-
-        global.viewPagerImageView = new ImageView[3];
-
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
         SpannableStringBuilder ssb = new SpannableStringBuilder(str);

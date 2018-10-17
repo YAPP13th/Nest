@@ -3,6 +3,7 @@ package roommate.yapp.com.yapp13th_roommate.Global;
 import android.app.Activity;
 import android.app.Application;
 import android.graphics.Bitmap;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
 import com.kakao.auth.KakaoSDK;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Kakao.KakaoSDKAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
 
 public class GlobalVariable extends Application {
 
@@ -31,7 +33,8 @@ public class GlobalVariable extends Application {
     private Boolean isExist;
 
     private int viewPagerPosition;
-    public ImageView[] viewPagerImageView;
+
+    public RecyclerView bottom_recyclerView;
 
     @Override
     public void onCreate() {
@@ -142,5 +145,13 @@ public class GlobalVariable extends Application {
 
     public void setViewPagerPosition(int viewPagerPosition) {
         this.viewPagerPosition = viewPagerPosition;
+    }
+
+    public RecyclerView getBottom_recyclerView() {
+        return bottom_recyclerView;
+    }
+
+    public void setBottom_recyclerView(RecyclerView bottom_recyclerView) {
+        this.bottom_recyclerView = bottom_recyclerView;
     }
 }
