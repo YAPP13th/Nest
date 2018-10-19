@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".SignUp.SignUpFirstActivity">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -373,20 +375,45 @@
                     android:text="없음" />
             </RadioGroup>
 
-            <ImageView
-                android:id="@+id/join_ivroompotho"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/myprofileedit_house_photo_icon"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgroom" />
+
+            <ImageView
+                android:id="@+id/viewPagerIndex1"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex2" />
+
+            <ImageView
+                android:id="@+id/viewPagerIndex2"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex3" />
+
+            <ImageView
+                android:id="@+id/viewPagerIndex3"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager" />
 
             <ImageView
                 android:id="@+id/ivLocation"
@@ -398,7 +425,7 @@
                 android:layout_marginTop="33dp"
                 android:src="@drawable/myprofileedit_location_icon"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_ivroompotho" />
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
             <TextView
                 android:id="@+id/tvLocation"
@@ -410,7 +437,7 @@
                 android:text="희망 지역"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
-                app:layout_constraintTop_toBottomOf="@+id/join_ivroompotho" />
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
             <TextView
                 android:id="@+id/join_location"

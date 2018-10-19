@@ -25,6 +25,7 @@ public class GlobalVariable extends Application {
     public UserInfo temp;
     public List<UserInfo> everyInfo;
     public List<UserInfo> filterInfo;
+    public List<UserInfo> selected;
 
     private String myId;
 
@@ -153,5 +154,13 @@ public class GlobalVariable extends Application {
 
     public void setBottom_recyclerView(RecyclerView bottom_recyclerView) {
         this.bottom_recyclerView = bottom_recyclerView;
+    }
+
+    public List<UserInfo> getSelected() {
+        return selected;
+    }
+
+    public void setSelected(List<UserInfo> selected) {
+        this.selected = selected;
     }
 }
