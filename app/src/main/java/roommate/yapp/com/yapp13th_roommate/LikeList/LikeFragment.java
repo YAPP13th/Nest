@@ -138,6 +138,7 @@ public class LikeFragment extends Fragment {
 
         return view;
     }
+<<<<<<< HEAD
 //
 //    public void firebase_like_get(){
 //        firebaseDatabase = FirebaseDatabase.getInstance();
@@ -192,3 +193,6 @@ public class LikeFragment extends Fragment {
 //
 //    }
 }
+=======
+}
+>>>>>>> e94d4598334349dad653b4a2de26ff71b66bfea0

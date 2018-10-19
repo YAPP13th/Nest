@@ -72,16 +72,28 @@ public class FirebaseFunc extends AppCompatActivity{
                     }
                 }
 
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    UserInfo temp = snapshot.getValue(UserInfo.class);
-                    if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
-                        temp.setKey(snapshot.getKey());
-                        global.everyInfo.add(temp);
-                        global.filterInfo.add(temp);
-                    }
-                }
+                global.setViewPagerPosition(0);
+                if(global.getExist()){
 
-                Login(loginProgres);
+                    for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                        UserInfo temp = snapshot.getValue(UserInfo.class);
+                        if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
+                            temp.setKey(snapshot.getKey());
+                            global.everyInfo.add(temp);
+                            global.filterInfo.add(temp);
+                        }
+                    }
+
+                    loginProgres.dismiss();
+                    Intent intent = new Intent(mContext, ViewPagerMain.class);
+                    mContext.startActivity(intent);
+                    finish();
+                }else{
+                    loginProgres.dismiss();
+                    Intent intent = new Intent(mContext, SignUpFirstActivity.class);
+                    mContext.startActivity(intent);
+                    finish();
+                }
 
             }
 
@@ -92,26 +104,39 @@ public class FirebaseFunc extends AppCompatActivity{
         });
     }
 
-    private void Login(ProgressDialog loginProgres){
-        global.setViewPagerPosition(0);
-        if(global.getExist()){
-            loginProgres.dismiss();
-            Intent intent = new Intent(mContext, ViewPagerMain.class);
-            mContext.startActivity(intent);
-            finish();
-        }else{
-            loginProgres.dismiss();
-            Intent intent = new Intent(mContext, SignUpFirstActivity.class);
-            mContext.startActivity(intent);
-            finish();
-        }
-    }
+//    private void Login(ProgressDialog loginProgres){
+//        global.setViewPagerPosition(0);
+//        if(global.getExist()){
+//            loginProgres.dismiss();
+//            Intent intent = new Intent(mContext, ViewPagerMain.class);
+//            mContext.startActivity(intent);
+//            finish();
+//        }else{
+//            loginProgres.dismiss();
+//            Intent intent = new Intent(mContext, SignUpFirstActivity.class);
+//            mContext.startActivity(intent);
+//            finish();
+//        }
+//    }
 
     public void FirebaseSignUp(){
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("user_info_test1");
 
-        databaseReference.push().setValue(global.myInfo);
+        databaseReference.push().setValue(global.myInfo,new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(DatabaseError databaseError,
+                                   DatabaseReference databaseReference) {
+                String uniqueKey = databaseReference.getKey();
+                global.myInfo.setKey(uniqueKey);
+
+                Map<String, Object> taskMap = new HashMap<String, Object>();
+                taskMap.put(global.myInfo.getKey(), global.myInfo);
+
+                databaseReference.updateChildren(taskMap);
+                //데이터 베이스에 데이터 등록 후 키값을 받아와 myInfo에 반영 및 데이터베이스에 업데이트
+            }
+        });
     }
 
     public void MyInfoUpdate(){

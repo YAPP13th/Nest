@@ -328,4 +328,21 @@ public class ImageFunc extends AppCompatActivity{
 
     }
 
+    public Bitmap incisionToTopRecyclerImage(Bitmap bitmap){
+        Bitmap result = Bitmap.createBitmap(bitmap,
+                0,
+                (int)bitmap.getHeight() * 1 / 10,
+                bitmap.getWidth(),
+                (int)bitmap.getHeight() * 9 / 10);
+        //top recycler view의 이미지는 5:4
+        //원본의 프로필 사진 이미지는 1:1 이므로
+        //상, 하 10%씩 잘라내는 작업 -> 이미지 늘어나는게 싫어서
+
+        if(bitmap != result){
+            bitmap.recycle();
+        }
+
+        return result;
+    }
+
 }
