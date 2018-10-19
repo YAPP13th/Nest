@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Yapp13th_RoomMate</string>
     <string name="desc_iv_profile">profile image</string>
-    <string name="get_kakao_sdk_appkey">@string/kakao_sdk_appkey</string>
+
+
+    <string name="get_kakao_sdk_appkey">f3d1a991e13963f430884ee96a4ac755</string>
+
+
+    <string name="join_Text1">당신은\n어떤사람인가요?</string>
+    <string name="join_Text2">당신은\n어떤 룸메이트 인가요?</string>
     <string-array name="year">
         <item>2015</item>
         <item>2014</item>

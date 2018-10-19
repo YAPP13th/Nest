@@ -86,5 +86,33 @@ $git pull "remote 별명" master
 $git branch -d "브랜치명
 ```
 
-### 최종
-병합이후에 프로젝트 관리 할때에는  => 5~11번의 과정을 통하여 계속 프로젝트 관리(이때 작업하기 이전에 무조건! 10번 과정이 필요함. 아니면 코드 충돌 날 수 있음.
+### 12) 그 이후에 Push 정책
+
+1. push 하기 전에는 항상 로컬 master branch 로 이동해 최신분을 pull 받고, push 하려는 branch 를 최신 상태로 만들어준다.
+```
+$ git checkout master
+$ git pull
+$ git checkout {작업브랜치명}
+$ git rebase master
+```
+2. remote 프로젝트로 push 한다. (remote 프로젝트의 master 브랜치가 아닌 다른 브랜치로 push)
+```
+$ git add .
+$ git commit -am "{작업내용}"
+$ git push origin {작업브랜치명}
+```
+3. [YAPP13th/Nest] 포크떠온 원본 저장소에서 "pull Request" 를 생성한다.
+- pull Request 의 commit message 를 통해 어떤 이슈에대한 내용을 해결했는지에 대한 태깅을 해준다. ex) resolve #{이슈번호} {커밋내용} 
+4. 프로젝트 owner 가 request 를 확인해 push 한 내용을 머지해준다.
+5. Merge request 이후 머지된 브랜치는 가능한 삭제하고, 새로운 브랜치를 따서 새로운 작업을 진행할 수 있도록 한다.
+```
+$ git checkout master
+$ git pull
+$ git branch -D {작업브랜치명}
+$ git checkout -b {새로운브랜치명}
+```
+- 브랜치를 제거한 경우 로컬에서 트래킹 중인 remote 브랜치 정보를 제거해 준다.
+```
+# 트래킹 중인 remote branch 가 있는 경우 서버에서 삭제되면 로컬에서도 리모트 브랜치 정보가 삭제됨.
+$ git fetch -p
+```
