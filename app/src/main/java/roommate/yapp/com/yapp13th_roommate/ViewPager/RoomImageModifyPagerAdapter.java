@@ -2,20 +2,18 @@ package roommate.yapp.com.yapp13th_roommate.ViewPager;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 
-public class RoomImagePagerAdapter extends PagerAdapter {
+public class RoomImageModifyPagerAdapter extends PagerAdapter {
 
     private Context mContext;
     private ImageView iv;
@@ -25,7 +23,7 @@ public class RoomImagePagerAdapter extends PagerAdapter {
 
     private Bitmap[] bitmaps;
 
-    public RoomImagePagerAdapter(Context mContext, Bitmap[] bitmaps) {
+    public RoomImageModifyPagerAdapter(Context mContext, Bitmap[] bitmaps) {
         this.mContext = mContext;
         this.bitmaps = new Bitmap[bitmaps.length];
         this.bitmaps = bitmaps;
@@ -42,7 +40,14 @@ public class RoomImagePagerAdapter extends PagerAdapter {
         iv = (ImageView)v.findViewById(R.id.ivRoom);
         iv.setScaleType(ImageView.ScaleType.FIT_XY);
         iv.setImageBitmap(bitmaps[position]);
-        //보는것만 쓰이는 룸 페이저 뷰
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                global.setViewPagerPosition(position);
+                imageFunc.selectRoomGallery();
+            }
+        });
+        //수정에 쓰이는 룸 페이저 뷰
 
         container.addView(v);
         return v;

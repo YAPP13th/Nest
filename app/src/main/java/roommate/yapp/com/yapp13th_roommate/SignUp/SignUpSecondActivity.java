@@ -1,6 +1,7 @@
 package roommate.yapp.com.yapp13th_roommate.SignUp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -22,6 +23,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Function.FirebaseFunc;
@@ -147,8 +150,17 @@ public class SignUpSecondActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Map<String, String> roomsInfo = new HashMap<>();
+                Bitmap[] rooms;
+                rooms = global.getTempRoom();
+
                 global.setMyProfile(global.getTempProfile());
                 global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
+
+                for(int i = 0; i < rooms.length; i++){
+                    roomsInfo.put("room" + i, imageFunc.saveConvertBitmap(rooms[i]));
+                }
+                global.temp.setRoom_image(roomsInfo);
 
                 global.temp.setId(global.myInfo.getId());
                 global.temp.setInstarID(tvInstar.getText().toString());

@@ -35,6 +35,8 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -58,6 +60,7 @@ import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.PagerAdapter;
+import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImageModifyPagerAdapter;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImagePagerAdapter;
 
 public class SignUpFirstActivity extends AppCompatActivity {
@@ -67,14 +70,14 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private final int MULTI_CROP = 1113;
     private final int ROOM_SELECT = 1114;
 
-    private ConstraintLayout touchInterceptor;
     private EditText etName, etOpenChat;
-    private ImageView ivMyProfile, pagerIndex;
+    private ImageView ivMyProfile, pagerIndex1, pagerIndex2, pagerIndex3;
     private RadioButton[] rbGender, rbRoom;
     private SeekBar seekBar;
     private int prog;
     private RadioGroup rg1,rg2;
     private Spinner spinner;
+    private CheckBox chTerms;
 
     private GlobalVariable global;
     private ImageFunc imageFunc;
@@ -83,7 +86,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private TextView tvTitle;
 
     private ViewPager viewPager;
-    private RoomImagePagerAdapter roomImagePagerAdapter;
+    private RoomImageModifyPagerAdapter roomImagePagerAdapter;
 
     private int multiCropIndex, multiSelectNum;
     private ArrayList<Image> images;
@@ -95,6 +98,17 @@ public class SignUpFirstActivity extends AppCompatActivity {
         global = (GlobalVariable)getApplicationContext();
         imageFunc = new ImageFunc(this);
         radioFunc = new RadioFunc(this);
+
+        global.everyInfo = new ArrayList<>();
+        global.filterInfo = new ArrayList<>();
+        global.myInfo = new UserInfo();
+        global.temp = new UserInfo();
+        global.myRoom = new Bitmap[3];
+        global.tempRoom = new Bitmap[3];
+
+        global.setExist(false);
+        global.setMyId("3");
+        global.myInfo.setId("3");
 
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
@@ -127,7 +141,12 @@ public class SignUpFirstActivity extends AppCompatActivity {
             }
         });
 
-        pagerIndex = findViewById(R.id.viewPagerIndex);
+        pagerIndex1 = findViewById(R.id.viewPagerIndex1);
+        pagerIndex2 = findViewById(R.id.viewPagerIndex2);
+        pagerIndex3 = findViewById(R.id.viewPagerIndex3);
+
+        global.temp.setMonthly("0");
+        //사용자가 시크바를 움직이지 않을 수도 있으므로 0으로 미리 초기화
 
         final TextView tvprog = findViewById(R.id.join_tvprog);
         seekBar=findViewById(R.id.seekBar);
@@ -204,9 +223,24 @@ public class SignUpFirstActivity extends AppCompatActivity {
                             });
                     builder.show();
                 }else{
-                    Intent intent = new Intent(SignUpFirstActivity.this,SignUpSecondActivity.class);
-                    startActivity(intent);
-                    finish();
+                    if(chTerms.isChecked()){
+                        Intent intent = new Intent(SignUpFirstActivity.this,SignUpSecondActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else{
+                        AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
+                        builder.setTitle("약관 동의");
+                        builder.setMessage("약관에 동의해 주세요");
+                        builder.setPositiveButton("넹",
+                                new DialogInterface.OnClickListener(){
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                    }
+                                });
+                        builder.show();
+                    }
+
                 }
 
 
@@ -229,9 +263,11 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
         Bitmap[] bitmaps = new Bitmap[1];
         bitmaps[0] = BitmapFactory.decodeResource(getResources(), R.drawable.myprofileedit_house_photo_icon);
-        roomImagePagerAdapter = new RoomImagePagerAdapter(SignUpFirstActivity.this, bitmaps);
+        roomImagePagerAdapter = new RoomImageModifyPagerAdapter(SignUpFirstActivity.this, bitmaps);
         viewPager.setAdapter(roomImagePagerAdapter);
         //뷰 페이저 빈 화면 만들기
+
+        chTerms = (CheckBox)findViewById(R.id.chTerms);
 
     }
 
@@ -280,7 +316,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     global.tempRoom[multiCropIndex++] = imageFunc.sendPicture(imageFunc.getImageContentUri(SignUpFirstActivity.this, new File(multiResultUri.getPath())));
 
                     if(multiCropIndex == multiSelectNum){
-                        roomImagePagerAdapter = new RoomImagePagerAdapter(SignUpFirstActivity.this, global.tempRoom);
+                        roomImagePagerAdapter = new RoomImageModifyPagerAdapter(SignUpFirstActivity.this, global.tempRoom);
                         viewPager.setAdapter(roomImagePagerAdapter);
 
                         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -289,21 +325,31 @@ public class SignUpFirstActivity extends AppCompatActivity {
                                 //페이저 뷰에서 지금 선택 된 인덱스를 표시해주는것 처리
                                 if(multiSelectNum == 3){
                                     if(position == 0){
-                                        pagerIndex.setImageResource(R.drawable.index1);
+                                        pagerIndex1.setImageResource(R.drawable.oval_copy);
+                                        pagerIndex2.setImageResource(R.drawable.oval);
+                                        pagerIndex3.setImageResource(R.drawable.oval);
                                         //●○○ 형태의 이미지
                                     }else if(position == 1){
-                                        pagerIndex.setImageResource(R.drawable.index2);
+                                        pagerIndex1.setImageResource(R.drawable.oval);
+                                        pagerIndex2.setImageResource(R.drawable.oval_copy);
+                                        pagerIndex3.setImageResource(R.drawable.oval);
                                         //○●○ 형태의 이미지
                                     }else if(position == 2){
-                                        pagerIndex.setImageResource(R.drawable.index3);
+                                        pagerIndex1.setImageResource(R.drawable.oval);
+                                        pagerIndex2.setImageResource(R.drawable.oval);
+                                        pagerIndex3.setImageResource(R.drawable.oval_copy);
                                         //○○● 형태의 이미지
                                     }
                                 }else if(multiSelectNum == 2){
                                     if(position == 0){
-                                        pagerIndex.setImageResource(R.drawable.index1);
+                                        pagerIndex1.setImageResource(R.color.transparent);
+                                        pagerIndex2.setImageResource(R.drawable.oval_copy);
+                                        pagerIndex3.setImageResource(R.drawable.oval);
                                         //●○ 형태의 이미지
                                     }else if(position == 1){
-                                        pagerIndex.setImageResource(R.drawable.index2);
+                                        pagerIndex1.setImageResource(R.color.transparent);
+                                        pagerIndex2.setImageResource(R.drawable.oval);
+                                        pagerIndex3.setImageResource(R.drawable.oval_copy);
                                         //○● 형태의 이미지
                                     }
                                 }
