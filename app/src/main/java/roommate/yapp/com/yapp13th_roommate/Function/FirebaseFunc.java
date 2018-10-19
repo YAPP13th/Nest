@@ -47,7 +47,7 @@ public class FirebaseFunc extends AppCompatActivity{
     public void FirebaseLoginInit(){
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test");
+        databaseReference = firebaseDatabase.getReference("user_info_test1");
         //firebase 및 firebase 테이블 연결
 
         final ProgressDialog loginProgres = ProgressDialog.show(mContext, "Wait please", "로그인중");
@@ -109,7 +109,7 @@ public class FirebaseFunc extends AppCompatActivity{
 
     public void FirebaseSignUp(){
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test");
+        databaseReference = firebaseDatabase.getReference("user_info_test1");
 
         databaseReference.push().setValue(global.myInfo);
     }
@@ -119,7 +119,7 @@ public class FirebaseFunc extends AppCompatActivity{
         taskMap.put(global.myInfo.getKey(), global.myInfo);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test");
+        databaseReference = firebaseDatabase.getReference("user_info_test1");
         databaseReference.updateChildren(taskMap);
 
         global.setViewPagerPosition(2);

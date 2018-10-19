@@ -132,6 +132,7 @@ public class KaKaoLoginActivity extends Activity {
                 global.temp = new UserInfo();
                 global.myRoom = new Bitmap[3];
                 global.tempRoom = new Bitmap[3];
+                global.likeInfo = new ArrayList<>();
 
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
 

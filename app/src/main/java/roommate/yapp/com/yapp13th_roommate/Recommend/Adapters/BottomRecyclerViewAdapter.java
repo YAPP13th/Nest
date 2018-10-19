@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.kakao.usermgmt.response.model.User;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 
@@ -21,14 +25,20 @@ import java.util.List;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 
 public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecyclerViewAdapter.ViewHolder> {
     private List<UserInfo> mData;
+    private List<UserInfo> likeData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
     private Context context;
 
+
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private GlobalVariable global;
     public BottomRecyclerViewAdapter(Context context, List<UserInfo> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
@@ -39,6 +49,8 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_bottom_recyclerview, parent, false);
+        global = GlobalVariable.getGlobalApplicationContext();
+
         return new ViewHolder(view);
     }
 
@@ -52,7 +64,12 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
     @Override
     public void onBindViewHolder(BottomRecyclerViewAdapter.ViewHolder holder, final int position) {
+
         if(mData != null){
+            final UserInfo dataModel = mData.get(position);
+
+
+
             byte[] image = Base64.decode(mData.get(position).getProfile_image(), Base64.DEFAULT);
             Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
 
@@ -76,6 +93,39 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                     intent.putExtras(bundle);
 
                     context.startActivity(intent);
+                }
+            });
+//            UserInfo userInfo = likeData.get(position);
+
+            holder.btn_bottom_recycler_pick.setOnLikeListener(new OnLikeListener() {
+                @Override
+                public void liked(LikeButton likeButton) {
+//
+                    try {
+
+
+                            likeData.add(dataModel);
+//                            global.likeInfo.add(dataModel);
+
+                            Log.e("global 1 :->" , String.valueOf(global.likeInfo));
+
+                            //comment Setting Like Button True
+                            firebaseDatabase = FirebaseDatabase.getInstance();
+                            databaseReference = firebaseDatabase.getReference("like");
+                            databaseReference.push().setValue(likeData);
+
+                        //databaseReference.push().setValue(global.everyInfo);
+                    }catch (NullPointerException e){
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void unLiked(LikeButton likeButton) {
+                    //comment Like Button FALSE
+
+
                 }
             });
         }
@@ -105,17 +155,6 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
             btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
 
-            btn_bottom_recycler_pick.setOnLikeListener(new OnLikeListener() {
-                @Override
-                public void liked(LikeButton likeButton) {
-                    Toast.makeText(context, "찜!", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void unLiked(LikeButton likeButton) {
-                    Toast.makeText(context, "찜@", Toast.LENGTH_SHORT).show();
-                }
-            });
 
             itemView.setOnClickListener(this);
         }

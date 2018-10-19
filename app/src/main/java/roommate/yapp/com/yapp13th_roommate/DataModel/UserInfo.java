@@ -3,6 +3,7 @@ package roommate.yapp.com.yapp13th_roommate.DataModel;
 import java.io.Serializable;
 import java.util.Date;
 
+
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
