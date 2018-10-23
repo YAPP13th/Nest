@@ -47,7 +47,7 @@ public class DetailInfoActivity extends AppCompatActivity {
         imageFunc = new ImageFunc(this);
 
         Intent intent = getIntent();
-        position = intent.getIntExtra("position", 0);
+        position = intent.getIntExtra("position1", 0);
 
         ivProfile = (ImageView)findViewById(R.id.ivUser);
         pagerIndex1 = (ImageView)findViewById(R.id.viewPagerIndex1);
@@ -72,21 +72,21 @@ public class DetailInfoActivity extends AppCompatActivity {
         btnSelect = (Button)findViewById(R.id.btnSelect);
         btnChat = (Button)findViewById(R.id.btnChat);
 
-        ivProfile.setImageBitmap(imageFunc.decodebase64ToBitmap(global.filterInfo.get(position).getProfile_image()));;
-        tvName.setText(global.filterInfo.get(position).getName());
-        tvBirth.setText(global.filterInfo.get(position).getYear() + " 년생");
-        tvLocation.setText(global.filterInfo.get(position).getLocation());
-        tvInstarID.setText(global.filterInfo.get(position).getInstarID());
-        tvMonthly.setText(global.filterInfo.get(position).getMonthly() + " 만원");
-        tvPattern.setText(global.filterInfo.get(position).getPattern());
-        tvDrink.setText(global.filterInfo.get(position).getDrink());
-        tvSmoking.setText(global.filterInfo.get(position).getSmoking());
-        tvAllowFriend.setText(global.filterInfo.get(position).getAllow_friend());
-        tvPet.setText(global.filterInfo.get(position).getPet());
-        tvLike.setText(global.filterInfo.get(position).getLike());
-        tvDisLike.setText(global.filterInfo.get(position).getDisLike());
-        tvChatURL.setText(global.filterInfo.get(position).getOpenChatURL());
-        tvIntroduceContent.setText(global.filterInfo.get(position).getIntroduce());
+        ivProfile.setImageBitmap(imageFunc.decodebase64ToBitmap(global.likeInfo.get(position).getProfile_image()));;
+        tvName.setText(global.likeInfo.get(position).getName());
+        tvBirth.setText(global.likeInfo.get(position).getYear() + " 년생");
+        tvLocation.setText(global.likeInfo.get(position).getLocation());
+        tvInstarID.setText(global.likeInfo.get(position).getInstarID());
+        tvMonthly.setText(global.likeInfo.get(position).getMonthly() + " 만원");
+        tvPattern.setText(global.likeInfo.get(position).getPattern());
+        tvDrink.setText(global.likeInfo.get(position).getDrink());
+        tvSmoking.setText(global.likeInfo.get(position).getSmoking());
+        tvAllowFriend.setText(global.likeInfo.get(position).getAllow_friend());
+        tvPet.setText(global.likeInfo.get(position).getPet());
+        tvLike.setText(global.likeInfo.get(position).getLike());
+        tvDisLike.setText(global.likeInfo.get(position).getDisLike());
+        tvChatURL.setText(global.likeInfo.get(position).getOpenChatURL());
+        tvIntroduceContent.setText(global.likeInfo.get(position).getIntroduce());
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         ViewTreeObserver vto = viewPager.getViewTreeObserver();
@@ -105,28 +105,28 @@ public class DetailInfoActivity extends AppCompatActivity {
 
         //방 사진 이미지가 하나도 없을 시 0으로 초기화 하는 작업 추가 해야됨
 
-        if(global.filterInfo.get(position).getRoom_image() == null || global.filterInfo.get(position).getRoom_image().isEmpty()){
+        if(global.likeInfo.get(position).getRoom_image() == null || global.likeInfo.get(position).getRoom_image().isEmpty()){
             int bitmapLength = 1;
             Bitmap[] bitmaps = new Bitmap[bitmapLength];
             bitmaps[0] = BitmapFactory.decodeResource(getResources(), R.drawable.myprofileedit_house_photo_icon);
             //추후에 빈 화면일 때 이미지생기면 여기에 처리
             makeRoom(bitmapLength, bitmaps);
         }else{
-            int bitmapLength = global.filterInfo.get(position).getRoom_image().size();
+            int bitmapLength = global.likeInfo.get(position).getRoom_image().size();
             Bitmap[] bitmaps = new Bitmap[bitmapLength];
 
             for(int i = 0; i < bitmaps.length; i++){
-                bitmaps[i] = imageFunc.decodebase64ToBitmap(global.filterInfo.get(position).getRoom_image().get("room" + i));
+                bitmaps[i] = imageFunc.decodebase64ToBitmap(global.likeInfo.get(position).getRoom_image().get("room" + i));
             }
             //뷰 페이저에 들어갈 방 사진 bitmap 만들기
             makeRoom(bitmapLength, bitmaps);
         }
 
-        if(!global.filterInfo.get(position).getOpenChatURL().equals("")){
+        if(!global.likeInfo.get(position).getOpenChatURL().equals("")){
             btnChat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Uri uri = Uri.parse(global.filterInfo.get(position).getOpenChatURL());
+                    Uri uri = Uri.parse(global.likeInfo.get(position).getOpenChatURL());
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }
