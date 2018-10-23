@@ -67,7 +67,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
                     Intent intent = new Intent(v.getContext(), DetailInfoActivity.class);
 
                     Bundle bundle = new Bundle();
-                    bundle.putInt("position", position);
+                    bundle.putInt("position1", position);
                     intent.putExtras(bundle);
 
                     context.startActivity(intent);

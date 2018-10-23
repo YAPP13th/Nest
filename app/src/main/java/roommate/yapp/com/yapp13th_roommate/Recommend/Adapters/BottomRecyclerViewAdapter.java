@@ -103,16 +103,16 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 //
                     try {
 
+//
+//                            likeData.add(dataModel);
+                            global.likeInfo.add(dataModel);
 
-                            likeData.add(dataModel);
-//                            global.likeInfo.add(dataModel);
-
-                            Log.e("global 1 :->" , String.valueOf(global.likeInfo));
+//                            Log.e("global 1 :->" , String.valueOf(global.likeInfo));
 
                             //comment Setting Like Button True
                             firebaseDatabase = FirebaseDatabase.getInstance();
                             databaseReference = firebaseDatabase.getReference("like");
-                            databaseReference.push().setValue(likeData);
+                            databaseReference.push().setValue(dataModel);
 
                         //databaseReference.push().setValue(global.everyInfo);
                     }catch (NullPointerException e){

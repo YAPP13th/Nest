@@ -66,15 +66,14 @@ public class LikeFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(this.getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new LikeAdapter(context,likeData);
-        likeData = new ArrayList<UserInfo>();
-
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("like");
+        likeData = new ArrayList<UserInfo>();
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
 
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     try {
@@ -88,9 +87,6 @@ public class LikeFragment extends Fragment {
                         Log.e("global 2 :->" , String.valueOf(likeData));
 //                        likeData.add(temp);
 
-
-
-
                     }catch(NullPointerException e){
                         e.printStackTrace();
                     }
@@ -100,11 +96,11 @@ public class LikeFragment extends Fragment {
 //                            temp.setKey(snapshot.getKey());
 //                            global.setExist(true);
 //                        }
-
-
                 }
-                Log.e("global 2 :->" , String.valueOf(global.likeInfo));
+                mAdapter = new LikeAdapter(context,likeData);
                 mRecyclerView.setAdapter(mAdapter);
+                Log.e("global 2 :->" , String.valueOf(global.likeInfo));
+
 
 //                likeData = global.likeInfo;
 //                likeData = (UserInfo) global.likeInfo;
@@ -138,7 +134,7 @@ public class LikeFragment extends Fragment {
 
         return view;
     }
-<<<<<<< HEAD
+
 //
 //    public void firebase_like_get(){
 //        firebaseDatabase = FirebaseDatabase.getInstance();
@@ -193,6 +189,4 @@ public class LikeFragment extends Fragment {
 //
 //    }
 }
-=======
-}
->>>>>>> e94d4598334349dad653b4a2de26ff71b66bfea0
+

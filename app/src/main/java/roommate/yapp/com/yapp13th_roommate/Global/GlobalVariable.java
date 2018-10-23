@@ -22,11 +22,11 @@ public class GlobalVariable extends Application {
     public UserInfo temp;
     public List<UserInfo> everyInfo;
     public List<UserInfo> filterInfo;
-<<<<<<< HEAD
+
     public List<UserInfo> likeInfo;
-=======
+
     public List<UserInfo> selected;
->>>>>>> e94d4598334349dad653b4a2de26ff71b66bfea0
+
 
     private String myId;
 
