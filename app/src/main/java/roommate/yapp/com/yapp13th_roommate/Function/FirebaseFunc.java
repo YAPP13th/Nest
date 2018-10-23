@@ -131,7 +131,8 @@ public class FirebaseFunc extends AppCompatActivity{
                 global.myInfo.setKey(uniqueKey);
 
                 Map<String, Object> taskMap = new HashMap<String, Object>();
-                taskMap.put(global.myInfo.getKey(), global.myInfo);
+                taskMap.put("key" ,global.myInfo.getKey());
+                //기존 데이터에 키 값을 추가하기 위한 해쉬맵 생성
 
                 databaseReference.updateChildren(taskMap);
                 //데이터 베이스에 데이터 등록 후 키값을 받아와 myInfo에 반영 및 데이터베이스에 업데이트

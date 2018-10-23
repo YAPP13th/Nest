@@ -99,16 +99,16 @@ public class SignUpFirstActivity extends AppCompatActivity {
         imageFunc = new ImageFunc(this);
         radioFunc = new RadioFunc(this);
 
-        global.everyInfo = new ArrayList<>();
-        global.filterInfo = new ArrayList<>();
-        global.myInfo = new UserInfo();
-        global.temp = new UserInfo();
-        global.myRoom = new Bitmap[3];
-        global.tempRoom = new Bitmap[3];
-
-        global.setExist(false);
-        global.setMyId("3");
-        global.myInfo.setId("3");
+//        global.everyInfo = new ArrayList<>();
+//        global.filterInfo = new ArrayList<>();
+//        global.myInfo = new UserInfo();
+//        global.temp = new UserInfo();
+//        global.myRoom = new Bitmap[3];
+//        global.tempRoom = new Bitmap[3];
+//
+//        global.setExist(false);
+//        global.setMyId("4");
+//        global.myInfo.setId("4");
 
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
@@ -208,6 +208,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 global.temp.setName(etName.getText().toString());
                 global.temp.setYear(spinner.getSelectedItem().toString());
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
+                //여기에서 유효한 오픈 채팅 url 인지 확인하는 작업이 필요함
 
                 if((global.temp.getName() == null || global.temp.getName().equals("")) || (global.temp.getGender() == null || global.temp.getGender().equals(""))
                         || (global.temp.getRoom() == null || global.temp.getRoom().equals("")) || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))){
