@@ -56,6 +56,7 @@ public class UserInfo implements Serializable{
         this.like = like;
         this.disLike = disLike;
         this.introduce = introduce;
+        this.likeFrom = likeFrom;
         this.address=address;
     }
 

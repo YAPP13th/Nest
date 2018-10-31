@@ -399,7 +399,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     String d = data.getExtras().getString("data");
                         if (d != null) {
                             String[] values = d.split(" ");
-                            findAddress=values[0]+values[1];
+                            findAddress = values[0] + " " + values[1];
                             join_location.setText(findAddress);// 구 까지 자른거,,,
                         }
                     break;
