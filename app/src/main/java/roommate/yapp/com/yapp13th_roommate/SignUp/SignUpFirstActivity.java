@@ -110,8 +110,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
 //        global.tempRoom = new Bitmap[3];
 //
 //        global.setExist(false);
-//        global.setMyId("3");
-//        global.myInfo.setId("3");
+//        global.setMyId("4");
+//        global.myInfo.setId("4");
 
         join_location=findViewById(R.id.join_location);
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
@@ -220,6 +220,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 global.temp.setName(etName.getText().toString());
                 global.temp.setYear(spinner.getSelectedItem().toString());
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
+                //여기에서 유효한 오픈 채팅 url 인지 확인하는 작업이 필요함
 
                 if((global.temp.getName() == null || global.temp.getName().equals("")) || (global.temp.getGender() == null || global.temp.getGender().equals(""))
                         || (global.temp.getRoom() == null || global.temp.getRoom().equals("")) || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))){
@@ -398,7 +399,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     String d = data.getExtras().getString("data");
                         if (d != null) {
                             String[] values = d.split(" ");
-                            findAddress=values[0]+values[1];
+                            findAddress = values[0] + " " + values[1];
                             join_location.setText(findAddress);// 구 까지 자른거,,,
                         }
                     break;

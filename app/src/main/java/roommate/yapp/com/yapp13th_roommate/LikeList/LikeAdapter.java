@@ -16,20 +16,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.like.LikeButton;
+import com.like.OnLikeListener;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
+import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.BottomSpacesItemDecoration;
 
 public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
     private List<UserInfo> mData;
     private LayoutInflater mInflater;
-
     private Context context;
+
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private GlobalVariable global;
+  
     public LikeAdapter(Context context, List<UserInfo> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
@@ -40,18 +52,21 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_like_recyclerview, parent, false);
+        global = GlobalVariable.getGlobalApplicationContext();
         return new LikeAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         if(mData != null){
-            Log.e("global 3 :->" , String.valueOf(mData));
-            byte[] image = Base64.decode(mData.get(position).getProfile_image(), Base64.DEFAULT);
-            Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
 
+            if(!(mData.get(position).getProfile_image() == null || mData.get(position).getProfile_image().isEmpty())){
+                byte[] image = Base64.decode(mData.get(position).getProfile_image(), Base64.DEFAULT);
+                Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
 
-            holder.iv_profile.setImageBitmap(decodeByte);
+                holder.iv_profile.setImageBitmap(decodeByte);
+            }
+
             holder.tv_name.setText(mData.get(position).getName());
             holder.tv_age.setText(mData.get(position).getYear());
             holder.tv_address.setText(mData.get(position).getLocation());
@@ -67,7 +82,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
                     Intent intent = new Intent(v.getContext(), DetailInfoActivity.class);
 
                     Bundle bundle = new Bundle();
-                    bundle.putInt("position1", position);
+                    bundle.putInt("like", position);
                     intent.putExtras(bundle);
 
                     context.startActivity(intent);
@@ -78,19 +93,11 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-
         if(mData !=null) {
             return mData.size();
-
-
         }else {
-
             return 0;
         }
-//        return mData.size();
-
-
-
 
     }
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -109,9 +116,6 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
             tv_selfIntroduction = itemView.findViewById(R.id.tv_selfIntroduction1);
             tv_like = itemView.findViewById(R.id.tv_top_recycler_like1);
             tv_dislike = itemView.findViewById(R.id.tv_top_recycler_dislike1);
-            btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick1);
-
-
         }
 
     }

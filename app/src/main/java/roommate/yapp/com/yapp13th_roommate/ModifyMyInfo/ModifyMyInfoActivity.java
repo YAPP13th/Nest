@@ -326,28 +326,6 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        //갤러리 선택 or 카메라로 촬영 선택에 따른 onActivityResult
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if(resultCode == RESULT_OK){
-//            switch (requestCode){
-//                case GALLERY_CODE:
-//                    global.setTempProfile(imageFunc.sendPicture(data.getData()));
-//                    ivJoin.setImageBitmap(global.getTempProfile());
-//                    break;
-//                case CAMERA_CODE:
-//                    imageFunc.getPictureForPhoto();
-//                    break;
-//
-//                default:
-//                    break;
-//            }
-//
-//        }
-//    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //갤러리 선택 or 카메라로 촬영 선택에 따른 onActivityResult

@@ -12,6 +12,7 @@ import java.util.List;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Kakao.KakaoSDKAdapter;
+import roommate.yapp.com.yapp13th_roommate.LikeList.LikeAdapter;
 
 public class GlobalVariable extends Application {
 
@@ -37,6 +38,9 @@ public class GlobalVariable extends Application {
     private int viewPagerPosition;
 
     public RecyclerView bottom_recyclerView;
+
+    public RecyclerView mRecyclerView;
+    public LikeAdapter mAdapter;
 
     @Override
     public void onCreate() {

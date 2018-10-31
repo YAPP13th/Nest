@@ -10,7 +10,7 @@ public class UserInfo implements Serializable{
 
     private String key;                         //DB에 저장되는 키값
     private String profile_image;               //프로필 사진 이미지 base64
-    private Map<String, String> room_image;    //방 사진 이미지 base64 최대 3개
+    private Map<String, String> room_image;     //방 사진 이미지 base64 최대 3개
     private String id;                          //고유 아이디(카톡 등으로 받은 아이디 값)
     private Date now_date;                      //최근 접속한 날짜로 초기화
     private String name;                        //이름
@@ -29,11 +29,12 @@ public class UserInfo implements Serializable{
     private String like;                        //좋아하는 것
     private String disLike;                     //싫어하는 것
     private String introduce;                   //자기소개
+    private String likeFrom;                    //찜한 사람 id
     private String address;                     //마지막에 주소 추가했으여
 
     public UserInfo() {}
 
-    public UserInfo(String key, String profile_image, Map<String, String> room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce, String address) {
+public UserInfo(String key, String profile_image, Map<String, String> room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce, String likeFrom, String address) {
         this.key = key;
         this.profile_image = profile_image;
         this.room_image = room_image;
@@ -55,6 +56,7 @@ public class UserInfo implements Serializable{
         this.like = like;
         this.disLike = disLike;
         this.introduce = introduce;
+        this.likeFrom = likeFrom;
         this.address=address;
     }
 
@@ -226,6 +228,14 @@ public class UserInfo implements Serializable{
         this.pet = pet;
     }
 
+    public String getLikeFrom() {
+        return likeFrom;
+    }
+
+    public void setLikeFrom(String likeFrom) {
+        this.likeFrom = likeFrom;
+    }
+  
     public String getAddress() {
         return address;
     }

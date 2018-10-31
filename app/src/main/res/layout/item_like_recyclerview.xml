@@ -17,15 +17,6 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:contentDescription="@string/desc_iv_profile" />
-
-        <!-- 찜하기 버튼 -->
-        <com.like.LikeButton
-            android:id="@+id/btn_bottom_recycler_pick1"
-            app:icon_type="heart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|right"
-            app:icon_size="20dp" />
     </FrameLayout>
 
     <LinearLayout
