@@ -4,12 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 
+
 @SuppressWarnings("serial")
 public class UserInfo implements Serializable{
 
     private String key;                         //DB에 저장되는 키값
     private String profile_image;               //프로필 사진 이미지 base64
-    private Map<String, String> room_image;    //방 사진 이미지 base64 최대 3개
+    private Map<String, String> room_image;     //방 사진 이미지 base64 최대 3개
     private String id;                          //고유 아이디(카톡 등으로 받은 아이디 값)
     private Date now_date;                      //최근 접속한 날짜로 초기화
     private String name;                        //이름
@@ -28,6 +29,7 @@ public class UserInfo implements Serializable{
     private String like;                        //좋아하는 것
     private String disLike;                     //싫어하는 것
     private String introduce;                   //자기소개
+    private String likeFrom;                    //찜한 사람 id
 
     public UserInfo() {}
 
@@ -221,5 +223,13 @@ public class UserInfo implements Serializable{
 
     public void setPet(String pet) {
         this.pet = pet;
+    }
+
+    public String getLikeFrom() {
+        return likeFrom;
+    }
+
+    public void setLikeFrom(String likeFrom) {
+        this.likeFrom = likeFrom;
     }
 }

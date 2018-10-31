@@ -50,6 +50,8 @@ public class KaKaoLoginActivity extends Activity {
         global = (GlobalVariable)getApplicationContext();
         firebaseFunc = new FirebaseFunc(KaKaoLoginActivity.this);
 
+        getHashKey();
+
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
 //        requestMe();
@@ -132,6 +134,7 @@ public class KaKaoLoginActivity extends Activity {
                 global.temp = new UserInfo();
                 global.myRoom = new Bitmap[3];
                 global.tempRoom = new Bitmap[3];
+                global.likeInfo = new ArrayList<>();
 
                 String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
 

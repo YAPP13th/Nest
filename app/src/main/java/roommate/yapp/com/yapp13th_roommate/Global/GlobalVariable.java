@@ -4,17 +4,15 @@ import android.app.Activity;
 import android.app.Application;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ImageView;
 
 import com.kakao.auth.KakaoSDK;
-import com.kakao.auth.authorization.authcode.KakaoWebViewDialog;
-import com.kakao.auth.exception.KakaoWebviewException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Kakao.KakaoSDKAdapter;
-import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.LikeList.LikeAdapter;
 
 public class GlobalVariable extends Application {
 
@@ -25,7 +23,11 @@ public class GlobalVariable extends Application {
     public UserInfo temp;
     public List<UserInfo> everyInfo;
     public List<UserInfo> filterInfo;
+
+    public List<UserInfo> likeInfo;
+
     public List<UserInfo> selected;
+
 
     private String myId;
 
@@ -36,6 +38,9 @@ public class GlobalVariable extends Application {
     private int viewPagerPosition;
 
     public RecyclerView bottom_recyclerView;
+
+    public RecyclerView mRecyclerView;
+    public LikeAdapter mAdapter;
 
     @Override
     public void onCreate() {

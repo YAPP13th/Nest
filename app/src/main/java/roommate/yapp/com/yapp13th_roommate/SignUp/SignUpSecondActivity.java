@@ -172,10 +172,6 @@ public class SignUpSecondActivity extends AppCompatActivity {
                 global.myInfo = global.temp;
 
                 firebaseFunc.FirebaseSignUp();
-
-                Intent signUpDone = new Intent(SignUpSecondActivity.this, ViewPagerMain.class);
-                startActivity(signUpDone);
-                finish();
             }
         });
 

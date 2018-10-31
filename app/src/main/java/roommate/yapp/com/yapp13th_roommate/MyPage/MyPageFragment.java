@@ -103,26 +103,21 @@ public class MyPageFragment extends Fragment {
         });
 
         viewPager = (ViewPager)view.findViewById(R.id.viewPager);
-        ViewTreeObserver vto = viewPager.getViewTreeObserver();
-        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
-                viewPager.requestLayout();
-            }
-        });
-        //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
-        //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
-        //레이아웃을 다시 그려준다
 
-        if(global.myInfo.getRoom_image() == null || global.myInfo.getRoom_image().isEmpty()){
-            int bitmapLength = 1;
-            Bitmap[] bitmaps = new Bitmap[bitmapLength];
-            bitmaps[0] = BitmapFactory.decodeResource(getResources(), R.drawable.myprofileedit_house_photo_icon);
-            //추후에 빈 화면일 때 이미지생기면 여기에 처리
-            makeRoom(bitmapLength, bitmaps);
-        }else{
+        if(!(global.myInfo.getRoom_image() == null || global.myInfo.getRoom_image().isEmpty())){
+            ViewTreeObserver vto = viewPager.getViewTreeObserver();
+            vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                    viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
+                    viewPager.requestLayout();
+                }
+            });
+            //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
+            //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
+            //레이아웃을 다시 그려준다
+
             int bitmapLength = global.myInfo.getRoom_image().size();
             Bitmap[] bitmaps = new Bitmap[bitmapLength];
 

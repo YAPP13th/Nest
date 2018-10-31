@@ -17,6 +17,7 @@ import android.widget.TextView;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
@@ -46,9 +47,6 @@ public class DetailInfoActivity extends AppCompatActivity {
         global = (GlobalVariable)getApplicationContext();
         imageFunc = new ImageFunc(this);
 
-        Intent intent = getIntent();
-        position = intent.getIntExtra("position", 0);
-
         ivProfile = (ImageView)findViewById(R.id.ivUser);
         pagerIndex1 = (ImageView)findViewById(R.id.viewPagerIndex1);
         pagerIndex2 = (ImageView)findViewById(R.id.viewPagerIndex2);
@@ -72,61 +70,72 @@ public class DetailInfoActivity extends AppCompatActivity {
         btnSelect = (Button)findViewById(R.id.btnSelect);
         btnChat = (Button)findViewById(R.id.btnChat);
 
-        ivProfile.setImageBitmap(imageFunc.decodebase64ToBitmap(global.filterInfo.get(position).getProfile_image()));;
-        tvName.setText(global.filterInfo.get(position).getName());
-        tvBirth.setText(global.filterInfo.get(position).getYear() + " 년생");
-        tvLocation.setText(global.filterInfo.get(position).getLocation());
-        tvInstarID.setText(global.filterInfo.get(position).getInstarID());
-        tvMonthly.setText(global.filterInfo.get(position).getMonthly() + " 만원");
-        tvPattern.setText(global.filterInfo.get(position).getPattern());
-        tvDrink.setText(global.filterInfo.get(position).getDrink());
-        tvSmoking.setText(global.filterInfo.get(position).getSmoking());
-        tvAllowFriend.setText(global.filterInfo.get(position).getAllow_friend());
-        tvPet.setText(global.filterInfo.get(position).getPet());
-        tvLike.setText(global.filterInfo.get(position).getLike());
-        tvDisLike.setText(global.filterInfo.get(position).getDisLike());
-        tvChatURL.setText(global.filterInfo.get(position).getOpenChatURL());
-        tvIntroduceContent.setText(global.filterInfo.get(position).getIntroduce());
+        Intent intent = getIntent();
+
+        if(intent.getIntExtra("bottom", -1) != -1){
+            position = intent.getIntExtra("bottom", -1);
+            init(global.filterInfo.get(position));
+        }else{
+            position = intent.getIntExtra("like", -1);
+            init(global.likeInfo.get(position));
+        }
+
+    }
+
+    public void init(UserInfo userInfo){
+        if(!(userInfo.getProfile_image() == null || userInfo.getProfile_image().isEmpty())){
+            ivProfile.setImageBitmap(imageFunc.decodebase64ToBitmap(userInfo.getProfile_image()));
+        }
+        tvName.setText(userInfo.getName());
+        tvBirth.setText(userInfo.getYear() + " 년생");
+        tvLocation.setText(userInfo.getLocation());
+        tvInstarID.setText(userInfo.getInstarID());
+        tvMonthly.setText(userInfo.getMonthly() + " 만원");
+        tvPattern.setText(userInfo.getPattern());
+        tvDrink.setText(userInfo.getDrink());
+        tvSmoking.setText(userInfo.getSmoking());
+        tvAllowFriend.setText(userInfo.getAllow_friend());
+        tvPet.setText(userInfo.getPet());
+        tvLike.setText(userInfo.getLike());
+        tvDisLike.setText(userInfo.getDisLike());
+        tvChatURL.setText(userInfo.getOpenChatURL());
+        tvIntroduceContent.setText(userInfo.getIntroduce());
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
-        ViewTreeObserver vto = viewPager.getViewTreeObserver();
-        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
-                viewPager.requestLayout();
-            }
-        });
-        //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
-        //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
-        //레이아웃을 다시 그려준다
-
 
         //방 사진 이미지가 하나도 없을 시 0으로 초기화 하는 작업 추가 해야됨
 
-        if(global.filterInfo.get(position).getRoom_image() == null || global.filterInfo.get(position).getRoom_image().isEmpty()){
-            int bitmapLength = 1;
-            Bitmap[] bitmaps = new Bitmap[bitmapLength];
-            bitmaps[0] = BitmapFactory.decodeResource(getResources(), R.drawable.myprofileedit_house_photo_icon);
-            //추후에 빈 화면일 때 이미지생기면 여기에 처리
-            makeRoom(bitmapLength, bitmaps);
-        }else{
-            int bitmapLength = global.filterInfo.get(position).getRoom_image().size();
+        if(!(userInfo.getRoom_image() == null || userInfo.getRoom_image().isEmpty())){
+            ViewTreeObserver vto = viewPager.getViewTreeObserver();
+            vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                    viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
+                    viewPager.requestLayout();
+                }
+            });
+            //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
+            //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
+            //레이아웃을 다시 그려준다
+
+            int bitmapLength = userInfo.getRoom_image().size();
             Bitmap[] bitmaps = new Bitmap[bitmapLength];
 
             for(int i = 0; i < bitmaps.length; i++){
-                bitmaps[i] = imageFunc.decodebase64ToBitmap(global.filterInfo.get(position).getRoom_image().get("room" + i));
+                bitmaps[i] = imageFunc.decodebase64ToBitmap(userInfo.getRoom_image().get("room" + i));
             }
             //뷰 페이저에 들어갈 방 사진 bitmap 만들기
             makeRoom(bitmapLength, bitmaps);
         }
 
-        if(!global.filterInfo.get(position).getOpenChatURL().equals("")){
+        final String openChatURL = userInfo.getOpenChatURL();
+
+        if(!userInfo.getOpenChatURL().equals("")){
             btnChat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Uri uri = Uri.parse(global.filterInfo.get(position).getOpenChatURL());
+                    Uri uri = Uri.parse(openChatURL);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }
@@ -143,7 +152,6 @@ public class DetailInfoActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     public void makeRoom(int length, Bitmap[] bitmaps){
