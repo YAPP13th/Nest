@@ -77,9 +77,9 @@ public class RecommendFragment extends Fragment
         top_recyclerView.addItemDecoration(new TopSpacesItemDecoration(spacingInPixels));
         bottom_recyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
 
-        top_adapter = new TopRecyclerViewAdapter(context, data);
+        top_adapter = new TopRecyclerViewAdapter(context, global.everyInfo);
         top_recyclerView.setAdapter(top_adapter);
-        top_adapter.setClickListener(this);
+//        top_adapter.setClickListener(this);
 
         global.bottom_recyclerView = bottom_recyclerView;
 

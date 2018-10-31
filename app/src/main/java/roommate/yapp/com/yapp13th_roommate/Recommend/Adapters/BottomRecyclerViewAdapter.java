@@ -192,14 +192,14 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
         public ViewHolder(View itemView) {
             super(itemView);
-            iv_profile = itemView.findViewById(R.id.iv_profile);
-            tv_name = itemView.findViewById(R.id.tv_name);
-            tv_age = itemView.findViewById(R.id.tv_top_recycler_birth_year);
-            tv_address = itemView.findViewById(R.id.tv_address);
-            tv_monthMoney = itemView.findViewById(R.id.tv_top_recycler_monthly_money);
-            tv_selfIntroduction = itemView.findViewById(R.id.tv_selfIntroduction);
-            tv_like = itemView.findViewById(R.id.tv_top_recycler_like);
-            tv_dislike = itemView.findViewById(R.id.tv_top_recycler_dislike);
+            iv_profile = itemView.findViewById(R.id.iv_bottom_profile);
+            tv_name = itemView.findViewById(R.id.tv_bottom_name);
+            tv_age = itemView.findViewById(R.id.tv_bottom_recycler_birth_year);
+            tv_address = itemView.findViewById(R.id.tv_bottom_address);
+            tv_monthMoney = itemView.findViewById(R.id.tv_bottom_recycler_monthly_money);
+            tv_selfIntroduction = itemView.findViewById(R.id.tv_bottom_selfIntroduction);
+            tv_like = itemView.findViewById(R.id.tv_buttom_recycler_like);
+            tv_dislike = itemView.findViewById(R.id.tv_bottom_recycler_dislike);
 
             btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
 
