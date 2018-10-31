@@ -12,7 +12,7 @@
 
         <!-- 프로필 이미지 -->
         <ImageView
-            android:id="@+id/iv_profile"
+            android:id="@+id/iv_bottom_profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -40,7 +40,7 @@
 
         <!-- 이름 -->
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_bottom_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
@@ -61,7 +61,7 @@
 
             <!-- 생년 -->
             <TextView
-                android:id="@+id/tv_top_recycler_birth_year"
+                android:id="@+id/tv_bottom_recycler_birth_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -85,7 +85,7 @@
 
             <!-- 월세 -->
             <TextView
-                android:id="@+id/tv_top_recycler_monthly_money"
+                android:id="@+id/tv_bottom_recycler_monthly_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -109,7 +109,7 @@
 
             <!-- 주소 -->
             <TextView
-                android:id="@+id/tv_address"
+                android:id="@+id/tv_bottom_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="9sp"
@@ -120,7 +120,7 @@
 
         <!-- 자기소개 -->
         <TextView
-            android:id="@+id/tv_selfIntroduction"
+            android:id="@+id/tv_bottom_selfIntroduction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -150,7 +150,7 @@
 
             <!-- 좋아요 내용 -->
             <TextView
-                android:id="@+id/tv_top_recycler_like"
+                android:id="@+id/tv_buttom_recycler_like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -167,7 +167,7 @@
 
             <!-- 싫어요 내용 -->
             <TextView
-                android:id="@+id/tv_top_recycler_dislike"
+                android:id="@+id/tv_bottom_recycler_dislike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
