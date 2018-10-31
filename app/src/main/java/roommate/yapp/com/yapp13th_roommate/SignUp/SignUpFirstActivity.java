@@ -102,16 +102,16 @@ public class SignUpFirstActivity extends AppCompatActivity {
         imageFunc = new ImageFunc(this);
         radioFunc = new RadioFunc(this);
 
-//        global.everyInfo = new ArrayList<>();
-//        global.filterInfo = new ArrayList<>();
-//        global.myInfo = new UserInfo();
-//        global.temp = new UserInfo();
-//        global.myRoom = new Bitmap[3];
-//        global.tempRoom = new Bitmap[3];
-//
-//        global.setExist(false);
-//        global.setMyId("4");
-//        global.myInfo.setId("4");
+        global.everyInfo = new ArrayList<>();
+        global.filterInfo = new ArrayList<>();
+        global.myInfo = new UserInfo();
+        global.temp = new UserInfo();
+        global.myRoom = new Bitmap[3];
+        global.tempRoom = new Bitmap[3];
+
+        global.setExist(false);
+        global.setMyId("8");
+        global.myInfo.setId("8");
 
         join_location=findViewById(R.id.join_location);
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
@@ -222,8 +222,11 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
                 //여기에서 유효한 오픈 채팅 url 인지 확인하는 작업이 필요함
 
-                if((global.temp.getName() == null || global.temp.getName().equals("")) || (global.temp.getGender() == null || global.temp.getGender().equals(""))
-                        || (global.temp.getRoom() == null || global.temp.getRoom().equals("")) || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))){
+                if((global.temp.getName() == null || global.temp.getName().equals(""))
+                        || (global.temp.getGender() == null || global.temp.getGender().equals(""))
+                        || (global.temp.getRoom() == null || global.temp.getRoom().equals(""))
+                        || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))
+                        || (global.temp.getLocation() == null || global.temp.getLocation().equals(""))){
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                     builder.setTitle("모두 입력해 주세요");
                     builder.setMessage("모두 입력해 주세요");
@@ -401,6 +404,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                             String[] values = d.split(" ");
                             findAddress = values[0] + " " + values[1];
                             join_location.setText(findAddress);// 구 까지 자른거,,,
+                            global.temp.setLocation(findAddress);
                         }
                     break;
                 default:

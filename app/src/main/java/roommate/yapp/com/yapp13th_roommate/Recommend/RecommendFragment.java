@@ -26,10 +26,6 @@ import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.TopSpacesIt
 public class RecommendFragment extends Fragment
         implements BottomRecyclerViewAdapter.ItemClickListener, AAH_FabulousFragment.Callbacks {
 
-    private RecyclerView top_recyclerView;
-    private RecyclerView bottom_recyclerView;
-    private BottomRecyclerViewAdapter bottom_adapter;
-    private TopRecyclerViewAdapter top_adapter;
     private Context context;
     private FloatingActionButton btn_fab;
 
@@ -47,8 +43,7 @@ public class RecommendFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState)
     {
         final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        top_recyclerView = rootView.findViewById(R.id.topRecyclerView);
-        bottom_recyclerView = rootView.findViewById(R.id.recyclerView);
+
         btn_fab = rootView.findViewById(R.id.btn_fab);
 
         btn_fab.setOnClickListener(new View.OnClickListener() {
@@ -60,28 +55,25 @@ public class RecommendFragment extends Fragment
             }
         });
 
-        String[] data = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48"};
-
         int numberOfColumns = 1;
-        bottom_recyclerView.setLayoutManager(new GridLayoutManager(context, numberOfColumns));
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space_for_top_items);
 
-        bottom_adapter = new BottomRecyclerViewAdapter(context, global.filterInfo);
-        bottom_recyclerView.setAdapter(bottom_adapter);
-        bottom_recyclerView.setNestedScrollingEnabled(false);
-
+        global.topRecyclerView = rootView.findViewById(R.id.topRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager
                 (context, LinearLayoutManager.HORIZONTAL, false);
-        top_recyclerView.setLayoutManager(layoutManager);
+        global.topRecyclerView.setLayoutManager(layoutManager);
+        global.topRecyclerView.addItemDecoration(new TopSpacesItemDecoration(spacingInPixels));
+        global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
+        global.topRecyclerView.setAdapter(global.topAdapter);
 
-        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space_for_top_items);
-        top_recyclerView.addItemDecoration(new TopSpacesItemDecoration(spacingInPixels));
-        bottom_recyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
 
-        top_adapter = new TopRecyclerViewAdapter(context, global.everyInfo);
-        top_recyclerView.setAdapter(top_adapter);
-//        top_adapter.setClickListener(this);
+        global.bottomRecyclerView = rootView.findViewById(R.id.recyclerView);
+        global.bottomRecyclerView.setLayoutManager(new GridLayoutManager(context, numberOfColumns));
+        global.bottomRecyclerView.setNestedScrollingEnabled(false);
+        global.bottomRecyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
+        global.bottomAdapter = new BottomRecyclerViewAdapter(context, global.filterInfo);
+        global.bottomRecyclerView.setAdapter(global.bottomAdapter);
 
-        global.bottom_recyclerView = bottom_recyclerView;
 
         return rootView;
     }

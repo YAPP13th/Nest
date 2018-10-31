@@ -104,29 +104,29 @@ public class MyPageFragment extends Fragment {
 
         viewPager = (ViewPager)view.findViewById(R.id.viewPager);
 
-        if(!(global.myInfo.getRoom_image() == null || global.myInfo.getRoom_image().isEmpty())){
-            ViewTreeObserver vto = viewPager.getViewTreeObserver();
-            vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                    viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
-                    viewPager.requestLayout();
-                }
-            });
-            //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
-            //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
-            //레이아웃을 다시 그려준다
-
-            int bitmapLength = global.myInfo.getRoom_image().size();
-            Bitmap[] bitmaps = new Bitmap[bitmapLength];
-
-            for(int i = 0; i < bitmaps.length; i++){
-                bitmaps[i] = imageFunc.decodebase64ToBitmap(global.myInfo.getRoom_image().get("room" + i));
-            }
-            //뷰 페이저에 들어갈 방 사진 bitmap 만들기
-            makeRoom(bitmapLength, bitmaps);
-        }
+//        if(!(global.myInfo.getRoom_image() == null || global.myInfo.getRoom_image().isEmpty())){
+//            ViewTreeObserver vto = viewPager.getViewTreeObserver();
+//            vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+//                @Override
+//                public void onGlobalLayout() {
+//                    viewPager.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+//                    viewPager.getLayoutParams().height = (int)(viewPager.getWidth() * 0.8);
+//                    viewPager.requestLayout();
+//                }
+//            });
+//            //match_parent를 onCreate에서 이용하면 아직 뷰가 그려지기 전이라서 0으로 호출이 된다
+//            //뷰가 그려진 이후를 지켜보기 위해 트리옵저버를 이용하여 viewPager를 확인 및 그려지면 가로 : 세로 = 5 : 4 비율을 만들기 위해
+//            //레이아웃을 다시 그려준다
+//
+//            int bitmapLength = global.myInfo.getRoom_image().size();
+//            Bitmap[] bitmaps = new Bitmap[bitmapLength];
+//
+//            for(int i = 0; i < bitmaps.length; i++){
+//                bitmaps[i] = imageFunc.decodebase64ToBitmap(global.myInfo.getRoom_image().get("room" + i));
+//            }
+//            //뷰 페이저에 들어갈 방 사진 bitmap 만들기
+//            makeRoom(bitmapLength, bitmaps);
+//        }
 
         return view;
     }
