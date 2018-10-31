@@ -42,13 +42,7 @@ public class RoomImagePagerAdapter extends PagerAdapter {
         iv = (ImageView)v.findViewById(R.id.ivRoom);
         iv.setScaleType(ImageView.ScaleType.FIT_XY);
         iv.setImageBitmap(bitmaps[position]);
-        iv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                global.setViewPagerPosition(position);
-                imageFunc.selectRoomGallery();
-            }
-        });
+        //보는것만 쓰이는 룸 페이저 뷰
 
         container.addView(v);
         return v;

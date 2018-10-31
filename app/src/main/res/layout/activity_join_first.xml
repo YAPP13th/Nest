@@ -129,7 +129,6 @@
             <ImageView
                 android:id="@+id/ivGender"
                 android:layout_width="20dp"
-
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
@@ -394,18 +393,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/join_rgroom" />
 
             <ImageView
-                android:id="@+id/viewPagerIndex"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginStart="0dp"
+                android:id="@+id/viewPagerIndex1"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@android:color/darker_gray" />
+                app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex2" />
+
+            <ImageView
+                android:id="@+id/viewPagerIndex2"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex3" />
+
+            <ImageView
+                android:id="@+id/viewPagerIndex3"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager" />
 
             <ImageView
                 android:id="@+id/ivLocation"
@@ -448,6 +463,49 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
 
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clTerms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/join_location">
+
+                <TextView
+                    android:id="@+id/tvTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="이용약관과 개인정보보호정책에 동의 (필수)"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="동의"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/chTerms"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
             <TextView
                 android:id="@+id/join_btnnext"
                 android:layout_width="match_parent"
@@ -458,7 +516,7 @@
                 android:padding="20dp"
                 android:text="넘어가기"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/join_location" />
+                app:layout_constraintTop_toBottomOf="@+id/clTerms" />
 
         </android.support.constraint.ConstraintLayout>
 

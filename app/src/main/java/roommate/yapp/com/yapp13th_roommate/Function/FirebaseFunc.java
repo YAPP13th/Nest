@@ -47,7 +47,7 @@ public class FirebaseFunc extends AppCompatActivity{
     public void FirebaseLoginInit(){
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test1");
+        databaseReference = firebaseDatabase.getReference("user_info_test");
         //firebase 및 firebase 테이블 연결
 
         final ProgressDialog loginProgres = ProgressDialog.show(mContext, "Wait please", "로그인중");
@@ -65,24 +65,55 @@ public class FirebaseFunc extends AppCompatActivity{
                     }else{
                         UserInfo temp = snapshot.getValue(UserInfo.class);
                         if(temp.getId().equals(global.getMyId())){
-                            global.myInfo = temp ;
-                            temp.setKey(snapshot.getKey());
+                            global.myInfo = temp;
                             global.setExist(true);
+                            break;
                         }
                     }
                 }
 
+                global.setViewPagerPosition(0);
+                if(global.getExist()){
+
+                    for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                        UserInfo temp = snapshot.getValue(UserInfo.class);
+                        if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
+                            global.everyInfo.add(temp);
+                            global.filterInfo.add(temp);
+                        }
+                    }
+
+                }else{
+                    loginProgres.dismiss();
+                    Intent intent = new Intent(mContext, SignUpFirstActivity.class);
+                    mContext.startActivity(intent);
+                    finish();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
+
+        databaseReference = firebaseDatabase.getReference("like");
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     UserInfo temp = snapshot.getValue(UserInfo.class);
-                    if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
-                        temp.setKey(snapshot.getKey());
-                        global.everyInfo.add(temp);
-                        global.filterInfo.add(temp);
+                    if(global.myInfo.getId().equals(temp.getLikeFrom())){
+                        global.likeInfo.add(temp);
                     }
                 }
 
-                Login(loginProgres);
-
+                loginProgres.dismiss();
+                Intent intent = new Intent(mContext, ViewPagerMain.class);
+                mContext.startActivity(intent);
+                finish();
             }
 
             @Override
@@ -92,26 +123,77 @@ public class FirebaseFunc extends AppCompatActivity{
         });
     }
 
-    private void Login(ProgressDialog loginProgres){
-        global.setViewPagerPosition(0);
-        if(global.getExist()){
-            loginProgres.dismiss();
-            Intent intent = new Intent(mContext, ViewPagerMain.class);
-            mContext.startActivity(intent);
-            finish();
-        }else{
-            loginProgres.dismiss();
-            Intent intent = new Intent(mContext, SignUpFirstActivity.class);
-            mContext.startActivity(intent);
-            finish();
-        }
-    }
-
     public void FirebaseSignUp(){
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test1");
+        databaseReference = firebaseDatabase.getReference("user_info_test");
 
-        databaseReference.push().setValue(global.myInfo);
+        databaseReference.push().setValue(global.myInfo,new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(DatabaseError databaseError,
+                                   DatabaseReference databaseReference) {
+                String uniqueKey = databaseReference.getKey();
+                global.myInfo.setKey(uniqueKey);
+
+                Map<String, Object> taskMap = new HashMap<String, Object>();
+                taskMap.put("key" ,global.myInfo.getKey());
+                //기존 데이터에 키 값을 추가하기 위한 해쉬맵 생성
+
+                databaseReference.updateChildren(taskMap);
+                //데이터 베이스에 데이터 등록 후 키값을 받아와 myInfo에 반영 및 데이터베이스에 업데이트
+            }
+        });
+
+
+        final ProgressDialog loginProgres = ProgressDialog.show(mContext, "Wait please", "로그인중");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                global.setViewPagerPosition(0);
+
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    UserInfo temp = snapshot.getValue(UserInfo.class);
+                    if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
+                        global.everyInfo.add(temp);
+                        global.filterInfo.add(temp);
+                    }
+                }
+
+                loginProgres.dismiss();
+
+                Intent signUpDone = new Intent(mContext, ViewPagerMain.class);
+                startActivity(signUpDone);
+                finish();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
+
+        databaseReference = firebaseDatabase.getReference("like");
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    UserInfo temp = snapshot.getValue(UserInfo.class);
+                    if(global.myInfo.getId().equals(temp.getLikeFrom())){
+                        global.likeInfo.add(temp);
+                    }
+                }
+
+                loginProgres.dismiss();
+                Intent intent = new Intent(mContext, ViewPagerMain.class);
+                mContext.startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
     }
 
     public void MyInfoUpdate(){
@@ -119,7 +201,7 @@ public class FirebaseFunc extends AppCompatActivity{
         taskMap.put(global.myInfo.getKey(), global.myInfo);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("user_info_test1");
+        databaseReference = firebaseDatabase.getReference("user_info_test");
         databaseReference.updateChildren(taskMap);
 
         global.setViewPagerPosition(2);
