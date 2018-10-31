@@ -46,7 +46,7 @@ public class DetailInfoActivity extends AppCompatActivity {
 
         global = (GlobalVariable)getApplicationContext();
         imageFunc = new ImageFunc(this);
-
+      
         ivProfile = (ImageView)findViewById(R.id.ivUser);
         pagerIndex1 = (ImageView)findViewById(R.id.viewPagerIndex1);
         pagerIndex2 = (ImageView)findViewById(R.id.viewPagerIndex2);

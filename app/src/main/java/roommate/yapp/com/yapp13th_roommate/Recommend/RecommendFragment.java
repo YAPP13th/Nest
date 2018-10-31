@@ -65,7 +65,7 @@ public class RecommendFragment extends Fragment
         int numberOfColumns = 1;
         bottom_recyclerView.setLayoutManager(new GridLayoutManager(context, numberOfColumns));
 
-        bottom_adapter = new BottomRecyclerViewAdapter(context, global.filterInfo);
+        bottom_adapter = new BottomRecyclerViewAdapter(context, global.everyInfo);
         bottom_recyclerView.setAdapter(bottom_adapter);
         bottom_recyclerView.setNestedScrollingEnabled(false);
 
