@@ -41,7 +41,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private GlobalVariable global;
-
+  
     public LikeAdapter(Context context, List<UserInfo> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;

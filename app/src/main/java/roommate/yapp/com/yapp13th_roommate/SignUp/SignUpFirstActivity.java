@@ -110,8 +110,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
         global.tempRoom = new Bitmap[3];
 
         global.setExist(false);
-        global.setMyId("8");
-        global.myInfo.setId("8");
+        global.setMyId("4");
+        global.myInfo.setId("4");
 
         join_location=findViewById(R.id.join_location);
         tvTitle = (TextView)findViewById(R.id.tvNewLine);

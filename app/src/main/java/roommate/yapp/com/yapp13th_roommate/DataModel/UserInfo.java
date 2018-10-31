@@ -34,7 +34,7 @@ public class UserInfo implements Serializable{
 
     public UserInfo() {}
 
-    public UserInfo(String key, String profile_image, Map<String, String> room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce, String likeFrom, String address) {
+public UserInfo(String key, String profile_image, Map<String, String> room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce, String likeFrom, String address) {
         this.key = key;
         this.profile_image = profile_image;
         this.room_image = room_image;
@@ -235,7 +235,7 @@ public class UserInfo implements Serializable{
     public void setLikeFrom(String likeFrom) {
         this.likeFrom = likeFrom;
     }
-
+  
     public String getAddress() {
         return address;
     }
