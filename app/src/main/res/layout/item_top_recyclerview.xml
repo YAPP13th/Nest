@@ -13,7 +13,7 @@
 
         <!-- 프로필 사진 -->
         <ImageView
-            android:id="@+id/iv_top_recycler_profile"
+            android:id="@+id/iv_top_profile"
             android:layout_width="151dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
@@ -37,6 +37,7 @@
         android:layout_marginTop="8dp"
         android:textSize="14sp"
         android:textColor="#212529"
+        android:id="@+id/tv_top_name"
         android:text="김승민"/>
 
     <LinearLayout
@@ -92,14 +93,32 @@
             android:textSize="9sp"
             android:textColor="#c0c0c0"
             android:text=" 만원"/>
-    </LinearLayout>
 
+        <TextView
+            android:id="@+id/tv_top_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9sp"
+            android:textColor="#c0c0c0"
+            android:text="서울시 은평구 불광동" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_top_selfIntroduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="9sp"
+        android:textColor="#929292"
+        android:text="안녕하세요 반갑습니다 저는 이번에 숙명여자대학교에서
+작곡을 전공하고 있습니다. 학교 근처에서 룸메이트를 …" />
     <!-- 선 -->
     <View
         android:layout_width="151dp"
         android:layout_height="1dp"
         android:layout_marginTop="7dp"
         android:background="#eeeeee"/>
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
