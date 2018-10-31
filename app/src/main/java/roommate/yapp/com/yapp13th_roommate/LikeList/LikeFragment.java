@@ -45,13 +45,13 @@ public class LikeFragment extends Fragment {
 
 
         LinearLayoutManager mLayoutManager;
-        global.mRecyclerView = (RecyclerView) view.findViewById(R.id.pick_recyclerview);
+        global.likeRecyclerView = (RecyclerView) view.findViewById(R.id.pick_recyclerview);
         mLayoutManager = new LinearLayoutManager(this.getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        global.mRecyclerView.setLayoutManager(mLayoutManager);
+        global.likeRecyclerView.setLayoutManager(mLayoutManager);
 
-        global.mAdapter = new LikeAdapter(context, global.likeInfo);
-        global.mRecyclerView.setAdapter(global.mAdapter);
+        global.likeAdapter = new LikeAdapter(context, global.likeInfo);
+        global.likeRecyclerView.setAdapter(global.likeAdapter);
 
         return view;
     }

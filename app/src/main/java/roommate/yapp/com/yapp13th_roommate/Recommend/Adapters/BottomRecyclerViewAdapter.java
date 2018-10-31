@@ -104,9 +104,11 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                 }
             });
 
-            for(int i = 0; i < global.likeInfo.size(); i++){
-                if(global.likeInfo.get(i).getId().equals(mData.get(position).getId())){
-                    holder.btn_bottom_recycler_pick.setLiked(true);
+            if(!(global.likeInfo == null)){
+                for(int i = 0; i < global.likeInfo.size(); i++){
+                    if(global.likeInfo.get(i).getId().equals(mData.get(position).getId())){
+                        holder.btn_bottom_recycler_pick.setLiked(true);
+                    }
                 }
             }
 
@@ -136,8 +138,11 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                                     databaseReference.updateChildren(taskMap);
                                     //데이터 베이스에 데이터 등록 후 키값을 받아와 myInfo에 반영 및 데이터베이스에 업데이트
 
-                                    global.mAdapter = new LikeAdapter(context, global.likeInfo);
-                                    global.mRecyclerView.setAdapter(global.mAdapter);
+                                    global.likeAdapter = new LikeAdapter(context, global.likeInfo);
+                                    global.likeRecyclerView.setAdapter(global.likeAdapter);
+
+                                    global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
+                                    global.topRecyclerView.setAdapter(global.topAdapter);
 
                                     fHolder.btn_bottom_recycler_pick.setEnabled(true);
                                 }
@@ -163,8 +168,11 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                                 databaseReference.child(global.likeInfo.get(i).getKey()).removeValue();
                                 global.likeInfo.remove(i);
 
-                                global.mAdapter = new LikeAdapter(context, global.likeInfo);
-                                global.mRecyclerView.setAdapter(global.mAdapter);
+                                global.likeAdapter = new LikeAdapter(context, global.likeInfo);
+                                global.likeRecyclerView.setAdapter(global.likeAdapter);
+
+                                global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
+                                global.topRecyclerView.setAdapter(global.topAdapter);
 
                                 fHolder.btn_bottom_recycler_pick.setEnabled(true);
                                 break;

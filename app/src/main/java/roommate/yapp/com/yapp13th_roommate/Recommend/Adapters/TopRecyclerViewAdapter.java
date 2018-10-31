@@ -27,6 +27,7 @@ import java.util.Random;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
+import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.LikeList.LikeAdapter;
 import roommate.yapp.com.yapp13th_roommate.R;
@@ -39,6 +40,7 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private GlobalVariable global;
+    private ImageFunc imageFunc;
 
     public TopRecyclerViewAdapter(Context context, List<UserInfo> mData) {
         this.mInflater = LayoutInflater.from(context);
@@ -50,7 +52,7 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_top_recyclerview, parent, false);
         global = GlobalVariable.getGlobalApplicationContext();
-
+        imageFunc = new ImageFunc(context);
 
         return new ViewHolder(view);
     }
@@ -68,6 +70,8 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
             if (!(mData.get(position).getProfile_image() == null || mData.get(position).getProfile_image().isEmpty())) {
                 byte[] image = Base64.decode(mData.get(position).getProfile_image(), Base64.DEFAULT);
                 Bitmap decodeByte = BitmapFactory.decodeByteArray(image, 0, image.length);
+                decodeByte = imageFunc.incisionToTopRecyclerImage(decodeByte);
+                //상, 하 10% 씩 잘라내는 함수
 
                 holder.iv_profile.setImageBitmap(decodeByte);
             }
@@ -94,13 +98,13 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
                 }
             });
 
-            for (int i = 0; i < global.likeInfo.size(); i++) {
-                if (global.likeInfo.get(i).getId().equals(mData.get(position).getId())) {
-                    holder.btn_top_recycler_pick.setLiked(true);
+            if(!(global.likeInfo == null)){
+                for (int i = 0; i < global.likeInfo.size(); i++) {
+                    if (global.likeInfo.get(i).getId().equals(mData.get(position).getId())) {
+                        holder.btn_top_recycler_pick.setLiked(true);
+                    }
                 }
             }
-
-
 
 
             holder.btn_top_recycler_pick.setOnLikeListener(new OnLikeListener() {
@@ -129,8 +133,11 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
                                 databaseReference.updateChildren(taskMap);
                                 //데이터 베이스에 데이터 등록 후 키값을 받아와 myInfo에 반영 및 데이터베이스에 업데이트
 
-                                global.mAdapter = new LikeAdapter(context, global.likeInfo);
-                                global.mRecyclerView.setAdapter(global.mAdapter);
+                                global.likeAdapter = new LikeAdapter(context, global.likeInfo);
+                                global.likeRecyclerView.setAdapter(global.likeAdapter);
+
+                                global.bottomAdapter = new BottomRecyclerViewAdapter(context, global.filterInfo);
+                                global.bottomRecyclerView.setAdapter(global.bottomAdapter);
 
                                 fHolder.btn_top_recycler_pick.setEnabled(true);
                             }
@@ -156,8 +163,11 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
                                 databaseReference.child(global.likeInfo.get(i).getKey()).removeValue();
                                 global.likeInfo.remove(i);
 
-                                global.mAdapter = new LikeAdapter(context, global.likeInfo);
-                                global.mRecyclerView.setAdapter(global.mAdapter);
+                                global.likeAdapter = new LikeAdapter(context, global.likeInfo);
+                                global.likeRecyclerView.setAdapter(global.likeAdapter);
+
+                                global.bottomAdapter = new BottomRecyclerViewAdapter(context, global.filterInfo);
+                                global.bottomRecyclerView.setAdapter(global.bottomAdapter);
 
                                 fHolder.btn_top_recycler_pick.setEnabled(true);
                                 break;

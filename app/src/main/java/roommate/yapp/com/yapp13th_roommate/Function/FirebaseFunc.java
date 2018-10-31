@@ -20,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Semaphore;
@@ -65,8 +66,16 @@ public class FirebaseFunc extends AppCompatActivity{
                     }else{
                         UserInfo temp = snapshot.getValue(UserInfo.class);
                         if(temp.getId().equals(global.getMyId())){
+                            temp.setNow_date(new Date(System.currentTimeMillis()));
                             global.myInfo = temp;
                             global.setExist(true);
+
+                            Map<String, Object> taskMap = new HashMap<String, Object>();
+//                            taskMap.put(global.myInfo.getKey(), global.myInfo);
+                            taskMap.put("now_date", new Date(System.currentTimeMillis()));
+                            //기존 데이터에 키 값을 추가하기 위한 해쉬맵 생성
+
+                            databaseReference.child(global.myInfo.getKey()).updateChildren(taskMap);
                             break;
                         }
                     }
@@ -74,7 +83,6 @@ public class FirebaseFunc extends AppCompatActivity{
 
                 global.setViewPagerPosition(0);
                 if(global.getExist()){
-
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                         UserInfo temp = snapshot.getValue(UserInfo.class);
                         if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
@@ -82,7 +90,6 @@ public class FirebaseFunc extends AppCompatActivity{
                             global.filterInfo.add(temp);
                         }
                     }
-
                 }else{
                     loginProgres.dismiss();
                     Intent intent = new Intent(mContext, SignUpFirstActivity.class);
@@ -98,9 +105,8 @@ public class FirebaseFunc extends AppCompatActivity{
             }
         });
 
-        databaseReference = firebaseDatabase.getReference("like");
-
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference likeDatabaseReference = firebaseDatabase.getReference("like");
+        likeDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
@@ -157,12 +163,6 @@ public class FirebaseFunc extends AppCompatActivity{
                         global.filterInfo.add(temp);
                     }
                 }
-
-                loginProgres.dismiss();
-
-                Intent signUpDone = new Intent(mContext, ViewPagerMain.class);
-                startActivity(signUpDone);
-                finish();
             }
 
             @Override
@@ -171,9 +171,9 @@ public class FirebaseFunc extends AppCompatActivity{
             }
         });
 
-        databaseReference = firebaseDatabase.getReference("like");
+        DatabaseReference likeDatabaseReference = firebaseDatabase.getReference("like");
 
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        likeDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
