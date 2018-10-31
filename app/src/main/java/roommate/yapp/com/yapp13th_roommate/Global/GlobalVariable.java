@@ -13,6 +13,8 @@ import java.util.List;
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Kakao.KakaoSDKAdapter;
 import roommate.yapp.com.yapp13th_roommate.LikeList.LikeAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.TopRecyclerViewAdapter;
 
 public class GlobalVariable extends Application {
 
@@ -37,10 +39,10 @@ public class GlobalVariable extends Application {
 
     private int viewPagerPosition;
 
-    public RecyclerView bottom_recyclerView;
-
-    public RecyclerView mRecyclerView;
-    public LikeAdapter mAdapter;
+    public RecyclerView likeRecyclerView, topRecyclerView, bottomRecyclerView;
+    public LikeAdapter likeAdapter;
+    public BottomRecyclerViewAdapter bottomAdapter;
+    public TopRecyclerViewAdapter topAdapter;
 
     @Override
     public void onCreate() {
@@ -151,14 +153,6 @@ public class GlobalVariable extends Application {
 
     public void setViewPagerPosition(int viewPagerPosition) {
         this.viewPagerPosition = viewPagerPosition;
-    }
-
-    public RecyclerView getBottom_recyclerView() {
-        return bottom_recyclerView;
-    }
-
-    public void setBottom_recyclerView(RecyclerView bottom_recyclerView) {
-        this.bottom_recyclerView = bottom_recyclerView;
     }
 
     public List<UserInfo> getSelected() {

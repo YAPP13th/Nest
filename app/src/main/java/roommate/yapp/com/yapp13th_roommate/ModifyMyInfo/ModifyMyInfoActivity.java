@@ -68,6 +68,9 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
     private final int GALLERY_CODE = 1112;
     private final int MULTI_CROP = 1113;
     private final int ROOM_SELECT = 1114;
+    private final int SEARCH_ADDRESS_ACTIVITY = 1115;
+
+    private String findAddress;//일단 주소 받아온것 여기저장,,
 
     private GlobalVariable global;
     private FirebaseFunc firebaseFunc;
@@ -82,7 +85,7 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
     private RadioGroup rgGender, rgRoom, rgPattern, rgDrink, rgSmoking, rgAllowFriend, rgPet;
     private Spinner spinner;
 
-    private TextView modify;
+    private TextView modify, tvLocation;
 
     private Boolean[] patternCheck, drinkCheck, smokingCheck, friendCheck, petCheck;
 
@@ -136,7 +139,9 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
         spinner.setSelection(0);
-        
+
+        tvLocation = (TextView)findViewById(R.id.join_location);
+
         etName = (EditText)findViewById(R.id.join_etname);
         etOpenChat = (EditText)findViewById(R.id.join_etchatURL);
         etInstar = (EditText)findViewById(R.id.join_etinstar) ;
@@ -435,6 +440,16 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
                     //갤러리 선택 말고 촬영 모드
                     //추가 안할듯? 갤러리도 겁나 복잡햇음
                     break;
+
+                case SEARCH_ADDRESS_ACTIVITY:
+                    String d = data.getExtras().getString("data");
+                    if (d != null) {
+                        String[] values = d.split(" ");
+                        findAddress = values[0] + " " + values[1];
+                        tvLocation.setText(findAddress);// 구 까지 자른거,,,
+                        global.temp.setLocation(findAddress);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -443,8 +458,12 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
     }
 
     private void dataInit() {
-        ivJoin.setImageBitmap(imageFunc.decodebase64ToBitmap(global.myInfo.getProfile_image()));
-        //base64로 인코딩 된 내 프로필을 가져와서 bitmap으로 디코딩 후 이미지뷰에 셋팅
+        if(!(global.myInfo.getProfile_image() == null || global.myInfo.getProfile_image().isEmpty())) {
+            ivJoin.setImageBitmap(imageFunc.decodebase64ToBitmap(global.myInfo.getProfile_image()));
+            //base64로 인코딩 된 내 프로필을 가져와서 bitmap으로 디코딩 후 이미지뷰에 셋팅
+        }
+
+        tvLocation.setText(global.myInfo.getLocation());
 
         etName.setText(global.myInfo.getName());
         etOpenChat.setText(global.myInfo.getOpenChatURL());

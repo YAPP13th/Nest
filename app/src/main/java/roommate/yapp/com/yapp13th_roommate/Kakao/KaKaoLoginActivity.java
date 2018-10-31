@@ -50,7 +50,7 @@ public class KaKaoLoginActivity extends Activity {
         global = (GlobalVariable)getApplicationContext();
         firebaseFunc = new FirebaseFunc(KaKaoLoginActivity.this);
 
-        getHashKey();
+//        getHashKey();
 
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);

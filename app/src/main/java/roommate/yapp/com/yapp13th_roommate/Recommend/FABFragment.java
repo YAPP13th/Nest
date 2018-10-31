@@ -239,12 +239,12 @@ public class FABFragment extends AAH_FabulousFragment {
                     }
 
                     bottom_adapter = new BottomRecyclerViewAdapter(getActivity(), global.filterInfo);
-                    global.bottom_recyclerView.setAdapter(bottom_adapter);
-                    global.bottom_recyclerView.setNestedScrollingEnabled(false);
+                    global.bottomRecyclerView.setAdapter(bottom_adapter);
+                    global.bottomRecyclerView.setNestedScrollingEnabled(false);
 
                     int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space_for_top_items);
 
-                    global.bottom_recyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
+                    global.bottomRecyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
 
                     //적용 된 필터를 새로운 recycleView adapter 를 만든 다음 원래 프래그 먼트에 적용
 
