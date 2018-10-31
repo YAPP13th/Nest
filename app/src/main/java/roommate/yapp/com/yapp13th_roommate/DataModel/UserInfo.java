@@ -30,10 +30,11 @@ public class UserInfo implements Serializable{
     private String disLike;                     //싫어하는 것
     private String introduce;                   //자기소개
     private String likeFrom;                    //찜한 사람 id
+    private String address;                     //마지막에 주소 추가했으여
 
     public UserInfo() {}
 
-    public UserInfo(String key, String profile_image, Map<String, String> room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce) {
+    public UserInfo(String key, String profile_image, Map<String, String> room_image, String id, Date now_date, String name, String gender, String year, String monthly, String openChatURL, Boolean room, String location, String instarID, String pattern, String drink, String smoking, String allow_friend, String pet, String like, String disLike, String introduce, String likeFrom, String address) {
         this.key = key;
         this.profile_image = profile_image;
         this.room_image = room_image;
@@ -55,6 +56,7 @@ public class UserInfo implements Serializable{
         this.like = like;
         this.disLike = disLike;
         this.introduce = introduce;
+        this.address=address;
     }
 
     public String getKey() {
@@ -231,5 +233,13 @@ public class UserInfo implements Serializable{
 
     public void setLikeFrom(String likeFrom) {
         this.likeFrom = likeFrom;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

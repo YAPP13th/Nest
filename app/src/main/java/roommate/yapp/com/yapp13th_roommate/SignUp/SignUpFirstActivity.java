@@ -69,6 +69,9 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private final int GALLERY_CODE = 1112;
     private final int MULTI_CROP = 1113;
     private final int ROOM_SELECT = 1114;
+    private final int SEARCH_ADDRESS_ACTIVITY = 1115;
+
+    private String findAddress;//일단 주소 받아온것 여기저장,,
 
     private EditText etName, etOpenChat;
     private ImageView ivMyProfile, pagerIndex1, pagerIndex2, pagerIndex3;
@@ -83,7 +86,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private ImageFunc imageFunc;
     private RadioFunc radioFunc;
 
-    private TextView tvTitle;
+    private TextView tvTitle, join_location;
 
     private ViewPager viewPager;
     private RoomImageModifyPagerAdapter roomImagePagerAdapter;
@@ -110,6 +113,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
 //        global.setMyId("4");
 //        global.myInfo.setId("4");
 
+        join_location=findViewById(R.id.join_location);
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
         SpannableStringBuilder ssb = new SpannableStringBuilder(str);
@@ -198,6 +202,14 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 radioFunc.roomCheck(rbRoom[1], rbRoom);
             }
         });
+        //웹뷰 인텐트
+        join_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SignUpFirstActivity.this, WebViewActivity.class);
+                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+            }
+        });
 
         //다음페이지
         TextView tvnext = findViewById(R.id.join_btnnext);
@@ -247,6 +259,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
 
             }
         });
+
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         ViewTreeObserver vto = viewPager.getViewTreeObserver();
@@ -380,6 +393,15 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     imageFunc.getPictureForPhoto();
                     //갤러리 선택 말고 촬영 모드
                     //추가 안할듯? 갤러리도 겁나 복잡햇음
+                    break;
+
+                case SEARCH_ADDRESS_ACTIVITY:
+                    String d = data.getExtras().getString("data");
+                        if (d != null) {
+                            String[] values = d.split(" ");
+                            findAddress=values[0]+values[1];
+                            join_location.setText(findAddress);// 구 까지 자른거,,,
+                        }
                     break;
                 default:
                     break;
