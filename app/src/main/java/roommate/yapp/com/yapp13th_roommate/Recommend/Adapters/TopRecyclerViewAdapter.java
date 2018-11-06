@@ -20,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +48,12 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
         this.mInflater = LayoutInflater.from(context);
         this.mData = mData;
         this.context = context;
+//        Collections.shuffle(mData);
     }
+
+    // TODO: 01/11/2018
+
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -187,8 +194,8 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
     @Override
     public int getItemCount() {
 
-//        return mData.size();
         return mData.size();
+//        return 3;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

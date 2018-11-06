@@ -39,23 +39,20 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
     private Context context;
-
-
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private GlobalVariable global;
+
     public BottomRecyclerViewAdapter(Context context, List<UserInfo> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
         this.context = context;
     }
 
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_bottom_recyclerview, parent, false);
         global = GlobalVariable.getGlobalApplicationContext();
-
         return new ViewHolder(view);
     }
 
@@ -95,7 +92,6 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                 public void onClick(View v) {
 
                     Intent intent = new Intent(v.getContext(), DetailInfoActivity.class);
-
                     Bundle bundle = new Bundle();
                     bundle.putInt("bottom", position);
                     intent.putExtras(bundle);
@@ -120,10 +116,8 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                     try {
 
                             global.likeInfo.add(dataModel);
-
                             firebaseDatabase = FirebaseDatabase.getInstance();
                             databaseReference = firebaseDatabase.getReference("like");
-
                             databaseReference.push().setValue(dataModel, new DatabaseReference.CompletionListener() {
                                 @Override
                                 public void onComplete(DatabaseError databaseError,
@@ -209,10 +203,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
             tv_selfIntroduction = itemView.findViewById(R.id.tv_bottom_selfIntroduction);
             tv_like = itemView.findViewById(R.id.tv_buttom_recycler_like);
             tv_dislike = itemView.findViewById(R.id.tv_bottom_recycler_dislike);
-
             btn_bottom_recycler_pick = itemView.findViewById(R.id.btn_bottom_recycler_pick);
-
-
             itemView.setOnClickListener(this);
         }
 
@@ -225,15 +216,12 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
     public List<UserInfo> getmData() {
         return mData;
     }
-
     public void setmData(List<UserInfo> mData) {
         this.mData = mData;
     }
-
     public void setClickListener(ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
-
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
