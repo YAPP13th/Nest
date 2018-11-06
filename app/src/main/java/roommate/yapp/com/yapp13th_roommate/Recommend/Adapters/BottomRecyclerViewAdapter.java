@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
@@ -16,9 +17,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.kakao.usermgmt.response.model.User;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
@@ -67,7 +70,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
     @Override
     public void onBindViewHolder(BottomRecyclerViewAdapter.ViewHolder holder, final int position) {
 
-        if(mData != null){
+        if(mData.size() != 0){
             mData.get(position).setLikeFrom(global.myInfo.getId());
             final UserInfo dataModel = mData.get(position);
             final BottomRecyclerViewAdapter.ViewHolder fHolder = holder;
@@ -118,29 +121,54 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                             global.likeInfo.add(dataModel);
                             firebaseDatabase = FirebaseDatabase.getInstance();
                             databaseReference = firebaseDatabase.getReference("like");
+<<<<<<< HEAD
                             databaseReference.push().setValue(dataModel, new DatabaseReference.CompletionListener() {
                                 @Override
                                 public void onComplete(DatabaseError databaseError,
                                                        DatabaseReference databaseReference) {
                                     String uniqueKey = databaseReference.getKey();
                                     global.likeInfo.get(global.likeInfo.size() - 1).setKey(uniqueKey);
+=======
 
-                                    Map<String, Object> taskMap = new HashMap<String, Object>();
-                                    taskMap.put("key", uniqueKey);
-                                    //기존 데이터에 키 값을 추가하기 위한 해쉬맵 생성
+                            global.likeAdapter = new LikeAdapter(context, global.likeInfo);
+                            global.likeRecyclerView.setAdapter(global.likeAdapter);
+>>>>>>> 55417c7d0b33875aa2f66027855877c19414a0a1
 
-                                    databaseReference.updateChildren(taskMap);
-                                    //데이터 베이스에 데이터 등록 후 키값을 받아와 myInfo에 반영 및 데이터베이스에 업데이트
+                            global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
+                            global.topRecyclerView.setAdapter(global.topAdapter);
 
-                                    global.likeAdapter = new LikeAdapter(context, global.likeInfo);
-                                    global.likeRecyclerView.setAdapter(global.likeAdapter);
+                            fHolder.btn_bottom_recycler_pick.setEnabled(true);
 
-                                    global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
-                                    global.topRecyclerView.setAdapter(global.topAdapter);
 
-                                    fHolder.btn_bottom_recycler_pick.setEnabled(true);
+                            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    if(!dataSnapshot.hasChild(global.myInfo.getId())){
+                                        HashMap<String, String> likeInfo = new HashMap<>();
+                                        likeInfo.put(mData.get(position).getId(), "");
+                                        databaseReference.child(global.myInfo.getId()).setValue(likeInfo);
+                                    }else{
+                                        for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+
+                                            if(global.myInfo.getId().equals(snapshot.getKey())){
+                                                HashMap<String, String> likeInfo = new HashMap<>();
+                                                for(DataSnapshot likeSnapshot : snapshot.getChildren()){
+                                                    likeInfo.put(likeSnapshot.getKey(), "");
+                                                }
+                                                likeInfo.put(mData.get(position).getId(), "");
+                                                databaseReference.child(global.myInfo.getId()).setValue(likeInfo);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+                                    throw databaseError.toException();
                                 }
                             });
+
                     }catch (NullPointerException e){
                         fHolder.btn_bottom_recycler_pick.setEnabled(true);
                         e.printStackTrace();
@@ -159,7 +187,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                                 firebaseDatabase = FirebaseDatabase.getInstance();
                                 databaseReference = firebaseDatabase.getReference("like");
 
-                                databaseReference.child(global.likeInfo.get(i).getKey()).removeValue();
+                                databaseReference.child(global.myInfo.getId()).child(mData.get(position).getId()).removeValue();
                                 global.likeInfo.remove(i);
 
                                 global.likeAdapter = new LikeAdapter(context, global.likeInfo);
