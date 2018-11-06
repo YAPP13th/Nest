@@ -59,6 +59,7 @@ import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
+import roommate.yapp.com.yapp13th_roommate.SignUp.WebViewActivity;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImageModifyPagerAdapter;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImagePagerAdapter;
 
@@ -127,7 +128,6 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
 
         global.temp = new UserInfo();
         global.temp.setId(global.myInfo.getId());
-        global.temp.setKey(global.myInfo.getKey());
         global.temp.setProfile_image(global.myInfo.getProfile_image());
         global.setTempProfile(imageFunc.decodebase64ToBitmap(global.temp.getProfile_image()));
 
@@ -141,6 +141,14 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
         spinner.setSelection(0);
 
         tvLocation = (TextView)findViewById(R.id.join_location);
+
+        tvLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ModifyMyInfoActivity.this, WebViewActivity.class);
+                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+            }
+        });
 
         etName = (EditText)findViewById(R.id.join_etname);
         etOpenChat = (EditText)findViewById(R.id.join_etchatURL);
@@ -287,19 +295,24 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Map<String, String> roomsInfo = new HashMap<>();
                 Bitmap[] rooms;
-                rooms = global.getTempRoom();
+
+                if(global.myInfo.getRoom_image().size() != 0){
+                    rooms = new Bitmap[global.myInfo.getRoom_image().size()];
+
+                    for(int i = 0; i < rooms.length; i++){
+                        rooms[i] = imageFunc.decodebase64ToBitmap(global.myInfo.getRoom_image().get("room" + i));
+                        roomsInfo.put("room" + i, global.myInfo.getRoom_image().get("room" + i));
+                    }
+                }
 
                 global.setMyProfile(global.getTempProfile());
                 global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
-
-                for(int i = 0; i < rooms.length; i++){
-                    roomsInfo.put("room" + i, imageFunc.saveConvertBitmap(rooms[i]));
-                }
                 global.temp.setRoom_image(roomsInfo);
 
                 global.temp.setName(etName.getText().toString());
                 global.temp.setYear(spinner.getSelectedItem().toString());
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
+                global.temp.setLocation(tvLocation.getText().toString());
                 global.temp.setInstarID(etInstar.getText().toString());
                 global.temp.setLike(etLike.getText().toString());
                 global.temp.setDisLike(etDisLike.getText().toString());
