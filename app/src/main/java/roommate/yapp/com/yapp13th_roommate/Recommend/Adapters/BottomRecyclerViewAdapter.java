@@ -121,19 +121,9 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                             global.likeInfo.add(dataModel);
                             firebaseDatabase = FirebaseDatabase.getInstance();
                             databaseReference = firebaseDatabase.getReference("like");
-<<<<<<< HEAD
-                            databaseReference.push().setValue(dataModel, new DatabaseReference.CompletionListener() {
-                                @Override
-                                public void onComplete(DatabaseError databaseError,
-                                                       DatabaseReference databaseReference) {
-                                    String uniqueKey = databaseReference.getKey();
-                                    global.likeInfo.get(global.likeInfo.size() - 1).setKey(uniqueKey);
-=======
 
                             global.likeAdapter = new LikeAdapter(context, global.likeInfo);
                             global.likeRecyclerView.setAdapter(global.likeAdapter);
->>>>>>> 55417c7d0b33875aa2f66027855877c19414a0a1
-
                             global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
                             global.topRecyclerView.setAdapter(global.topAdapter);
 
@@ -208,6 +198,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                 }
             });
         }
+
     }
 
     @Override

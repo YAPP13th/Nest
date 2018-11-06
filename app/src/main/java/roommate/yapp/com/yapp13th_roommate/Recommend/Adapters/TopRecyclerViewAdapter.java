@@ -215,14 +215,11 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
 
     @Override
     public int getItemCount() {
-<<<<<<< HEAD
+
 
         return mData.size();
 //        return 3;
-=======
-//        return 3;
-        return mData.size();
->>>>>>> 55417c7d0b33875aa2f66027855877c19414a0a1
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
