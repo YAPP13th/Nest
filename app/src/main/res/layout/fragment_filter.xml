@@ -158,7 +158,8 @@
 
                     <ImageView
                         android:layout_width="20dp"
-                        android:layout_height="20dp" />
+                        android:layout_height="20dp"
+                        android:background="@drawable/join_first_location_icon"/>
 
                     <TextView
                         android:id="@+id/tvLocation"

@@ -83,7 +83,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
-                android:background="#eeeeee"
+                android:background="@drawable/join_first_profile_photo_x"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNecessary" />
 
