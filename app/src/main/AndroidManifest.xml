@@ -54,7 +54,8 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".DetailInfo.DetailInfoActivity" ></activity>
-        <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"></activity>
+        <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
         <activity android:name=".SignUp.WebViewActivity"></activity>
 
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

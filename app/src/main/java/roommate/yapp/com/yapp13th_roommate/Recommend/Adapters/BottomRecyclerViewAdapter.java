@@ -124,7 +124,9 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
 
                             global.likeAdapter = new LikeAdapter(context, global.likeInfo);
                             global.likeRecyclerView.setAdapter(global.likeAdapter);
-                            global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
+
+                            global.topAdapter = new TopRecyclerViewAdapter(context, global.randomTopUser);
+
                             global.topRecyclerView.setAdapter(global.topAdapter);
 
                             fHolder.btn_bottom_recycler_pick.setEnabled(true);
@@ -183,7 +185,7 @@ public class BottomRecyclerViewAdapter extends RecyclerView.Adapter<BottomRecycl
                                 global.likeAdapter = new LikeAdapter(context, global.likeInfo);
                                 global.likeRecyclerView.setAdapter(global.likeAdapter);
 
-                                global.topAdapter = new TopRecyclerViewAdapter(context, global.everyInfo);
+                                global.topAdapter = new TopRecyclerViewAdapter(context, global.randomTopUser);
                                 global.topRecyclerView.setAdapter(global.topAdapter);
 
                                 fHolder.btn_bottom_recycler_pick.setEnabled(true);

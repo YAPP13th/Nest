@@ -36,7 +36,7 @@ public class RecommendFragment extends Fragment
 
     private GlobalVariable global;
 
-    private List<UserInfo> randomTopUser, sameLocationUser;
+    private List<UserInfo> sameLocationUser;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class RecommendFragment extends Fragment
         final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         sameLocationUser = new ArrayList<>();
-        randomTopUser = new ArrayList<>();
+        global.randomTopUser = new ArrayList<>();
         ArrayList<Integer>ranNumber = new ArrayList<Integer>();
         int count = 0;
 
@@ -69,12 +69,12 @@ public class RecommendFragment extends Fragment
         //shuffle을 이용하여 랜덤 인덱스를 섞는다
         if(sameLocationUser.size() < 3){
             for(int i = 0; i < sameLocationUser.size(); i++){
-                randomTopUser.add(sameLocationUser.get(i));
+                global.randomTopUser.add(sameLocationUser.get(i));
             }
         }else{
-            randomTopUser.add(sameLocationUser.get(ranNumber.get(0)));
-            randomTopUser.add(sameLocationUser.get(ranNumber.get(1)));
-            randomTopUser.add(sameLocationUser.get(ranNumber.get(2)));
+            global.randomTopUser.add(sameLocationUser.get(ranNumber.get(0)));
+            global.randomTopUser.add(sameLocationUser.get(ranNumber.get(1)));
+            global.randomTopUser.add(sameLocationUser.get(ranNumber.get(2)));
         }
         //랜덤 인덱스를 이용하여 탑 뷰에 뿌려줄 데이터를 만든다
 
@@ -99,7 +99,7 @@ public class RecommendFragment extends Fragment
                 (context, LinearLayoutManager.HORIZONTAL, false);
         global.topRecyclerView.setLayoutManager(layoutManager);
         global.topRecyclerView.addItemDecoration(new TopSpacesItemDecoration(spacingInPixels));
-        global.topAdapter = new TopRecyclerViewAdapter(context, randomTopUser);
+        global.topAdapter = new TopRecyclerViewAdapter(context, global.randomTopUser);
         global.topRecyclerView.setAdapter(global.topAdapter);
 
 

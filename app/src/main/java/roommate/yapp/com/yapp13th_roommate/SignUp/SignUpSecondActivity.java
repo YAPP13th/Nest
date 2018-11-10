@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -45,6 +46,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
     private RadioGroup rgPattern, rgDrink, rgSmoking, rgAllowFriend, rgPet;
     private EditText tvInstar, tvLike, tvDisLike, tvIntroduce;
     private TextView btnStart;
+    private ImageView ivBack;
 
     private Boolean patternCheck[], drinkCheck[],smokingCheck[], friendCheck[], petCheck[];
 
@@ -80,6 +82,14 @@ public class SignUpSecondActivity extends AppCompatActivity {
         tvLike = (EditText)findViewById(R.id.join_etlike);
         tvDisLike = (EditText)findViewById(R.id.join_etdislike);
         tvIntroduce = (EditText)findViewById(R.id.join_etme);
+
+        ivBack = findViewById(R.id.ivBack);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         btnStart = (TextView)findViewById(R.id.join_start);
 
