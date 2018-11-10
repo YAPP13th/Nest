@@ -74,7 +74,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
     private String findAddress;//일단 주소 받아온것 여기저장,,
 
     private EditText etName, etOpenChat;
-    private ImageView ivMyProfile, pagerIndex1, pagerIndex2, pagerIndex3;
+    private ImageView ivBack, ivMyProfile, pagerIndex1, pagerIndex2, pagerIndex3;
     private RadioButton[] rbGender, rbRoom;
     private SeekBar seekBar;
     private int prog;
@@ -110,8 +110,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
 //        global.tempRoom = new Bitmap[3];
 //
 //        global.setExist(false);
-//        global.setMyId("3");
-//        global.myInfo.setId("3");
+//        global.setMyId("4");
+//        global.myInfo.setId("4");
 
         join_location=findViewById(R.id.join_location);
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
@@ -148,6 +148,15 @@ public class SignUpFirstActivity extends AppCompatActivity {
         pagerIndex1 = findViewById(R.id.viewPagerIndex1);
         pagerIndex2 = findViewById(R.id.viewPagerIndex2);
         pagerIndex3 = findViewById(R.id.viewPagerIndex3);
+
+        ivBack = findViewById(R.id.ivBack);
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         global.temp.setMonthly("0");
         //사용자가 시크바를 움직이지 않을 수도 있으므로 0으로 미리 초기화

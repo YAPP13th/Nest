@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
+            android:background="@drawable/join_first_profile_photo_x"
             android:contentDescription="@string/desc_iv_profile" />
 
         <!-- 찜하기 버튼 -->

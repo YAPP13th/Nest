@@ -23,6 +23,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="48dp"
+                    android:src="@drawable/profile_back_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
@@ -148,7 +160,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:background="@drawable/myprofileedit_second_instagram_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -202,7 +214,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_money_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -252,7 +264,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_lifetime_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -302,7 +314,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_beer_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -352,7 +364,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_smoking_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -402,7 +414,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_friends_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -452,7 +464,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_pet_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -502,7 +514,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_like_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -552,7 +564,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_dislike_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -602,7 +614,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_alignParentTop="true"
-                        android:background="#eeeeee"
+                        android:src="@drawable/myprofileedit_chat_icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
