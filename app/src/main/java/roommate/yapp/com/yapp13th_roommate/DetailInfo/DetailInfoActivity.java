@@ -31,7 +31,7 @@ public class DetailInfoActivity extends AppCompatActivity {
 
     private int position;
 
-    private ImageView ivProfile, pagerIndex1, pagerIndex2, pagerIndex3;
+    private ImageView ivBack, ivProfile, pagerIndex1, pagerIndex2, pagerIndex3;
     private TextView tvName, tvBirth, tvLocation, tvInstarID, tvMonthly, tvPattern, tvDrink, tvSmoking, tvAllowFriend, tvPet, tvLike, tvDisLike, tvChatURL, tvIntroduceContent;
 
     private Button btnSelect, btnChat;
@@ -46,7 +46,8 @@ public class DetailInfoActivity extends AppCompatActivity {
 
         global = (GlobalVariable)getApplicationContext();
         imageFunc = new ImageFunc(this);
-      
+
+        ivBack = (ImageView)findViewById(R.id.ivBack);
         ivProfile = (ImageView)findViewById(R.id.ivUser);
         pagerIndex1 = (ImageView)findViewById(R.id.viewPagerIndex1);
         pagerIndex2 = (ImageView)findViewById(R.id.viewPagerIndex2);
@@ -79,6 +80,13 @@ public class DetailInfoActivity extends AppCompatActivity {
             position = intent.getIntExtra("like", -1);
             init(global.likeInfo.get(position));
         }
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 
