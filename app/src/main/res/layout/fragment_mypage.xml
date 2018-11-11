@@ -7,6 +7,7 @@
     tools:context=".MyPage.MyPageFragment">
 
     <android.support.constraint.ConstraintLayout
+        android:background="@drawable/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -26,18 +27,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/ivBack"
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="48dp"
-                        android:src="@drawable/profile_back_icon"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
 
                     <android.support.v4.view.ViewPager
                         android:id="@+id/viewPager"
