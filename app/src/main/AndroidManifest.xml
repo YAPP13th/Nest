@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="roommate.yapp.com.yapp13th_roommate">
 
@@ -23,15 +22,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".Kakao.KaKaoLoginActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateUnspecified"
-            >
-
-
+            android:launchMode = "singleInstance">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                        />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -46,26 +40,20 @@
         </activity>
 
         <!--<activity android:name=".Kakao.MainActivity"></activity>-->
-        <activity android:name=".SignUp.SignUpSecondActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
-
+        <activity android:name=".SignUp.SignUpFirstActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".SignUp.SignUpFirstActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
+        <activity android:name=".SignUp.SignUpSecondActivity" >
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-
-
-
         <activity android:name=".DetailInfo.DetailInfoActivity" ></activity>
         <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"
             android:windowSoftInputMode="adjustNothing"></activity>
@@ -73,9 +61,7 @@
 
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat"/>
-        <activity android:name=".Function.RadioFunc"
 
-            />
 
 
         <meta-data
