@@ -30,6 +30,8 @@ public class GlobalVariable extends Application {
     public List<UserInfo> randomTopUser;
     public List<UserInfo> selected;
 
+    public List<String> delCheckList;//찜에서 삭제할 목록
+
 
     private String myId;
 
