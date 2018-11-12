@@ -13,25 +13,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.like.LikeButton;
-import com.like.OnLikeListener;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.DetailInfo.DetailInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
-import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.BottomSpacesItemDecoration;
 
 public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
     private List<UserInfo> mData;
@@ -53,6 +50,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_like_recyclerview, parent, false);
         global = GlobalVariable.getGlobalApplicationContext();
+        global.delCheckList=new ArrayList<String>();
         return new LikeAdapter.ViewHolder(view);
     }
 
@@ -74,7 +72,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
             holder.tv_selfIntroduction.setText(mData.get(position).getIntroduce());
             holder.tv_like.setText(mData.get(position).getLike());
             holder.tv_dislike.setText(mData.get(position).getDisLike());
-
+            holder.cb_like.setChecked(false);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -86,6 +84,17 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
                     intent.putExtras(bundle);
 
                     context.startActivity(intent);
+                }
+            });
+            holder.cb_like.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                    if(b) //체크하면 id가 스트링으로 리스트에 저장
+                        global.delCheckList.add(mData.get(position).getId());
+                    else //체크 풀면 id있는지 찾고 있으면 없앰
+                        if(global.delCheckList.contains(mData.get(position).getId()))
+                            global.delCheckList.remove(mData.get(position).getId());
                 }
             });
         }
@@ -104,6 +113,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
         LikeButton btn_bottom_recycler_pick;
         ImageView iv_profile;
         TextView tv_name, tv_age, tv_address, tv_monthMoney, tv_selfIntroduction, tv_like, tv_dislike;
+        CheckBox cb_like;
 
 
         public ViewHolder(View view) {
@@ -116,6 +126,7 @@ public class LikeAdapter extends RecyclerView.Adapter<LikeAdapter.ViewHolder>{
             tv_selfIntroduction = itemView.findViewById(R.id.tv_selfIntroduction1);
             tv_like = itemView.findViewById(R.id.tv_top_recycler_like1);
             tv_dislike = itemView.findViewById(R.id.tv_top_recycler_dislike1);
+            cb_like = itemView.findViewById(R.id.cb_like);
         }
 
     }
