@@ -1,14 +1,8 @@
 package roommate.yapp.com.yapp13th_roommate.SignUp;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.GradientDrawable;
-import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -16,12 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,7 +22,6 @@ import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain;
 
 public class SignUpSecondActivity extends AppCompatActivity {
 
@@ -50,10 +38,41 @@ public class SignUpSecondActivity extends AppCompatActivity {
 
     private Boolean patternCheck[], drinkCheck[],smokingCheck[], friendCheck[], petCheck[];
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_second);
+//        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS , WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        getApplicationContext().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MODE_CHANGED);
+//        tvLike = (EditText)findViewById(R.id.join_etlike);
+//        tvLike.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+
+
+        // TODO: 10/11/2018 잠깐 추가 할부분 지울거임
+        global = (GlobalVariable)getApplicationContext();
+        global.everyInfo = new ArrayList<>();
+        global.filterInfo = new ArrayList<>();
+        global.myInfo = new UserInfo();
+        global.temp = new UserInfo();
+        global.myRoom = new Bitmap[3];
+        global.tempRoom = new Bitmap[3];
+
+        global.setExist(false);
+        global.setMyId("4");
+        global.myInfo.setId("4");
+
+
+
 
         global = (GlobalVariable)getApplicationContext();
         firebaseFunc = new FirebaseFunc(this);
@@ -119,6 +138,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
         rgPattern.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
                 patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[0], rbPattern, patternCheck);
                 patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[1], rbPattern, patternCheck);
                 patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[2], rbPattern, patternCheck);

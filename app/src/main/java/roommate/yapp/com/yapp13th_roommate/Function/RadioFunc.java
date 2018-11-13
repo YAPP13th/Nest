@@ -1,30 +1,40 @@
 package roommate.yapp.com.yapp13th_roommate.Function;
 
 import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
 
-public class RadioFunc {
+public class RadioFunc extends AppCompatActivity{
 
     private Context mContext;
     private GlobalVariable global;
-    private GradientDrawable drawable,drawable2;
+    private Drawable drawable,drawable2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_join_second);
+//
+    }
+
 
     public RadioFunc(Context context){
         super();
         this.mContext = context;
         global = (GlobalVariable)mContext.getApplicationContext();
 
-        drawable = (GradientDrawable) ContextCompat.getDrawable(mContext, R.drawable.rounding);
-        drawable2 = (GradientDrawable) ContextCompat.getDrawable(mContext, R.drawable.rounding2);
+        drawable =  ContextCompat.getDrawable(mContext, R.drawable.choice);
+        drawable2 =  ContextCompat.getDrawable(mContext, R.drawable.unchoice_btn);
+
     }
 
     public void genderCheck(RadioButton rb, RadioButton[] rbGender){
@@ -503,6 +513,7 @@ public class RadioFunc {
     }
 
     public void radioSelect(RadioButton rb){
+
         rb.setBackground(drawable);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             rb.setClipToOutline(true);
@@ -510,6 +521,7 @@ public class RadioFunc {
     }
 
     public void radioClear(RadioButton rb){
+
         rb.setBackground(drawable2);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             rb.setClipToOutline(true);

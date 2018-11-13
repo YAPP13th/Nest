@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -133,6 +133,7 @@
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPattern">
 
@@ -142,13 +143,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="아침형" />
+                    android:text="아침형"
+                    android:gravity="center"
+                    />
 
                 <RadioButton
                     android:id="@+id/join_rbnight"
@@ -156,26 +159,28 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="저녁형" />
+                    android:text="저녁형"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbnostyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="불규칙" />
+                    android:text="불규칙"
+                    android:gravity="center"/>
             </RadioGroup>
 
             <ImageView
@@ -198,6 +203,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="음주 빈도"
+                android:gravity="center"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rglifestyle" />
@@ -219,13 +225,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="금주" />
+                    android:text="금주"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbdrink2"
@@ -233,13 +240,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="매일" />
+                    android:text="매일"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbdrink3"
@@ -247,26 +255,28 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="주1-2회" />
+                    android:text="주1-2회"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbdrink4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="월1-2회" />
+                    android:text="월1-2회"
+                    android:gravity="center"/>
             </RadioGroup>
 
             <ImageView
@@ -289,6 +299,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="음주 빈도"
+                android:gravity="center"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgdrink" />
@@ -310,13 +321,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="흡연" />
+                    android:text="흡연"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbcig2"
@@ -324,13 +336,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="비흡연" />
+                    android:text="비흡연"
+                    android:gravity="center"/>
 
             </RadioGroup>
 
@@ -355,6 +368,7 @@
                 android:layout_marginTop="27dp"
                 android:text="친구 출입"
                 android:textSize="14sp"
+                android:gravity="center"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgcig" />
 
@@ -375,13 +389,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="허용" />
+                    android:text="허용"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbfri2"
@@ -389,13 +404,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="금지" />
+                    android:text="금지"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbfri3"
@@ -403,13 +419,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="합의하 허용" />
+                    android:text="합의하 허용"
+                    android:gravity="center"/>
 
             </RadioGroup>
 
@@ -433,6 +450,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="애완동물"
+                android:gravity="center"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgfriend" />
@@ -454,13 +472,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="허용" />
+                    android:text="허용"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbpet2"
@@ -468,13 +487,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="금지" />
+                    android:text="금지"
+                    android:gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/join_rbpet3"
@@ -482,13 +502,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/unchoice_btn"
                     android:button="@null"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="합의하 허용" />
+                    android:text="합의하 허용"
+                    android:gravity="center"/>
 
             </RadioGroup>
 
@@ -512,9 +533,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="좋아하는 것"
+                android:gravity="center"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
-                app:layout_constraintTop_toBottomOf="@+id/join_rgpet" />
+                app:layout_constraintTop_toBottomOf="@+id/join_rgpet"
+                android:nextFocusDown="@id/ivIntroduce"/>
 
             <EditText
                 android:id="@+id/join_etlike"
@@ -525,12 +548,17 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/textstroke"
+                android:background="@drawable/round"
                 android:hint="하나만 입력해주세요"
+                android:gravity="center"
                 android:textSize="14sp"
+
+                android:singleLine="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvLike" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLike"
+                android:nextFocusDown="@id/tvDisLike"
+                android:imeOptions="actionNext"/>
 
 
             <ImageView
@@ -553,7 +581,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="싫어하는 것"
+                android:gravity="center"
                 android:textSize="14sp"
+                android:singleLine="true"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_etlike" />
 
@@ -566,12 +596,21 @@
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:background="@drawable/textstroke"
+                android:background="@drawable/round"
                 android:hint="하나만 입력해주세요"
+                android:gravity="center"
                 android:textSize="14sp"
+                android:singleLine="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDisLike" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDisLike"
+                android:nextFocusDown="@id/ivIntroduce"
+                android:imeOptions="actionNext"
+
+
+
+
+                />
 
             <ImageView
                 android:id="@+id/ivIntroduce"
@@ -593,9 +632,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="자기소개"
+                android:gravity="center"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
-                app:layout_constraintTop_toBottomOf="@+id/join_etdislike" />
+                app:layout_constraintTop_toBottomOf="@+id/join_etdislike"
+                />
 
             <EditText
                 android:id="@+id/join_etme"
@@ -606,26 +647,29 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/textstroke"
+                android:background="@drawable/round"
                 android:hint="100자 이하"
-                android:inputType="textMultiLine"
-                android:singleLine="false"
                 android:textSize="14sp"
+                android:singleLine="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvIntroduce" />
+                app:layout_constraintTop_toBottomOf="@+id/tvIntroduce"
+
+                android:imeOptions="actionDone"/>
 
             <TextView
                 android:id="@+id/join_start"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="13dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="20dp"
                 android:background="@android:color/holo_orange_light"
                 android:gravity="center"
                 android:padding="20dp"
+
                 android:text="시작하기"
-                android:textSize="16sp"
                 android:textColor="@color/white"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/join_etme" />
 
@@ -635,4 +679,4 @@
     </ScrollView>
 
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
