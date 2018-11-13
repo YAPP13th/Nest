@@ -26,7 +26,9 @@
 
         <activity android:name=".Kakao.KaKaoLoginActivity"
             android:windowSoftInputMode="adjustUnspecified|stateUnspecified"
+            android:launchMode = "singleInstance"
             >
+
 
 
             <intent-filter>

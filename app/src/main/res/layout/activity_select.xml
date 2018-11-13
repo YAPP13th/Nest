@@ -15,7 +15,7 @@
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_layout"
-        android:layout_weight="10"
+        android:layout_weight="12"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"

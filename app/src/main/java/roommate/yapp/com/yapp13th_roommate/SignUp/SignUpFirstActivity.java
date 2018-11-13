@@ -113,6 +113,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
 //        global.setMyId("4");
 //        global.myInfo.setId("4");
 
+        global.tempRoom = null;
+
         join_location=findViewById(R.id.join_location);
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
@@ -261,9 +263,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     builder.show();
                 }else{
                     if(chTerms.isChecked()){
-                        Intent intent = new Intent(SignUpFirstActivity.this,SignUpSecondActivity.class);
+                        Intent intent = new Intent(SignUpFirstActivity.this, SignUpSecondActivity.class);
                         startActivity(intent);
-                        finish();
                     }else{
                         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                         builder.setTitle("약관 동의");

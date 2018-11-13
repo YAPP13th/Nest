@@ -8,20 +8,22 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
 
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.LoginButton;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
-
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -42,6 +44,8 @@ public class KaKaoLoginActivity extends Activity {
     private GlobalVariable global;
     private FirebaseFunc firebaseFunc;
 
+    private LoginButton kakaoButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +59,8 @@ public class KaKaoLoginActivity extends Activity {
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
 //        requestMe();
+
+        kakaoButton = (LoginButton)findViewById(R.id.com_kakao_login);
 
     }
 
@@ -79,10 +85,17 @@ public class KaKaoLoginActivity extends Activity {
         Session.getCurrentSession().removeCallback(callback);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        kakaoButton.setClickable(true);
+    }
+
     private class SessionCallback implements ISessionCallback {
 
         @Override
         public void onSessionOpened() {
+            kakaoButton.setClickable(false);
             requestMe();
         }
 

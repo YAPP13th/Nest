@@ -13,10 +13,19 @@ android {
         multiDexEnabled true
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "get_kakao_sdk_appkey", "f3d1a991e13963f430884ee96a4ac755"
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "get_kakao_sdk_appkey", "f3d1a991e13963f430884ee96a4ac755"
         }
+    }
+    lintOptions {
+        checkReleaseBuilds false
     }
 }
 

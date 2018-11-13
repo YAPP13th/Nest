@@ -180,17 +180,19 @@ public class SignUpSecondActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Map<String, String> roomsInfo = new HashMap<>();
-                Bitmap[] rooms;
-                rooms = global.getTempRoom();
 
                 global.setMyProfile(global.getTempProfile());
                 global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
 
-                for(int i = 0; i < rooms.length; i++){
-                    roomsInfo.put("room" + i, imageFunc.saveConvertBitmap(rooms[i]));
+                if(global.getTempRoom() != null){
+                    Bitmap[] rooms;
+                    rooms = global.getTempRoom();
+                    Map<String, String> roomsInfo = new HashMap<>();
+                    for(int i = 0; i < rooms.length; i++){
+                        roomsInfo.put("room" + i, imageFunc.saveConvertBitmap(rooms[i]));
+                    }
+                    global.temp.setRoom_image(roomsInfo);
                 }
-                global.temp.setRoom_image(roomsInfo);
 
                 global.temp.setId(global.myInfo.getId());
                 global.temp.setInstarID(tvInstar.getText().toString());
