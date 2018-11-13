@@ -1,14 +1,8 @@
 package roommate.yapp.com.yapp13th_roommate.SignUp;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.GradientDrawable;
-import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,7 +22,6 @@ import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
 import roommate.yapp.com.yapp13th_roommate.R;
-import roommate.yapp.com.yapp13th_roommate.ViewPager.ViewPagerMain;
 
 public class SignUpSecondActivity extends AppCompatActivity {
 
@@ -44,6 +37,8 @@ public class SignUpSecondActivity extends AppCompatActivity {
     private ImageView ivBack;
 
     private Boolean patternCheck[], drinkCheck[],smokingCheck[], friendCheck[], petCheck[];
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,17 +59,17 @@ public class SignUpSecondActivity extends AppCompatActivity {
 
 
         // TODO: 10/11/2018 잠깐 추가 할부분 지울거임
-//        global = (GlobalVariable)getApplicationContext();
-//        global.everyInfo = new ArrayList<>();
-//        global.filterInfo = new ArrayList<>();
-//        global.myInfo = new UserInfo();
-//        global.temp = new UserInfo();
-//        global.myRoom = new Bitmap[3];
-//        global.tempRoom = new Bitmap[3];
+        global = (GlobalVariable)getApplicationContext();
+        global.everyInfo = new ArrayList<>();
+        global.filterInfo = new ArrayList<>();
+        global.myInfo = new UserInfo();
+        global.temp = new UserInfo();
+        global.myRoom = new Bitmap[3];
+        global.tempRoom = new Bitmap[3];
 
-//        global.setExist(false);
-//        global.setMyId("4");
-//        global.myInfo.setId("4");
+        global.setExist(false);
+        global.setMyId("4");
+        global.myInfo.setId("4");
 
 
 
@@ -143,6 +138,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
         rgPattern.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
                 patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[0], rbPattern, patternCheck);
                 patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[1], rbPattern, patternCheck);
                 patternCheck = radioFunc.patternCheck(rgPattern, rbPattern[2], rbPattern, patternCheck);
@@ -184,19 +180,17 @@ public class SignUpSecondActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Map<String, String> roomsInfo = new HashMap<>();
+                Bitmap[] rooms;
+                rooms = global.getTempRoom();
 
                 global.setMyProfile(global.getTempProfile());
                 global.temp.setProfile_image(imageFunc.saveConvertBitmap(global.getMyProfile()));
 
-                if(global.getTempRoom() != null){
-                    Bitmap[] rooms;
-                    rooms = global.getTempRoom();
-                    Map<String, String> roomsInfo = new HashMap<>();
-                    for(int i = 0; i < rooms.length; i++){
-                        roomsInfo.put("room" + i, imageFunc.saveConvertBitmap(rooms[i]));
-                    }
-                    global.temp.setRoom_image(roomsInfo);
+                for(int i = 0; i < rooms.length; i++){
+                    roomsInfo.put("room" + i, imageFunc.saveConvertBitmap(rooms[i]));
                 }
+                global.temp.setRoom_image(roomsInfo);
 
                 global.temp.setId(global.myInfo.getId());
                 global.temp.setInstarID(tvInstar.getText().toString());

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/clJoin"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
@@ -106,8 +106,6 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-
-
                 android:text="이름"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivName"
@@ -117,17 +115,13 @@
                 android:id="@+id/join_etname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/round"
                 android:hint="반드시 실명으로 입력해주세요"
                 android:inputType="textPersonName"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivName" />
 
@@ -171,11 +165,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -189,8 +181,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -305,7 +295,6 @@
                 android:layout_marginTop="33dp"
                 android:text="오픈채팅 URL"
                 android:textSize="14sp"
-
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
                 app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -313,18 +302,13 @@
                 android:id="@+id/join_etchatURL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginStart="16dp"
-
-                android:layout_marginTop="1dp"
-
-                android:background="@drawable/round"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="12dp"
                 android:hint="카카오톡 오픈채팅 URL 을 입력해주세요"
                 android:inputType="textPersonName"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvChatURL" />
 
@@ -334,8 +318,6 @@
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
                 android:src="@drawable/myprofileedit_house_icon"
@@ -350,7 +332,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="33dp"
                 android:text="집 유무"
-
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
                 app:layout_constraintTop_toBottomOf="@+id/join_etchatURL" />
@@ -374,7 +355,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -388,7 +368,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -410,9 +389,9 @@
                 android:id="@+id/viewPagerIndex1"
                 android:layout_width="4dp"
                 android:layout_height="4dp"
-                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex2" />
 
@@ -420,9 +399,9 @@
                 android:id="@+id/viewPagerIndex2"
                 android:layout_width="4dp"
                 android:layout_height="4dp"
-                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex3" />
 
@@ -430,9 +409,9 @@
                 android:id="@+id/viewPagerIndex3"
                 android:layout_width="4dp"
                 android:layout_height="4dp"
-                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="13dp"
                 android:layout_marginRight="13dp"
+                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toEndOf="@+id/viewPager" />
 
@@ -464,12 +443,12 @@
                 android:id="@+id/join_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:layout_marginStart="21dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/round"
+                android:background="@drawable/unchoice_btn"
                 android:text="위치검색"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -504,13 +483,12 @@
                 android:id="@+id/join_etinstar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-
-                android:background="@drawable/round"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
                 android:hint="반드시 실명으로 입력해주세요"
                 android:inputType="textPersonName"
                 android:textSize="14sp"
@@ -638,7 +616,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -653,7 +630,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -668,7 +644,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -732,7 +707,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -747,7 +721,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -785,7 +758,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="18dp"
-
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
@@ -800,7 +772,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -829,7 +800,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -881,7 +851,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/rounding2"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -896,7 +865,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/rounding2"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -909,10 +877,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-
                     android:background="@drawable/rounding2"
                     android:button="@null"
-                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -954,10 +920,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="14dp"
-
-                android:background="@drawable/round"
+                android:background="@drawable/textstroke"
                 android:hint="하나만 입력해주세요"
-                android:imeOptions="actionNext"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -984,9 +948,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="싫어하는 것"
-
                 android:textSize="14sp"
-
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_etlike" />
 
@@ -999,9 +961,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/round"
+                android:background="@drawable/textstroke"
                 android:hint="ex) 빨래, 애완동물"
-                android:imeOptions="actionNext"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1034,15 +995,14 @@
             <EditText
                 android:id="@+id/join_etme"
                 android:layout_width="match_parent"
-                android:layout_height="91dp"
+                android:layout_height="100dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/round"
+                android:background="@drawable/textstroke"
                 android:hint="100자 이하"
-                android:imeOptions="actionDone"
                 android:inputType="textMultiLine"
                 android:singleLine="false"
                 android:textSize="14sp"
@@ -1053,16 +1013,12 @@
             <TextView
                 android:id="@+id/join_modify"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-
+                android:layout_height="56dp"
+                android:layout_marginTop="13dp"
                 android:background="@android:color/holo_orange_light"
                 android:gravity="center"
                 android:padding="20dp"
                 android:text="수정완료"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/join_etme" />
 
         </android.support.constraint.ConstraintLayout>
@@ -1071,4 +1027,4 @@
     </ScrollView>
 
 
-</ScrollView>
+</android.support.constraint.ConstraintLayout>
