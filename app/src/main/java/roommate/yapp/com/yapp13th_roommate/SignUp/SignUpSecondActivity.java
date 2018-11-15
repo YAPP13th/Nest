@@ -16,12 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -54,6 +49,35 @@ public class SignUpSecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_second);
+//        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS , WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        getApplicationContext().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MODE_CHANGED);
+//        tvLike = (EditText)findViewById(R.id.join_etlike);
+//        tvLike.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+
+
+        // TODO: 10/11/2018 잠깐 추가 할부분 지울거임
+//        global = (GlobalVariable)getApplicationContext();
+//        global.everyInfo = new ArrayList<>();
+//        global.filterInfo = new ArrayList<>();
+//        global.myInfo = new UserInfo();
+//        global.temp = new UserInfo();
+//        global.myRoom = new Bitmap[3];
+//        global.tempRoom = new Bitmap[3];
+
+//        global.setExist(false);
+//        global.setMyId("4");
+//        global.myInfo.setId("4");
+
+
+
 
         global = (GlobalVariable)getApplicationContext();
         firebaseFunc = new FirebaseFunc(this);

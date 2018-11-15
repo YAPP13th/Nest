@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cb_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:layout_width="106dp"
@@ -15,28 +20,29 @@
             android:id="@+id/iv_profile1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:contentDescription="@string/desc_iv_profile" />
+            android:background="@drawable/join_first_profile_photo_x"
+            android:contentDescription="@string/desc_iv_profile"
+            android:scaleType="fitXY" />
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_profile"
+        android:orientation="vertical"
+        android:paddingBottom="11dp"
         android:paddingLeft="14dp"
         android:paddingRight="10dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="11dp"
-        android:orientation="vertical">
+        android:paddingTop="15dp">
 
         <!-- 이름 -->
         <TextView
             android:id="@+id/tv_name1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:text="이지은"
             android:textColor="#212529"
-            android:text="이지은" />
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,7 +54,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_birth"/>
+                android:src="@drawable/ic_birth" />
 
             <!-- 생년 -->
             <TextView
@@ -56,16 +62,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:textSize="9sp"
+                android:text="2000"
                 android:textColor="#c0c0c0"
-                android:text="2000"/>
+                android:textSize="9sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9sp"
+                android:text=" 년생"
                 android:textColor="#c0c0c0"
-                android:text=" 년생"/>
+                android:textSize="9sp" />
 
             <!-- 돈 icon -->
             <ImageView
@@ -80,32 +86,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:textSize="9sp"
+                android:text="200"
                 android:textColor="#c0c0c0"
-                android:text="200"/>
+                android:textSize="9sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9sp"
+                android:text=" 만원"
                 android:textColor="#c0c0c0"
-                android:text=" 만원"/>
+                android:textSize="9sp" />
 
             <!-- location icon -->
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:src="@drawable/ic_location"/>
+                android:src="@drawable/ic_location" />
 
             <!-- 주소 -->
             <TextView
                 android:id="@+id/tv_address1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9sp"
+                android:text="서울시 은평구 불광동"
                 android:textColor="#c0c0c0"
-                android:text="서울시 은평구 불광동" />
+                android:textSize="9sp" />
 
         </LinearLayout>
 
@@ -115,18 +121,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textSize="9sp"
-            android:textColor="#929292"
             android:text="안녕하세요 반갑습니다 저는 이번에 숙명여자대학교에서
-작곡을 전공하고 있습니다. 학교 근처에서 룸메이트를 …" />
+작곡을 전공하고 있습니다. 학교 근처에서 룸메이트를 …"
+            android:textColor="#929292"
+            android:textSize="9sp" />
 
         <!-- 선 -->
         <View
             android:layout_width="191dp"
             android:layout_height="1dp"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="#eeeeee"/>
+            android:layout_marginTop="8dp"
+            android:background="#eeeeee" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -145,9 +151,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:textSize="9sp"
+                android:text="혼자 요리하기"
                 android:textColor="#5499ff"
-                android:text="혼자 요리하기"/>
+                android:textSize="9sp" />
 
             <!-- 싫어요 icon -->
             <ImageView
@@ -162,9 +168,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:textSize="9sp"
+                android:text="화장실 청소"
                 android:textColor="#ff6c3f"
-                android:text="화장실 청소"/>
+                android:textSize="9sp" />
 
         </LinearLayout>
 

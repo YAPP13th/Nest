@@ -22,10 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Kakao.KaKaoLoginActivity"
-            android:launchMode = "singleInstance">
+            android:windowSoftInputMode="adjustUnspecified|stateUnspecified"
+            android:launchMode = "singleInstance"
+            >
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"
+                        />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -40,30 +45,36 @@
         </activity>
 
         <!--<activity android:name=".Kakao.MainActivity"></activity>-->
-        <activity android:name=".SignUp.SignUpFirstActivity">
+        <activity android:name=".SignUp.SignUpSecondActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
+
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".SignUp.SignUpSecondActivity" >
+        <activity android:name=".SignUp.SignUpFirstActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
+
+
+
         <activity android:name=".DetailInfo.DetailInfoActivity" ></activity>
         <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"
-            android:windowSoftInputMode="adjustNothing"></activity>
+            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
+
+        </activity>
         <activity android:name=".SignUp.WebViewActivity"></activity>
 
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat"/>
-
-
-
+        <activity android:name=".Function.RadioFunc" />
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
