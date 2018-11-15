@@ -106,6 +106,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
+
+
                 android:text="이름"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivName"
@@ -168,6 +170,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
+
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
