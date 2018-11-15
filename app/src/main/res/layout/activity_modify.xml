@@ -118,6 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="16dp"
@@ -188,6 +189,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
+
                     android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
@@ -303,6 +305,7 @@
                 android:layout_marginTop="33dp"
                 android:text="오픈채팅 URL"
                 android:textSize="14sp"
+
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
                 app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -314,7 +317,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
+
                 android:layout_marginTop="1dp"
+
                 android:background="@drawable/round"
                 android:hint="카카오톡 오픈채팅 URL 을 입력해주세요"
                 android:inputType="textPersonName"
@@ -330,6 +335,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="33dp"
                 android:src="@drawable/myprofileedit_house_icon"
@@ -344,6 +350,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="33dp"
                 android:text="집 유무"
+
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ivGender"
                 app:layout_constraintTop_toBottomOf="@+id/join_etchatURL" />
@@ -502,6 +509,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+
                 android:background="@drawable/round"
                 android:hint="반드시 실명으로 입력해주세요"
                 android:inputType="textPersonName"
@@ -777,6 +785,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="18dp"
+
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
@@ -900,6 +909,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
+
                     android:background="@drawable/rounding2"
                     android:button="@null"
                     android:gravity="center"
@@ -944,6 +954,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="14dp"
+
                 android:background="@drawable/round"
                 android:hint="하나만 입력해주세요"
                 android:imeOptions="actionNext"
@@ -973,7 +984,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="싫어하는 것"
+
                 android:textSize="14sp"
+
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_etlike" />
 
@@ -1041,6 +1054,8 @@
                 android:id="@+id/join_modify"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
+
                 android:background="@android:color/holo_orange_light"
                 android:gravity="center"
                 android:padding="20dp"
