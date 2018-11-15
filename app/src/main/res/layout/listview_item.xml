@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnDeletePick2"
         android:clickable="true"
-        android:src="@drawable/profile_dislike_icon" />
+        android:src="@drawable/trash_btn" />
 
 
 </LinearLayout>
