@@ -59,17 +59,17 @@ public class SignUpSecondActivity extends AppCompatActivity {
 
 
         // TODO: 10/11/2018 잠깐 추가 할부분 지울거임
-        global = (GlobalVariable)getApplicationContext();
-        global.everyInfo = new ArrayList<>();
-        global.filterInfo = new ArrayList<>();
-        global.myInfo = new UserInfo();
-        global.temp = new UserInfo();
-        global.myRoom = new Bitmap[3];
-        global.tempRoom = new Bitmap[3];
+//        global = (GlobalVariable)getApplicationContext();
+//        global.everyInfo = new ArrayList<>();
+//        global.filterInfo = new ArrayList<>();
+//        global.myInfo = new UserInfo();
+//        global.temp = new UserInfo();
+//        global.myRoom = new Bitmap[3];
+//        global.tempRoom = new Bitmap[3];
 
-        global.setExist(false);
-        global.setMyId("4");
-        global.myInfo.setId("4");
+//        global.setExist(false);
+//        global.setMyId("4");
+//        global.myInfo.setId("4");
 
 
 
