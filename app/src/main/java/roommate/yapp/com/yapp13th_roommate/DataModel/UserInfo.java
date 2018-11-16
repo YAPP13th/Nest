@@ -1,12 +1,14 @@
 package roommate.yapp.com.yapp13th_roommate.DataModel;
 
+import android.support.annotation.NonNull;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 
 
 @SuppressWarnings("serial")
-public class UserInfo implements Serializable{
+public class UserInfo implements Serializable, Comparable<UserInfo>{
 
     private String profile_image;               //프로필 사진 이미지 base64
     private Map<String, String> room_image;     //방 사진 이미지 base64 최대 3개
@@ -232,5 +234,12 @@ public UserInfo(String profile_image, Map<String, String> room_image, String id,
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public int compareTo(@NonNull UserInfo userInfo) {
+        if(getNow_date() == null || userInfo.getNow_date() == null)
+            return 0;
+        return getNow_date().compareTo(userInfo.getNow_date());
     }
 }
