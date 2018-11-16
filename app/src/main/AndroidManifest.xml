@@ -26,8 +26,8 @@
 
         <activity android:name=".Kakao.KaKaoLoginActivity"
             android:windowSoftInputMode="adjustUnspecified|stateUnspecified"
+            android:launchMode = "singleInstance"
             >
-
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"
@@ -68,16 +68,14 @@
 
         <activity android:name=".DetailInfo.DetailInfoActivity" ></activity>
         <activity android:name=".ModifyMyInfo.ModifyMyInfoActivity"
-            android:windowSoftInputMode="adjustNothing"></activity>
+            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
+
+        </activity>
         <activity android:name=".SignUp.WebViewActivity"></activity>
 
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat"/>
-        <activity android:name=".Function.RadioFunc"
-
-            />
-
-
+        <activity android:name=".Function.RadioFunc" />
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/get_kakao_sdk_appkey" />
