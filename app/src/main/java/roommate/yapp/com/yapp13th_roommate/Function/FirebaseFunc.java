@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -81,9 +83,17 @@ public class FirebaseFunc extends AppCompatActivity{
                         UserInfo temp = snapshot.getValue(UserInfo.class);
                         if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
                             global.everyInfo.add(temp);
-                            global.filterInfo.add(temp);
                         }
                     }
+
+                    Collections.sort(global.everyInfo, new Comparator<UserInfo>() {
+                        @Override
+                        public int compare(UserInfo userInfo, UserInfo t1) {
+                            return userInfo.getNow_date().compareTo(t1.getNow_date());
+                        }
+                    });
+                    Collections.reverse(global.everyInfo);
+                    global.filterInfo = global.everyInfo;
 
                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                     DatabaseReference likeDatabaseReference = firebaseDatabase.getReference("like");
@@ -149,9 +159,18 @@ public class FirebaseFunc extends AppCompatActivity{
                     UserInfo temp = snapshot.getValue(UserInfo.class);
                     if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
                         global.everyInfo.add(temp);
-                        global.filterInfo.add(temp);
                     }
                 }
+
+                Collections.sort(global.everyInfo, new Comparator<UserInfo>() {
+                    @Override
+                    public int compare(UserInfo userInfo, UserInfo t1) {
+                        return userInfo.getNow_date().compareTo(t1.getNow_date());
+                    }
+                });
+                Collections.reverse(global.everyInfo);
+                global.filterInfo = global.everyInfo;
+
                 loginProgres.dismiss();
                 Intent intent = new Intent(mContext, ViewPagerMain.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
