@@ -20,7 +20,9 @@ public class ViewPagerMain extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.tabbar_home_click));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.tabbar_like));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.tabbar_myprofile));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
@@ -35,15 +37,15 @@ public class ViewPagerMain extends AppCompatActivity {
                 if(tab.getPosition() == 0){
                     tabLayout.getTabAt(0).setIcon(R.drawable.tabbar_home_click);
                     tabLayout.getTabAt(1).setIcon(R.drawable.tabbar_like);
-//                    tabLayout.getTabAt(2).setIcon(R.drawable.tabbar_myprofile);
+                    tabLayout.getTabAt(2).setIcon(R.drawable.tabbar_myprofile);
                 }else if(tab.getPosition() == 1){
                     tabLayout.getTabAt(0).setIcon(R.drawable.tabbar_home);
                     tabLayout.getTabAt(1).setIcon(R.drawable.tabbar_like_click);
-//                    tabLayout.getTabAt(2).setIcon(R.drawable.tabbar_myprofile);
+                    tabLayout.getTabAt(2).setIcon(R.drawable.tabbar_myprofile);
                 }else if(tab.getPosition() == 2){
                     tabLayout.getTabAt(0).setIcon(R.drawable.tabbar_home);
                     tabLayout.getTabAt(1).setIcon(R.drawable.tabbar_like);
-//                    tabLayout.getTabAt(2).setIcon(R.drawable.tabbar_myprofile_click);
+                    tabLayout.getTabAt(2).setIcon(R.drawable.my_profile_yellow);
                 }
             }
 
