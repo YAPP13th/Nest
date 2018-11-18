@@ -1,11 +1,15 @@
 package roommate.yapp.com.yapp13th_roommate.DetailInfo;
 
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.util.Linkify;
 import android.view.View;
@@ -38,6 +42,7 @@ public class DetailInfoActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private RoomImagePagerAdapter roomImagePagerAdapter;
+    private TextView url_chat_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,35 @@ public class DetailInfoActivity extends AppCompatActivity {
 
         btnSelect = (Button)findViewById(R.id.btnSelect);
         btnChat = (Button)findViewById(R.id.btnChat);
+        url_chat_text = (TextView)findViewById(R.id.tvChatURL);
+
+
+//        url_chat_text.setLongClickable(true);
+//        url_chat_text.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                TextView tv = (TextView)v;
+//                final String m = tv.getText().toString();
+//
+//                AlertDialog.Builder dial = new AlertDialog.Builder(getApplicationContext());
+//                dial.setTitle("복사");
+//
+//                final CharSequence[] items ={"복사"};
+//
+//                dial.setItems(items, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        ClipboardManager clip = (ClipboardManager)getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
+//                        clip.setText(m);
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//                dial.show();
+//
+//                return false;
+//            }
+//        });
 
         Intent intent = getIntent();
 
@@ -87,6 +121,11 @@ public class DetailInfoActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+
+
+
 
     }
 
