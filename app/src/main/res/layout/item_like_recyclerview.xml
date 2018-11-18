@@ -6,10 +6,7 @@
     android:layout_marginRight="10dp"
     android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/cb_like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
     <FrameLayout
         android:layout_width="106dp"
@@ -20,7 +17,7 @@
             android:id="@+id/iv_profile1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/join_first_profile_photo_x"
+            android:background="@drawable/location_bird_location"
             android:contentDescription="@string/desc_iv_profile"
             android:scaleType="fitXY" />
     </FrameLayout>
@@ -30,19 +27,36 @@
         android:layout_height="match_parent"
         android:background="@drawable/bg_profile"
         android:orientation="vertical"
-        android:paddingBottom="11dp"
+        android:paddingBottom="10dp"
         android:paddingLeft="14dp"
         android:paddingRight="10dp"
-        android:paddingTop="15dp">
+        android:paddingTop="5dp">
 
-        <!-- 이름 -->
-        <TextView
-            android:id="@+id/tv_name1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이지은"
-            android:textColor="#212529"
-            android:textSize="14sp" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <!-- 이름 -->
+            <TextView
+                android:id="@+id/tv_name1"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="이지은"
+                android:textColor="#212529"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_name1" />
+        </android.support.constraint.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,22 +142,28 @@
 
         <!-- 선 -->
         <View
-            android:layout_width="191dp"
+            android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="#eeeeee" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
             <!-- 좋아요 icon -->
             <ImageView
-                android:layout_width="7dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/main_like1x" />
+                android:src="@drawable/ic_thumb_up" />
 
             <!-- 좋아요 내용 -->
             <TextView
@@ -154,8 +174,13 @@
                 android:text="혼자 요리하기"
                 android:textColor="#5499ff"
                 android:textSize="9sp" />
-
+            </LinearLayout>
             <!-- 싫어요 icon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -171,6 +196,7 @@
                 android:text="화장실 청소"
                 android:textColor="#ff6c3f"
                 android:textSize="9sp" />
+            </LinearLayout>
 
         </LinearLayout>
 

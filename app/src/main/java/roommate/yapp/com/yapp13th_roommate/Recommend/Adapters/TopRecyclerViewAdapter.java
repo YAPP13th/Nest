@@ -87,7 +87,9 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
 
                 holder.tv_name.setText(mData.get(position).getName());
                 holder.tv_age.setText(mData.get(position).getYear());
-                holder.tv_address.setText(mData.get(position).getLocation());
+
+                // todo 여기 위에 탑부분이라서 지역추천으로 되어있어서 뿌려
+                holder.tv_address.setText("");
                 holder.tv_monthMoney.setText(mData.get(position).getMonthly());
                 holder.tv_selfIntroduction.setText(mData.get(position).getIntroduce());
                 holder.tv_like.setText(mData.get(position).getLike());
