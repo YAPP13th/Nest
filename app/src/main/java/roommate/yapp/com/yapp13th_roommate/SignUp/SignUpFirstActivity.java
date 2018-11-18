@@ -232,20 +232,19 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 global.temp.setYear(spinner.getSelectedItem().toString());
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
                 //여기에서 유효한 오픈 채팅 url 인지 확인하는 작업이 필요함
-//                if(global.temp.getOpenChatURL().length() < 27 && !global.temp.getOpenChatURL().substring(0, 27).equals("https://open.kakao.com/o/1")){
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
-//                    builder.setTitle("유효한 오픈 채팅 url이 아닙니다.");
-//                    builder.setMessage("https://open.kakao.com/o/ 와 같은 url을 입력해 주세요");
-//                    builder.setPositiveButton("넹",
-//                            new DialogInterface.OnClickListener(){
-//                                @Override
-//                                public void onClick(DialogInterface dialog, int which) {
-//
-//                                }
-//                            });
-//                    builder.show();
-//                }else
-                if((global.temp.getName() == null || global.temp.getName().equals(""))
+                if(global.temp.getOpenChatURL().length() < 27 && !global.temp.getOpenChatURL().substring(0, 27).equals("https://open.kakao.com/o/")){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
+                    builder.setTitle("유효한 오픈 채팅 url이 아닙니다.");
+                    builder.setMessage("https://open.kakao.com/o/ 와 같은 url을 입력해 주세요");
+                    builder.setPositiveButton("넹",
+                            new DialogInterface.OnClickListener(){
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    builder.show();
+                }else if((global.temp.getName() == null || global.temp.getName().equals(""))
                         || (global.temp.getGender() == null || global.temp.getGender().equals(""))
                         || (global.temp.getRoom() == null || global.temp.getRoom().equals(""))
                         || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))

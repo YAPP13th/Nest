@@ -1,6 +1,7 @@
 package roommate.yapp.com.yapp13th_roommate.Recommend;
 
 import android.app.Dialog;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -43,7 +44,7 @@ public class FABFragment extends AAH_FabulousFragment {
     private RadioButton[] rb_house_in_filter, rb_pattern_in_filter, rb_drink_in_filter,
             rb_smoking_in_filter, rb_friend_in_filter, rb_pet_in_filter;
     private Boolean[] roomCheck ,patternCheck, drinkCheck, smokingCheck, friendCheck, petCheck;
-    private Button btn_filter;
+    private Button btn_cancel, btn_filter;
     private Spinner spinner_in_filter;
 
     private String[] years;
@@ -94,6 +95,7 @@ public class FABFragment extends AAH_FabulousFragment {
         rg_smoking_in_filter = view.findViewById(R.id.rg_smoking_in_filter);
         rg_friend_in_filter = view.findViewById(R.id.rg_friend_in_filter);
         rg_pet_in_filter = view.findViewById(R.id.rg_pet_in_filter);
+        btn_cancel = view.findViewById(R.id.btn_cancel);
         btn_filter = view.findViewById(R.id.btn_filter);
         spinner_in_filter = view.findViewById(R.id.spinner_in_filter);
 
@@ -242,13 +244,25 @@ public class FABFragment extends AAH_FabulousFragment {
                     global.bottomRecyclerView.setAdapter(bottom_adapter);
                     global.bottomRecyclerView.setNestedScrollingEnabled(false);
 
-                    int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space_for_top_items);
-
-                    global.bottomRecyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
-
                     //적용 된 필터를 새로운 recycleView adapter 를 만든 다음 원래 프래그 먼트에 적용
 
                 }
+            }
+        });
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                closeFilter("cancel");
+
+                global.filterInfo = new ArrayList<>();
+                global.filterInfo = global.everyInfo;
+
+                bottom_adapter = new BottomRecyclerViewAdapter(getActivity(), global.filterInfo);
+                global.bottomRecyclerView.setAdapter(bottom_adapter);
+                global.bottomRecyclerView.setNestedScrollingEnabled(false);
+
+                //필터 적용 해제 후, 새로운 recycleView adapter 를 만든 다음 원래 프래그 먼트에 적용
             }
         });
 
