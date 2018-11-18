@@ -236,7 +236,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                     builder.setTitle("유효한 오픈 채팅 url이 아닙니다.");
                     builder.setMessage("https://open.kakao.com/o/ 와 같은 url을 입력해 주세요");
-                    builder.setPositiveButton("넹",
+                    builder.setPositiveButton("확인",
                             new DialogInterface.OnClickListener(){
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
