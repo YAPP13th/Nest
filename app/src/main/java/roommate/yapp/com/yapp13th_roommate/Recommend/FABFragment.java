@@ -1,6 +1,10 @@
 package roommate.yapp.com.yapp13th_roommate.Recommend;
 
 import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,8 +19,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.allattentionhere.fabulousfilter.AAH_FabulousFragment;
+import com.darsh.multipleimageselect.helpers.Constants;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -24,15 +32,19 @@ import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Function.FirebaseFunc;
 import roommate.yapp.com.yapp13th_roommate.Function.RadioFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
+import roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
 import roommate.yapp.com.yapp13th_roommate.Recommend.ItemDecorations.BottomSpacesItemDecoration;
+import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
+import roommate.yapp.com.yapp13th_roommate.SignUp.WebViewActivity;
+import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImageModifyPagerAdapter;
 
 public class FABFragment extends AAH_FabulousFragment {
 
     private RadioFunc radioFunc;
     private GlobalVariable global;
-
+    private String findAddress;//일단 주소 받아온것 여기저장,,
     private static final Object RecommendFragment = new RecommendFragment();
 
     private RelativeLayout layout_filter;
@@ -46,9 +58,9 @@ public class FABFragment extends AAH_FabulousFragment {
     private Boolean[] roomCheck ,patternCheck, drinkCheck, smokingCheck, friendCheck, petCheck;
     private Button btn_cancel, btn_filter;
     private Spinner spinner_in_filter;
-
+    private TextView join_location;
     private String[] years;
-
+    private final int SEARCH_ADDRESS_ACTIVITY = 1115;
     private BottomRecyclerViewAdapter bottom_adapter;
 
     public static FABFragment newInstance() {
@@ -85,6 +97,7 @@ public class FABFragment extends AAH_FabulousFragment {
         Arrays.fill(petCheck, false);
 
         View view = View.inflate(getContext(), R.layout.fragment_filter, null);
+        join_location=view.findViewById(R.id.join_location);
         layout_filter = view.findViewById(R.id.layout_filter);
         layout_filter_static = view.findViewById(R.id.layout_filter_static);
         tv_money_in_filter = view.findViewById(R.id.tv_money_in_filter);
@@ -208,6 +221,18 @@ public class FABFragment extends AAH_FabulousFragment {
             }
         });
 
+        //웹뷰 인텐트
+        join_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), WebViewActivity.class);
+                startActivityForResult(i, SEARCH_ADDRESS_ACTIVITY);
+
+
+
+            }
+        });
+
         // filtering button
         btn_filter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -271,5 +296,21 @@ public class FABFragment extends AAH_FabulousFragment {
         setViewMain(layout_filter);
         setMainContentView(view);
         super.setupDialog(dialog, style);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            String d = data.getExtras().getString("data");
+            if (d != null) {
+                String[] values = d.split(" ");
+                findAddress = values[0] + " " + values[1];
+                join_location.setText(findAddress);// 구 까지 자른거,,,
+                global.temp.setLocation(findAddress);
+
+                
+
+            }
+
+
     }
 }
