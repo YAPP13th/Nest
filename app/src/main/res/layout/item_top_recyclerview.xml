@@ -11,10 +11,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+
         >
 
         <!-- 프로필 사진 -->
         <ImageView
+            android:background="@drawable/bg_rounded_for_main"
             android:id="@+id/iv_top_profile"
             android:layout_width="151dp"
             android:layout_height="100dp"

@@ -196,8 +196,14 @@ public class SignUpSecondActivity extends AppCompatActivity {
 
                 global.temp.setId(global.myInfo.getId());
                 global.temp.setInstarID(tvInstar.getText().toString());
-                global.temp.setLike(tvLike.getText().toString());
-                global.temp.setDisLike(tvDisLike.getText().toString());
+                if(tvLike.getText().toString().equals("")){
+                    global.temp.setLike("좋아요");
+                    global.temp.setDisLike("싫어요");
+                }else {
+
+                    global.temp.setLike(tvLike.getText().toString());
+                    global.temp.setDisLike(tvDisLike.getText().toString());
+                }
                 global.temp.setIntroduce(tvIntroduce.getText().toString());
                 global.temp.setNow_date(new Date(System.currentTimeMillis()));
 
