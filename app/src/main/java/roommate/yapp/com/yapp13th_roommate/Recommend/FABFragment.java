@@ -306,11 +306,6 @@ public class FABFragment extends AAH_FabulousFragment {
                 findAddress = values[0] + " " + values[1];
                 join_location.setText(findAddress);// 구 까지 자른거,,,
                 global.temp.setLocation(findAddress);
-
-                
-
             }
-
-
     }
 }
