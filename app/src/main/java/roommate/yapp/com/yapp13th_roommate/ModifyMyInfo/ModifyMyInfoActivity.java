@@ -296,6 +296,11 @@ public class ModifyMyInfoActivity extends AppCompatActivity{
                 Map<String, String> roomsInfo = new HashMap<>();
                 Bitmap[] rooms;
 
+                // TODO: 18. 11. 18
+//                java.lang.NullPointerException: Attempt to invoke interface method 'int java.util.Map.size()' on a null object reference
+//                at roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity$11.onClick(ModifyMyInfoActivity.java:299)
+                //방사진 초기화 문제인거같은데 자세히 찾아보야함
+
                 if(global.myInfo.getRoom_image().size() != 0){
                     rooms = new Bitmap[global.myInfo.getRoom_image().size()];
 
