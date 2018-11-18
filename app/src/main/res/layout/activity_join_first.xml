@@ -229,6 +229,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
+                android:background="@drawable/round_radius"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvBirth" />
@@ -465,7 +466,7 @@
                 android:layout_marginRight="21dp"
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/rounding2"
+                android:background="@drawable/round_radius"
                 android:clickable="true"
                 android:gravity="center"
                 android:text="위치검색"

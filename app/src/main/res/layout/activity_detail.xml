@@ -20,6 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -28,8 +29,8 @@
                     android:layout_width="17dp"
                     android:layout_height="17dp"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="48dp"
                     android:src="@drawable/profile_back_icon"
                     app:layout_constraintStart_toStartOf="parent"
@@ -47,9 +48,9 @@
                     android:id="@+id/viewPagerIndex1"
                     android:layout_width="4dp"
                     android:layout_height="4dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="35dp"
                     app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                     app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex2" />
 
@@ -57,9 +58,9 @@
                     android:id="@+id/viewPagerIndex2"
                     android:layout_width="4dp"
                     android:layout_height="4dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="35dp"
                     app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                     app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex3" />
 
@@ -67,9 +68,9 @@
                     android:id="@+id/viewPagerIndex3"
                     android:layout_width="4dp"
                     android:layout_height="4dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_marginEnd="13dp"
                     android:layout_marginRight="13dp"
-                    android:layout_marginBottom="35dp"
                     app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                     app:layout_constraintEnd_toEndOf="@+id/viewPager" />
 
@@ -79,10 +80,10 @@
                     android:layout_height="70dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
                     android:src="@drawable/location_bird_location"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -108,8 +109,8 @@
                     android:layout_height="15dp"
                     android:layout_below="@+id/textView16"
                     android:layout_marginTop="5dp"
-                    android:layout_toStartOf="@+id/textView16"
                     android:layout_toLeftOf="@+id/textView16"
+                    android:layout_toStartOf="@+id/textView16"
                     android:text="1995년생"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -186,11 +187,11 @@
                         android:layout_marginRight="55dp"
                         android:layout_marginStart="110dp"
                         android:text="Feel_nowww"
+                        android:textAllCaps="true"
+                        android:textIsSelectable="false"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/ivInstar"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:textAllCaps="true"
-                        android:textIsSelectable="false"/>
+                        app:layout_constraintTop_toTopOf="parent" />
                     <!--textAllCaps와 textIsSelectable이 있으면 밑줄과 색 변경을 제거함-->
 
                 </android.support.constraint.ConstraintLayout>
@@ -599,9 +600,7 @@
                     android:id="@+id/clChatURL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="55dp"
                     android:layout_marginLeft="55dp"
-                    android:layout_marginRight="55dp"
                     android:layout_marginStart="55dp"
                     android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -638,7 +637,11 @@
                         android:layout_marginLeft="110dp"
                         android:layout_marginRight="55dp"
                         android:layout_marginStart="110dp"
+                        android:inputType="text"
+                        android:maxLines="2"
+
                         android:text="http://dfskd..."
+                        android:textIsSelectable="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/ivChatURL"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -649,9 +652,9 @@
                     android:id="@+id/tvIntroduce"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="52dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="36dp"
                     android:text="자기소개"
                     android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -659,13 +662,15 @@
 
                 <LinearLayout
                     android:id="@+id/llChat"
-                    android:layout_width="match_parent"
+                    android:layout_width="284dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="11dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvIntroduce">
@@ -673,9 +678,9 @@
                     <TextView
                         android:id="@+id/tvIntroduceContent"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:text="안녕하세요 반갑습니다 저는 숙명여자대학교에서 작곡을 전공하고 있는 학생입니다. 학교 앞 근처에서 룸메이트를 구하려고하는데요! 룸메이트랑  3번 정도  살아본적있어서 잘 알고 있어요! 편하게 연락주세요 :)"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
