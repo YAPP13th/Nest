@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
+    android:layout_weight="1"
     android:background="@drawable/bg_rounded_for_main"
     android:orientation="vertical">
 
@@ -19,7 +19,7 @@
             android:layout_width="151dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/join_first_profile_photo_x" />
+            android:src="@drawable/location_bird_location" />
 
         <!-- 찜하기 버튼 -->
         <com.like.LikeButton
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:textSize="9sp"
             android:textColor="#c0c0c0"
-            android:text="서울시 은평구 불광동" />
+            android:text="" />
     </LinearLayout>
     <TextView
         android:id="@+id/tv_top_selfIntroduction"
@@ -121,48 +121,62 @@
         android:background="#eeeeee"/>
 
 
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <!-- 좋아요 icon -->
-        <ImageView
-            android:layout_width="7dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:src="@drawable/main_like1x" />
-
-        <!-- 좋아요 내용 -->
-        <TextView
-            android:id="@+id/tv_top_recycler_like"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:textSize="9sp"
-            android:textColor="#5499ff"
-            android:text="혼자 요리하기"/>
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        <!-- 싫어요 icon -->
-        <ImageView
+            <!-- 좋아요 icon -->
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_thumb_up" />
+
+            <!-- 좋아요 내용 -->
+            <TextView
+                android:id="@+id/tv_top_recycler_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="혼자 요리하기"
+                android:textColor="#5499ff"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:src="@drawable/ic_thumb_down" />
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!-- 싫어요 icon -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_thumb_down" />
 
-        <!-- 싫어요 내용 -->
-        <TextView
-            android:id="@+id/tv_top_recycler_dislike"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:textSize="9sp"
-            android:textColor="#ff6c3f"
-            android:text="화장실 청소"/>
+            <!-- 싫어요 내용 -->
+            <TextView
+                android:id="@+id/tv_top_recycler_dislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="화장실 청소"
+                android:textColor="#ff6c3f"
+                android:textSize="9sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

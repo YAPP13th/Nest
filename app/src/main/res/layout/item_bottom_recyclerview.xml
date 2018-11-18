@@ -11,17 +11,19 @@
 
 
     <FrameLayout
-        android:layout_width="106dp"
-        android:layout_height="120dp">
+        android:layout_width="116.5dp"
+        android:layout_height="115dp"
+
+        >
 
         <!-- 프로필 이미지 -->
         <ImageView
             android:id="@+id/iv_bottom_profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:background="@drawable/join_first_profile_photo_x"
-            android:contentDescription="@string/desc_iv_profile" />
+            android:background="@drawable/location_bird_location"
+            android:contentDescription="@string/desc_iv_profile"
+            android:scaleType="fitXY" />
 
 
     </FrameLayout>
@@ -32,17 +34,17 @@
         android:background="@drawable/bg_profile"
         android:orientation="vertical"
         android:paddingBottom="11dp"
-        android:paddingLeft="14dp"
+        android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
 
-        <!-- 이름 -->
+            <!-- 이름 -->
             <TextView
                 android:id="@+id/tv_bottom_name"
                 android:layout_width="225dp"
@@ -64,7 +66,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -151,7 +152,7 @@
 
         <!-- 선 -->
         <View
-            android:layout_width="191dp"
+            android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
@@ -163,38 +164,52 @@
             android:orientation="horizontal">
 
             <!-- 좋아요 icon -->
-            <ImageView
-                android:layout_width="7dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/main_like1x" />
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-            <!-- 좋아요 내용 -->
-            <TextView
-                android:id="@+id/tv_buttom_recycler_like"
-                android:layout_width="wrap_content"
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thumb_up" />
+
+                <!-- 좋아요 내용 -->
+                <TextView
+                    android:id="@+id/tv_buttom_recycler_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="혼자 요리하기"
+                    android:textColor="#5499ff"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:text="혼자 요리하기"
-                android:textColor="#5499ff"
-                android:textSize="9sp" />
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <!-- 싫어요 icon -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/ic_thumb_down" />
 
-            <!-- 싫어요 icon -->
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:src="@drawable/ic_thumb_down" />
-
-            <!-- 싫어요 내용 -->
-            <TextView
-                android:id="@+id/tv_bottom_recycler_dislike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:text="화장실 청소"
-                android:textColor="#ff6c3f"
-                android:textSize="9sp" />
-
+                <!-- 싫어요 내용 -->
+                <TextView
+                    android:id="@+id/tv_bottom_recycler_dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="화장실 청소"
+                    android:textColor="#ff6c3f"
+                    android:textSize="9sp" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

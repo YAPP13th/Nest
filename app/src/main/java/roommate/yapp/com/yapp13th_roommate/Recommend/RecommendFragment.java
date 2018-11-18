@@ -1,10 +1,13 @@
 package roommate.yapp.com.yapp13th_roommate.Recommend;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.allattentionhere.fabulousfilter.AAH_FabulousFragment;
@@ -22,6 +26,8 @@ import java.util.List;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
+import roommate.yapp.com.yapp13th_roommate.ModifyMyInfo.ModifyMyInfoActivity;
+import roommate.yapp.com.yapp13th_roommate.MyPage.MyPageFragment;
 import roommate.yapp.com.yapp13th_roommate.R;
 import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
 import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.TopRecyclerViewAdapter;
@@ -44,6 +50,12 @@ public class RecommendFragment extends Fragment
         global = (GlobalVariable)getActivity().getApplication();
 
         context = getContext();
+
+
+
+
+
+
     }
 
     @Override
@@ -109,6 +121,28 @@ public class RecommendFragment extends Fragment
         global.bottomRecyclerView.addItemDecoration(new BottomSpacesItemDecoration(spacingInPixels));
         global.bottomAdapter = new BottomRecyclerViewAdapter(context, global.filterInfo);
         global.bottomRecyclerView.setAdapter(global.bottomAdapter);
+
+
+
+
+
+        // todo 여기부분에서 메인 추천화면에서 myPage로 넘어가는 이벤트 처리 추가
+
+
+//        Button bt = (Button) rootView.findViewById(R.id.main_myinfo);
+//        bt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Intent intent = new Intent(getActivity(), MyPageFragment.class);
+////                startActivity(intent);
+//                Fragment fragment = new MyPageFragment();
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.home_frg, fragment);
+//                fragmentTransaction.commit();
+//            }
+//        });
+
 
 
         return rootView;
