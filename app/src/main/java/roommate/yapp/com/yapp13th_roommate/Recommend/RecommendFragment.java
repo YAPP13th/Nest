@@ -51,11 +51,6 @@ public class RecommendFragment extends Fragment
 
         context = getContext();
 
-
-
-
-
-
     }
 
     @Override
