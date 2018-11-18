@@ -253,7 +253,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                     builder.setTitle("모두 입력해 주세요");
                     builder.setMessage("모두 입력해 주세요");
-                    builder.setPositiveButton("넹",
+                    builder.setPositiveButton("확인",
                             new DialogInterface.OnClickListener(){
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -269,7 +269,7 @@ public class SignUpFirstActivity extends AppCompatActivity {
                         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                         builder.setTitle("약관 동의");
                         builder.setMessage("약관에 동의해 주세요");
-                        builder.setPositiveButton("넹",
+                        builder.setPositiveButton("확인",
                                 new DialogInterface.OnClickListener(){
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {

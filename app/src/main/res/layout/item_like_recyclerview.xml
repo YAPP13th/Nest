@@ -9,8 +9,10 @@
 
 
     <FrameLayout
-        android:layout_width="106dp"
-        android:layout_height="120dp">
+
+        android:layout_width="116.5dp"
+        android:layout_height="115dp"
+        android:background="@drawable/bg_profile">
 
         <!-- 프로필 이미지 -->
         <ImageView

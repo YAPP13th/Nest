@@ -1,5 +1,6 @@
 <com.allattentionhere.fabulousfilter.AAH_FilterView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,16 +20,71 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="17dp"
+
                 android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="63.5dp"
+                    android:background="@drawable/bg_rounded_only_top"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/filter_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.518" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="0sp"
+                        android:textColor="#ffffff"
+                        android:textSize="21sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="필터" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="나와 맞는 룸메이트를 직접 찾아보세요" />
+
+                </android.support.constraint.ConstraintLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="21dp"
+                    android:layout_marginLeft="17dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -52,13 +108,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:layout_marginRight="15dp"/>
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="17dp"
+                    android:background="@drawable/round"
+                    />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="33dp"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="17dp"
+                    android:orientation="horizontal"
+                    >
 
                     <ImageView
                         android:layout_width="20dp"
@@ -84,6 +145,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_gravity="right"
                     android:layout_marginRight="25dp"
+                    android:layout_marginLeft="17dp"
                     android:text="0만원" />
 
                 <SeekBar
@@ -92,13 +154,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:layout_marginRight="17dp"
+                    android:layout_marginLeft="17dp"
                     android:max="10" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="35dp">
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="17dp">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -121,7 +185,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
 
                     <RadioButton
                         android:id="@+id/rb_house_o_in_filter"
@@ -154,7 +219,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="34dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -187,7 +253,7 @@
                     android:layout_marginRight="21dp"
                     android:layout_marginStart="21dp"
                     android:layout_marginTop="21dp"
-                    android:background="@drawable/rounding2"
+                    android:background="@drawable/round"
                     android:clickable="true"
                     android:gravity="center"
                     android:letterSpacing="-0.01"
@@ -198,7 +264,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="34dp">
+                    android:layout_marginTop="34dp"
+                    android:layout_marginLeft="17dp">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -221,7 +288,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
 
                     <RadioButton
                         android:id="@+id/rb_morning_pattern_in_filter"
@@ -247,7 +315,8 @@
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:paddingTop="10dp"
-                        android:text="저녁형" />
+                        android:text="저녁형"
+                        android:layout_marginLeft="17dp"/>
 
                     <RadioButton
                         android:id="@+id/rb_random_pattern_in_filter"
@@ -265,7 +334,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="33dp">
+                    android:layout_marginTop="33dp"
+                    android:layout_marginLeft="17dp">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -287,6 +357,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
+                    android:layout_marginLeft="17dp"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -346,6 +417,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="34dp"
+                    android:layout_marginLeft="17dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -369,6 +441,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
+                    android:layout_marginLeft="17dp"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -403,6 +476,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="34dp"
+                    android:layout_marginLeft="17dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -426,6 +500,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
+                    android:layout_marginLeft="17dp"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -474,7 +549,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="34dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="17dp">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -495,6 +571,7 @@
                 <RadioGroup
                     android:id="@+id/rg_pet_in_filter"
                     android:layout_width="wrap_content"
+                    android:layout_marginLeft="17dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
                     android:paddingBottom="110dp"
@@ -548,26 +625,30 @@
         <LinearLayout
             android:id="@+id/layout_filter_static"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
+
+
             <Button
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ff6e3f"
-                android:text="필터 해제"
+                android:text="초기화"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
+
             <Button
                 android:id="@+id/btn_filter"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:textColor="#ffffff"
-                android:text="필터 적용" />
+                android:layout_weight="1"
+                android:background="#ffc231"
+                android:text="적용"
+                android:textColor="#ffffff" />
             <!--android:background="@drawable/bg_rounded_only_top"-->
 
         </LinearLayout>
