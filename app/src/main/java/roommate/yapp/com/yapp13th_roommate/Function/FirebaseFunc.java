@@ -193,7 +193,7 @@ public class FirebaseFunc extends AppCompatActivity{
         DatabaseReference databaseReference = firebaseDatabase.getReference("user_info");
         databaseReference.updateChildren(taskMap);
 
-        global.setViewPagerPosition(0);
+        global.setViewPagerPosition(2);
 
         Intent intent = new Intent(mContext, ViewPagerMain.class);
         intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
