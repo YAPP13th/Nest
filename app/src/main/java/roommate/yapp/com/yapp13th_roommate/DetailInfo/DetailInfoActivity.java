@@ -212,6 +212,8 @@ public class DetailInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(check == 1){
+
+
                     global.likeInfo.add(global.filterInfo.get(position));
 
                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();

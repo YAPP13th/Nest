@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:background="#ffffff"
+        android:background="@drawable/no_name"
         android:visibility="invisible"
         tools:ignore="MissingPrefix"
         tools:visibility="visible">
@@ -31,7 +31,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="63.5dp"
-                    android:background="@drawable/bg_rounded_only_top"
+                    android:background="@drawable/rectangle"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -57,12 +57,12 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:lineSpacingExtra="0sp"
+                        android:text="필터"
                         android:textColor="#ffffff"
                         android:textSize="21sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView3"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="필터" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -71,12 +71,12 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
+                        android:text="나와 맞는 룸메이트를 직접 찾아보세요"
                         android:textColor="#ffffff"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/textView3"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="나와 맞는 룸메이트를 직접 찾아보세요" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </android.support.constraint.ConstraintLayout>
 
@@ -99,7 +99,8 @@
                         android:letterSpacing="-0.02"
                         android:textColor="#212529"
                         android:text="출생연도"
-                        android:textSize="15sp" />
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -134,7 +135,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
                         android:text="예상월세"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"/>
 
@@ -175,9 +177,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
+                        android:textStyle="bold"
                         android:text="집 유무" />
 
                 </LinearLayout>
@@ -225,19 +228,20 @@
                     android:layout_marginLeft="17dp">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/join_first_location_icon"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/join_first_location_icon" />
 
                     <TextView
                         android:id="@+id/tvLocation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="9dp"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
                         android:text="희망 지역"
+                        android:textStyle="bold"
                         />
 
                 </LinearLayout>
@@ -278,7 +282,8 @@
                         android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
-                        android:text="생활 패턴" />
+                        android:text="생활 패턴"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -348,7 +353,8 @@
                         android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
-                        android:text="음주 빈도" />
+                        android:text="음주 빈도"
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
                 <RadioGroup
@@ -431,6 +437,7 @@
                         android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
+                        android:textStyle="bold"
                         android:text="흡연" />
 
                 </LinearLayout>
@@ -490,6 +497,7 @@
                         android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
+                        android:textStyle="bold"
                         android:text="친구 출입" />
 
                 </LinearLayout>
@@ -563,6 +571,7 @@
                         android:textSize="16sp"
                         android:textColor="#212529"
                         android:letterSpacing="-0.02"
+                        android:textStyle="bold"
                         android:text="애완동물" />
 
                 </LinearLayout>
@@ -643,7 +652,7 @@
             <Button
                 android:id="@+id/btn_filter"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#ffc231"
                 android:text="적용"

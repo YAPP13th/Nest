@@ -232,9 +232,11 @@ public class SignUpFirstActivity extends AppCompatActivity {
                 global.temp.setYear(spinner.getSelectedItem().toString());
                 global.temp.setOpenChatURL(etOpenChat.getText().toString());
                 //여기에서 유효한 오픈 채팅 url 인지 확인하는 작업이 필요함
+
 //                && !global.temp.getOpenChatURL().substring(0, 27).equals("https://open.kakao.com/o/")
-                if(global.temp.getOpenChatURL().length() <= 25 ||
-                        !global.temp.getOpenChatURL().substring(0, 25).equals("https://open.kakao.com/o/")){
+                if(global.temp.getOpenChatURL().length() <= 24 ||
+                        !global.temp.getOpenChatURL().substring(0, 24).equals("https://open.kakao.com/o")){
+
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
                     builder.setTitle("유효한 오픈 채팅 url이 아닙니다.");
                     builder.setMessage("https://open.kakao.com/o/ 와 같은 url을 입력해 주세요");
@@ -252,8 +254,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
                         || (global.temp.getOpenChatURL() == null || global.temp.getOpenChatURL().equals(""))
                         || (global.temp.getLocation() == null || global.temp.getLocation().equals(""))){
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
-                    builder.setTitle("잠깐!");
-                    builder.setMessage("정보를 모두 입력하셨나요?");
+                    builder.setTitle("두둥!");
+                    builder.setMessage("모두 입력하셨나요?");
                     builder.setPositiveButton("확인",
                             new DialogInterface.OnClickListener(){
                                 @Override
@@ -268,8 +270,8 @@ public class SignUpFirstActivity extends AppCompatActivity {
                         startActivity(intent);
                     }else{
                         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpFirstActivity.this);
-                        builder.setTitle("약관 동의");
-                        builder.setMessage("약관에 동의해 주세요");
+                        builder.setTitle("[약관 동의]");
+                        builder.setMessage("개인정보 약관에 동의해 주세요");
                         builder.setPositiveButton("확인",
                                 new DialogInterface.OnClickListener(){
                                     @Override

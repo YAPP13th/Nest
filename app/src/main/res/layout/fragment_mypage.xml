@@ -90,6 +90,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="12dp"
                         android:text="김김김"
+                        android:textColor="#212529"
                         android:textSize="22sp"
 
                         app:layout_constraintEnd_toEndOf="parent"
@@ -170,9 +171,10 @@
                             android:layout_marginStart="8dp"
                             android:letterSpacing="-0.03"
                             android:text="인스타그램"
-
                             android:textColor="#606060"
+
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivInstar"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -227,6 +229,7 @@
                             android:text="예상 월세"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivMonthly"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -280,6 +283,7 @@
                             android:text="생활 패턴"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivPattern"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -333,6 +337,7 @@
                             android:text="음주 빈도"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivDrink"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -386,6 +391,7 @@
                             android:text="흡연"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivSmoking"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -439,6 +445,7 @@
                             android:text="친구 출입"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivAllowFriend"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -492,6 +499,7 @@
                             android:text="애완동물"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
 
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivPet"
@@ -544,8 +552,10 @@
                             android:layout_marginStart="8dp"
                             android:letterSpacing="-0.03"
                             android:text="좋아하는 것"
+
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivLike"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -599,6 +609,7 @@
                             android:text="싫어하는 것"
                             android:textColor="#606060"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivDisLike"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -648,6 +659,7 @@
                             android:text="오픈채팅 URL"
                             android:textColor="#616161"
                             android:textSize="14sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivChatURL"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -659,13 +671,13 @@
                             android:layout_marginLeft="135dp"
                             android:layout_marginStart="135dp"
                             android:ellipsize="marquee"
-                            android:letterSpacing="-0.02"
-                            android:textIsSelectable="true"
                             android:inputType="text"
+                            android:letterSpacing="-0.02"
                             android:maxLines="2"
-
                             android:text="http://dfskd..."
+
                             android:textColor="#616161"
+                            android:textIsSelectable="true"
                             android:textSize="14sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ivChatURL"
@@ -692,14 +704,11 @@
 
                     <LinearLayout
                         android:id="@+id/llChat"
-                        android:layout_width="276dp"
+                        android:layout_width="331dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="23dp"
-                        android:layout_marginLeft="23dp"
-                        android:layout_marginRight="23dp"
-                        android:layout_marginStart="23dp"
-                        android:layout_marginTop="11dp"
+
+
+                        android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -737,6 +746,7 @@
                         android:layout_weight="1"
                         android:background="#ffc231"
                         android:text="수정하기"
+
                         android:textColor="#ffffff"
                         android:textSize="16sp" />
 
