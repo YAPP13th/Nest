@@ -42,8 +42,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginStart="18dp"
+
+
                     android:layout_marginTop="8dp"
                     android:text="지역 맞춤"
                     android:textColor="#212529"
@@ -57,8 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginStart="18dp"
+
                     android:layout_marginTop="8dp"
                     android:text="두둥이 추천해요"
                     android:textColor="#ffc539"
