@@ -189,12 +189,11 @@ public class FirebaseFunc extends AppCompatActivity{
         Map<String, Object> taskMap = new HashMap<String, Object>();
         taskMap.put(global.myInfo.getId(), global.myInfo);
 
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("user_info");
         databaseReference.updateChildren(taskMap);
 
-        global.setViewPagerPosition(0);
-
+        global.setViewPagerPosition(2);
         Intent intent = new Intent(mContext, ViewPagerMain.class);
         intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
 

@@ -300,6 +300,7 @@ public class FABFragment extends AAH_FabulousFragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        try {
             String d = data.getExtras().getString("data");
             if (d != null) {
                 String[] values = d.split(" ");
@@ -307,5 +308,9 @@ public class FABFragment extends AAH_FabulousFragment {
                 join_location.setText(findAddress);// 구 까지 자른거,,,
                 global.temp.setLocation(findAddress);
             }
+        }catch(NullPointerException e){
+            e.printStackTrace();
+        }
     }
+
 }
