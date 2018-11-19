@@ -102,7 +102,7 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
                         Intent intent = new Intent(v.getContext(), DetailInfoActivity.class);
 
                         Bundle bundle = new Bundle();
-                        bundle.putInt("bottom", position);
+                        bundle.putInt("top", position);
                         intent.putExtras(bundle);
 
                         context.startActivity(intent);
