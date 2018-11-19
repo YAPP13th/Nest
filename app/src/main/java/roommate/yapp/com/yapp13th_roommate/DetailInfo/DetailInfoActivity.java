@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,13 +19,23 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import roommate.yapp.com.yapp13th_roommate.DataModel.UserInfo;
 import roommate.yapp.com.yapp13th_roommate.Function.ImageFunc;
 import roommate.yapp.com.yapp13th_roommate.Global.GlobalVariable;
+import roommate.yapp.com.yapp13th_roommate.LikeList.LikeAdapter;
 import roommate.yapp.com.yapp13th_roommate.R;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.BottomRecyclerViewAdapter;
+import roommate.yapp.com.yapp13th_roommate.Recommend.Adapters.TopRecyclerViewAdapter;
 import roommate.yapp.com.yapp13th_roommate.SignUp.SignUpFirstActivity;
 import roommate.yapp.com.yapp13th_roommate.ViewPager.RoomImagePagerAdapter;
 
@@ -43,6 +54,8 @@ public class DetailInfoActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private RoomImagePagerAdapter roomImagePagerAdapter;
     private TextView url_chat_text;
+
+    private int check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,9 +122,15 @@ public class DetailInfoActivity extends AppCompatActivity {
 
         if(intent.getIntExtra("bottom", -1) != -1){
             position = intent.getIntExtra("bottom", -1);
+            check = 1;
             init(global.filterInfo.get(position));
+        }else if(intent.getIntExtra("top", -1) != -1){
+            position = intent.getIntExtra("top", -1);
+            check = 2;
+            init(global.randomTopUser.get(position));
         }else{
             position = intent.getIntExtra("like", -1);
+            check = 3;
             init(global.likeInfo.get(position));
         }
 
@@ -121,10 +140,6 @@ public class DetailInfoActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-
 
 
     }
@@ -196,7 +211,99 @@ public class DetailInfoActivity extends AppCompatActivity {
         btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(check == 1){
+                    global.likeInfo.add(global.filterInfo.get(position));
 
+                    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                    final DatabaseReference databaseReference = firebaseDatabase.getReference("like");
+
+                    HashMap<String, String> likeInfo = new HashMap<>();
+                    likeInfo.put(global.filterInfo.get(position).getId(), "");
+
+                    global.likeAdapter = new LikeAdapter(DetailInfoActivity.this, global.likeInfo);
+                    global.likeRecyclerView.setAdapter(global.likeAdapter);
+
+                    global.topAdapter = new TopRecyclerViewAdapter(DetailInfoActivity.this, global.randomTopUser);
+                    global.topRecyclerView.setAdapter(global.topAdapter);
+
+                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if(!dataSnapshot.hasChild(global.myInfo.getId())){
+                                HashMap<String, String> likeInfo = new HashMap<>();
+                                likeInfo.put(global.filterInfo.get(position).getId(), "");
+                                databaseReference.child(global.myInfo.getId()).setValue(likeInfo);
+                            }else{
+                                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+
+                                    if(global.myInfo.getId().equals(snapshot.getKey())){
+                                        HashMap<String, String> likeInfo = new HashMap<>();
+                                        for(DataSnapshot likeSnapshot : snapshot.getChildren()){
+                                            likeInfo.put(likeSnapshot.getKey(), "");
+                                        }
+                                        likeInfo.put(global.filterInfo.get(position).getId(), "");
+                                        databaseReference.child(global.myInfo.getId()).setValue(likeInfo);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+                    });
+
+                    finish();
+                }else if(check == 2){
+                    global.likeInfo.add(global.randomTopUser.get(position));
+
+                    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                    final DatabaseReference databaseReference = firebaseDatabase.getReference("like");
+
+                    HashMap<String, String> likeInfo = new HashMap<>();
+                    likeInfo.put(global.randomTopUser.get(position).getId(), "");
+
+                    global.likeAdapter = new LikeAdapter(DetailInfoActivity.this, global.likeInfo);
+                    global.likeRecyclerView.setAdapter(global.likeAdapter);
+
+                    global.topAdapter = new TopRecyclerViewAdapter(DetailInfoActivity.this, global.randomTopUser);
+                    global.topRecyclerView.setAdapter(global.topAdapter);
+
+                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if(!dataSnapshot.hasChild(global.myInfo.getId())){
+                                HashMap<String, String> likeInfo = new HashMap<>();
+                                likeInfo.put(global.randomTopUser.get(position).getId(), "");
+                                databaseReference.child(global.myInfo.getId()).setValue(likeInfo);
+                            }else{
+                                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+
+                                    if(global.myInfo.getId().equals(snapshot.getKey())){
+                                        HashMap<String, String> likeInfo = new HashMap<>();
+                                        for(DataSnapshot likeSnapshot : snapshot.getChildren()){
+                                            likeInfo.put(likeSnapshot.getKey(), "");
+                                        }
+                                        likeInfo.put(global.randomTopUser.get(position).getId(), "");
+                                        databaseReference.child(global.myInfo.getId()).setValue(likeInfo);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            throw databaseError.toException();
+                        }
+                    });
+
+                    finish();
+                }else{
+                    finish();
+                }
             }
         });
     }

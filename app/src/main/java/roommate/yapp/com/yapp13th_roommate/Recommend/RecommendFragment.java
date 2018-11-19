@@ -49,15 +49,6 @@ public class RecommendFragment extends Fragment
         super.onCreate(savedInstanceState);
         global = (GlobalVariable)getActivity().getApplication();
 
-        context = getContext();
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState)
-    {
-        final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-
         sameLocationUser = new ArrayList<>();
         global.randomTopUser = new ArrayList<>();
         ArrayList<Integer>ranNumber = new ArrayList<Integer>();
@@ -84,6 +75,15 @@ public class RecommendFragment extends Fragment
             global.randomTopUser.add(sameLocationUser.get(ranNumber.get(2)));
         }
         //랜덤 인덱스를 이용하여 탑 뷰에 뿌려줄 데이터를 만든다
+
+        context = getContext();
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState)
+    {
+        final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
 
         btn_fab = rootView.findViewById(R.id.btn_fab);
