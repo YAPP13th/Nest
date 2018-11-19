@@ -67,7 +67,9 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".SignUp.SignUpFirstActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateUnspecified">
+
+            android:windowSoftInputMode="adjustUnspecified|stateUnspecified"
+            >
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 

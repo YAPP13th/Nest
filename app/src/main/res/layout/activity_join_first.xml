@@ -311,13 +311,17 @@
             <EditText
                 android:id="@+id/join_etchatURL"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="42dp"
-                android:layout_marginStart="42dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/round"
                 android:hint="카카오톡 오픈채팅 URL 을 입력해주세요"
                 android:inputType="textPersonName"
+                android:text="https://open.kakao.com/o/"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvChatURL" />
@@ -435,8 +439,8 @@
 
             <ImageView
                 android:id="@+id/ivLocation"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
