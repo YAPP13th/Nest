@@ -55,7 +55,8 @@
                 android:layout_marginLeft="14dp"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="21dp"
-                android:text="@string/join_Text2"
+                android:layout_marginBottom="25.5dp"
+
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/newLine" />
@@ -79,8 +80,10 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
+
                 android:text="인스타그램 ID"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
                 app:layout_constraintStart_toEndOf="@+id/ivInstar"
                 app:layout_constraintTop_toBottomOf="@+id/tvNewLine" />
 
@@ -93,6 +96,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
                 android:background="@android:color/transparent"
                 android:hint="하나만 입력해주세요"
                 android:inputType="textPersonName"
@@ -121,7 +125,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="생활 패턴"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
+
                 app:layout_constraintStart_toEndOf="@+id/ivPattern"
                 app:layout_constraintTop_toBottomOf="@+id/join_etinstar" />
 
@@ -203,8 +209,10 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="음주 빈도"
+                android:textSize="15sp"
+                android:textColor="#212529"
                 android:gravity="center"
-                android:textSize="14sp"
+
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rglifestyle" />
 
@@ -215,81 +223,68 @@
                 android:layout_marginLeft="18dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDrink">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/join_rbdrink1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                    <RadioButton
-                        android:id="@+id/join_rbdrink1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/unchoice_btn"
-                        android:button="@null"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:paddingTop="10dp"
-                        android:text="금주"
-                        android:gravity="center"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/unchoice_btn"
+                    android:button="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="금주"
+                    android:gravity="center"/>
 
-                    <RadioButton
-                        android:id="@+id/join_rbdrink2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/unchoice_btn"
-                        android:button="@null"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:paddingTop="10dp"
-                        android:text="매일"
-                        android:gravity="center"/>
+                <RadioButton
+                    android:id="@+id/join_rbdrink2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                </LinearLayout>
+                    android:layout_weight="1"
+                    android:background="@drawable/unchoice_btn"
+                    android:button="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="매일"
+                    android:gravity="center"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/join_rbdrink3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                    <RadioButton
-                        android:id="@+id/join_rbdrink3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/unchoice_btn"
-                        android:button="@null"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:paddingTop="10dp"
-                        android:text="주1-2회"
-                        android:gravity="center"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/unchoice_btn"
+                    android:button="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="주1-2회"
+                    android:gravity="center"/>
 
-                    <RadioButton
-                        android:id="@+id/join_rbdrink4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/unchoice_btn"
-                        android:button="@null"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:paddingTop="10dp"
-                        android:text="월1-2회"
-                        android:gravity="center"/>
-
-                </LinearLayout>
-
+                <RadioButton
+                    android:id="@+id/join_rbdrink4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/unchoice_btn"
+                    android:button="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="월1-2회"
+                    android:gravity="center"/>
             </RadioGroup>
 
             <ImageView
@@ -311,9 +306,11 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
-                android:text="음주 빈도"
+                android:text="흡연"
                 android:gravity="center"
-                android:textSize="14sp"
+
+                android:textSize="15sp"
+                android:textColor="#212529"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgdrink" />
 
@@ -380,7 +377,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
                 android:text="친구 출입"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
+
                 android:gravity="center"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgcig" />
@@ -464,7 +463,8 @@
                 android:layout_marginTop="27dp"
                 android:text="애완동물"
                 android:gravity="center"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgfriend" />
 
@@ -547,7 +547,8 @@
                 android:layout_marginTop="27dp"
                 android:text="좋아하는 것"
                 android:gravity="center"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_rgpet"
                 android:nextFocusDown="@id/ivIntroduce"/>
@@ -595,7 +596,8 @@
                 android:layout_marginTop="27dp"
                 android:text="싫어하는 것"
                 android:gravity="center"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
                 android:singleLine="true"
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_etlike" />
@@ -646,7 +648,9 @@
                 android:layout_marginTop="27dp"
                 android:text="자기소개"
                 android:gravity="center"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textColor="#212529"
+
                 app:layout_constraintStart_toEndOf="@+id/ivDrink"
                 app:layout_constraintTop_toBottomOf="@+id/join_etdislike"
                 />
@@ -682,7 +686,7 @@
 
                 android:text="시작하기"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/join_etme" />
 

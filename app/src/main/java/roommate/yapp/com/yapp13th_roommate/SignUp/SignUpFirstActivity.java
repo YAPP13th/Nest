@@ -119,8 +119,12 @@ public class SignUpFirstActivity extends AppCompatActivity {
         tvTitle = (TextView)findViewById(R.id.tvNewLine);
         String str = "당신은\n어떤사람인가요?";
         SpannableStringBuilder ssb = new SpannableStringBuilder(str);
+        ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#212529")), 0, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#ffc231")), 4, 8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#212529")), 8, 12, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         tvTitle.setText(ssb);
+
 
         etName = (EditText)findViewById(R.id.join_etname);
         etOpenChat = (EditText)findViewById(R.id.join_etchatURL);

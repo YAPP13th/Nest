@@ -1,8 +1,12 @@
 package roommate.yapp.com.yapp13th_roommate.SignUp;
 
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -33,7 +37,7 @@ public class SignUpSecondActivity extends AppCompatActivity {
     private RadioButton[] rbPattern, rbDrink, rbSmoking, rbAllowFriend, rbPet;
     private RadioGroup rgPattern, rgDrink, rgSmoking, rgAllowFriend, rgPet;
     private EditText tvInstar, tvLike, tvDisLike, tvIntroduce;
-    private TextView btnStart;
+    private TextView btnStart,tvTitle;
     private ImageView ivBack;
 
     private Boolean patternCheck[], drinkCheck[],smokingCheck[], friendCheck[], petCheck[];
@@ -134,6 +138,16 @@ public class SignUpSecondActivity extends AppCompatActivity {
         rbPet[0] = findViewById(R.id.join_rbpet1);
         rbPet[1] = findViewById(R.id.join_rbpet2);
         rbPet[2] = findViewById(R.id.join_rbpet3);
+
+
+        tvTitle = (TextView)findViewById(R.id.tvNewLine);
+        String str = "당신은\n어떤 룸메이트 인가요?";
+        SpannableStringBuilder ssb = new SpannableStringBuilder(str);
+        ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#212529")), 0, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#ffc231")), 4, 12, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssb.setSpan(new ForegroundColorSpan(Color.parseColor("#212529")), 12, 16, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        tvTitle.setText(ssb);
 
         rgPattern.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
