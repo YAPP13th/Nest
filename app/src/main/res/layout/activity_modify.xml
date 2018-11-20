@@ -427,7 +427,6 @@
                 android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex3" />
-
             <ImageView
                 android:id="@+id/viewPagerIndex3"
                 android:layout_width="4dp"
