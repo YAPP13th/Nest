@@ -363,74 +363,62 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="17dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_no_drink_in_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                        <RadioButton
-                            android:id="@+id/rb_no_drink_in_filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/unchoice_btn"
-                            android:button="@null"
-                            android:paddingBottom="10dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:paddingTop="10dp"
-                            android:text="금주" />
+                        android:background="@drawable/unchoice_btn"
+                        android:button="@null"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:layout_weight="1"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="금주" />
 
-                        <RadioButton
-                            android:id="@+id/rb_everyday_drink_in_filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/unchoice_btn"
-                            android:button="@null"
-                            android:paddingBottom="10dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:paddingTop="10dp"
-                            android:text="매일" />
+                    <RadioButton
+                        android:id="@+id/rb_everyday_drink_in_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                    </LinearLayout>
+                        android:background="@drawable/unchoice_btn"
+                        android:button="@null"
+                        android:layout_weight="1"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="매일" />
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_week_drink_in_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                        <RadioButton
-                            android:id="@+id/rb_week_drink_in_filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/unchoice_btn"
-                            android:button="@null"
-                            android:paddingBottom="10dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:paddingTop="10dp"
-                            android:text="주1-2회" />
+                        android:layout_weight="1"
+                        android:background="@drawable/unchoice_btn"
+                        android:button="@null"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="주1-2회" />
 
-                        <RadioButton
-                            android:id="@+id/rb_month_drink_in_filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/unchoice_btn"
-                            android:button="@null"
-                            android:paddingBottom="10dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:paddingTop="10dp"
-                            android:text="월1-2회" />
-
-                    </LinearLayout>
-
+                    <RadioButton
+                        android:id="@+id/rb_month_drink_in_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/unchoice_btn"
+                        android:button="@null"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="월1-2회" />
                 </RadioGroup>
 
                 <LinearLayout
