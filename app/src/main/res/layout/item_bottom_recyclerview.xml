@@ -6,6 +6,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_profile"
     >
     <!-- 찜하기 버튼 -->
 
@@ -22,7 +23,9 @@
             android:id="@+id/iv_bottom_profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/location_bird_location"
+            android:padding="1dp"
+            android:src="@drawable/location_bird_location"
+            android:background="@drawable/bg_profile"
             android:contentDescription="@string/desc_iv_profile"
             android:scaleType="fitXY" />
 
@@ -32,7 +35,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_profile"
         android:orientation="vertical"
         android:paddingBottom="11dp"
         android:paddingLeft="10dp"
@@ -48,7 +50,7 @@
             <!-- 이름 -->
             <TextView
                 android:id="@+id/tv_bottom_name"
-                android:layout_width="217dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
@@ -60,13 +62,15 @@
 
             <com.like.LikeButton
                 android:id="@+id/btn_bottom_recycler_pick"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:icon_size="20dp"
+                app:icon_size="15dp"
                 app:icon_type="heart"
+                android:layout_gravity="right"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
+
 
 
         <LinearLayout
