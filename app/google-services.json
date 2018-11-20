@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "352776152928",
-    "firebase_url": "https://dodong-test.firebaseio.com",
-    "project_id": "dodong-test",
-    "storage_bucket": "dodong-test.appspot.com"
+    "project_number": "211533515993",
+    "firebase_url": "https://nest-dodong.firebaseio.com",
+    "project_id": "nest-dodong",
+    "storage_bucket": "nest-dodong.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:352776152928:android:5af1df68f564585d",
+        "mobilesdk_app_id": "1:211533515993:android:5af1df68f564585d",
         "android_client_info": {
           "package_name": "roommate.yapp.com.yapp13th_roommate"
         }
       },
       "oauth_client": [
         {
-          "client_id": "352776152928-ealpkihshj893sgvqjq68i72ke5gcuei.apps.googleusercontent.com",
+          "client_id": "211533515993-akjo57snrrd3m8qjful4tct36mnmijlo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDUOtY2nUO84qP4QXK6n1hxV_dIc4Yqe5M"
+          "current_key": "AIzaSyBbDGofdQxnGdetEPMevlzHLaiXhqS2GRs"
         }
       ],
       "services": {
