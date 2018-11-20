@@ -688,37 +688,47 @@
                         android:id="@+id/tvIntroduce"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+
                         android:layout_marginLeft="55dp"
-
                         android:layout_marginStart="55dp"
+
+
                         android:layout_marginTop="44dp"
-
-
                         android:letterSpacing="-0.03"
                         android:text="자기소개"
                         android:textColor="#212529"
                         android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/llChat"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/clChatURL" />
 
                     <LinearLayout
                         android:id="@+id/llChat"
-                        android:layout_width="331dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginRight="55dp"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.509"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvIntroduce">
+                        app:layout_constraintTop_toBottomOf="@+id/tvIntroduce"
+                        app:layout_constraintVertical_bias="0.0">
 
                         <TextView
                             android:id="@+id/tvIntroduceContent"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="55dp"
+                            android:layout_marginRight="55dp"
+                            android:gravity="left"
                             android:letterSpacing="-0.04"
                             android:lineSpacingExtra="9sp"
+                            android:lines="4"
+                            android:maxLines="4"
                             android:text="안녕하세요 반갑습니다 저는 숙명여자대학교에서 작곡을 전공하고 있는 학생입니다. 학교 앞 근처에서 룸메이트를 구하려고하는데요! 룸메이트랑  3번 정도  살아본적있어서 잘 알고 있어요! 편하게 연락주세요 :)"
                             android:textColor="#4a4a4a"
                             android:textSize="12sp" />
