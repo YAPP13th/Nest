@@ -172,11 +172,11 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
+                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:gravity="center"
                     android:text="여자" />
 
                 <RadioButton
@@ -186,12 +186,12 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
+                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="남자"
-                    android:gravity="center"/>
+                    android:text="남자" />
             </RadioGroup>
 
             <ImageView
@@ -384,24 +384,19 @@
                     android:layout_weight="1"
                     android:background="@drawable/unchoice_btn"
                     android:button="@null"
+                    android:gravity="center"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
-                    android:text="없음"
-                    android:gravity="center"
-                    />
+                    android:text="없음" />
             </RadioGroup>
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginLeft="21dp"
-                android:layout_marginRight="21dp"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="44dp"
+                android:layout_height="271dp"
+                android:padding="21dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -411,9 +406,9 @@
                 android:id="@+id/viewPagerIndex1"
                 android:layout_width="4dp"
                 android:layout_height="4dp"
+                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex2" />
 
@@ -421,9 +416,9 @@
                 android:id="@+id/viewPagerIndex2"
                 android:layout_width="4dp"
                 android:layout_height="4dp"
+                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toStartOf="@+id/viewPagerIndex3" />
 
@@ -431,9 +426,9 @@
                 android:id="@+id/viewPagerIndex3"
                 android:layout_width="4dp"
                 android:layout_height="4dp"
+                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="13dp"
                 android:layout_marginRight="13dp"
-                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                 app:layout_constraintEnd_toEndOf="@+id/viewPager" />
 
@@ -492,8 +487,8 @@
                     android:id="@+id/tvTerms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="이용약관과 개인정보보호정책에 동의 (필수)"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

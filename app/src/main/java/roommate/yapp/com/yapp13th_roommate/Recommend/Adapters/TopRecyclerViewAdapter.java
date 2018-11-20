@@ -91,7 +91,7 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
                 // todo 여기 위에 탑부분이라서 지역추천으로 되어있어서 뿌려
                 holder.tv_address.setText("");
                 holder.tv_monthMoney.setText(mData.get(position).getMonthly());
-                holder.tv_selfIntroduction.setText(mData.get(position).getIntroduce());
+                //holder.tv_selfIntroduction.setText(mData.get(position).getIntroduce());
                 holder.tv_like.setText(mData.get(position).getLike());
                 holder.tv_dislike.setText(mData.get(position).getDisLike());
 
@@ -236,7 +236,7 @@ public class TopRecyclerViewAdapter extends RecyclerView.Adapter<TopRecyclerView
             tv_age = itemView.findViewById(R.id.tv_top_recycler_birth_year);
             tv_address = itemView.findViewById(R.id.tv_top_address);
             tv_monthMoney = itemView.findViewById(R.id.tv_top_recycler_monthly_money);
-            tv_selfIntroduction = itemView.findViewById(R.id.tv_top_selfIntroduction);
+            //tv_selfIntroduction = itemView.findViewById(R.id.tv_top_selfIntroduction);
             tv_like = itemView.findViewById(R.id.tv_top_recycler_like);
             tv_dislike = itemView.findViewById(R.id.tv_top_recycler_dislike);
 

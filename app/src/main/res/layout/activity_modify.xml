@@ -401,7 +401,7 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_marginTop="15dp"
+                android:padding="16dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

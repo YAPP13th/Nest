@@ -159,6 +159,7 @@ public class FirebaseFunc extends AppCompatActivity{
                     UserInfo temp = snapshot.getValue(UserInfo.class);
                     if(global.myInfo.getGender().equals(temp.getGender()) && !temp.getId().equals(global.getMyId())){
                         global.everyInfo.add(temp);
+                        Log.d("firetest","add");
                     }
                 }
 

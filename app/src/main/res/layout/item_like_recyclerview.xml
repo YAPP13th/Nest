@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_profile"
     android:layout_marginRight="10dp"
     android:orientation="horizontal">
 
@@ -11,15 +13,16 @@
     <FrameLayout
 
         android:layout_width="116.5dp"
-        android:layout_height="115dp"
-        android:background="@drawable/bg_profile">
+        android:layout_height="115dp">
 
         <!-- 프로필 이미지 -->
         <ImageView
             android:id="@+id/iv_profile1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/location_bird_location"
+            android:padding="1dp"
+            android:src="@drawable/location_bird_location"
+            android:background="@drawable/bg_profile"
             android:contentDescription="@string/desc_iv_profile"
             android:scaleType="fitXY" />
     </FrameLayout>
@@ -27,7 +30,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_profile"
         android:orientation="vertical"
         android:paddingBottom="10dp"
         android:paddingLeft="14dp"
@@ -42,7 +44,7 @@
             <!-- 이름 -->
             <TextView
                 android:id="@+id/tv_name1"
-                android:layout_width="214dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:text="이지은"
@@ -57,7 +59,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tv_name1" />
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/tv_name1"
+                tools:layout_editor_absoluteY="0dp" />
         </android.support.constraint.ConstraintLayout>
 
         <LinearLayout

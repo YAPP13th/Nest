@@ -633,7 +633,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/clChatURL"
                         android:layout_width="match_parent"
-                        android:layout_height="17dp"
+                        android:layout_height="18dp"
                         android:layout_marginLeft="55dp"
                         android:layout_marginStart="55dp"
                         android:layout_marginTop="20dp"
@@ -675,7 +675,6 @@
                             android:letterSpacing="-0.02"
                             android:maxLines="2"
                             android:text="http://dfskd..."
-
                             android:textColor="#616161"
                             android:textIsSelectable="true"
                             android:textSize="14sp"
